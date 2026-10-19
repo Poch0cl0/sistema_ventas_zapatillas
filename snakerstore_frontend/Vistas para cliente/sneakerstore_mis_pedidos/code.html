@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "background": "#f9f9fa", "on-surface": "#1a1c1d", "secondary-fixed-dim": "#ffb59d", "on-secondary-fixed": "#390c00", "tertiary-fixed-dim": "#c0c7d6", "on-primary-fixed": "#1c1b1b", "on-primary-fixed-variant": "#474646", "surface-dim": "#dadadb", "surface-bright": "#f9f9fa", "surface-container-highest": "#e2e2e3", "outline": "#747878", "on-primary": "#ffffff", "error-container": "#ffdad6", "secondary-container": "#fe6a34", "primary-container": "#1c1b1b", "on-secondary-fixed-variant": "#832600", "on-primary-container": "#858383", "tertiary": "#000000", "secondary": "#ab3500", "on-secondary-container": "#5d1900", "inverse-on-surface": "#f0f1f2", "inverse-primary": "#c8c6c5", "primary-fixed-dim": "#c8c6c5", "on-surface-variant": "#444748", "surface": "#f9f9fa", "surface-container-high": "#e8e8e9", "primary-fixed": "#e5e2e1", "surface-container-low": "#f3f3f4", "on-tertiary-container": "#7d8492", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#151c27", "tertiary-container": "#151c27", "outline-variant": "#c4c7c7", "surface-tint": "#5f5e5e", "on-tertiary-fixed-variant": "#404754", "secondary-fixed": "#ffdbd0", "surface-variant": "#e2e2e3", "on-secondary": "#ffffff", "on-background": "#1a1c1d", "inverse-surface": "#2f3132", "surface-container": "#eeeeef", "primary": "#000000", "on-tertiary": "#ffffff", "on-error": "#ffffff", "error": "#ba1a1a", "tertiary-fixed": "#dce2f3", "on-error-container": "#93000a" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.5rem", "space-xs": "0.25rem", "margin": "2rem", "margin-mobile": "1rem", "gutter": "1.5rem", "space-md": "1rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "gutter-mobile": "0.75rem" }, fontFamily: { "headline-md": ["Inter"], "headline-sm": ["Inter"], "body-md": ["Inter"], "price-md": ["Inter"], "display-hero": ["Inter"], "price-lg": ["Inter"], "label-size": ["Inter"], "headline-lg-mobile": ["Inter"], "body-sm": ["Inter"], "body-lg": ["Inter"], "headline-lg": ["Inter"], "label-badge": ["Inter"], "display-hero-mobile": ["Inter"] }, fontSize: { "headline-md": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "700"}], "headline-sm": ["18px", {"lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}], "price-md": ["18px", {"lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "display-hero": ["56px", {"lineHeight": "60px", "letterSpacing": "-0.03em", "fontWeight": "800"}], "price-lg": ["24px", {"lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "800"}], "label-size": ["13px", {"lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "600"}], "headline-lg-mobile": ["26px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}], "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}], "headline-lg": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "label-badge": ["11px", {"lineHeight": "12px", "letterSpacing": "0.05em", "fontWeight": "700"}], "display-hero-mobile": ["36px", {"lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "800"}] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="SneakerStore Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XwnSj5aCSrv7RclT3WoonCoPb1_Cfh77YGDJHlU1ojayTrVXgWmJ5eOxMwrxQldcBxdsV58IIAL9pdOLOt1W3Bf9BN3zAt-YN7AYw8Z7yKknGoKhHNKEIyalfUnr0xPAEGm3523GBgupfPxKsJMQDT6xIiD0LONm4iNf9vzDAg2tOaKSjHL-hRiXiOkqKdz-J0fudDGLbF_9IQiF-vimK6-zXBc0wxLKVXKLYC0eaKxie8GClJKqJlD7Sv"/><span class="font-headline-sm text-headline-sm uppercase tracking-tight text-primary">SneakerStore</span><span class="hidden">Inicio</span></div><div class="flex items-center gap-space-xs"><button aria-label="Buscar" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Carrito de compras" class="w-11 h-11 relative flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-2 right-2 flex items-center justify-center min-w-[16px] h-4 px-1 rounded-full bg-secondary-container text-on-primary font-label-badge text-label-badge leading-none">2</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive State Simulator Controls (UX Testing Toolbar) -->
+<section class="w-full bg-surface-container-high px-margin-mobile py-2.5 shadow-sm">
+<div class="flex items-center justify-between mb-1.5">
+<span class="flex items-center gap-1.5 text-on-surface-variant font-label-badge text-label-badge uppercase tracking-wider">
+<span class="material-symbols-outlined text-[15px] text-secondary-container">tune</span>
+        Simulador de Escenarios UX
+      </span>
+<span class="text-[10px] font-medium text-on-surface-variant bg-surface-container-highest px-2 py-0.5 rounded-full">Prototipo Interactivo</span>
+</div>
+<div class="grid grid-cols-3 gap-1.5">
+<button class="h-8 rounded-lg font-label-badge text-label-badge transition-all bg-primary text-on-primary font-bold shadow-sm flex items-center justify-center text-center" id="sim-btn-all" onclick="setUxState('all')">
+        Todos (4)
+      </button>
+<button class="h-8 rounded-lg font-label-badge text-label-badge transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container font-medium flex items-center justify-center text-center" id="sim-btn-empty" onclick="setUxState('empty')">
+        Sin Pedidos
+      </button>
+<button class="h-8 rounded-lg font-label-badge text-label-badge transition-all bg-surface-container-lowest text-on-surface hover:bg-surface-container font-medium flex items-center justify-center text-center" id="sim-btn-expired" onclick="setUxState('expired')">
+        Vencidos
+      </button>
+</div>
+</section>
+<!-- Page Header -->
+<header class="px-margin-mobile pt-space-lg pb-space-sm flex flex-col gap-2">
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-2">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Mis Pedidos</h1>
+<span class="bg-surface-container-highest text-on-surface font-label-badge text-label-badge px-2 py-0.5 rounded-full" id="badge-total-count">4</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug">
+          Gestiona tus compras, haz seguimiento de tus envíos y registra tus pagos pendientes.
+        </p>
+</div>
+<!-- WhatsApp Support Action -->
+<a class="shrink-0 flex items-center gap-1.5 px-3 py-2 rounded-xl bg-surface-container-lowest text-on-surface shadow-sm hover:shadow active:scale-95 transition-all text-left" href="https://wa.me/51999999999" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px] text-secondary">support_agent</span>
+<div class="flex flex-col">
+<span class="font-label-badge text-[10px] uppercase text-on-surface-variant leading-none">Ayuda</span>
+<span class="font-label-badge text-label-badge font-bold text-on-surface leading-tight">Soporte</span>
+</div>
+</a>
+</div>
+<!-- Live Counter Banner -->
+<div class="mt-1 flex items-center justify-between py-2 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="font-medium text-on-surface-variant" id="orders-status-summary">4 pedidos registrados en tu historial</span>
+</div>
+<span class="text-on-surface-variant text-[11px] font-medium">Actualizado hoy</span>
+</div>
+</header>
+<!-- Horizontal Scroll Status Filter Pills -->
+<section class="w-full overflow-hidden py-space-xs">
+<div class="flex items-center gap-2 px-margin-mobile overflow-x-auto no-scrollbar scroll-smooth">
+<button class="status-chip shrink-0 h-9 px-4 rounded-full flex items-center gap-2 font-label-badge text-label-badge transition-all bg-primary text-on-primary shadow-sm font-semibold" onclick="filterStatus('all', this)">
+<span>Todos</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-lowest/20 text-on-primary text-[10px]">4</span>
+</button>
+<button class="status-chip shrink-0 h-9 px-4 rounded-full flex items-center gap-2 font-label-badge text-label-badge transition-all bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container" onclick="filterStatus('pending', this)">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+<span>Pendientes</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-on-surface text-[10px] font-bold">1</span>
+</button>
+<button class="status-chip shrink-0 h-9 px-4 rounded-full flex items-center gap-2 font-label-badge text-label-badge transition-all bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container" onclick="filterStatus('preparing', this)">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+<span>En preparación</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-on-surface text-[10px]">1</span>
+</button>
+<button class="status-chip shrink-0 h-9 px-4 rounded-full flex items-center gap-2 font-label-badge text-label-badge transition-all bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container" onclick="filterStatus('delivered', this)">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span>Entregados</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-on-surface text-[10px]">1</span>
+</button>
+<button class="status-chip shrink-0 h-9 px-4 rounded-full flex items-center gap-2 font-label-badge text-label-badge transition-all bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container" onclick="filterStatus('cancelled', this)">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span>Cancelados</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-on-surface text-[10px]">1</span>
+</button>
+</div>
+</section>
+<!-- Orders Content List -->
+<main class="px-margin-mobile pt-space-sm pb-space-xl flex flex-col gap-4" id="orders-container">
+<!-- CARD 1: PENDIENTE DE PAGO (URGENTE CON CRONÓMETRO) -->
+<article class="order-card w-full rounded-2xl bg-surface-container-lowest p-4 shadow-sm flex flex-col gap-3 relative overflow-hidden transition-all duration-200" data-status="pending">
+<!-- Top urgent highlight band -->
+<div class="flex items-center justify-between pb-1">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">#SK-84920</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-ping"></span>
+              Pendiente de Pago
+            </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hoy, 24 Oct 2025 • 14:30</span>
+</div>
+<button aria-label="Opciones del pedido" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+</div>
+<!-- Urgent Reservation Countdown Banner -->
+<div class="rounded-xl bg-secondary-fixed/50 p-3 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-secondary font-label-badge text-label-badge">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+<span>Reserva activa: <strong class="font-bold" id="countdown-timer">22h 14m 38s restantes</strong></span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[16px]">priority_high</span>
+</div>
+<p class="font-body-sm text-[11px] leading-tight text-on-secondary-fixed-variant">
+          Transfiere por Yape o Plin para asegurar tu stock antes que expire y sea liberado automáticamente.
+        </p>
+</div>
+<!-- Product Items List (2 Shoes) -->
+<div class="flex flex-col gap-2.5 pt-1">
+<!-- Item 1 -->
+<div class="flex items-center gap-3 bg-surface-container-low p-2 rounded-xl">
+<img class="w-14 h-14 rounded-lg object-cover bg-surface-container-highest shrink-0" data-alt="High-top black and neon volt athletic running sneaker in crisp studio lighting side profile view isolated" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV6nhLUB2zqQQRUtXMVqyzJrlalbL6_r_zdDYGxkEDtfSGjcnFHeZ5i2AdtAUU_9fymB52SkVGaL77135DShHXmM6181qLDONjSbgibmSGUC0bMHlD7eXb2Tv3Eqjc68A8vdGQK57RZtAambBrG2c304krox4Y_biBE8uROkNt0j4CFI4P-LfyH-MOcTYneaUGpFbG3vSE0i5o12Z2tu39sQlvWo7mDI6LbL1RhxUB8NR1qDVREDXTqA"/>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-badge text-[10px] text-on-surface-variant uppercase tracking-wider">Nike</span>
+<h3 class="font-label-size text-label-size text-on-surface truncate">Air Volt React GT</h3>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Talla: <strong class="text-on-surface">EU 41</strong></span>
+<span class="text-on-surface-variant text-[11px]">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cant: 1</span>
+</div>
+</div>
+<span class="font-price-md text-price-md text-on-surface shrink-0">S/ 589.00</span>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-3 bg-surface-container-low p-2 rounded-xl">
+<img class="w-14 h-14 rounded-lg object-cover bg-surface-container-highest shrink-0" data-alt="Vintage retro urban street basketball sneaker with red and white accents clean minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo0IPXaKz2I5xcTY-fKCPhXzs8DjXi4FcWFwx9fdZNCWGdLxHeNUrGyjSYQ7iLH48dzZdVPnQY17Z2ftnp70cRXJcVineV3jp0I_QiAhH3Q7ppIvy-tO2lfPbjZeE6kFmhCIPYGguH5IR9iHnaozpI88TxrlZkr9Gok8eDaWNH2kFh6N43z5I-IDFuYNKpyOoYj0LxQsT4a0EFhnBEHFwU7wuucmpc6CUebKfEye6GygVyLJHRmQWwaQ"/>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-badge text-[10px] text-on-surface-variant uppercase tracking-wider">Jordan</span>
+<h3 class="font-label-size text-label-size text-on-surface truncate">Retro Street OG</h3>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Talla: <strong class="text-on-surface">EU 42</strong></span>
+<span class="text-on-surface-variant text-[11px]">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cant: 1</span>
+</div>
+</div>
+<span class="font-price-md text-price-md text-on-surface shrink-0">S/ 519.00</span>
+</div>
+</div>
+<!-- Pricing Summary Footer -->
+<div class="flex items-center justify-between pt-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Total (2 pares • Envío a Lima incluido)</span>
+<span class="font-price-lg text-price-lg text-on-surface">S/ 1,108.00</span>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-5 gap-2 pt-1">
+<button class="col-span-2 h-11 px-3 rounded-xl bg-surface-container-high text-on-surface font-label-size text-label-size flex items-center justify-center gap-1 active:scale-95 transition-all">
+<span>Ver detalle</span>
+</button>
+<button class="col-span-3 h-11 px-4 rounded-xl bg-secondary-container text-on-primary font-label-size text-label-size font-bold flex items-center justify-center gap-1.5 shadow-md shadow-secondary-container/20 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+<span>Subir Voucher</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- CARD 2: EN PREPARACIÓN / CONFIRMADO -->
+<article class="order-card w-full rounded-2xl bg-surface-container-lowest p-4 shadow-sm flex flex-col gap-3 relative transition-all duration-200" data-status="preparing">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">#SK-83105</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-label-badge uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">package_2</span>
+              En preparación
+            </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">21 Oct 2025 • 18:10</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-badge text-label-badge flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary-container">check_circle</span>
+          Pago Verificado (Yape)
+        </span>
+</div>
+<!-- Preparation & Live Tracking Progress -->
+<div class="rounded-xl bg-surface-container p-3 flex flex-col gap-2">
+<div class="flex items-center justify-between text-on-surface font-label-badge text-label-badge">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">local_shipping</span>
+            Empaquetando en almacén Lima
+          </span>
+<span class="text-on-surface-variant font-normal">Despacho: Mañana</span>
+</div>
+<!-- Progress Bar Indicator -->
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden flex">
+<div class="h-full bg-primary rounded-full w-2/3"></div>
+</div>
+</div>
+<!-- Product Item -->
+<div class="flex items-center gap-3 bg-surface-container-low p-2 rounded-xl">
+<img class="w-14 h-14 rounded-lg object-cover bg-surface-container-highest shrink-0" data-alt="Chunky modern seafoam blue lifestyle sneaker top angle shot neutral studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7_NbTZxtwHd4c5R8CILtSuJ1sKRcO06cptutIDhcBp40If3xrFeJrmCim_rXkOzqkz68W2tnS_gboooSwA1HPh2dGpYgiV6n9LFzpNIWKiALaFfqXyzwIo_FKXD6rb91fVX-SABBOKbNuljAw3nf-3NvpwSS7mWzSBRO8YNZUVVtyNTkdspfPd1z2QXDBpn8AcBak8dY0TLceseyBNl_yF5jmf5kvG8QBeNQ_5FLKM0FzwOpT_mTyCw"/>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-badge text-[10px] text-on-surface-variant uppercase tracking-wider">New Balance</span>
+<h3 class="font-label-size text-label-size text-on-surface truncate">NB 9060 Triple Sea</h3>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Talla: <strong class="text-on-surface">EU 42</strong></span>
+<span class="text-on-surface-variant text-[11px]">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cant: 1</span>
+</div>
+</div>
+<span class="font-price-md text-price-md text-on-surface shrink-0">S/ 579.00</span>
+</div>
+<!-- Footer & Action -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col">
+<span class="font-body-sm text-[11px] text-on-surface-variant">Total Pagado</span>
+<span class="font-price-lg text-price-lg text-on-surface">S/ 579.00</span>
+</div>
+<button class="h-10 px-4 rounded-xl bg-primary text-on-primary font-label-size text-label-size font-medium flex items-center gap-1.5 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span>Ver tracking</span>
+</button>
+</div>
+</article>
+<!-- CARD 3: ENTREGADO -->
+<article class="order-card w-full rounded-2xl bg-surface-container-lowest p-4 shadow-sm flex flex-col gap-3 relative transition-all duration-200" data-status="delivered">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">#SK-79402</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-badge text-label-badge uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">done_all</span>
+              Entregado
+            </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">12 Oct 2025 • Entregado en Miraflores</span>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Recibido</span>
+</div>
+<!-- Product Item -->
+<div class="flex items-center gap-3 bg-surface-container-low p-2 rounded-xl">
+<img class="w-14 h-14 rounded-lg object-cover bg-surface-container-highest shrink-0" data-alt="Classic clean white low sneaker with vintage beige sole on minimalist studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTPnWLQN5qR_XfToEOFEcLEiikClLA1pDWI86_Hw6F2CDHTsqN7YL5aqwZrCczZNMNw27NLKtVPhb3NF6RRCUY3I8Dk-vebGwgtg665kxllVPDOV-dYsD9mojEJ36MlmZ17TwfcXhPG8j7L8izGP5xu7Ll840X02yC7wXnibpcWSQrido7vMMumvIGqJzRzyScivD9Cb-lVAoycKhhQeoV-sSLRtj5lSubC-lbazEsQ7Y48p3zvJWI9Q"/>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-badge text-[10px] text-on-surface-variant uppercase tracking-wider">Adidas Originals</span>
+<h3 class="font-label-size text-label-size text-on-surface truncate">Forum Low Urban White</h3>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Talla: <strong class="text-on-surface">EU 40</strong></span>
+<span class="text-on-surface-variant text-[11px]">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cant: 1</span>
+</div>
+</div>
+<span class="font-price-md text-price-md text-on-surface shrink-0">S/ 389.00</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col">
+<span class="font-body-sm text-[11px] text-on-surface-variant">Total abonado</span>
+<span class="font-price-md text-price-md text-on-surface">S/ 389.00</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="h-9 px-3 rounded-xl bg-surface-container-high text-on-surface font-label-badge text-label-badge flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">receipt</span>
+<span>Boleta</span>
+</button>
+<button class="h-9 px-3.5 rounded-xl bg-primary text-on-primary font-label-badge text-label-badge font-semibold flex items-center gap-1 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[15px]">replay</span>
+<span>Volver a pedir</span>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 4: CANCELADO (RESERVA VENCIDA) -->
+<article class="order-card w-full rounded-2xl bg-surface-container-lowest p-4 shadow-sm flex flex-col gap-3 relative transition-all duration-200" data-status="cancelled">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface-variant">#SK-76120</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-badge text-label-badge uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">event_busy</span>
+              Cancelado
+            </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">28 Sep 2025</span>
+</div>
+<span class="text-[11px] font-medium text-error">Sin comprobante</span>
+</div>
+<!-- Business Rule Alert: 24h Expiration Notice -->
+<div class="rounded-xl bg-surface-container p-3 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] shrink-0 mt-0.5">info</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-badge text-label-badge font-bold text-on-surface">Reserva de 24 horas vencida</span>
+<p class="font-body-sm text-[11px] leading-snug text-on-surface-variant">
+            El comprobante no fue registrado dentro del plazo límite. El stock de tu talla fue liberado automáticamente para la venta a otros clientes.
+          </p>
+</div>
+</div>
+<!-- Product Item (Dimmed) -->
+<div class="flex items-center gap-3 bg-surface-container-low p-2 rounded-xl opacity-75">
+<img class="w-14 h-14 rounded-lg object-cover bg-surface-container-highest shrink-0 grayscale-[40%]" data-alt="Classic low skate court sneaker black and white contrast low saturation studio look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3qf2J7gTpt6JWh-ZFyZEIFJIBM4EZZSdUohdoT1BrAglYubd1CgUUzQjhUoGO1wBb-atERPUDYzN03N395KQLMoqCin9fv4YPNxj0Ccs6sEuDIq6zZMxq-MEnXpkCaGiAAw1GGc4zcDU-2Yz6OVSm14w0SAJcxrUjS8t2VBvZ_YgNW-i_253TTeI0ZOkrZrCEmFf5Z0fV_vjgM0N-1Okx_tsmcHRKeV-T-nykZyqYfoq_u6tUdfyROw"/>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-badge text-[10px] text-on-surface-variant uppercase tracking-wider">Nike Sportswear</span>
+<h3 class="font-label-size text-label-size text-on-surface truncate">Dunk Low Retro</h3>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Talla: <strong class="text-on-surface">EU 41</strong></span>
+<span class="text-on-surface-variant text-[11px]">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">S/ 469.00</span>
+</div>
+</div>
+<span class="px-2 py-1 rounded bg-surface-container-highest text-on-surface-variant font-label-badge text-[10px]">Liberado</span>
+</div>
+<!-- Actions -->
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-[12px] text-on-surface-variant line-through">S/ 469.00</span>
+<button class="h-10 px-4 rounded-xl bg-surface-container-high text-on-surface hover:bg-primary hover:text-on-primary font-label-size text-label-size font-medium flex items-center gap-1.5 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[17px]">search</span>
+<span>Reintentar en catálogo</span>
+</button>
+</div>
+</article>
+</main>
+<!-- Empty State (Hidden by default, activated via UX simulator or filter) -->
+<section class="hidden px-margin-mobile py-space-xl flex flex-col items-center justify-center text-center" id="empty-state-view">
+<div class="w-24 h-24 rounded-full bg-surface-container-high flex items-center justify-center mb-4 relative shadow-inner">
+<span class="material-symbols-outlined text-[48px] text-on-surface-variant">inventory_2</span>
+<div class="absolute -bottom-1 -right-1 w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[16px]">priority_high</span>
+</div>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-1">Aún no tienes pedidos aquí</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[280px] mb-6">
+      Tus drops favoritos y zapatillas reservadas aparecerán en esta sección en tiempo real.
+    </p>
+<a class="h-12 px-8 rounded-xl bg-secondary-container text-on-primary font-label-size text-label-size font-bold flex items-center justify-center gap-2 shadow-lg shadow-secondary-container/25 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined text-[20px]">explore</span>
+<span>Explorar Catálogo</span>
+</a>
+</section>
+<!-- Floating FAQ / Help Banner at Bottom -->
+<section class="mx-margin-mobile mb-space-xl p-4 rounded-2xl bg-surface-container-low flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[20px]">help_center</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<h3 class="font-label-size text-label-size text-on-surface truncate">¿Tienes dudas sobre tu envío?</h3>
+<p class="font-body-sm text-[11px] text-on-surface-variant truncate">Los envíos a Lima toman entre 24 y 48 horas.</p>
+</div>
+<button class="shrink-0 text-secondary font-label-badge text-label-badge font-bold uppercase tracking-wider">
+      Preguntas
+    </button>
+</section>
+</div>
+<script>
+  // Simple UX simulator state switcher
+  function setUxState(mode) {
+    const ordersContainer = document.getElementById('orders-container');
+    const emptyView = document.getElementById('empty-state-view');
+    const btnAll = document.getElementById('sim-btn-all');
+    const btnEmpty = document.getElementById('sim-btn-empty');
+    const btnExpired = document.getElementById('sim-btn-expired');
+    const cards = document.querySelectorAll('.order-card');
+    const summary = document.getElementById('orders-status-summary');
+    const totalBadge = document.getElementById('badge-total-count');
+
+    // Reset styles
+    [btnAll, btnEmpty, btnExpired].forEach(btn => {
+      btn.className = "h-8 rounded-lg font-label-badge text-label-badge transition-all bg-surface-container-lowest text-on-surface font-medium flex items-center justify-center text-center";
+    });
+
+    if (mode === 'all') {
+      btnAll.className = "h-8 rounded-lg font-label-badge text-label-badge transition-all bg-primary text-on-primary font-bold shadow-sm flex items-center justify-center text-center";
+      ordersContainer.classList.remove('hidden');
+      emptyView.classList.add('hidden');
+      cards.forEach(card => card.classList.remove('hidden'));
+      summary.textContent = "4 pedidos registrados en tu historial";
+      totalBadge.textContent = "4";
+    } else if (mode === 'empty') {
+      btnEmpty.className = "h-8 rounded-lg font-label-badge text-label-badge transition-all bg-primary text-on-primary font-bold shadow-sm flex items-center justify-center text-center";
+      ordersContainer.classList.add('hidden');
+      emptyView.classList.remove('hidden');
+      summary.textContent = "No hay pedidos pendientes de entrega";
+      totalBadge.textContent = "0";
+    } else if (mode === 'expired') {
+      btnExpired.className = "h-8 rounded-lg font-label-badge text-label-badge transition-all bg-primary text-on-primary font-bold shadow-sm flex items-center justify-center text-center";
+      ordersContainer.classList.remove('hidden');
+      emptyView.classList.add('hidden');
+      cards.forEach(card => {
+        if (card.getAttribute('data-status') === 'cancelled') {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+      summary.textContent = "1 pedido con reserva de 24h vencida";
+      totalBadge.textContent = "1";
+    }
+  }
+
+  // Filter chips interaction
+  function filterStatus(status, chipElement) {
+    const chips = document.querySelectorAll('.status-chip');
+    chips.forEach(c => {
+      c.classList.remove('bg-primary', 'text-on-primary', 'font-semibold');
+      c.classList.add('bg-surface-container-lowest', 'text-on-surface');
+      const badge = c.querySelector('span:last-child');
+      if (badge) {
+        badge.classList.remove('bg-surface-container-lowest/20', 'text-on-primary');
+        badge.classList.add('bg-surface-container', 'text-on-surface');
+      }
+    });
+
+    chipElement.classList.add('bg-primary', 'text-on-primary', 'font-semibold');
+    chipElement.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+    const badge = chipElement.querySelector('span:last-child');
+    if (badge) {
+      badge.classList.add('bg-surface-container-lowest/20', 'text-on-primary');
+      badge.classList.remove('bg-surface-container', 'text-on-surface');
+    }
+
+    const cards = document.querySelectorAll('.order-card');
+    const ordersContainer = document.getElementById('orders-container');
+    const emptyView = document.getElementById('empty-state-view');
+
+    let visibleCount = 0;
+    cards.forEach(card => {
+      if (status === 'all' || card.getAttribute('data-status') === status) {
+        card.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+
+    if (visibleCount === 0) {
+      ordersContainer.classList.add('hidden');
+      emptyView.classList.remove('hidden');
+    } else {
+      ordersContainer.classList.remove('hidden');
+      emptyView.classList.add('hidden');
+    }
+  }
+
+  // Live countdown animation mock
+  let seconds = 38;
+  let minutes = 14;
+  let hours = 22;
+  const timerEl = document.getElementById('countdown-timer');
+
+  if (timerEl) {
+    setInterval(() => {
+      seconds--;
+      if (seconds < 0) {
+        seconds = 59;
+        minutes--;
+        if (minutes < 0) {
+          minutes = 59;
+          hours--;
+        }
+      }
+      timerEl.textContent = `${hours}h ${minutes}m ${seconds < 10 ? '0' : ''}${seconds}s restantes`;
+    }, 1000);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-4px_16px_-2px_rgba(17,17,17,0.06)]" data-active-classes="text-primary font-semibold [&amp;_span.indicator]:opacity-100"><div class="flex items-center justify-around h-16 px-gutter-mobile"><a class="group relative flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-surface-variant hover:text-primary transition-all" data-path="inicio" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-badge text-label-badge mt-0.5">Inicio</span><span class="indicator opacity-0 w-1 h-1 rounded-full bg-secondary-container mt-0.5 transition-opacity"></span></a><a class="group relative flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-surface-variant hover:text-primary transition-all" data-path="catalogo" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span class="font-label-badge text-label-badge mt-0.5">Catálogo</span><span class="indicator opacity-0 w-1 h-1 rounded-full bg-secondary-container mt-0.5 transition-opacity"></span></a><a class="group relative flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-surface-variant hover:text-primary transition-all" data-path="carrito" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute -top-1 -right-2 flex items-center justify-center min-w-[15px] h-[15px] px-1 rounded-full bg-secondary-container text-on-primary font-label-badge text-[9px] font-bold leading-none">2</span></div><span class="font-label-badge text-label-badge mt-0.5">Carrito</span><span class="indicator opacity-0 w-1 h-1 rounded-full bg-secondary-container mt-0.5 transition-opacity"></span></a><a class="group relative flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-surface-variant hover:text-primary transition-all" data-path="pedidos" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-badge text-label-badge mt-0.5">Pedidos</span><span class="indicator opacity-0 w-1 h-1 rounded-full bg-secondary-container mt-0.5 transition-opacity"></span></a><a class="group relative flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-surface-variant hover:text-primary transition-all" data-path="perfil" href="#"><span class="material-symbols-outlined text-[22px]">person</span><span class="font-label-badge text-label-badge mt-0.5">Perfil</span><span class="indicator opacity-0 w-1 h-1 rounded-full bg-secondary-container mt-0.5 transition-opacity"></span></a></div></nav></body></html>

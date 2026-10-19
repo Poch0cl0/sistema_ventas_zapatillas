@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary": "#ab3500", "on-primary-fixed": "#1c1b1b", "secondary-fixed": "#ffdbd0", "on-background": "#1a1c1d", "on-secondary-container": "#5d1900", "surface-container-low": "#f3f3f4", "primary-fixed-dim": "#c8c6c5", "on-error": "#ffffff", "secondary-fixed-dim": "#ffb59d", "secondary-container": "#fe6a34", "on-primary-fixed-variant": "#474646", "primary-fixed": "#e5e2e1", "on-secondary-fixed-variant": "#832600", "tertiary-fixed": "#dce2f3", "primary-container": "#1c1b1b", "primary": "#000000", "tertiary-container": "#151c27", "outline": "#747878", "background": "#f9f9fa", "surface-container-high": "#e8e8e9", "inverse-on-surface": "#f0f1f2", "outline-variant": "#c4c7c7", "inverse-surface": "#2f3132", "on-error-container": "#93000a", "on-surface-variant": "#444748", "surface-tint": "#5f5e5e", "tertiary-fixed-dim": "#c0c7d6", "tertiary": "#000000", "on-primary": "#ffffff", "surface-dim": "dadadb", "surface-container-lowest": "#ffffff", "on-surface": "#1a1c1d", "on-secondary-fixed": "#390c00", "on-primary-container": "#858383", "surface-container": "#eeeeef", "surface-variant": "#e2e2e3", "on-secondary": "#ffffff", "error-container": "#ffdad6", "surface-container-highest": "#e2e2e3", "error": "#ba1a1a", "on-tertiary-fixed-variant": "#404754", "surface-bright": "#f9f9fa", "inverse-primary": "#c8c6c5", "on-tertiary-fixed": "#151c27", "on-tertiary": "#ffffff", "on-tertiary-container": "#7d8492", "surface": "#f9f9fa" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "1rem", "margin": "2rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter-mobile": "0.75rem", "space-md": "1rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "gutter": "1.5rem" }, "fontFamily": { "label-size": ["Inter"], "label-badge": ["Inter"], "headline-lg-mobile": ["Inter"], "headline-lg": ["Inter"], "price-lg": ["Inter"], "display-hero-mobile": ["Inter"], "price-md": ["Inter"], "body-sm": ["Inter"], "headline-sm": ["Inter"], "display-hero": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"], "headline-md": ["Inter"] }, "fontSize": { "label-size": ["13px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "600" }], "label-badge": ["11px", { "lineHeight": "12px", "letterSpacing": "0.05em", "fontWeight": "700" }], "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "price-lg": ["24px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "display-hero-mobile": ["36px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "price-md": ["18px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-hero": ["56px", { "lineHeight": "60px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "700" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen selection:bg-secondary-fixed"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)] pt-safe"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="font-headline-md text-headline-md tracking-tight uppercase text-primary select-none">SNEAKERSTORE</span></div><div class="flex items-center gap-space-xs"><button aria-label="Buscar calzado" class="w-11 h-11 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><a aria-label="Carrito de compras" class="w-11 h-11 min-w-[44px] min-h-[44px] relative flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors" data-path="carrito" href="#"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-2 right-2 flex items-center justify-center min-w-[16px] h-4 px-1 rounded-full bg-secondary-container text-on-secondary font-label-badge text-label-badge leading-none">2</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-8">
+<!-- 1. BARRA SUPERIOR DE SIMULACIÓN DE ESTADOS UX (Interactivo) -->
+<aside aria-label="Simulador de estados UX" class="w-full bg-surface-container-high px-margin-mobile py-space-sm mb-space-md">
+<div class="max-w-md mx-auto">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary-container">tune</span>
+          Simulación de Estados UX
+        </span>
+<span class="font-body-sm text-body-sm text-outline" id="active-state-tag">Modo: 1. Normal</span>
+</div>
+<div class="grid grid-cols-4 gap-1 bg-surface-container-low p-1 rounded-lg">
+<button class="ux-tab-btn py-1.5 px-1 rounded-md text-center font-label-badge text-label-badge transition-all bg-primary text-on-primary shadow-sm" id="btn-state-normal" onclick="setUxState('normal')" type="button">
+          1. Normal
+        </button>
+<button class="ux-tab-btn py-1.5 px-1 rounded-md text-center font-label-badge text-label-badge transition-all text-on-surface-variant hover:text-primary" id="btn-state-editing" onclick="setUxState('editing')" type="button">
+          2. Edición
+        </button>
+<button class="ux-tab-btn py-1.5 px-1 rounded-md text-center font-label-badge text-label-badge transition-all text-on-surface-variant hover:text-primary" id="btn-state-error" onclick="setUxState('error')" type="button">
+          3. Error
+        </button>
+<button class="ux-tab-btn py-1.5 px-1 rounded-md text-center font-label-badge text-label-badge transition-all text-on-surface-variant hover:text-primary" id="btn-state-success" onclick="setUxState('success')" type="button">
+          4. Éxito
+        </button>
+</div>
+</div>
+</aside>
+<div class="w-full max-w-md mx-auto px-margin-mobile flex flex-col gap-space-md">
+<!-- FEEDBACK TOAST / BANNER (Para Estado Éxito) -->
+<div class="hidden flex items-start gap-space-sm p-space-md rounded-xl bg-surface-container-lowest shadow-md transition-all" id="toast-success">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-label-size text-label-size text-on-surface font-bold">¡Cambios guardados con éxito!</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Tus datos personales y preferencias de contacto han sido actualizados en SneakerStore.</p>
+</div>
+<button class="text-outline hover:text-primary p-1" onclick="dismissToast()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- 2. ENCABEZADO DE PERFIL / HERO CARD -->
+<section class="w-full rounded-xl bg-surface-container-lowest p-space-md shadow-sm relative overflow-hidden">
+<!-- Acento Kinetic sutil superior -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary-container"></div>
+<div class="flex items-start gap-space-md">
+<!-- Avatar con Badge de Verificado -->
+<div class="relative shrink-0">
+<div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-md">
+<span class="font-headline-sm text-headline-sm text-on-primary tracking-wider font-extrabold select-none">CM</span>
+</div>
+<span class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-secondary-container text-on-secondary flex items-center justify-center shadow-sm" title="Cliente VIP Verificado">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</span>
+</div>
+<!-- Info Principal -->
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge uppercase tracking-wider">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+              VIP Member
+            </span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-badge text-label-badge uppercase">
+              Lima, PE
+            </span>
+</div>
+<h1 class="font-headline-sm text-headline-sm text-primary mt-1 truncate">Carlos Mendoza Poma</h1>
+<p class="font-body-sm text-body-sm text-outline truncate flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">mail</span>
+            carlos.mendoza@email.com
+          </p>
+<p class="font-body-sm text-body-sm text-outline-variant text-[11px] mt-1">
+            Miembro desde Enero 2024
+          </p>
+</div>
+</div>
+<!-- Resumen Rápido / Micro-métricas Hype -->
+<div class="grid grid-cols-3 gap-2 mt-space-md pt-space-sm bg-surface-container-low rounded-lg p-2.5 text-center">
+<div class="flex flex-col items-center">
+<span class="font-price-md text-price-md text-primary">4</span>
+<span class="font-body-sm text-body-sm text-outline text-[11px] leading-tight">Pedidos listos</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-price-md text-price-md text-secondary-container flex items-center gap-0.5">
+            1
+            <span class="material-symbols-outlined text-[14px]">local_shipping</span>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight font-semibold">En camino</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-price-md text-price-md text-primary flex items-center gap-0.5">
+            Oro
+          </span>
+<span class="font-body-sm text-body-sm text-outline text-[11px] leading-tight">Nivel Hype</span>
+</div>
+</div>
+</section>
+<!-- 3. ACCESO RÁPIDO A 'MIS PEDIDOS' -->
+<section class="w-full rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">package_2</span>
+</div>
+<div>
+<h2 class="font-label-size text-label-size text-primary font-bold">Mis Pedidos y Envíos</h2>
+<p class="font-body-sm text-body-sm text-outline text-[12px]">Rastrea tus compras y entregas en curso</p>
+</div>
+</div>
+</div>
+<!-- Miniatura del Pedido Activo Más Reciente -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-sm hover:bg-surface-container transition-colors cursor-pointer">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center p-1 shrink-0 overflow-hidden shadow-sm">
+<img class="w-full h-full object-contain" data-alt="Zapatilla deportiva urbana de edición limitada color blanco y naranja en ángulo de catálogo minimalista sobre fondo neutro de estudio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA12c6x23mhU05YTfV7agMvulbxgpYsqCRFdVcryvFqT-PGK8jKcpVciM7o4v4lUYrTj5llEW3J-AwU7wLA6lzEgxqvKzG8lBZys5n-0Tgv-njZyLGjRbtDLYFLFgiNyfdZEiORZcvnRlMHgk9cIGfxTUGS6nWSfCAuddYkQx5Qt645JjCdqVXfkleVYPxFtAXASCkUndyFrwMDR0UuO89urNqtGU-Qg1kCkcBHluXjVkDSHV2UYNhmsw"/>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-size text-label-size text-primary font-bold">#SK-83105</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge text-[10px]">
+                En camino
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-outline text-[12px] truncate">Air Max Pulse Urban • Lima Express</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px] shrink-0">chevron_right</span>
+</div>
+<div class="mt-space-sm flex items-center justify-between pt-space-xs">
+<a class="inline-flex items-center gap-1 font-label-size text-label-size text-secondary-container hover:text-secondary font-bold" data-path="pedidos" href="#">
+          Ver todos mis pedidos (4)
+          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<span class="font-body-sm text-body-sm text-outline text-[11px]">Entrega est. Hoy 6:00 PM</span>
+</div>
+</section>
+<!-- 4. TARJETA FORMULARIO: 'DATOS PERSONALES' (EDICIÓN Y VALIDACIÓN) -->
+<section class="w-full rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">person</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">Información Personal</h2>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-primary font-label-size text-label-size hover:bg-surface-container-highest transition-colors flex items-center gap-1" id="btn-toggle-edit" onclick="toggleEditMode()" type="button">
+<span class="material-symbols-outlined text-[16px]" id="edit-icon">edit</span>
+<span id="edit-label">Editar</span>
+</button>
+</div>
+<!-- Banner de Error Dinámico (para estado error) -->
+<div class="hidden mb-space-md p-space-sm rounded-lg bg-error-container text-on-error-container flex items-center gap-2" id="error-banner">
+<span class="material-symbols-outlined text-[18px]">error</span>
+<span class="font-body-sm text-body-sm font-semibold">Por favor revisa los campos señalados en rojo.</span>
+</div>
+<form class="flex flex-col gap-space-md" id="profile-form" onsubmit="event.preventDefault(); saveProfileChanges();">
+<!-- Campo: Nombre Completo -->
+<div class="flex flex-col gap-1">
+<label class="font-label-size text-label-size text-on-surface-variant flex items-center justify-between" for="input-fullname">
+<span>Nombre Completo</span>
+<span class="text-outline text-[11px]">Documento DNI verificado</span>
+</label>
+<div class="relative flex items-center">
+<span class="absolute left-3.5 material-symbols-outlined text-outline text-[20px] pointer-events-none">person</span>
+<input class="w-full h-11 pl-11 pr-4 rounded-lg bg-surface-container-low text-primary font-body-md text-body-md disabled:opacity-80 disabled:cursor-not-allowed focus:bg-surface-container-lowest focus:outline-none transition-colors" disabled="" id="input-fullname" type="text" value="Carlos Mendoza Poma"/>
+</div>
+<p class="hidden font-body-sm text-body-sm text-error mt-0.5 flex items-center gap-1" id="error-name">
+<span class="material-symbols-outlined text-[14px]">cancel</span>
+            El nombre debe contener al menos dos apellidos completos.
+          </p>
+</div>
+<!-- Campo: Teléfono de Contacto (Formato Perú) -->
+<div class="flex flex-col gap-1">
+<label class="font-label-size text-label-size text-on-surface-variant flex items-center justify-between" for="input-phone">
+<span>Teléfono Móvil (Perú)</span>
+<span class="text-secondary-container font-label-badge text-label-badge uppercase">Alertas SMS / Olva</span>
+</label>
+<div class="relative flex items-center">
+<div class="absolute left-3.5 flex items-center gap-1 text-on-surface-variant font-label-size text-label-size pointer-events-none">
+<span class="material-symbols-outlined text-[18px] text-outline">call</span>
+<span>+51</span>
+</div>
+<input class="w-full h-11 pl-16 pr-4 rounded-lg bg-surface-container-low text-primary font-body-md text-body-md disabled:opacity-80 disabled:cursor-not-allowed focus:bg-surface-container-lowest focus:outline-none transition-colors" disabled="" id="input-phone" maxlength="11" type="tel" value="987 654 321"/>
+</div>
+<p class="hidden font-body-sm text-body-sm text-error mt-0.5 flex items-center gap-1" id="error-phone">
+<span class="material-symbols-outlined text-[14px]">cancel</span>
+            Ingresa un número de celular peruano válido de 9 dígitos.
+          </p>
+</div>
+<!-- Campo: Correo Electrónico (Solo Lectura / Protegido) -->
+<div class="flex flex-col gap-1">
+<label class="font-label-size text-label-size text-on-surface-variant flex items-center justify-between" for="input-email">
+<span>Correo Electrónico</span>
+<span class="inline-flex items-center gap-0.5 text-secondary font-label-badge text-label-badge">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+              Verificado
+            </span>
+</label>
+<div class="relative flex items-center">
+<span class="absolute left-3.5 material-symbols-outlined text-outline text-[20px] pointer-events-none">mail</span>
+<input class="w-full h-11 pl-11 pr-10 rounded-lg bg-surface-container text-on-surface-variant font-body-md text-body-md cursor-not-allowed select-all focus:outline-none" id="input-email" readonly="" type="email" value="carlos.mendoza@email.com"/>
+<span class="absolute right-3.5 material-symbols-outlined text-outline text-[18px] pointer-events-none" title="Campo protegido">lock</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline text-[11px] mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">info</span>
+            Para cambiar tu correo de cuenta Hype, contacta al soporte de SneakerStore.
+          </p>
+</div>
+<!-- Botones de Acción (Visibles solo al Editar o en Simulación Error) -->
+<div class="hidden flex items-center gap-2 pt-space-xs" id="action-buttons-group">
+<button class="flex-1 h-12 rounded-xl bg-surface-container-high text-primary font-label-size text-label-size font-bold hover:bg-surface-container-highest transition-colors" onclick="cancelEditMode()" type="button">
+            Cancelar
+          </button>
+<button class="flex-1 h-12 rounded-xl bg-secondary-container text-on-secondary font-label-size text-label-size font-bold shadow-md hover:opacity-95 transition-all flex items-center justify-center gap-1.5" type="submit">
+<span class="material-symbols-outlined text-[18px]">check</span>
+            Guardar cambios
+          </button>
+</div>
+</form>
+</section>
+<!-- 5. PREFERENCIAS Y DIRECCIÓN DE ENTREGA HABITUAL -->
+<section class="w-full rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-md">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+</div>
+<h2 class="font-label-size text-label-size text-primary font-bold">Dirección Predeterminada</h2>
+</div>
+<button class="font-label-size text-label-size text-secondary-container hover:text-secondary font-semibold">
+            Gestionar
+          </button>
+</div>
+<!-- Tarjeta de Dirección Actual -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm mt-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-primary">home</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-size text-label-size text-primary font-bold">Casa / Miraflores</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface-variant font-label-badge text-label-badge text-[10px] uppercase">
+                Principal
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Av. José Larco 852, Dpto. 402</p>
+<p class="font-body-sm text-body-sm text-outline text-[12px]">Miraflores, Lima 15074 • Ref: Altura Parque Kennedy</p>
+</div>
+</div>
+</div>
+<!-- Preferencias de Notificaciones de Drops y Envíos -->
+<div class="pt-space-xs">
+<h3 class="font-label-size text-label-size text-primary font-bold mb-space-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">notifications_active</span>
+          Alertas de Drops y Envíos
+        </h3>
+<div class="flex flex-col gap-2">
+<!-- Toggle WhatsApp -->
+<label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary-container text-[20px]">chat</span>
+<div>
+<p class="font-label-size text-label-size text-primary font-semibold">WhatsApp Express</p>
+<p class="font-body-sm text-body-sm text-outline text-[11px]">Rastreo en tiempo real con Olva / Motorizado</p>
+</div>
+</div>
+<input checked="" class="w-5 h-5 accent-secondary-container rounded cursor-pointer" type="checkbox"/>
+</label>
+<!-- Toggle Email Drops -->
+<label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">mark_email_unread</span>
+<div>
+<p class="font-label-size text-label-size text-primary font-semibold">Lanzamientos VIP (Drops)</p>
+<p class="font-body-sm text-body-sm text-outline text-[11px]">Acceso prioritario 15 min antes del sold out</p>
+</div>
+</div>
+<input checked="" class="w-5 h-5 accent-secondary-container rounded cursor-pointer" type="checkbox"/>
+</label>
+</div>
+</div>
+</section>
+<!-- 6. ZONA DE SEGURIDAD Y ACCIÓN CERRAR SESIÓN -->
+<section class="w-full rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-sm">
+<h2 class="font-label-size text-label-size text-primary font-bold mb-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">security</span>
+        Seguridad de la Cuenta
+      </h2>
+<!-- Opción Cambiar Contraseña -->
+<button class="w-full p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between hover:bg-surface-container transition-colors text-left" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">key</span>
+</div>
+<div>
+<p class="font-label-size text-label-size text-primary font-semibold">Cambiar contraseña</p>
+<p class="font-body-sm text-body-sm text-outline text-[11px]">Actualizada hace 3 meses</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">chevron_right</span>
+</button>
+<!-- Botón de Cerrar Sesión Seguro -->
+<button class="w-full mt-space-xs h-12 rounded-xl bg-surface-container-low text-error hover:bg-error-container hover:text-on-error-container font-label-size text-label-size font-bold transition-all flex items-center justify-center gap-2" onclick="confirmLogout()" type="button">
+<span class="material-symbols-outlined text-[18px]">logout</span>
+        Cerrar Sesión Segura
+      </button>
+<!-- Versión del Sistema y Build -->
+<div class="text-center pt-space-xs">
+<p class="font-body-sm text-body-sm text-outline-variant text-[11px] uppercase tracking-wider">
+          SneakerStore App v2.4.0 • Build Perú
+        </p>
+</div>
+</section>
+</div>
+</div>
+<script>
+  let currentMode = 'normal';
+
+  function setUxState(state) {
+    currentMode = state;
+    const tag = document.getElementById('active-state-tag');
+    const toast = document.getElementById('toast-success');
+    const errorBanner = document.getElementById('error-banner');
+    const errorName = document.getElementById('error-name');
+    const errorPhone = document.getElementById('error-phone');
+    const inputName = document.getElementById('input-fullname');
+    const inputPhone = document.getElementById('input-phone');
+    const actionGroup = document.getElementById('action-buttons-group');
+    const editLabel = document.getElementById('edit-label');
+    const editIcon = document.getElementById('edit-icon');
+
+    // Resetear botones de pestaña
+    document.querySelectorAll('.ux-tab-btn').forEach(btn => {
+      btn.className = 'ux-tab-btn py-1.5 px-1 rounded-md text-center font-label-badge text-label-badge transition-all text-on-surface-variant hover:text-primary';
+    });
+    const activeBtn = document.getElementById('btn-state-' + state);
+    if (activeBtn) {
+      activeBtn.className = 'ux-tab-btn py-1.5 px-1 rounded-md text-center font-label-badge text-label-badge transition-all bg-primary text-on-primary shadow-sm';
+    }
+
+    // Reset estados visuales
+    toast.classList.add('hidden');
+    errorBanner.classList.add('hidden');
+    errorName.classList.add('hidden');
+    errorPhone.classList.add('hidden');
+    inputName.classList.remove('bg-error-container', 'text-on-error-container');
+    inputPhone.classList.remove('bg-error-container', 'text-on-error-container');
+
+    if (state === 'normal') {
+      tag.textContent = 'Modo: 1. Normal';
+      inputName.disabled = true;
+      inputPhone.disabled = true;
+      inputName.value = 'Carlos Mendoza Poma';
+      inputPhone.value = '987 654 321';
+      actionGroup.classList.add('hidden');
+      editLabel.textContent = 'Editar';
+      editIcon.textContent = 'edit';
+    } 
+    else if (state === 'editing') {
+      tag.textContent = 'Modo: 2. Editando';
+      inputName.disabled = false;
+      inputPhone.disabled = false;
+      actionGroup.classList.remove('hidden');
+      editLabel.textContent = 'Editando';
+      editIcon.textContent = 'edit_note';
+      inputName.focus();
+    } 
+    else if (state === 'error') {
+      tag.textContent = 'Modo: 3. Error';
+      inputName.disabled = false;
+      inputPhone.disabled = false;
+      inputName.value = 'Carlos M.';
+      inputPhone.value = '987 65';
+      actionGroup.classList.remove('hidden');
+      editLabel.textContent = 'Revisar';
+      editIcon.textContent = 'warning';
+      errorBanner.classList.remove('hidden');
+      errorName.classList.remove('hidden');
+      errorPhone.classList.remove('hidden');
+      inputName.classList.add('bg-error-container', 'text-on-error-container');
+      inputPhone.classList.add('bg-error-container', 'text-on-error-container');
+    } 
+    else if (state === 'success') {
+      tag.textContent = 'Modo: 4. Éxito';
+      inputName.disabled = true;
+      inputPhone.disabled = true;
+      inputName.value = 'Carlos Mendoza Poma';
+      inputPhone.value = '987 654 321';
+      actionGroup.classList.add('hidden');
+      editLabel.textContent = 'Editar';
+      editIcon.textContent = 'edit';
+      toast.classList.remove('hidden');
+    }
+  }
+
+  function toggleEditMode() {
+    if (currentMode === 'normal') {
+      setUxState('editing');
+    } else {
+      setUxState('normal');
+    }
+  }
+
+  function cancelEditMode() {
+    setUxState('normal');
+  }
+
+  function saveProfileChanges() {
+    const inputName = document.getElementById('input-fullname').value.trim();
+    const inputPhone = document.getElementById('input-phone').value.replace(/\s+/g, '');
+
+    if (inputName.length < 8 || inputPhone.length < 9) {
+      setUxState('error');
+    } else {
+      setUxState('success');
+    }
+  }
+
+  function dismissToast() {
+    document.getElementById('toast-success').classList.add('hidden');
+  }
+
+  function confirmLogout() {
+    if (confirm('¿Deseas cerrar tu sesión segura en SneakerStore Perú?')) {
+      alert('Sesión cerrada con éxito. ¡Vuelve pronto por los mejores drops!');
+    }
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_16px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center w-14 h-11 min-w-[44px] min-h-[44px] text-on-surface-variant transition-colors gap-0.5" data-path="inicio" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-badge text-label-badge tracking-tight uppercase">Inicio</span></a><a class="flex flex-col items-center justify-center w-14 h-11 min-w-[44px] min-h-[44px] text-on-surface-variant transition-colors gap-0.5" data-path="catalogo" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-badge text-label-badge tracking-tight uppercase">Catálogo</span></a><a class="relative flex flex-col items-center justify-center w-14 h-11 min-w-[44px] min-h-[44px] text-on-surface-variant transition-colors gap-0.5" data-path="carrito" href="#"><div class="relative"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute -top-1 -right-2 flex items-center justify-center min-w-[16px] h-4 px-1 rounded-full bg-secondary-container text-on-secondary font-label-badge text-label-badge leading-none">2</span></div><span class="font-label-badge text-label-badge tracking-tight uppercase">Carrito</span></a><a class="flex flex-col items-center justify-center w-14 h-11 min-w-[44px] min-h-[44px] text-on-surface-variant transition-colors gap-0.5" data-path="pedidos" href="#"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-badge text-label-badge tracking-tight uppercase">Pedidos</span></a><a aria-current="page" class="relative flex flex-col items-center justify-center w-14 h-11 min-w-[44px] min-h-[44px] transition-colors gap-0.5 text-primary font-bold" data-path="perfil-de-usuario" href="#"><span class="material-symbols-outlined text-[22px]">person</span><span class="font-label-badge text-label-badge tracking-tight uppercase">Perfil</span></a></div></nav></body></html>

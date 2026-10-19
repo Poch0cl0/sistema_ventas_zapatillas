@@ -1,0 +1,1 @@
+﻿const adminRoot = '/preview/admin';

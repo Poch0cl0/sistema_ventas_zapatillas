@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface":"#f9f9fa","surface-variant":"#e2e2e3","on-surface-variant":"#444748","secondary-container":"#fe6a34","on-surface":"#1a1c1d","surface-container":"#eeeeef","secondary-fixed":"#ffdbd0","inverse-primary":"#c8c6c5","on-background":"#1a1c1d","surface-dim":"#dadadb","tertiary":"#000000","outline-variant":"#c4c7c7","tertiary-container":"#151c27","primary-fixed-dim":"#c8c6c5","surface-container-high":"#e8e8e9","tertiary-fixed-dim":"#c0c7d6","on-primary-fixed-variant":"#474646","on-secondary-fixed":"#390c00","surface-tint":"#5f5e5e","surface-bright":"#f9f9fa","on-primary-container":"#858383","secondary":"#ab3500","background":"#f9f9fa","on-primary":"#ffffff","tertiary-fixed":"#dce2f3","surface-container-low":"#f3f3f4","on-tertiary-fixed":"#151c27","on-secondary-fixed-variant":"#832600","surface-container-highest":"#e2e2e3","on-primary-fixed":"#1c1b1b","on-error":"#ffffff","primary":"#000000","on-error-container":"#93000a","on-tertiary":"#ffffff","outline":"#747878","error":"#ba1a1a","primary-fixed":"#e5e2e1","on-secondary-container":"#5d1900","primary-container":"#1c1b1b","on-tertiary-fixed-variant":"#404754","surface-container-lowest":"#ffffff","inverse-on-surface":"#f0f1f2","error-container":"#ffdad6","secondary-fixed-dim":"#ffb59d","on-secondary":"#ffffff","on-tertiary-container":"#7d8492","inverse-surface":"#2f3132"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-mobile":"1rem","gutter":"1.5rem","space-md":"1rem","margin":"2rem","space-xs":"0.25rem","gutter-mobile":"0.75rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xl":"2.5rem"},"fontFamily":{"display-hero":["Inter"],"headline-lg":["Inter"],"headline-sm":["Inter"],"body-lg":["Inter"],"price-lg":["Inter"],"label-size":["Inter"],"body-sm":["Inter"],"label-badge":["Inter"],"display-hero-mobile":["Inter"],"body-md":["Inter"],"headline-lg-mobile":["Inter"],"headline-md":["Inter"],"price-md":["Inter"]},"fontSize":{"display-hero":["56px",{"lineHeight":"60px","letterSpacing":"-0.03em","fontWeight":"800"}],"headline-lg":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"price-lg":["24px",{"lineHeight":"28px","letterSpacing":"-0.02em","fontWeight":"800"}],"label-size":["13px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"label-badge":["11px",{"lineHeight":"12px","letterSpacing":"0.05em","fontWeight":"700"}],"display-hero-mobile":["36px",{"lineHeight":"40px","letterSpacing":"-0.025em","fontWeight":"800"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"700"}],"price-md":["18px",{"lineHeight":"22px","letterSpacing":"-0.01em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col flex-1 overflow-y-auto"><div class="px-6 pt-6 pb-5 flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">question_mark</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-tight text-primary leading-none">SneakerStore</span><span class="font-label-badge text-label-badge text-on-surface-variant tracking-wider uppercase mt-0.5">Admin Panel</span></div></div><span class="bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge px-2 py-0.5 rounded-full">HQ LIMA</span></div><div class="px-6 py-2"><div class="p-3 rounded-lg bg-surface-container-low flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary-container text-[18px]">store</span><div class="flex flex-col"><span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">Almacén Central</span><span class="font-label-badge text-label-badge text-on-surface-variant">Miraflores, Lima PE</span></div></div></div><nav class="flex-1 px-4 py-4 space-y-1" data-active-classes="bg-primary text-on-primary font-semibold shadow-sm"><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="resumen" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Resumen</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="productos" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-body-md text-body-md">Productos</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="inventario" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">warehouse</span><span class="font-body-md text-body-md">Inventario</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="pedidos" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span class="font-body-md text-body-md">Pedidos</span></div><span class="bg-secondary-container text-on-primary font-label-badge text-label-badge px-2 py-0.5 rounded-full">12 Pend</span></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="ventas-presenciales" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">point_of_sale</span><span class="font-body-md text-body-md">Ventas Presenciales</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="zonas-de-delivery" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">map</span><span class="font-body-md text-body-md">Zonas de Delivery</span></div></a></nav></div><div class="p-4 border-t border-surface-container-high bg-surface-container-lowest"><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-error hover:bg-error-container hover:text-on-error-container transition-all mb-3" data-path="cerrar-sesion" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span class="font-body-md text-body-md font-medium">Cerrar sesión</span></a><div class="flex items-center justify-between pt-2"><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Admin General</span><span class="font-label-badge text-label-badge text-on-surface-variant">ops@sneakerstore.pe</span></div></div><span class="material-symbols-outlined text-outline text-[18px]">verified</span></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span class="hover:text-on-surface cursor-pointer">Admin</span><span class="material-symbols-outlined text-[16px]">chevron_right</span><span class="font-semibold text-on-surface">Dashboard</span></div><div class="hidden lg:flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-badge text-label-badge"><span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span><span>Sistema Operativo (Firebase Ready)</span></div></div><div class="flex items-center gap-4"><div class="relative hidden sm:block w-72"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full h-10 pl-9 pr-4 rounded-full bg-surface-container-low text-on-surface placeholder:text-on-surface-variant text-body-sm font-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary transition-all" placeholder="Buscar pedido, SKU, cliente..." type="text"/></div><button class="relative p-2 rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary-container"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface flex-1 w-full px-gutter py-space-md"><div class="flex flex-col w-full">
+<!-- Interactive State Simulator Toolbar -->
+<div class="bg-surface-container-lowest shadow-sm rounded-xl p-3 mb-space-md flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">tune</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Simulador de Estados UX:</span>
+</div>
+<div class="flex items-center flex-wrap gap-1.5" id="ux-state-bar">
+<button class="state-btn px-3 py-1.5 rounded-lg text-body-sm font-semibold bg-primary text-on-primary transition-all" id="btn-state-live" onclick="setUxState('live')">
+        1. Tabla Principal (En vivo)
+      </button>
+<button class="state-btn px-3 py-1.5 rounded-lg text-body-sm font-semibold bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" id="btn-state-adjust-modal" onclick="setUxState('adjust-modal')">
+        2. Modal Ajuste Abierto
+      </button>
+<button class="state-btn px-3 py-1.5 rounded-lg text-body-sm font-semibold bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" id="btn-state-add-size" onclick="setUxState('add-size')">
+        3. Modal Agregar Talla
+      </button>
+<button class="state-btn px-3 py-1.5 rounded-lg text-body-sm font-semibold bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" id="btn-state-empty" onclick="setUxState('empty')">
+        4. Inventario Vacío
+      </button>
+<button class="state-btn px-3 py-1.5 rounded-lg text-body-sm font-semibold bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" id="btn-state-alerts" onclick="setUxState('alerts')">
+        5. Alertas Críticas (≤ 2)
+      </button>
+<button class="state-btn px-3 py-1.5 rounded-lg text-body-sm font-semibold bg-surface-container hover:bg-surface-container-high text-on-surface transition-all flex items-center gap-1" id="btn-state-toast" onclick="triggerToast()">
+<span class="material-symbols-outlined text-[16px] text-secondary">notifications_active</span>
+        6. Ver Toast Exitoso
+      </button>
+</div>
+</div>
+<!-- Page Header -->
+<header class="flex flex-col xl:flex-row xl:items-center justify-between gap-4 mb-space-md">
+<div class="flex flex-col gap-1 max-w-3xl">
+<div class="flex items-center gap-3">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Control Central de Inventario</h1>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge px-2.5 py-1 rounded-full flex items-center gap-1.5 uppercase font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-ping"></span>
+          Stock Compartido Omnicanal
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Gestión unificada de existencias por talla europea (EU). El inventario físico en el almacén Miraflores se sincroniza en tiempo real con la tienda online y el mostrador de ventas presenciales.
+      </p>
+</div>
+<!-- Header Actions -->
+<div class="flex items-center gap-3 shrink-0">
+<button class="h-11 px-4 rounded-xl bg-surface-container-lowest hover:bg-surface-container text-on-surface shadow-sm font-body-md text-body-md font-semibold flex items-center gap-2 transition-all" onclick="triggerExportNotice()">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+        Exportar Kárdex (CSV/Excel)
+      </button>
+<button class="h-11 px-5 rounded-xl bg-primary hover:bg-secondary text-on-primary font-body-md text-body-md font-semibold flex items-center gap-2 shadow-md transition-all" onclick="openAddSizeModal()">
+<span class="material-symbols-outlined text-[18px]">add_box</span>
+        + Agregar Nueva Talla
+      </button>
+</div>
+</header>
+<!-- Synchronization Notice Banner -->
+<div class="bg-surface-container-lowest rounded-xl p-4 mb-space-lg shadow-sm flex items-start sm:items-center justify-between gap-4">
+<div class="flex items-start sm:items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center shrink-0 text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[22px]">sync_alt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface leading-tight">Aviso de Sincronización Omnicanal</span>
+<span class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+          Las unidades marcadas como <strong class="text-on-surface font-semibold">“Reservadas”</strong> corresponden a compras web con reserva activa de 24h para validación Yape/Plin o empaquetado. El stock <strong class="text-on-surface font-semibold">“Disponible”</strong> puede despacharse inmediatamente en mostrador o venta digital.
+        </span>
+</div>
+</div>
+<span class="hidden md:inline-flex px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-badge text-label-badge uppercase tracking-wider shrink-0">
+      Latencia: 18ms • Firebase Live
+    </span>
+</div>
+<!-- KPI Metric Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-space-lg">
+<!-- Metric 1: Total Pares Físicos -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Total Pares Físicos</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[18px]">inventory</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between mb-3">
+<span class="font-price-lg text-display-hero text-on-surface tracking-tight">230</span>
+<span class="font-label-badge text-label-badge bg-surface-container text-on-surface px-2 py-0.5 rounded-full font-bold">82% Capacidad</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 82%;"></div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-2">Almacén Central Miraflores • Cap: 280 pares</span>
+</div>
+<!-- Metric 2: Stock Disponible -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Stock Disponible Inmediato</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between mb-3">
+<span class="font-price-lg text-display-hero text-on-surface tracking-tight">206</span>
+<span class="font-label-badge text-label-badge bg-surface-container text-on-surface px-2 py-0.5 rounded-full font-bold">89.5% Físico</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 89.5%;"></div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-2">Habilitado para POS mostrador y catálogo web</span>
+</div>
+<!-- Metric 3: Pares Reservados -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Pares Reservados (Web / Yape)</span>
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[18px]">hourglass_top</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between mb-3">
+<span class="font-price-lg text-display-hero text-secondary tracking-tight">24</span>
+<span class="font-label-badge text-label-badge bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded-full font-bold">12 Órdenes</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full" style="width: 10.5%;"></div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-2">Retenidos por checkout web pendiente de confirmación</span>
+</div>
+<!-- Metric 4: Tallas en Alerta Crítica -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Alertas Críticas (≤ 2 Pares)</span>
+<div class="w-8 h-8 rounded-lg bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between mb-3">
+<span class="font-price-lg text-display-hero text-error tracking-tight">05</span>
+<button class="font-label-badge text-label-badge text-error underline hover:text-on-surface font-semibold" onclick="setUxState('alerts')">Ver Tallas</button>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 25%;"></div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-2">Reposición prioritaria requerida con distribuidor</span>
+</div>
+</div>
+<!-- Filters & Search Toolbar -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm mb-space-md flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full h-11 pl-11 pr-4 rounded-xl bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary focus:outline-none transition-all" id="inventory-search" oninput="handleSearch(this.value)" placeholder="Buscar por nombre de modelo, SKU, código de barra o talla..." type="text"/>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<!-- Marca Filter -->
+<div class="relative">
+<select class="h-11 px-3.5 pr-8 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md font-medium focus:outline-none appearance-none cursor-pointer" id="filter-brand" onchange="applyFilters()">
+<option value="all">Todas las Marcas</option>
+<option value="Nike">Nike</option>
+<option value="Jordan">Jordan</option>
+<option value="New Balance">New Balance</option>
+<option value="Adidas">Adidas</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[18px]">expand_more</span>
+</div>
+<!-- Talla EU Filter -->
+<div class="relative">
+<select class="h-11 px-3.5 pr-8 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md font-medium focus:outline-none appearance-none cursor-pointer" id="filter-size" onchange="applyFilters()">
+<option value="all">Todas las Tallas (EU)</option>
+<option value="EU 38">EU 38</option>
+<option value="EU 39">EU 39</option>
+<option value="EU 40">EU 40</option>
+<option value="EU 41">EU 41</option>
+<option value="EU 42">EU 42</option>
+<option value="EU 42.5">EU 42.5</option>
+<option value="EU 43">EU 43</option>
+<option value="EU 44">EU 44</option>
+<option value="EU 45">EU 45</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[18px]">expand_more</span>
+</div>
+<!-- Estado Filter -->
+<div class="relative">
+<select class="h-11 px-3.5 pr-8 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md font-medium focus:outline-none appearance-none cursor-pointer" id="filter-status" onchange="applyFilters()">
+<option value="all">Todos los Estados</option>
+<option value="healthy">Stock Saludable (&gt; 2)</option>
+<option value="critical">Alerta Crítica (≤ 2)</option>
+<option value="out">Agotado (0)</option>
+<option value="reserved">Con Reservas Activas</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[18px]">expand_more</span>
+</div>
+<!-- Reset & Urgent Filter Button -->
+<button class="h-11 px-3.5 rounded-xl bg-secondary-fixed text-on-secondary-fixed hover:bg-secondary-container hover:text-on-primary font-body-md text-body-md font-semibold flex items-center gap-1.5 transition-all" onclick="filterCriticalOnly()">
+<span class="material-symbols-outlined text-[18px]">emergency</span>
+        Solo Reposición Urgente
+      </button>
+<button class="w-11 h-11 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant flex items-center justify-center transition-all" onclick="resetAllFilters()" title="Reiniciar Filtros">
+<span class="material-symbols-outlined text-[20px]">restart_alt</span>
+</button>
+</div>
+</div>
+<!-- Main Content Layout: Table & Side Kardex Panel -->
+<div class="grid grid-cols-1 2xl:grid-cols-12 gap-space-md mb-space-xl">
+<!-- Table Container (8 cols on 2xl) -->
+<div class="2xl:col-span-8 flex flex-col">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Head Bar -->
+<div class="px-5 py-4 bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Desglose de Existencias por Talla</span>
+<span class="bg-surface-container font-label-badge text-label-badge text-on-surface px-2 py-0.5 rounded-full font-bold" id="rows-count-badge">6 Variantes</span>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-full bg-primary inline-block"></span>
+<span>Miraflores Rack A1-D4</span>
+</div>
+</div>
+<!-- Table Responsive Scroll Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left" id="inventory-table">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-badge text-label-badge uppercase tracking-wider">
+<th class="py-3 px-4">Producto / Modelo</th>
+<th class="py-3 px-3 text-center">Talla EU</th>
+<th class="py-3 px-3 text-center">Disponible</th>
+<th class="py-3 px-3 text-center">Reservado</th>
+<th class="py-3 px-3 text-center">Total Almacén</th>
+<th class="py-3 px-4 text-center">Estado / Alerta</th>
+<th class="py-3 px-4 text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface" id="inventory-tbody">
+<!-- Row 1: Nike Pulse EU 41 (Selected / Critical Alert) -->
+<tr class="inventory-row hover:bg-surface-container-low/70 transition-colors cursor-pointer bg-surface-container-low/40" data-brand="Nike" data-disp="1" data-model="Nike Air Max Pulse Urban" data-res="1" data-size="EU 41" data-sku="NK-PLS-6240" data-status="critical" onclick="selectRowForKardex('Nike Air Max Pulse Urban (EU 41)', 'NK-PLS-6240', 1, 1, 2, this)">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container overflow-hidden flex items-center justify-center shrink-0">
+<img class="w-full h-full object-cover" data-alt="Nike Air Max Pulse sneaker in black and clean white colorway with vibrant orange details, side view studio lighting on a neutral minimal background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtcIkbRGAaeNxsDHXeSeSRFP-Oa7qs5ah093o9G9t51NRtrWfY096XhOriNurXW1f-pEJd5PzqadewkKo7svjXub-9EkYPpOzwEcT8yD2EgaApWXxSbxHzWtmtmiMmCn8WbXc_AZ5wTJP1lrqDzgZm7Qt0qTKer60myxKIjuIqIHM-Jd5nPrq2lIoWYP_pqH-N3wgEYLLsJ5uEwAQC7wBTFipQ00eu2QRPIfK9bj5rGSAmTW4KWli4ZQ"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Nike Air Max Pulse Urban</span>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-mono">NK-PLS-6240</span>
+<span>•</span>
+<span>Running Urbana</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 text-center">
+<div class="inline-flex flex-col items-center">
+<span class="font-label-size text-label-size font-bold bg-surface-container-high px-2 py-1 rounded">EU 41</span>
+<span class="text-[10px] text-on-surface-variant mt-0.5">US 8 • 26cm</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container text-on-surface font-headline-sm text-headline-sm font-bold">1</span>
+</td>
+<td class="py-3.5 px-3 text-center">
+<div class="inline-flex items-center gap-1 text-secondary font-headline-sm text-headline-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                    1
+                  </div>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">2</span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-error font-label-badge text-label-badge font-bold">
+<span class="material-symbols-outlined text-[14px]">error</span>
+                    Alerta Crítica: 1 par
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1.5" onclick="event.stopPropagation()">
+<button class="h-8 px-2.5 rounded-lg bg-primary hover:bg-secondary text-on-primary font-body-sm text-body-sm font-semibold transition-all" onclick="openAdjustModal('Nike Air Max Pulse Urban', 'NK-PLS-6240', 'EU 41', 1, 1)">
+                      Ajustar Stock
+                    </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-all" onclick="selectRowForKardex('Nike Air Max Pulse Urban (EU 41)', 'NK-PLS-6240', 1, 1, 2)" title="Ver Kárdex">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Nike Pulse EU 42 (Healthy) -->
+<tr class="inventory-row hover:bg-surface-container-low/70 transition-colors cursor-pointer" data-brand="Nike" data-disp="4" data-model="Nike Air Max Pulse Urban" data-res="0" data-size="EU 42" data-sku="NK-PLS-6240" data-status="healthy" onclick="selectRowForKardex('Nike Air Max Pulse Urban (EU 42)', 'NK-PLS-6240', 4, 0, 4, this)">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container overflow-hidden flex items-center justify-center shrink-0">
+<img class="w-full h-full object-cover" data-alt="Nike Air Max Pulse angled athletic profile perspective studio photography against stark clean surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSI5_Z-RTqQnXzrXIBC-bBFCaIbcUSEpGgH7bSO7A1TuzPASzVVQV7tkCZkKPuHN2GKdoi7lvdPFTcea81WubvKy8AAXBiH8zsbIUkwCRh_Zg2AfbbTTINsxvS-Xll34xbggcTjsTwaa5R47A6OdG5YByj47ilqJtaR7qxbUTQHlS_i7LjhFXVf38bhTiwgXLMaf_jX_G8UTXtjlCeN3-L2RWCo9WG7y8zwukfNd6MmiDCfD3lbJakzA"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Nike Air Max Pulse Urban</span>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-mono">NK-PLS-6240</span>
+<span>•</span>
+<span>Running Urbana</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 text-center">
+<div class="inline-flex flex-col items-center">
+<span class="font-label-size text-label-size font-bold bg-surface-container-high px-2 py-1 rounded">EU 42</span>
+<span class="text-[10px] text-on-surface-variant mt-0.5">US 8.5 • 26.5cm</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container text-on-surface font-headline-sm text-headline-sm font-bold">4</span>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="text-on-surface-variant font-body-sm text-body-sm font-semibold">0</span>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">4</span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-badge text-label-badge font-bold">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                    Stock Saludable
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1.5" onclick="event.stopPropagation()">
+<button class="h-8 px-2.5 rounded-lg bg-primary hover:bg-secondary text-on-primary font-body-sm text-body-sm font-semibold transition-all" onclick="openAdjustModal('Nike Air Max Pulse Urban', 'NK-PLS-6240', 'EU 42', 4, 0)">
+                      Ajustar Stock
+                    </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-all" onclick="selectRowForKardex('Nike Air Max Pulse Urban (EU 42)', 'NK-PLS-6240', 4, 0, 4)" title="Ver Kárdex">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Jordan Retro Street EU 42.5 (100% Reserved) -->
+<tr class="inventory-row hover:bg-surface-container-low/70 transition-colors cursor-pointer" data-brand="Jordan" data-disp="0" data-model="Jordan Retro Street OG" data-res="2" data-size="EU 42.5" data-sku="JD-RET-5190" data-status="reserved" onclick="selectRowForKardex('Jordan Retro Street OG (EU 42.5)', 'JD-RET-5190', 0, 2, 2, this)">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container overflow-hidden flex items-center justify-center shrink-0">
+<img class="w-full h-full object-cover" data-alt="Air Jordan Retro high top silhouette in premium black and varsity red leather with pristine white midsole, athletic presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAinUC_LtXjY3UxmLyJ6lzt-8xb1GVxPT83leY3I7wlYndl5ThNTvGRrSIqvAHDqIjowN4MBLSpbCVgTQ44ACbAGkP6Om-WLtPJvURs2nvvnVUWLqbh-4WwWRA6_5o9sx6J0LW0h6tq4ic7E6xrSQ-1Py8EN6wiA5vwjAllVizt_0qCKSQBfwMSCLAQTJRfhJ-MLZKmYR9A8a7zxXh4urqRfYfh3XZDiM4ITmA3RaqoeauAD9A8UfuPWA"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Jordan Retro Street OG</span>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-mono">JD-RET-5190</span>
+<span>•</span>
+<span>Basketball Heritage</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 text-center">
+<div class="inline-flex flex-col items-center">
+<span class="font-label-size text-label-size font-bold bg-surface-container-high px-2 py-1 rounded">EU 42.5</span>
+<span class="text-[10px] text-on-surface-variant mt-0.5">US 9 • 27cm</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant font-headline-sm text-headline-sm font-bold">0</span>
+</td>
+<td class="py-3.5 px-3 text-center">
+<div class="inline-flex items-center gap-1 text-secondary font-headline-sm text-headline-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                    2
+                  </div>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">2</span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge font-bold">
+<span class="material-symbols-outlined text-[14px]">lock_clock</span>
+                    Reservado 100% Web
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1.5" onclick="event.stopPropagation()">
+<button class="h-8 px-2.5 rounded-lg bg-primary hover:bg-secondary text-on-primary font-body-sm text-body-sm font-semibold transition-all" onclick="openAdjustModal('Jordan Retro Street OG', 'JD-RET-5190', 'EU 42.5', 0, 2)">
+                      Ajustar Stock
+                    </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-all" onclick="selectRowForKardex('Jordan Retro Street OG (EU 42.5)', 'JD-RET-5190', 0, 2, 2)" title="Ver Kárdex">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: New Balance NB 9060 (Agotado) -->
+<tr class="inventory-row hover:bg-surface-container-low/70 transition-colors cursor-pointer" data-brand="New Balance" data-disp="0" data-model='New Balance NB 9060 "Triple Sea"' data-res="0" data-size="EU 40" data-sku="NB-9060-5790" data-status="out" onclick='selectRowForKardex("New Balance NB 9060 (EU 40)", "NB-9060-5790", 0, 0, 0, this)'>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3 opacity-60">
+<div class="w-12 h-12 rounded-lg bg-surface-container overflow-hidden flex items-center justify-center shrink-0">
+<img class="w-full h-full object-cover grayscale" data-alt="Chunky modern New Balance 9060 sneaker sculpted sole sea salt and grey shades minimal studio shot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXTU2GNsTTEuTPhhr2Hf623GFrAiGPYYDh6EHKpxjcf0wKgvRs9Y_hJi2SBDBYkzFyFnbpZEmhTvrya-tNc0m5oIScv-K8RPEgoN5p5sTb07v1_4k_JBbwexYp35sSYR2V4qCXpcMyiU38qHmOgaAOJZmf5F2LLxY0GCdvH-N2Fd1qQbTTtON2EvZ9vTLBaK4We1FsDX4XV4w0w31er3vag58jNpkNAPYH-4YLARWLQ6CPh8ZTO9XJzA"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">New Balance NB 9060 “Triple Sea”</span>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-mono">NB-9060-5790</span>
+<span>•</span>
+<span>Lifestyle Chunky</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 text-center">
+<div class="inline-flex flex-col items-center opacity-60">
+<span class="font-label-size text-label-size font-bold bg-surface-container-high px-2 py-1 rounded">EU 40</span>
+<span class="text-[10px] text-on-surface-variant mt-0.5">US 7 • 25cm</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant font-headline-sm text-headline-sm font-bold opacity-50">0</span>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="text-on-surface-variant font-body-sm text-body-sm font-semibold opacity-50">0</span>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface-variant opacity-60">0</span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-badge text-label-badge font-bold">
+<span class="material-symbols-outlined text-[14px]">block</span>
+                    Agotado (0 pares)
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1.5" onclick="event.stopPropagation()">
+<button class="h-8 px-2.5 rounded-lg bg-primary hover:bg-secondary text-on-primary font-body-sm text-body-sm font-semibold transition-all" onclick="openAdjustModal('New Balance NB 9060 Triple Sea', 'NB-9060-5790', 'EU 40', 0, 0)">
+                      Reponer Stock
+                    </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-all" onclick='selectRowForKardex("New Balance NB 9060 (EU 40)", "NB-9060-5790", 0, 0, 0)' title="Ver Kárdex">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Adidas Campus 00s (Alerta Crítica) -->
+<tr class="inventory-row hover:bg-surface-container-low/70 transition-colors cursor-pointer" data-brand="Adidas" data-disp="2" data-model='Adidas Campus 00s "Core Black"' data-res="1" data-size="EU 43" data-sku="AD-CMP-3590" data-status="critical" onclick='selectRowForKardex("Adidas Campus 00s (EU 43)", "AD-CMP-3590", 2, 1, 3, this)'>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container overflow-hidden flex items-center justify-center shrink-0">
+<img class="w-full h-full object-cover" data-alt="Classic Adidas Campus 00s low-top sneaker in black suede with bold white stripes and fat laces on clean backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANAVMTrrG1-Ngi6whJc2I4-5yz3_o5h_VqaCMON-0vegdfrNVAfUoCgnaloj-W66tSt97T47qRSTZ2urdC085ztjZV4P9P37-_BziENhkMGtFvhsA-53Zgm81TUZSI-9VM89ZegiefT5eOX75tMweUXsaDASSxeHjHfBlDYzelx-7opu3ahnaPxMgeaOBlAQBXEMi6qBNYYSokbj6XbJeowMJ3QJCyCS7Im4N5awdMYj9MnINkjSwQaQ"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Adidas Campus 00s “Core Black”</span>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-mono">AD-CMP-3590</span>
+<span>•</span>
+<span>Skate / Street</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 text-center">
+<div class="inline-flex flex-col items-center">
+<span class="font-label-size text-label-size font-bold bg-surface-container-high px-2 py-1 rounded">EU 43</span>
+<span class="text-[10px] text-on-surface-variant mt-0.5">US 9.5 • 27.5cm</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container text-on-surface font-headline-sm text-headline-sm font-bold">2</span>
+</td>
+<td class="py-3.5 px-3 text-center">
+<div class="inline-flex items-center gap-1 text-secondary font-headline-sm text-headline-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                    1
+                  </div>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">3</span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge font-bold">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+                    Alerta: 2 pares
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1.5" onclick="event.stopPropagation()">
+<button class="h-8 px-2.5 rounded-lg bg-primary hover:bg-secondary text-on-primary font-body-sm text-body-sm font-semibold transition-all" onclick="openAdjustModal('Adidas Campus 00s Core Black', 'AD-CMP-3590', 'EU 43', 2, 1)">
+                      Ajustar Stock
+                    </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-all" onclick='selectRowForKardex("Adidas Campus 00s (EU 43)", "AD-CMP-3590", 2, 1, 3)' title="Ver Kárdex">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Nike Air Volt React GT (Healthy) -->
+<tr class="inventory-row hover:bg-surface-container-low/70 transition-colors cursor-pointer" data-brand="Nike" data-disp="6" data-model="Nike Air Volt React GT" data-res="2" data-size="EU 44" data-sku="NK-VOLT-8492" data-status="healthy" onclick="selectRowForKardex('Nike Air Volt React GT (EU 44)', 'NK-VOLT-8492', 6, 2, 8, this)">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container overflow-hidden flex items-center justify-center shrink-0">
+<img class="w-full h-full object-cover" data-alt="Nike Air Volt athletic sneaker technical mesh fabric in electric neon and stealth charcoal highlights, commercial sports studio setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcgzNqcft1DWHcD6ahSnCzTHW5Jbwome2krg8aQCz_7nM76J9in5DzfXruJIooNojBeLdzS7WHk0jwNPkLmd_EESIFesZUhKSXxKJGwFkeuVWUze08mN7Npxk3NFUG_uNSs-PzNCfK2dQUo-wMyt4g0xFO8nuNa4YMkRFKrg02HaEy-duDUZPQtQYTR5tg2EAxh8IuSebMYBO7P_0eRVFSj_K030B2vcve2A1_jqts0Z9MtFFpkUj6aA"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Nike Air Volt React GT</span>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-mono">NK-VOLT-8492</span>
+<span>•</span>
+<span>Performance Pro</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3 text-center">
+<div class="inline-flex flex-col items-center">
+<span class="font-label-size text-label-size font-bold bg-surface-container-high px-2 py-1 rounded">EU 44</span>
+<span class="text-[10px] text-on-surface-variant mt-0.5">US 10 • 28cm</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container text-on-surface font-headline-sm text-headline-sm font-bold">6</span>
+</td>
+<td class="py-3.5 px-3 text-center">
+<div class="inline-flex items-center gap-1 text-secondary font-headline-sm text-headline-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                    2
+                  </div>
+</td>
+<td class="py-3.5 px-3 text-center">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">8</span>
+</td>
+<td class="py-3.5 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-badge text-label-badge font-bold">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                    Stock Saludable
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1.5" onclick="event.stopPropagation()">
+<button class="h-8 px-2.5 rounded-lg bg-primary hover:bg-secondary text-on-primary font-body-sm text-body-sm font-semibold transition-all" onclick="openAdjustModal('Nike Air Volt React GT', 'NK-VOLT-8492', 'EU 44', 6, 2)">
+                      Ajustar Stock
+                    </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-all" onclick="selectRowForKardex('Nike Air Volt React GT (EU 44)', 'NK-VOLT-8492', 6, 2, 8)" title="Ver Kárdex">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Empty State Container (Hidden by default, triggered by simulator/filter) -->
+<div class="hidden p-12 flex-col items-center justify-center text-center" id="inventory-empty-state">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant mb-3">
+<span class="material-symbols-outlined text-[32px]">inventory_2</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">No se encontraron pares o variantes</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-4">
+            No existen registros que coincidan con los criterios de búsqueda o filtros aplicados en el almacén Miraflores.
+          </p>
+<button class="px-4 py-2 rounded-xl bg-primary text-on-primary font-body-md text-body-md font-semibold hover:bg-secondary transition-all" onclick="resetAllFilters()">
+            Restablecer Filtros
+          </button>
+</div>
+<!-- Table Footer Pagination & Summary -->
+<div class="px-5 py-3.5 bg-surface-container-lowest flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span id="footer-count">Mostrando 6 variantes físicas registradas</span>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<span class="px-3 py-1 bg-primary text-on-primary rounded-lg font-bold">1</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Kardex & Movements Panel (4 cols on 2xl) -->
+<div class="2xl:col-span-4 flex flex-col">
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col h-full">
+<!-- Kardex Header -->
+<div class="flex items-start justify-between mb-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">assignment</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Auditoría Kárdex</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5" id="kardex-subtitle">
+              Nike Air Max Pulse Urban (EU 41)
+            </span>
+</div>
+<span class="bg-surface-container text-on-surface font-label-badge text-label-badge px-2 py-0.5 rounded-full font-mono">
+            SKU: NK-PLS-6240
+          </span>
+</div>
+<!-- Current Stock Summary Card in Kardex -->
+<div class="p-3.5 rounded-xl bg-surface-container-low mb-4 flex items-center justify-between">
+<div>
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider block">Balance Actual</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold" id="kardex-balance">1 Disp. + 1 Res. = 2 Pares</span>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-primary hover:bg-secondary text-on-primary font-body-sm text-body-sm font-semibold transition-all" onclick="openAdjustModalFromKardex()">
+            Ajustar
+          </button>
+</div>
+<!-- Timeline Log of Movements -->
+<div class="flex-1 overflow-y-auto space-y-4 pr-1">
+<!-- Movement 1: Venta Online Web -->
+<div class="relative pl-6 pb-2">
+<span class="absolute left-0 top-1.5 w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<div class="flex items-center justify-between">
+<span class="font-label-size text-label-size font-bold text-on-surface">Venta Online #SK-84920</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Hace 25 min</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge font-bold">
+                -1 Par Reservado
+              </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Web / Checkout Yape</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Usuario: <span class="font-mono text-on-surface">Sistema Web Checkout</span> • En espera de empaque.
+            </p>
+</div>
+<!-- Movement 2: Ingreso de Lote Almacén -->
+<div class="relative pl-6 pb-2">
+<span class="absolute left-0 top-1.5 w-2.5 h-2.5 rounded-full bg-primary"></span>
+<div class="flex items-center justify-between">
+<span class="font-label-size text-label-size font-bold text-on-surface">Ajuste Manual Almacén</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Hace 2 horas</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-badge text-label-badge font-bold">
+                +3 Pares Físicos
+              </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Recepción de Mercadería</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Guía Remisión: <span class="font-mono text-on-surface">GR-2024-991</span> • Admin: <span class="text-on-surface font-semibold">ops@sneakerstore.pe</span>
+</p>
+</div>
+<!-- Movement 3: POS Mostrador Miraflores -->
+<div class="relative pl-6 pb-2">
+<span class="absolute left-0 top-1.5 w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<div class="flex items-center justify-between">
+<span class="font-label-size text-label-size font-bold text-on-surface">Venta Mostrador POS #SK-82990</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Ayer 16:30</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-badge text-label-badge font-bold">
+                -1 Par Disponible
+              </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tienda Física Miraflores</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Vendedor: <span class="text-on-surface font-semibold">Caja 01 Miraflores</span> • Pago con Tarjeta POS.
+            </p>
+</div>
+<!-- Movement 4: Liberación de Reserva Automática -->
+<div class="relative pl-6 pb-1">
+<span class="absolute left-0 top-1.5 w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<div class="flex items-center justify-between">
+<span class="font-label-size text-label-size font-bold text-on-surface">Liberación Automática Reserva</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Ayer 11:15</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-badge text-label-badge font-bold">
+                +1 Par Devuelto a Disponible
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Motivo: Voucher Yape no adjuntado dentro de la ventana de 24 horas. Sistema liberó stock automáticamente.
+            </p>
+</div>
+</div>
+<div class="pt-3 mt-3 bg-surface-container-lowest">
+<button class="w-full py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm font-semibold flex items-center justify-center gap-2 transition-all" onclick="triggerExportNotice()">
+<span class="material-symbols-outlined text-[16px]">print</span>
+            Descargar Kárdex de esta Talla (PDF)
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- MODAL 1: Ajuste de Existencias Físicas -->
+<div class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4" id="modal-adjust-stock">
+<div class="bg-surface-container-lowest rounded-2xl shadow-2xl w-full max-w-xl overflow-hidden flex flex-col transform transition-all animate-in fade-in zoom-in-95 duration-150">
+<!-- Modal Header -->
+<div class="px-6 py-5 bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[22px]">tune</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight" id="modal-adjust-title">
+              Ajustar Existencias Físicas
+            </h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="modal-adjust-subtitle">
+              SKU: NK-PLS-6240 • Almacén Central Miraflores
+            </span>
+</div>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface transition-all" onclick="closeAdjustModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Current Stock Status Box -->
+<div class="px-6 py-3 bg-surface-container-low flex items-center justify-between">
+<div>
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider block">Existencia Actual en Estantería</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold" id="modal-current-display">
+            2 Pares Totales (1 Disponible + 1 Reservado)
+          </span>
+</div>
+<span class="px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge font-bold">
+          Rack Miraflores A1
+        </span>
+</div>
+<!-- Form Body -->
+<form class="p-6 flex flex-col gap-4" id="form-adjust-stock" onsubmit="handleAdjustSubmit(event)">
+<!-- Movement Type Selector Tabs -->
+<div>
+<label class="block font-label-size text-label-size font-bold text-on-surface mb-2">
+            Tipo de Movimiento Físico
+          </label>
+<div class="grid grid-cols-3 gap-2 p-1 bg-surface-container rounded-xl">
+<button class="py-2 px-3 rounded-lg font-body-sm text-body-sm font-semibold transition-all bg-primary text-on-primary flex items-center justify-center gap-1.5 shadow-sm" id="tab-adjust-in" onclick="setAdjustType('in')" type="button">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+              Entrada (+)
+            </button>
+<button class="py-2 px-3 rounded-lg font-body-sm text-body-sm font-semibold transition-all text-on-surface hover:bg-surface-container-high flex items-center justify-center gap-1.5" id="tab-adjust-out" onclick="setAdjustType('out')" type="button">
+<span class="material-symbols-outlined text-[16px]">remove_circle</span>
+              Salida (-)
+            </button>
+<button class="py-2 px-3 rounded-lg font-body-sm text-body-sm font-semibold transition-all text-on-surface hover:bg-surface-container-high flex items-center justify-center gap-1.5" id="tab-adjust-set" onclick="setAdjustType('set')" type="button">
+<span class="material-symbols-outlined text-[16px]">equal</span>
+              Conteo Real (=)
+            </button>
+</div>
+</div>
+<!-- Quantity Input with Stepper -->
+<div>
+<label class="block font-label-size text-label-size font-bold text-on-surface mb-2">
+            Cantidad de Pares a Modificar
+          </label>
+<div class="flex items-center gap-3">
+<div class="flex items-center bg-surface-container-low rounded-xl p-1">
+<button class="w-10 h-10 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface flex items-center justify-center font-bold text-[18px] transition-all shadow-sm" onclick="changeQty(-1)" type="button">
+                -
+              </button>
+<input class="w-20 text-center bg-transparent font-headline-sm text-headline-sm font-bold text-on-surface focus:outline-none" id="adjust-qty-input" max="99" min="1" oninput="calculateNewStock()" type="number" value="2"/>
+<button class="w-10 h-10 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface flex items-center justify-center font-bold text-[18px] transition-all shadow-sm" onclick="changeQty(1)" type="button">
+                +
+              </button>
+</div>
+<!-- Real-time calculation output card -->
+<div class="flex-1 p-3 rounded-xl bg-surface-container flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Nuevo Stock Disponible Resultante:</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface" id="calculated-stock-badge">3 pares</span>
+</div>
+</div>
+</div>
+<!-- Adjustment Reason Dropdown -->
+<div>
+<label class="block font-label-size text-label-size font-bold text-on-surface mb-1.5">
+            Motivo Obligatorio del Ajuste
+          </label>
+<div class="relative">
+<select class="w-full h-11 px-3.5 pr-8 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md font-medium focus:ring-1 focus:ring-primary focus:outline-none cursor-pointer appearance-none" id="adjust-reason-select" required="">
+<option value="reception">Recepción de mercadería / Lote nuevo</option>
+<option value="audit">Corrección de conteo en inventario físico</option>
+<option value="damage">Daño de fábrica / Caja deteriorada</option>
+<option value="exchange">Devolución o cambio presencial</option>
+<option value="sample">Muestra comercial / Exhibición en vitrina</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Notes / Audit Log Textarea -->
+<div>
+<label class="block font-label-size text-label-size font-bold text-on-surface mb-1.5">
+            Notas de Auditoría / N° Guía de Remisión (Opcional)
+          </label>
+<textarea class="w-full p-3 rounded-xl bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-md text-body-md focus:ring-1 focus:ring-primary focus:outline-none resize-none" id="adjust-notes-input" placeholder="Ej. Guía Proveedor Nike GR-921 o lote recibido en bulto #4..." rows="2"></textarea>
+</div>
+<!-- Confirmation Checkbox -->
+<label class="flex items-start gap-2.5 cursor-pointer select-none pt-1">
+<input class="mt-1 w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer" required="" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">
+            Confirmo bajo responsabilidad de almacén que el conteo físico en estantería coincide con este ajuste y debe sincronizarse inmediatamente con la web.
+          </span>
+</label>
+<!-- Actions -->
+<div class="flex items-center justify-end gap-3 pt-3">
+<button class="px-5 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-body-md text-body-md font-semibold transition-all" onclick="closeAdjustModal()" type="button">
+            Cancelar
+          </button>
+<button class="px-6 py-2.5 rounded-xl bg-primary hover:bg-secondary text-on-primary font-body-md text-body-md font-semibold transition-all shadow-md flex items-center gap-2" type="submit">
+<span class="material-symbols-outlined text-[18px]">check</span>
+            Confirmar y Aplicar Ajuste
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- MODAL 2: Agregar Nueva Talla a Modelo -->
+<div class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4" id="modal-add-size">
+<div class="bg-surface-container-lowest rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden flex flex-col transform transition-all animate-in fade-in zoom-in-95 duration-150">
+<!-- Modal Header -->
+<div class="px-6 py-5 bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center text-on-secondary">
+<span class="material-symbols-outlined text-[22px]">add_circle</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Agregar Nueva Talla</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Alta de variante en Almacén Miraflores</span>
+</div>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface transition-all" onclick="closeAddSizeModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Add Size Form -->
+<form class="p-6 flex flex-col gap-4" onsubmit="handleAddSizeSubmit(event)">
+<div>
+<label class="block font-label-size text-label-size font-bold text-on-surface mb-1.5">
+            Seleccionar Modelo de Calzado
+          </label>
+<select class="w-full h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md font-medium focus:ring-1 focus:ring-primary focus:outline-none">
+<option>Nike Air Max Pulse Urban (SKU: NK-PLS-6240)</option>
+<option>Jordan Retro Street OG (SKU: JD-RET-5190)</option>
+<option>New Balance NB 9060 “Triple Sea” (SKU: NB-9060-5790)</option>
+<option>Adidas Campus 00s “Core Black” (SKU: AD-CMP-3590)</option>
+<option>Nike Air Volt React GT (SKU: NK-VOLT-8492)</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="block font-label-size text-label-size font-bold text-on-surface mb-1.5">
+              Talla EU
+            </label>
+<select class="w-full h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md font-medium focus:ring-1 focus:ring-primary focus:outline-none">
+<option>EU 38 (24 cm)</option>
+<option>EU 39 (24.5 cm)</option>
+<option>EU 40 (25 cm)</option>
+<option>EU 41 (26 cm)</option>
+<option>EU 42 (26.5 cm)</option>
+<option selected="">EU 42.5 (27 cm)</option>
+<option>EU 43 (27.5 cm)</option>
+<option>EU 44 (28 cm)</option>
+<option>EU 45 (29 cm)</option>
+</select>
+</div>
+<div>
+<label class="block font-label-size text-label-size font-bold text-on-surface mb-1.5">
+              Stock Inicial Físico
+            </label>
+<input class="w-full h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md font-bold focus:ring-1 focus:ring-primary focus:outline-none" min="1" type="number" value="4"/>
+</div>
+</div>
+<div>
+<label class="block font-label-size text-label-size font-bold text-on-surface mb-1.5">
+            Ubicación en Estante / Rack
+          </label>
+<input class="w-full h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:ring-1 focus:ring-primary focus:outline-none" placeholder="Ej. Pasillo B - Nivel 2" type="text" value="Miraflores Rack A2"/>
+</div>
+<div class="flex items-center justify-end gap-3 pt-3">
+<button class="px-5 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-body-md text-body-md font-semibold transition-all" onclick="closeAddSizeModal()" type="button">
+            Cancelar
+          </button>
+<button class="px-6 py-2.5 rounded-xl bg-primary hover:bg-secondary text-on-primary font-body-md text-body-md font-semibold transition-all shadow-md" type="submit">
+            Registrar Talla
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- FLOATING TOAST: Notification of successful sync -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 transition-all duration-300 pointer-events-none max-w-md w-full" id="inventory-toast">
+<div class="bg-primary text-on-primary p-4 rounded-xl shadow-2xl flex items-start gap-3 border-l-4 border-secondary">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+</div>
+<div class="flex flex-col flex-1">
+<span class="font-headline-sm text-headline-sm text-on-primary leading-tight">Ajuste de inventario aplicado con éxito</span>
+<span class="font-body-sm text-body-sm text-surface-container-high mt-1" id="toast-message-body">
+          Se sumaron +2 pares a Nike Air Max Pulse Urban (EU 41). Nuevo disponible: 3 pares. Sincronizado en web y mostrador.
+        </span>
+</div>
+<button class="text-surface-container-high hover:text-on-primary p-1" onclick="dismissToast()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Vanilla JS Interactions for Admin Inventory Dashboard -->
+<script>
+  let currentAdjustData = {
+    model: 'Nike Air Max Pulse Urban',
+    sku: 'NK-PLS-6240',
+    size: 'EU 41',
+    disp: 1,
+    res: 1,
+    type: 'in' // 'in', 'out', 'set'
+  };
+
+  function setUxState(state) {
+    // Reset buttons visual state
+    document.querySelectorAll('#ux-state-bar .state-btn').forEach(btn => {
+      btn.className = "state-btn px-3 py-1.5 rounded-lg text-body-sm font-semibold bg-surface-container hover:bg-surface-container-high text-on-surface transition-all";
+    });
+    const activeBtn = document.getElementById('btn-state-' + state);
+    if (activeBtn) {
+      activeBtn.className = "state-btn px-3 py-1.5 rounded-lg text-body-sm font-semibold bg-primary text-on-primary transition-all";
+    }
+
+    // Handle state switch
+    closeAdjustModal();
+    closeAddSizeModal();
+    const emptyState = document.getElementById('inventory-empty-state');
+    const tableEl = document.getElementById('inventory-table');
+    const rows = document.querySelectorAll('.inventory-row');
+
+    if (state === 'live') {
+      emptyState.classList.add('hidden');
+      tableEl.classList.remove('hidden');
+      rows.forEach(r => r.style.display = '');
+      document.getElementById('rows-count-badge').textContent = '6 Variantes';
+      document.getElementById('footer-count').textContent = 'Mostrando 6 variantes físicas registradas';
+    } else if (state === 'adjust-modal') {
+      emptyState.classList.add('hidden');
+      tableEl.classList.remove('hidden');
+      rows.forEach(r => r.style.display = '');
+      openAdjustModal('Nike Air Max Pulse Urban', 'NK-PLS-6240', 'EU 41', 1, 1);
+    } else if (state === 'add-size') {
+      emptyState.classList.add('hidden');
+      tableEl.classList.remove('hidden');
+      rows.forEach(r => r.style.display = '');
+      openAddSizeModal();
+    } else if (state === 'empty') {
+      rows.forEach(r => r.style.display = 'none');
+      tableEl.classList.add('hidden');
+      emptyState.classList.remove('hidden');
+      document.getElementById('rows-count-badge').textContent = '0 Variantes';
+      document.getElementById('footer-count').textContent = '0 resultados';
+    } else if (state === 'alerts') {
+      emptyState.classList.add('hidden');
+      tableEl.classList.remove('hidden');
+      filterCriticalOnly();
+    }
+  }
+
+  function openAdjustModal(model, sku, size, disp, res) {
+    currentAdjustData.model = model;
+    currentAdjustData.sku = sku;
+    currentAdjustData.size = size;
+    currentAdjustData.disp = parseInt(disp, 10);
+    currentAdjustData.res = parseInt(res, 10);
+    currentAdjustData.type = 'in';
+
+    document.getElementById('modal-adjust-title').textContent = 'Ajustar Existencias Físicas — ' + model + ' [' + size + ']';
+    document.getElementById('modal-adjust-subtitle').textContent = 'SKU: ' + sku + ' • Almacén Central Miraflores';
+    const total = currentAdjustData.disp + currentAdjustData.res;
+    document.getElementById('modal-current-display').textContent = total + ' Pares Totales (' + currentAdjustData.disp + ' Disponible + ' + currentAdjustData.res + ' Reservado)';
+    
+    setAdjustType('in');
+    document.getElementById('adjust-qty-input').value = '2';
+    calculateNewStock();
+
+    const modal = document.getElementById('modal-adjust-stock');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function openAdjustModalFromKardex() {
+    openAdjustModal(currentAdjustData.model, currentAdjustData.sku, currentAdjustData.size, currentAdjustData.disp, currentAdjustData.res);
+  }
+
+  function closeAdjustModal() {
+    const modal = document.getElementById('modal-adjust-stock');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  function openAddSizeModal() {
+    const modal = document.getElementById('modal-add-size');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeAddSizeModal() {
+    const modal = document.getElementById('modal-add-size');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  function setAdjustType(type) {
+    currentAdjustData.type = type;
+    const tabIn = document.getElementById('tab-adjust-in');
+    const tabOut = document.getElementById('tab-adjust-out');
+    const tabSet = document.getElementById('tab-adjust-set');
+
+    const defaultClass = "py-2 px-3 rounded-lg font-body-sm text-body-sm font-semibold transition-all text-on-surface hover:bg-surface-container-high flex items-center justify-center gap-1.5";
+    const activeClass = "py-2 px-3 rounded-lg font-body-sm text-body-sm font-semibold transition-all bg-primary text-on-primary flex items-center justify-center gap-1.5 shadow-sm";
+
+    tabIn.className = defaultClass;
+    tabOut.className = defaultClass;
+    tabSet.className = defaultClass;
+
+    if (type === 'in') tabIn.className = activeClass;
+    if (type === 'out') tabOut.className = activeClass;
+    if (type === 'set') tabSet.className = activeClass;
+
+    calculateNewStock();
+  }
+
+  function changeQty(delta) {
+    const input = document.getElementById('adjust-qty-input');
+    let val = parseInt(input.value || 0, 10) + delta;
+    if (val < 1) val = 1;
+    input.value = val;
+    calculateNewStock();
+  }
+
+  function calculateNewStock() {
+    const qty = parseInt(document.getElementById('adjust-qty-input').value || 0, 10);
+    const disp = currentAdjustData.disp;
+    let finalDisp = disp;
+
+    if (currentAdjustData.type === 'in') {
+      finalDisp = disp + qty;
+    } else if (currentAdjustData.type === 'out') {
+      finalDisp = Math.max(0, disp - qty);
+    } else if (currentAdjustData.type === 'set') {
+      finalDisp = qty;
+    }
+
+    const badge = document.getElementById('calculated-stock-badge');
+    badge.textContent = finalDisp + ' pares';
+  }
+
+  function handleAdjustSubmit(e) {
+    e.preventDefault();
+    const qty = document.getElementById('adjust-qty-input').value;
+    const sign = currentAdjustData.type === 'in' ? '+' : (currentAdjustData.type === 'out' ? '-' : '=');
+    closeAdjustModal();
+
+    const msg = 'Ajuste de inventario aplicado con éxito: Se registraron ' + sign + qty + ' pares en ' + currentAdjustData.model + ' (' + currentAdjustData.size + '). Sincronizado en web y mostrador.';
+    document.getElementById('toast-message-body').textContent = msg;
+    triggerToast();
+  }
+
+  function handleAddSizeSubmit(e) {
+    e.preventDefault();
+    closeAddSizeModal();
+    document.getElementById('toast-message-body').textContent = 'Nueva talla agregada con éxito al catálogo de existencias Miraflores.';
+    triggerToast();
+  }
+
+  function selectRowForKardex(title, sku, disp, res, total, rowEl) {
+    document.getElementById('kardex-subtitle').textContent = title;
+    document.getElementById('kardex-balance').textContent = disp + ' Disp. + ' + res + ' Res. = ' + total + ' Pares';
+    currentAdjustData.model = title;
+    currentAdjustData.sku = sku;
+    currentAdjustData.disp = parseInt(disp, 10);
+    currentAdjustData.res = parseInt(res, 10);
+
+    // Highlight row
+    document.querySelectorAll('.inventory-row').forEach(r => r.classList.remove('bg-surface-container-low/40'));
+    if (rowEl) {
+      rowEl.classList.add('bg-surface-container-low/40');
+    }
+  }
+
+  function handleSearch(val) {
+    applyFilters();
+  }
+
+  function applyFilters() {
+    const search = (document.getElementById('inventory-search').value || '').toLowerCase();
+    const brand = document.getElementById('filter-brand').value;
+    const size = document.getElementById('filter-size').value;
+    const status = document.getElementById('filter-status').value;
+
+    const rows = document.querySelectorAll('.inventory-row');
+    let visibleCount = 0;
+
+    rows.forEach(row => {
+      const rowModel = (row.dataset.model || '').toLowerCase();
+      const rowSku = (row.dataset.sku || '').toLowerCase();
+      const rowBrand = row.dataset.brand;
+      const rowSize = row.dataset.size;
+      const rowStatus = row.dataset.status;
+
+      const matchSearch = !search || rowModel.includes(search) || rowSku.includes(search) || rowSize.toLowerCase().includes(search);
+      const matchBrand = (brand === 'all') || (rowBrand === brand);
+      const matchSize = (size === 'all') || (rowSize === size);
+      const matchStatus = (status === 'all') || (rowStatus === status);
+
+      if (matchSearch && matchBrand && matchSize && matchStatus) {
+        row.style.display = '';
+        visibleCount++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    const emptyState = document.getElementById('inventory-empty-state');
+    const tableEl = document.getElementById('inventory-table');
+
+    if (visibleCount === 0) {
+      tableEl.classList.add('hidden');
+      emptyState.classList.remove('hidden');
+    } else {
+      tableEl.classList.remove('hidden');
+      emptyState.classList.add('hidden');
+    }
+
+    document.getElementById('rows-count-badge').textContent = visibleCount + ' Variantes';
+    document.getElementById('footer-count').textContent = 'Mostrando ' + visibleCount + ' variantes físicas registradas';
+  }
+
+  function filterCriticalOnly() {
+    document.getElementById('filter-status').value = 'critical';
+    document.getElementById('filter-brand').value = 'all';
+    document.getElementById('filter-size').value = 'all';
+    document.getElementById('inventory-search').value = '';
+    applyFilters();
+  }
+
+  function resetAllFilters() {
+    document.getElementById('inventory-search').value = '';
+    document.getElementById('filter-brand').value = 'all';
+    document.getElementById('filter-size').value = 'all';
+    document.getElementById('filter-status').value = 'all';
+    applyFilters();
+  }
+
+  let toastTimer = null;
+  function triggerToast() {
+    const toast = document.getElementById('inventory-toast');
+    toast.classList.remove('translate-y-32', 'opacity-0', 'pointer-events-none');
+    toast.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      dismissToast();
+    }, 4500);
+  }
+
+  function dismissToast() {
+    const toast = document.getElementById('inventory-toast');
+    toast.classList.add('translate-y-32', 'opacity-0', 'pointer-events-none');
+    toast.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+  }
+
+  function triggerExportNotice() {
+    document.getElementById('toast-message-body').textContent = 'Kárdex exportado correctamente en formato compatible con Excel / SUNAT (Almacén Miraflores).';
+    triggerToast();
+  }
+</script></main></div></body></html>

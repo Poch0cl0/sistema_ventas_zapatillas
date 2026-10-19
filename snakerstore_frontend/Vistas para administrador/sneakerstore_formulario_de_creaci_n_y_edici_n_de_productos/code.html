@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface":"#f9f9fa","surface-variant":"#e2e2e3","on-surface-variant":"#444748","secondary-container":"#fe6a34","on-surface":"#1a1c1d","surface-container":"#eeeeef","secondary-fixed":"#ffdbd0","inverse-primary":"#c8c6c5","on-background":"#1a1c1d","surface-dim":"#dadadb","tertiary":"#000000","outline-variant":"#c4c7c7","tertiary-container":"#151c27","primary-fixed-dim":"#c8c6c5","surface-container-high":"#e8e8e9","tertiary-fixed-dim":"#c0c7d6","on-primary-fixed-variant":"#474646","on-secondary-fixed":"#390c00","surface-tint":"#5f5e5e","surface-bright":"#f9f9fa","on-primary-container":"#858383","secondary":"#ab3500","background":"#f9f9fa","on-primary":"#ffffff","tertiary-fixed":"#dce2f3","surface-container-low":"#f3f3f4","on-tertiary-fixed":"#151c27","on-secondary-fixed-variant":"#832600","surface-container-highest":"#e2e2e3","on-primary-fixed":"#1c1b1b","on-error":"#ffffff","primary":"#000000","on-error-container":"#93000a","on-tertiary":"#ffffff","outline":"#747878","error":"#ba1a1a","primary-fixed":"#e5e2e1","on-secondary-container":"#5d1900","primary-container":"#1c1b1b","on-tertiary-fixed-variant":"#404754","surface-container-lowest":"#ffffff","inverse-on-surface":"#f0f1f2","error-container":"#ffdad6","secondary-fixed-dim":"#ffb59d","on-secondary":"#ffffff","on-tertiary-container":"#7d8492","inverse-surface":"#2f3132"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-mobile":"1rem","gutter":"1.5rem","space-md":"1rem","margin":"2rem","space-xs":"0.25rem","gutter-mobile":"0.75rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xl":"2.5rem"},"fontFamily":{"display-hero":["Inter"],"headline-lg":["Inter"],"headline-sm":["Inter"],"body-lg":["Inter"],"price-lg":["Inter"],"label-size":["Inter"],"body-sm":["Inter"],"label-badge":["Inter"],"display-hero-mobile":["Inter"],"body-md":["Inter"],"headline-lg-mobile":["Inter"],"headline-md":["Inter"],"price-md":["Inter"]},"fontSize":{"display-hero":["56px",{"lineHeight":"60px","letterSpacing":"-0.03em","fontWeight":"800"}],"headline-lg":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"price-lg":["24px",{"lineHeight":"28px","letterSpacing":"-0.02em","fontWeight":"800"}],"label-size":["13px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"label-badge":["11px",{"lineHeight":"12px","letterSpacing":"0.05em","fontWeight":"700"}],"display-hero-mobile":["36px",{"lineHeight":"40px","letterSpacing":"-0.025em","fontWeight":"800"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"700"}],"price-md":["18px",{"lineHeight":"22px","letterSpacing":"-0.01em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col flex-1 overflow-y-auto"><div class="px-6 pt-6 pb-5 flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">question_mark</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-tight text-primary leading-none">SneakerStore</span><span class="font-label-badge text-label-badge text-on-surface-variant tracking-wider uppercase mt-0.5">Admin Panel</span></div></div><span class="bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge px-2 py-0.5 rounded-full">HQ LIMA</span></div><div class="px-6 py-2"><div class="p-3 rounded-lg bg-surface-container-low flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary-container text-[18px]">store</span><div class="flex flex-col"><span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">Almacén Central</span><span class="font-label-badge text-label-badge text-on-surface-variant">Miraflores, Lima PE</span></div></div></div><nav class="flex-1 px-4 py-4 space-y-1" data-active-classes="bg-primary text-on-primary font-semibold shadow-sm"><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="resumen" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Resumen</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="productos" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-body-md text-body-md">Productos</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="inventario" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">warehouse</span><span class="font-body-md text-body-md">Inventario</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="pedidos" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span class="font-body-md text-body-md">Pedidos</span></div><span class="bg-secondary-container text-on-primary font-label-badge text-label-badge px-2 py-0.5 rounded-full">12 Pend</span></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="ventas-presenciales" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">point_of_sale</span><span class="font-body-md text-body-md">Ventas Presenciales</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="zonas-de-delivery" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">map</span><span class="font-body-md text-body-md">Zonas de Delivery</span></div></a></nav></div><div class="p-4 border-t border-surface-container-high bg-surface-container-lowest"><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-error hover:bg-error-container hover:text-on-error-container transition-all mb-3" data-path="cerrar-sesion" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span class="font-body-md text-body-md font-medium">Cerrar sesión</span></a><div class="flex items-center justify-between pt-2"><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Admin General</span><span class="font-label-badge text-label-badge text-on-surface-variant">ops@sneakerstore.pe</span></div></div><span class="material-symbols-outlined text-outline text-[18px]">verified</span></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span class="hover:text-on-surface cursor-pointer">Admin</span><span class="material-symbols-outlined text-[16px]">chevron_right</span><span class="font-semibold text-on-surface">Dashboard</span></div><div class="hidden lg:flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-badge text-label-badge"><span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span><span>Sistema Operativo (Firebase Ready)</span></div></div><div class="flex items-center gap-4"><div class="relative hidden sm:block w-72"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full h-10 pl-9 pr-4 rounded-full bg-surface-container-low text-on-surface placeholder:text-on-surface-variant text-body-sm font-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary transition-all" placeholder="Buscar pedido, SKU, cliente..." type="text"/></div><button class="relative p-2 rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary-container"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface flex-1 w-full px-gutter py-space-md"><div class="flex flex-col w-full pb-24">
+<!-- Interactive State Controller Bar (UX Prototyping) -->
+<div class="w-full bg-surface-container-lowest p-4 rounded-xl shadow-sm mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm text-on-surface leading-tight">Simulador de Estados UX</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Prueba flujos interactivos de creación, errores y modales</p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<button class="state-pill px-3 py-1.5 rounded-full font-label-badge text-label-badge transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-high" id="btn-state-empty" onclick="setScenario('empty')">
+        1. Crear (Vacío)
+      </button>
+<button class="state-pill px-3 py-1.5 rounded-full font-label-badge text-label-badge transition-all bg-primary text-on-primary shadow-sm" id="btn-state-edit" onclick="setScenario('edit')">
+        2. Modo Edición
+      </button>
+<button class="state-pill px-3 py-1.5 rounded-full font-label-badge text-label-badge transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-high" id="btn-state-val" onclick="setScenario('validation')">
+        3. Errores Validación
+      </button>
+<button class="state-pill px-3 py-1.5 rounded-full font-label-badge text-label-badge transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-high" id="btn-state-toast" onclick="triggerToast()">
+        4. Simular Guardado
+      </button>
+<button class="state-pill px-3 py-1.5 rounded-full font-label-badge text-label-badge transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-high" onclick="openModal()">
+        5. Modal Descartar
+      </button>
+</div>
+</div>
+<!-- Breadcrumbs & Navigation Back -->
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<a class="hover:text-primary transition-colors" href="#">Admin</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Productos</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="font-semibold text-primary" id="breadcrumb-current">Editar Calzado NK-PLS-6240</span>
+</div>
+<a class="inline-flex items-center gap-1.5 font-label-size text-label-size text-on-surface-variant hover:text-primary transition-colors" href="#" onclick="openModal(); return false;">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Volver a Productos</span>
+</a>
+</div>
+<!-- Main View Header -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-8">
+<div>
+<div class="flex items-center gap-3">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight" id="page-title">Editar Producto • NK-PLS-6240</h1>
+<span class="px-2.5 py-0.5 rounded-full font-label-badge text-label-badge bg-secondary-fixed text-on-secondary-fixed" id="header-status-badge">
+          PUBLICADO ONLINE
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 max-w-2xl" id="page-subtitle">
+        Registra los datos maestros, marca, fotos y precios de catálogo comercial. Las cantidades físicas por talla se gestionan centralmente en Inventario.
+      </p>
+</div>
+<div class="flex items-center gap-3">
+<button class="h-11 px-5 rounded-xl font-label-size text-label-size bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" onclick="openModal()">
+        Cancelar
+      </button>
+<button class="h-11 px-6 rounded-xl font-label-size text-label-size bg-primary hover:bg-secondary-container text-on-primary transition-all shadow-md flex items-center gap-2" onclick="handleSaveAction()">
+<span class="material-symbols-outlined text-[18px]">cloud_sync</span>
+<span>Guardar Cambios</span>
+</button>
+</div>
+</div>
+<!-- Form Layout 70% / 30% Desktop Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- LEFT COLUMN: Main Product Core Details (70% ~ 8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-6">
+<!-- CARD 1: Basic Footwear Information -->
+<section class="bg-surface-container-lowest rounded-xl p-6 shadow-sm">
+<div class="flex items-center justify-between pb-4 mb-6 border-b border-surface-container-high">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[22px]">app_registration</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Información Básica del Calzado</h2>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Datos Catálogo</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<!-- Product Name Input -->
+<div class="md:col-span-2">
+<label class="block font-label-size text-label-size text-on-surface mb-1.5" for="prod-name">
+              Nombre Comercial del Producto <span class="text-error">*</span>
+</label>
+<input class="w-full h-11 px-4 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary outline-none transition-all" id="prod-name" placeholder="Ej. Air Jordan Retro 4 'Bred' / New Balance 550" type="text" value="Nike Air Max Pulse Urban Edition"/>
+<p class="hidden text-error font-body-sm text-body-sm mt-1.5 flex items-center gap-1" id="err-name">
+<span class="material-symbols-outlined text-[16px]">error</span>
+              El nombre del modelo de zapatilla es obligatorio.
+            </p>
+</div>
+<!-- Master SKU Code -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="font-label-size text-label-size text-on-surface" for="prod-sku">
+                SKU Maestro / Identificador <span class="text-error">*</span>
+</label>
+<button class="font-label-badge text-label-badge text-secondary-container hover:underline" onclick="generateSku()" type="button">
+                Auto-generar
+              </button>
+</div>
+<div class="relative">
+<input class="w-full h-11 px-4 pl-10 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md uppercase font-semibold focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary outline-none transition-all" id="prod-sku" placeholder="Ej. NK-PLS-6240" type="text" value="NK-PLS-6240"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">barcode</span>
+</div>
+<p class="hidden text-error font-body-sm text-body-sm mt-1.5 flex items-center gap-1" id="err-sku">
+<span class="material-symbols-outlined text-[16px]">error</span>
+              Ingresa un código SKU válido y único.
+            </p>
+</div>
+<!-- Brand Dropdown -->
+<div>
+<label class="block font-label-size text-label-size text-on-surface mb-1.5" for="prod-brand">
+              Marca <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-11 px-4 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary outline-none transition-all appearance-none pr-10 cursor-pointer" id="prod-brand">
+<option selected="" value="Nike">Nike Sportswear</option>
+<option value="Jordan">Jordan Brand</option>
+<option value="New Balance">New Balance Athletics</option>
+<option value="Adidas">Adidas Originals</option>
+<option value="Puma">Puma Hoops / Select</option>
+<option value="Asics">ASICS Sportstyle</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Category Dropdown -->
+<div class="md:col-span-2">
+<label class="block font-label-size text-label-size text-on-surface mb-1.5" for="prod-category">
+              Categoría y Silueta <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-11 px-4 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary outline-none transition-all appearance-none pr-10 cursor-pointer" id="prod-category">
+<option selected="" value="lifestyle">Retro &amp; Urban Lifestyle</option>
+<option value="running">Running / High-Performance Cushioning</option>
+<option value="vip">Collabs VIP / Drops Limitados Tier-0</option>
+<option value="skate">Skateboarding &amp; Low Profile</option>
+<option value="basketball">Basketball Classics</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Editorial Description Area -->
+<div class="md:col-span-2">
+<div class="flex items-center justify-between mb-1.5">
+<label class="font-label-size text-label-size text-on-surface" for="prod-description">
+                Descripción Editorial de Producto
+              </label>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Soporta especificaciones técnicas</span>
+</div>
+<div class="rounded-lg bg-surface-container-low overflow-hidden focus-within:ring-2 focus-within:ring-primary transition-all">
+<!-- Simple Formatting Toolbar -->
+<div class="px-3 py-2 bg-surface-container flex items-center gap-1">
+<button class="w-8 h-8 rounded hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" title="Negrita" type="button">
+<span class="material-symbols-outlined text-[18px]">format_bold</span>
+</button>
+<button class="w-8 h-8 rounded hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" title="Itálica" type="button">
+<span class="material-symbols-outlined text-[18px]">format_italic</span>
+</button>
+<div class="w-px h-4 bg-outline-variant mx-1"></div>
+<button class="w-8 h-8 rounded hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" title="Lista con viñetas" type="button">
+<span class="material-symbols-outlined text-[18px]">format_list_bulleted</span>
+</button>
+<button class="w-8 h-8 rounded hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" title="Especificaciones técnicas" type="button">
+<span class="material-symbols-outlined text-[18px]">checklist</span>
+</button>
+</div>
+<textarea class="w-full p-4 bg-transparent text-on-surface font-body-md text-body-md outline-none resize-y leading-relaxed" id="prod-description" placeholder="Describe el calzado, estética urbana, tecnología de cámara de aire y materiales..." rows="4">Inspiradas en la escena musical underground de Londres, las Nike Air Max Pulse combinan una silueta audaz y urbana con amortiguación de cámara de aire Air Max 270 rediseñada. El revestimiento textil con toques de cuero sintético y detalles en goma reflectante ofrecen durabilidad sin perder transpirabilidad para el uso diario en asfalto.</textarea>
+</div>
+</div>
+</div>
+</section>
+<!-- CARD 2: Multimedia & Image Gallery (Multiple Upload) -->
+<section class="bg-surface-container-lowest rounded-xl p-6 shadow-sm">
+<div class="flex items-center justify-between pb-4 mb-4 border-b border-surface-container-high">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[22px]">photo_library</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Galería de Fotos &amp; Multimedia</h2>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant">4 de 8 imágenes cargadas</span>
+</div>
+<p class="hidden text-error font-body-sm text-body-sm mb-3 flex items-center gap-1" id="err-gallery">
+<span class="material-symbols-outlined text-[16px]">error</span>
+          Debes subir al menos una fotografía principal para publicar en el catálogo.
+        </p>
+<!-- Drag & Drop Upload Zone -->
+<div class="relative group cursor-pointer border-2 border-dashed border-outline-variant hover:border-primary rounded-xl p-8 text-center bg-surface hover:bg-surface-container-low transition-all">
+<input class="absolute inset-0 opacity-0 cursor-pointer w-full h-full" multiple="" type="file"/>
+<div class="flex flex-col items-center justify-center pointer-events-none">
+<div class="w-14 h-14 rounded-full bg-surface-container flex items-center justify-center text-primary group-hover:scale-110 transition-transform mb-3">
+<span class="material-symbols-outlined text-[28px]">cloud_upload</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface mb-1">
+              Arrastra tus fotografías aquí o <span class="text-secondary-container underline">explora archivos</span>
+</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Formatos aceptados: PNG transparente, JPG o WEBP de alta calidad (Hasta 5MB por imagen)
+            </p>
+</div>
+</div>
+<div class="mt-4 flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm bg-surface-container-low p-3 rounded-lg">
+<span class="material-symbols-outlined text-[18px] text-primary">info</span>
+<span>Resolución recomendada: <strong>1200 x 1200 px</strong> con fondo blanco puro o neutro para optimización en app móvil y tienda online.</span>
+</div>
+<!-- Thumbnails Grid Preview -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6" id="gallery-container">
+<!-- Image 1: Main Cover -->
+<div class="relative group rounded-xl bg-surface-container overflow-hidden aspect-square flex flex-col items-center justify-center shadow-sm">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-alt="Lateral profile shot of a modern Nike Air Max Pulse athletic sneaker on a crisp minimal off-white background with soft studio shadow, showcasing orange accents and detailed sole textures." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBsCyoURkDIDv4_JU0WyMRmNf3AsSYFQgGrgkdUl9NmpXVxhrBavU9hK22y9saH_MsQtKJmeIV76SFVzZh_gMdMiRNtCzJEVDhuc4JTwaGyDrM1fkB-PgXGVs0n-S3esifnYxYCUh3-l5mwQLHPIs3b-dv73MGhYVcsSFRIfbpQPGZzo3eub8lBZ4O2qtP0u22sq3WmnqXAW8XTT-K8TwZ-9_9xIkiEvX-JLl25KBFbpVaesVoF9TRMlQ')"></div>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full font-label-badge text-label-badge bg-primary text-on-primary">
+              PORTADA
+            </span>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center hover:bg-surface-container transition-colors" title="Reordenar foto">
+<span class="material-symbols-outlined text-[18px]">drag_indicator</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-error text-on-error flex items-center justify-center hover:opacity-90 transition-opacity" title="Eliminar foto">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Image 2: Top View -->
+<div class="relative group rounded-xl bg-surface-container overflow-hidden aspect-square flex flex-col items-center justify-center shadow-sm">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-alt="Top-down flatlay perspective of modern urban street sneakers with symmetrical lacing and vibrant branded insole detail against clean studio white backplate." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDdkSAIpc9K2UM6qi5WpelhY-5mQql3DAcUbMgXhwStj1bsPf7tdUoWMSdt-w_Yywqts0v-Vzhu_f2ovZVIc0nk3HY9fJShPpX3fqpnBH54kZK_gDGimtFzRMz31JUD96yhuBMIcPAL0Wiwn-9lRnNUnbCYjhIj2zjDfD9fyhUAPuiI2R8l7sdkZ4AhFY6O2uFxt8Hd2bjCXpUtFlZ0hd7XLxMLAVmm-WmJnTR77rus30O1oZLp2ebFYQ')"></div>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full font-label-badge text-label-badge bg-surface-container-lowest text-on-surface">
+              Superior
+            </span>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<button class="w-8 h-8 rounded-full bg-error text-on-error flex items-center justify-center hover:opacity-90 transition-opacity" title="Eliminar foto">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Image 3: Outsole Traction -->
+<div class="relative group rounded-xl bg-surface-container overflow-hidden aspect-square flex flex-col items-center justify-center shadow-sm">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-alt="Detailed macro product photo of sneaker rubber traction outsole with ergonomic waffle grooves and dynamic athletic tread patterns in urban studio setup." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA7FO9nDZriEse4beW3FB49u0uPfZro_vSn0BoJVSg1QCd3C5e8G1OM4nxHpG6_z_e5nYcKZjusvYF_rxKnZvuyO5prPyE-PJlEk0Ss3370j3M9QLG8iP6SqYylqAITnVqpVUYMhq1oVlty4QiTu2Olgk5o9RNd4sJ6Gn9Lyxvu-ZkL1ql3dsEYfQQhiUolv1Fm_i2rXENOvBeBQBL0FW7JfQ7ucKmIKc4Ce9GBvajo3Jtp5QYj1DkuBg')"></div>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full font-label-badge text-label-badge bg-surface-container-lowest text-on-surface">
+              Suela
+            </span>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<button class="w-8 h-8 rounded-full bg-error text-on-error flex items-center justify-center hover:opacity-90 transition-opacity" title="Eliminar foto">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Image 4: 3/4 Perspective Pair -->
+<div class="relative group rounded-xl bg-surface-container overflow-hidden aspect-square flex flex-col items-center justify-center shadow-sm">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-alt="Three quarter dynamic angular display of a complete pair of contemporary runner sneakers resting lightly against neutral grey podium with urban athletic lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCBVso7p7GOS_PxslwyoqhBdZUQlmRGpQ2hhk2ITlASIvGalwChMuxhK_hv8gu9452uqu3T6-L2L5nZzmyN8eQ52JUwZRR2SIgvjy5y6D4BaaGrnK6ODKL8aJQGVdRn9L3gEUmgmZdhd3EyeJ2gYoI934zax88BjM8dvcHOm6Y3ijcS7BbVURCU1WTzvtgnhaaaH3WYzG-3iZJCNC1HtoXQZLlOnudIOZlYmiaz9C-lUPc2a4V-YekBXQ')"></div>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full font-label-badge text-label-badge bg-surface-container-lowest text-on-surface">
+              Ángulo Par
+            </span>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<button class="w-8 h-8 rounded-full bg-error text-on-error flex items-center justify-center hover:opacity-90 transition-opacity" title="Eliminar foto">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-4 flex justify-end">
+<button class="h-9 px-4 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-size text-label-size flex items-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">add_photo_alternate</span>
+<span>+ Agregar más fotos</span>
+</button>
+</div>
+</section>
+<!-- CARD 3: Pricing and Commercial Taxes (Soles PEN) -->
+<section class="bg-surface-container-lowest rounded-xl p-6 shadow-sm">
+<div class="flex items-center justify-between pb-4 mb-6 border-b border-surface-container-high">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[22px]">payments</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Precios &amp; Facturación en Soles (S/)</h2>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Moneda Oficial: PEN</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Regular Retail Price -->
+<div>
+<label class="block font-label-size text-label-size text-on-surface mb-1.5" for="price-regular">
+              Precio Regular de Venta (PEN) <span class="text-error">*</span>
+</label>
+<div class="relative">
+<div class="absolute left-3 top-1/2 -translate-y-1/2 font-headline-sm text-headline-sm text-primary font-bold">
+                S/
+              </div>
+<input class="w-full h-12 pl-10 pr-4 rounded-lg bg-surface-container-low text-primary font-price-lg text-price-lg focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary outline-none transition-all" id="price-regular" oninput="calcDiscountBadge()" step="0.10" type="number" value="624.00"/>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5">
+              Precio visible en vitrina para carrito web y boletas físicas.
+            </p>
+<p class="hidden text-error font-body-sm text-body-sm mt-1 flex items-center gap-1" id="err-price">
+<span class="material-symbols-outlined text-[16px]">error</span>
+              Ingresa un precio mayor a S/ 0.00.
+            </p>
+</div>
+<!-- Compare-At / Strike-through Price -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="font-label-size text-label-size text-on-surface" for="price-compare">
+                Precio de Lista Anterior (Tachado)
+              </label>
+<span class="px-2 py-0.5 rounded-full font-label-badge text-label-badge bg-secondary text-on-secondary" id="discount-badge">
+                -9% OFF
+              </span>
+</div>
+<div class="relative">
+<div class="absolute left-3 top-1/2 -translate-y-1/2 font-headline-sm text-headline-sm text-on-surface-variant font-bold">
+                S/
+              </div>
+<input class="w-full h-12 pl-10 pr-4 rounded-lg bg-surface-container-low text-on-surface-variant font-price-md text-price-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary outline-none transition-all" id="price-compare" oninput="calcDiscountBadge()" placeholder="Ej. S/ 0.00" step="0.10" type="number" value="689.00"/>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5">
+              Opcional. Si se define, mostrará la etiqueta de descuento promocional.
+            </p>
+</div>
+<!-- Tax Setting Switch -->
+<div class="md:col-span-2 pt-2">
+<div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-container text-[22px] mt-0.5">receipt_long</span>
+<div>
+<p class="font-label-size text-label-size text-on-surface font-semibold">Precios incluyen IGV (18%)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Configurado para emisión automática de Boletas y Facturas electrónicas directas con SUNAT.
+                  </p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN: Visibility, Channel Controls & Inventory Info (30% ~ 4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<!-- CARD 4: Channel Visibility & Status -->
+<section class="bg-surface-container-lowest rounded-xl p-6 shadow-sm">
+<div class="flex items-center justify-between pb-3 mb-4 border-b border-surface-container-high">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">toggle_on</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Estado &amp; Canales</h2>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+</div>
+<!-- Master Status Toggle -->
+<div class="p-3.5 rounded-xl bg-surface-container-low flex items-center justify-between mb-5">
+<div class="flex flex-col">
+<span class="font-label-size text-label-size text-on-surface font-semibold">Estado del Producto</span>
+<span class="font-body-sm text-body-sm text-secondary-container font-medium" id="status-label">Activo en Catálogo</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="toggle-status" onchange="handleStatusToggle(this)" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Sales Channels Checkboxes -->
+<p class="font-label-size text-label-size text-on-surface mb-3 font-semibold">Canales Habilitados de Venta:</p>
+<div class="space-y-3 mb-6">
+<label class="flex items-start gap-3 p-3 rounded-lg bg-surface hover:bg-surface-container-low transition-colors cursor-pointer">
+<input checked="" class="mt-0.5 rounded text-primary focus:ring-0 w-4 h-4" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-size text-label-size text-on-surface font-semibold">E-Commerce Web &amp; App</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Visible para compra online con delivery a todo Perú.</span>
+</div>
+</label>
+<label class="flex items-start gap-3 p-3 rounded-lg bg-surface hover:bg-surface-container-low transition-colors cursor-pointer">
+<input checked="" class="mt-0.5 rounded text-primary focus:ring-0 w-4 h-4" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-size text-label-size text-on-surface font-semibold">POS Mostrador (Miraflores)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Habilitado para caja de cobro en tienda física.</span>
+</div>
+</label>
+</div>
+<!-- Drop VIP Early Access Toggle -->
+<div class="p-3.5 rounded-xl bg-surface-container border-l-4 border-secondary-container flex items-center justify-between">
+<div class="pr-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">verified</span>
+<span class="font-label-size text-label-size text-on-surface font-bold">Lanzamiento VIP Drop</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Reserva exclusiva para miembros tier Oro con acceso 24h anticipado.
+            </p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary-container"></div>
+</label>
+</div>
+</section>
+<!-- CARD 5: Sizing & Stock Notice (Inventory Direct Link) -->
+<section class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border-2 border-secondary-fixed">
+<div class="flex items-start gap-3 mb-3">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">warehouse</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary leading-tight">Gestión de Tallas y Stock</h3>
+<span class="font-label-badge text-label-badge text-secondary uppercase font-semibold">Control Centralizado</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+          Las tallas comerciales (EU 38 a EU 45), código de barras individual por par y stock físico en el <strong>Almacén Central Miraflores</strong> se asignan desde el módulo <strong>Inventario</strong> una vez guardado el calzado.
+        </p>
+<!-- Preconfigured default sizes badges display -->
+<p class="font-label-badge text-label-badge text-on-surface-variant uppercase mb-2">Matriz de tallas vinculadas al modelo:</p>
+<div class="grid grid-cols-3 gap-2 mb-4">
+<div class="px-2 py-2 rounded-lg bg-surface-container text-center flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">EU 39</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">0 pares</span>
+</div>
+<div class="px-2 py-2 rounded-lg bg-surface-container text-center flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">EU 40</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">0 pares</span>
+</div>
+<div class="px-2 py-2 rounded-lg bg-surface-container text-center flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">EU 41</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">0 pares</span>
+</div>
+<div class="px-2 py-2 rounded-lg bg-surface-container text-center flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">EU 42</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">0 pares</span>
+</div>
+<div class="px-2 py-2 rounded-lg bg-surface-container text-center flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">EU 43</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">0 pares</span>
+</div>
+<div class="px-2 py-2 rounded-lg bg-surface-container text-center flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">EU 44</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">0 pares</span>
+</div>
+</div>
+<a class="w-full h-10 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high font-label-size text-label-size font-semibold flex items-center justify-center gap-1.5 transition-colors" href="#">
+<span>Ir a Configuración de Inventario</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</section>
+<!-- CARD 6: Metadata & Audit trail -->
+<section class="bg-surface-container-lowest rounded-xl p-5 shadow-sm">
+<h3 class="font-label-size text-label-size text-on-surface font-semibold mb-3">Auditoría de Registro</h3>
+<div class="space-y-3 text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center justify-between pb-2 border-b border-surface-container-high">
+<span>Creado por:</span>
+<span class="text-primary font-medium">ops@sneakerstore.pe</span>
+</div>
+<div class="flex items-center justify-between pb-2 border-b border-surface-container-high">
+<span>Fecha de creación:</span>
+<span class="text-primary">12 Oct 2024, 15:40</span>
+</div>
+<div class="flex items-center justify-between pb-2 border-b border-surface-container-high">
+<span>Última modificación:</span>
+<span class="text-primary font-medium">Hace 2 días (Admin General)</span>
+</div>
+<div class="flex items-center justify-between">
+<span>Sincronización Web:</span>
+<span class="inline-flex items-center gap-1 text-secondary font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+              En tiempo real
+            </span>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Sticky Bottom Floating Action Bar -->
+<div class="fixed bottom-0 left-72 right-0 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_-4px_16px_rgba(0,0,0,0.06)] border-t border-surface-container-high z-30 px-gutter py-3">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span class="font-body-sm text-body-sm text-on-surface hidden sm:inline">Modo Edición activo para <strong>NK-PLS-6240</strong></span>
+</div>
+<div class="flex items-center gap-3">
+<button class="h-10 px-4 rounded-xl font-label-size text-label-size text-error hover:bg-error-container transition-all flex items-center gap-1.5" onclick="openModal()">
+<span class="material-symbols-outlined text-[18px]">delete_sweep</span>
+<span>Descartar Cambios</span>
+</button>
+<button class="h-10 px-5 rounded-xl font-label-size text-label-size bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" onclick="handleSaveAction(true)">
+          Guardar como Borrador
+        </button>
+<button class="h-10 px-6 rounded-xl font-label-size text-label-size bg-primary hover:bg-secondary-container text-on-primary transition-all shadow-md flex items-center gap-2" onclick="handleSaveAction(false)">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Guardar Producto</span>
+</button>
+</div>
+</div>
+</div>
+<!-- INTERACTIVE MODAL 1: Confirm Discard Changes -->
+<div class="fixed inset-0 z-50 bg-primary/60 backdrop-blur-sm hidden items-center justify-center p-4" id="modal-discard">
+<div class="bg-surface-container-lowest rounded-2xl max-w-md w-full p-6 shadow-2xl transform transition-all">
+<div class="w-12 h-12 rounded-full bg-error-container text-error flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-[26px]">warning</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">¿Deseas salir sin guardar los cambios?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+        Los cambios realizados en las especificaciones del calzado, precio de venta y galería fotográfica no se guardarán en el catálogo. Esta acción no se puede deshacer.
+      </p>
+<div class="flex items-center justify-end gap-3">
+<button class="h-11 px-5 rounded-xl font-label-size text-label-size bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" onclick="closeModal()">
+          Continuar editando
+        </button>
+<button class="h-11 px-5 rounded-xl font-label-size text-label-size bg-error hover:opacity-90 text-on-error transition-all font-semibold" onclick="confirmDiscard()">
+          Salir sin guardar
+        </button>
+</div>
+</div>
+</div>
+<!-- TOAST NOTIFICATION: Success Feedback -->
+<div class="fixed bottom-20 right-8 z-50 transform translate-y-32 opacity-0 transition-all duration-300 pointer-events-none max-w-md bg-primary text-on-primary p-4 rounded-xl shadow-xl flex items-start gap-3" id="toast-success">
+<span class="material-symbols-outlined text-secondary-container text-[24px] shrink-0 mt-0.5">verified</span>
+<div class="flex-1">
+<p class="font-headline-sm text-headline-sm font-semibold text-on-primary">¡Producto sincronizado con éxito!</p>
+<p class="font-body-sm text-body-sm text-on-primary-container mt-0.5">Los datos comerciales del modelo y precios han sido actualizados en la base central.</p>
+</div>
+<button class="text-on-primary-container hover:text-on-primary" onclick="hideToast()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Vanilla Interactive Scripts -->
+<script>
+  function setScenario(mode) {
+    // Reset buttons appearance
+    document.querySelectorAll('.state-pill').forEach(btn => {
+      btn.className = "state-pill px-3 py-1.5 rounded-full font-label-badge text-label-badge transition-all bg-surface-container text-on-surface-variant hover:bg-surface-container-high";
+    });
+
+    // Reset error displays
+    document.getElementById('err-name').classList.add('hidden');
+    document.getElementById('err-sku').classList.add('hidden');
+    document.getElementById('err-gallery').classList.add('hidden');
+    document.getElementById('err-price').classList.add('hidden');
+
+    const nameInput = document.getElementById('prod-name');
+    const skuInput = document.getElementById('prod-sku');
+    const descInput = document.getElementById('prod-description');
+    const priceInput = document.getElementById('price-regular');
+    const compareInput = document.getElementById('price-compare');
+    const pageTitle = document.getElementById('page-title');
+    const breadcrumb = document.getElementById('breadcrumb-current');
+    const gallery = document.getElementById('gallery-container');
+
+    if (mode === 'empty') {
+      document.getElementById('btn-state-empty').className = "state-pill px-3 py-1.5 rounded-full font-label-badge text-label-badge transition-all bg-primary text-on-primary shadow-sm";
+      pageTitle.innerText = 'Nuevo Producto';
+      breadcrumb.innerText = 'Crear Nuevo Calzado';
+      nameInput.value = '';
+      skuInput.value = '';
+      descInput.value = '';
+      priceInput.value = '';
+      compareInput.value = '';
+      document.getElementById('discount-badge').style.display = 'none';
+      document.getElementById('header-status-badge').innerText = 'BORRADOR';
+      document.getElementById('header-status-badge').className = 'px-2.5 py-0.5 rounded-full font-label-badge text-label-badge bg-surface-container text-on-surface-variant';
+    } 
+    else if (mode === 'edit') {
+      document.getElementById('btn-state-edit').className = "state-pill px-3 py-1.5 rounded-full font-label-badge text-label-badge transition-all bg-primary text-on-primary shadow-sm";
+      pageTitle.innerText = 'Editar Producto • NK-PLS-6240';
+      breadcrumb.innerText = 'Editar Calzado NK-PLS-6240';
+      nameInput.value = 'Nike Air Max Pulse Urban Edition';
+      skuInput.value = 'NK-PLS-6240';
+      descInput.value = 'Inspiradas en la escena musical underground de Londres, las Nike Air Max Pulse combinan una silueta audaz y urbana con amortiguación de cámara de aire Air Max 270 rediseñada. El revestimiento textil con toques de cuero sintético y detalles en goma reflectante ofrecen durabilidad sin perder transpirabilidad para el uso diario en asfalto.';
+      priceInput.value = '624.00';
+      compareInput.value = '689.00';
+      document.getElementById('discount-badge').style.display = 'inline-block';
+      document.getElementById('header-status-badge').innerText = 'PUBLICADO ONLINE';
+      document.getElementById('header-status-badge').className = 'px-2.5 py-0.5 rounded-full font-label-badge text-label-badge bg-secondary-fixed text-on-secondary-fixed';
+      calcDiscountBadge();
+    } 
+    else if (mode === 'validation') {
+      document.getElementById('btn-state-val').className = "state-pill px-3 py-1.5 rounded-full font-label-badge text-label-badge transition-all bg-error text-on-error shadow-sm";
+      nameInput.value = '';
+      skuInput.value = '';
+      priceInput.value = '0.00';
+      document.getElementById('err-name').classList.remove('hidden');
+      document.getElementById('err-sku').classList.remove('hidden');
+      document.getElementById('err-price').classList.remove('hidden');
+      document.getElementById('err-gallery').classList.remove('hidden');
+    }
+  }
+
+  function generateSku() {
+    const brands = ['NK', 'JD', 'NB', 'AD', 'AS'];
+    const randomBrand = brands[Math.floor(Math.random() * brands.length)];
+    const randomCode = Math.floor(1000 + Math.random() * 9000);
+    document.getElementById('prod-sku').value = randomBrand + '-PLX-' + randomCode;
+    document.getElementById('err-sku').classList.add('hidden');
+  }
+
+  function calcDiscountBadge() {
+    const reg = parseFloat(document.getElementById('price-regular').value);
+    const comp = parseFloat(document.getElementById('price-compare').value);
+    const badge = document.getElementById('discount-badge');
+
+    if (comp && reg && comp > reg) {
+      const discount = Math.round(((comp - reg) / comp) * 100);
+      badge.innerText = '-' + discount + '% OFF';
+      badge.style.display = 'inline-block';
+    } else {
+      badge.style.display = 'none';
+    }
+  }
+
+  function handleStatusToggle(elem) {
+    const label = document.getElementById('status-label');
+    if (elem.checked) {
+      label.innerText = 'Activo en Catálogo';
+      label.className = 'font-body-sm text-body-sm text-secondary-container font-medium';
+    } else {
+      label.innerText = 'Inactivo / Oculto';
+      label.className = 'font-body-sm text-body-sm text-on-surface-variant font-medium';
+    }
+  }
+
+  function handleSaveAction(isDraft) {
+    const name = document.getElementById('prod-name').value;
+    if (!name.trim()) {
+      setScenario('validation');
+      return;
+    }
+    triggerToast(isDraft ? 'Borrador guardado provisionalmente' : null);
+  }
+
+  function triggerToast(customMsg) {
+    const toast = document.getElementById('toast-success');
+    if (customMsg) {
+      toast.querySelector('p.font-headline-sm').innerText = customMsg;
+    } else {
+      toast.querySelector('p.font-headline-sm').innerText = '¡Producto sincronizado con éxito!';
+    }
+    toast.classList.remove('translate-y-32', 'opacity-0', 'pointer-events-none');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      hideToast();
+    }, 4000);
+  }
+
+  function hideToast() {
+    const toast = document.getElementById('toast-success');
+    toast.classList.add('translate-y-32', 'opacity-0', 'pointer-events-none');
+    toast.classList.remove('translate-y-0', 'opacity-100');
+  }
+
+  function openModal() {
+    const modal = document.getElementById('modal-discard');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('modal-discard');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  function confirmDiscard() {
+    closeModal();
+    setScenario('empty');
+    triggerToast('Cambios descartados');
+  }
+</script></main></div></body></html>

@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface":"#f9f9fa","surface-variant":"#e2e2e3","on-surface-variant":"#444748","secondary-container":"#fe6a34","on-surface":"#1a1c1d","surface-container":"#eeeeef","secondary-fixed":"#ffdbd0","inverse-primary":"#c8c6c5","on-background":"#1a1c1d","surface-dim":"#dadadb","tertiary":"#000000","outline-variant":"#c4c7c7","tertiary-container":"#151c27","primary-fixed-dim":"#c8c6c5","surface-container-high":"#e8e8e9","tertiary-fixed-dim":"#c0c7d6","on-primary-fixed-variant":"#474646","on-secondary-fixed":"#390c00","surface-tint":"#5f5e5e","surface-bright":"#f9f9fa","on-primary-container":"#858383","secondary":"#ab3500","background":"#f9f9fa","on-primary":"#ffffff","tertiary-fixed":"#dce2f3","surface-container-low":"#f3f3f4","on-tertiary-fixed":"#151c27","on-secondary-fixed-variant":"#832600","surface-container-highest":"#e2e2e3","on-primary-fixed":"#1c1b1b","on-error":"#ffffff","primary":"#000000","on-error-container":"#93000a","on-tertiary":"#ffffff","outline":"#747878","error":"#ba1a1a","primary-fixed":"#e5e2e1","on-secondary-container":"#5d1900","primary-container":"#1c1b1b","on-tertiary-fixed-variant":"#404754","surface-container-lowest":"#ffffff","inverse-on-surface":"#f0f1f2","error-container":"#ffdad6","secondary-fixed-dim":"#ffb59d","on-secondary":"#ffffff","on-tertiary-container":"#7d8492","inverse-surface":"#2f3132"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-mobile":"1rem","gutter":"1.5rem","space-md":"1rem","margin":"2rem","space-xs":"0.25rem","gutter-mobile":"0.75rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xl":"2.5rem"},"fontFamily":{"display-hero":["Inter"],"headline-lg":["Inter"],"headline-sm":["Inter"],"body-lg":["Inter"],"price-lg":["Inter"],"label-size":["Inter"],"body-sm":["Inter"],"label-badge":["Inter"],"display-hero-mobile":["Inter"],"body-md":["Inter"],"headline-lg-mobile":["Inter"],"headline-md":["Inter"],"price-md":["Inter"]},"fontSize":{"display-hero":["56px",{"lineHeight":"60px","letterSpacing":"-0.03em","fontWeight":"800"}],"headline-lg":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"price-lg":["24px",{"lineHeight":"28px","letterSpacing":"-0.02em","fontWeight":"800"}],"label-size":["13px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"label-badge":["11px",{"lineHeight":"12px","letterSpacing":"0.05em","fontWeight":"700"}],"display-hero-mobile":["36px",{"lineHeight":"40px","letterSpacing":"-0.025em","fontWeight":"800"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"700"}],"price-md":["18px",{"lineHeight":"22px","letterSpacing":"-0.01em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col flex-1 overflow-y-auto"><div class="px-6 pt-6 pb-5 flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">question_mark</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-tight text-primary leading-none">SneakerStore</span><span class="font-label-badge text-label-badge text-on-surface-variant tracking-wider uppercase mt-0.5">Admin Panel</span></div></div><span class="bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge px-2 py-0.5 rounded-full">HQ LIMA</span></div><div class="px-6 py-2"><div class="p-3 rounded-lg bg-surface-container-low flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary-container text-[18px]">store</span><div class="flex flex-col"><span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">Almacén Central</span><span class="font-label-badge text-label-badge text-on-surface-variant">Miraflores, Lima PE</span></div></div></div><nav class="flex-1 px-4 py-4 space-y-1" data-active-classes="bg-primary text-on-primary font-semibold shadow-sm"><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="resumen" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Resumen</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="productos" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-body-md text-body-md">Productos</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="inventario" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">warehouse</span><span class="font-body-md text-body-md">Inventario</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="pedidos" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span class="font-body-md text-body-md">Pedidos</span></div><span class="bg-secondary-container text-on-primary font-label-badge text-label-badge px-2 py-0.5 rounded-full">12 Pend</span></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="ventas-presenciales" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">point_of_sale</span><span class="font-body-md text-body-md">Ventas Presenciales</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="zonas-de-delivery" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">map</span><span class="font-body-md text-body-md">Zonas de Delivery</span></div></a></nav></div><div class="p-4 border-t border-surface-container-high bg-surface-container-lowest"><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-error hover:bg-error-container hover:text-on-error-container transition-all mb-3" data-path="cerrar-sesion" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span class="font-body-md text-body-md font-medium">Cerrar sesión</span></a><div class="flex items-center justify-between pt-2"><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Admin General</span><span class="font-label-badge text-label-badge text-on-surface-variant">ops@sneakerstore.pe</span></div></div><span class="material-symbols-outlined text-outline text-[18px]">verified</span></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span class="hover:text-on-surface cursor-pointer">Admin</span><span class="material-symbols-outlined text-[16px]">chevron_right</span><span class="font-semibold text-on-surface">Dashboard</span></div><div class="hidden lg:flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-badge text-label-badge"><span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span><span>Sistema Operativo (Firebase Ready)</span></div></div><div class="flex items-center gap-4"><div class="relative hidden sm:block w-72"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full h-10 pl-9 pr-4 rounded-full bg-surface-container-low text-on-surface placeholder:text-on-surface-variant text-body-sm font-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary transition-all" placeholder="Buscar pedido, SKU, cliente..." type="text"/></div><button class="relative p-2 rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary-container"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface flex-1 w-full px-gutter py-space-md"><div class="flex flex-col w-full">
+<!-- Interactive State Simulator Toolbar -->
+<aside aria-label="Simulador de estados de interfaz" class="mb-space-lg w-full rounded-xl bg-surface-container-lowest p-space-sm shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+<div class="flex items-center gap-2 px-2">
+<span class="material-symbols-outlined text-secondary-container text-[18px]">tune</span>
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-on-surface-variant font-bold">Simulador UX de Vistas:</span>
+</div>
+<div aria-label="Vistas disponibles" class="flex flex-wrap items-center gap-1.5 w-full md:w-auto" role="tablist">
+<button class="view-btn px-3 py-1.5 rounded-lg font-body-sm text-body-sm font-semibold transition-all bg-primary text-on-primary shadow-sm flex items-center gap-1.5" id="btn-live" onclick="switchView('live')">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+        1. Lista Completa (En Vivo)
+      </button>
+<button class="view-btn px-3 py-1.5 rounded-lg font-body-sm text-body-sm font-medium transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center gap-1.5" id="btn-modal" onclick="switchView('modal')">
+<span class="material-symbols-outlined text-[16px] text-error">warning</span>
+        2. Modal Desactivar Activo
+      </button>
+<button class="view-btn px-3 py-1.5 rounded-lg font-body-sm text-body-sm font-medium transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center gap-1.5" id="btn-empty" onclick="switchView('empty')">
+<span class="material-symbols-outlined text-[16px]">search_off</span>
+        3. Estado Vacío
+      </button>
+<button class="view-btn px-3 py-1.5 rounded-lg font-body-sm text-body-sm font-medium transition-all text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center gap-1.5" id="btn-skeleton" onclick="switchView('skeleton')">
+<span class="material-symbols-outlined text-[16px]">hourglass_top</span>
+        4. Carga / Skeletons
+      </button>
+</div>
+</aside>
+<!-- Section Header -->
+<section class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col gap-1 max-w-2xl">
+<div class="flex flex-wrap items-center gap-3">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Productos</h1>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest text-on-surface font-label-badge text-label-badge font-bold">
+<span class="w-2 h-2 rounded-full bg-[#16A34A]"></span>
+          34 Modelos Activos • 128 SKUs
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Gestiona el catálogo omnicanal, disponibilidad para la tienda online y mostrador Miraflores.
+      </p>
+</div>
+<div class="flex items-center gap-3 self-start lg:self-auto flex-wrap">
+<button class="h-11 px-4 rounded-xl bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-all font-body-sm text-body-sm font-semibold flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Exportar CSV</span>
+</button>
+<button class="h-11 px-4 rounded-xl bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-all font-body-sm text-body-sm font-semibold flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">checklist</span>
+<span>Ajuste Masivo</span>
+</button>
+<button class="h-11 px-5 rounded-xl bg-primary text-on-primary hover:bg-secondary-container transition-all font-body-sm text-body-sm font-semibold flex items-center gap-2 shadow-md">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>+ Nuevo Producto</span>
+</button>
+</div>
+</section>
+<!-- Filter & Search Controls -->
+<section class="w-full bg-surface-container-lowest rounded-xl p-space-md mb-space-md shadow-sm flex flex-col gap-space-md">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-sm items-center">
+<!-- Search Input -->
+<div class="lg:col-span-5 relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full h-11 pl-11 pr-4 rounded-xl bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all" placeholder="Buscar por nombre, modelo, SKU o código de barras..." type="text"/>
+</div>
+<!-- Filters -->
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<!-- Brand Filter -->
+<div class="relative">
+<select class="w-full h-11 pl-3.5 pr-8 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm font-medium appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary cursor-pointer transition-all">
+<option value="">Marca: Todas las marcas</option>
+<option value="nike">Nike</option>
+<option value="jordan">Jordan</option>
+<option value="newbalance">New Balance</option>
+<option value="adidas">Adidas</option>
+<option value="yeezy">Yeezy</option>
+<option value="puma">Puma</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant text-[18px]">keyboard_arrow_down</span>
+</div>
+<!-- Category Filter -->
+<div class="relative">
+<select class="w-full h-11 pl-3.5 pr-8 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm font-medium appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary cursor-pointer transition-all">
+<option value="">Categoría: Todas</option>
+<option value="retro">Retro / Lifestyle</option>
+<option value="running">Running / Performance</option>
+<option value="basketball">Basketball</option>
+<option value="collabs">Collabs VIP</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant text-[18px]">keyboard_arrow_down</span>
+</div>
+<!-- Status Filter -->
+<div class="relative">
+<select class="w-full h-11 pl-3.5 pr-8 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm font-medium appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary cursor-pointer transition-all">
+<option value="">Estado: Todos</option>
+<option value="activo">Activo</option>
+<option value="inactivo">Inactivo / Desactivado</option>
+<option value="critico">Stock Crítico</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant text-[18px]">keyboard_arrow_down</span>
+</div>
+</div>
+</div>
+<!-- Active Filter Badges & Quick Stats -->
+<div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Mostrando <strong class="text-on-surface font-semibold">8</strong> de 34 productos filtrados</span>
+<span class="text-outline-variant">•</span>
+<button class="font-body-sm text-body-sm text-secondary-container hover:underline font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">close</span>
+          Limpiar filtros
+        </button>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Vista:</span>
+<div class="flex bg-surface-container-low p-0.5 rounded-lg">
+<button class="p-1 rounded bg-surface-container-lowest text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[18px]">view_list</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- CONTENT VIEWS WRAPPER -->
+<div class="w-full">
+<!-- VIEW 1: LIVE DATA TABLE (Default) -->
+<div class="view-panel block space-y-space-md" id="view-live">
+<!-- Desktop Table -->
+<div class="hidden md:block w-full bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-badge text-label-badge uppercase tracking-wider">
+<th class="py-3.5 px-4 font-semibold">Imagen y Producto</th>
+<th class="py-3.5 px-4 font-semibold">Marca</th>
+<th class="py-3.5 px-4 font-semibold">Precio</th>
+<th class="py-3.5 px-4 font-semibold">Stock Total</th>
+<th class="py-3.5 px-4 font-semibold">Canal / Visibilidad</th>
+<th class="py-3.5 px-4 font-semibold">Estado</th>
+<th class="py-3.5 px-4 font-semibold text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm divide-y divide-surface-container-high/60">
+<!-- Item 1: Nike Air Volt React GT -->
+<tr class="hover:bg-surface/70 transition-colors group">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-lg bg-surface-container-low overflow-hidden flex-shrink-0 flex items-center justify-center p-1 relative">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="Nike Air Volt React GT athletic futuristic running sneaker in vibrant neon volt and black colorway isolated on neutral studio white background cinematic product lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQsSHnsPgWE-iGTPXw-nvTsLDeg_5R5Yzp0rcAuppuPs4jNUXkGhREGge2bi0wxakLs_83igqiy29CWoZsq2OE7YIK9jdTc_Wo_bOHb0iTEwjo7EGTEI_bcgr77aqvK83bMYn0XRRiyL_edo7mRBcWxO7aqnw8an2u2Mat4QL-jTxvSneD4xWsZulMxZAUadBnHA42Fx43m9bjicPuVMbZ0rIVL0zs3dYYOr4G1PUp6p0_Be3EwH1hkA"/>
+<span class="absolute bottom-1 right-1 w-2 h-2 rounded-full bg-[#16A34A]" title="Sincronizado"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-semibold text-on-surface group-hover:text-secondary-container transition-colors truncate">Nike Air Volt React GT</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-badge text-label-badge text-on-surface-variant tracking-wider uppercase font-mono">NK-VOLT-8492</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Running / Performance</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-badge text-label-badge font-bold uppercase tracking-wider">Nike</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-price-md text-price-md text-primary font-bold">S/ 589.00</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant line-through">S/ 649.00</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-on-surface">8 pares</span>
+<span class="text-on-surface-variant font-label-badge text-label-badge">(EU 40-44)</span>
+</div>
+<div class="w-24 h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 55%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">devices</span>
+<span>Web &amp; POS Miraflores</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#16A34A]/10 text-[#16A34A] font-label-badge text-label-badge font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#16A34A]"></span>
+                    Activo
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Ver ficha rápida">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" title="Editar producto">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" onclick="openDeactivateModal('Nike Air Volt React GT', 'NK-VOLT-8492')" title="Desactivar producto">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 2: Jordan Retro Street OG -->
+<tr class="hover:bg-surface/70 transition-colors group">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-lg bg-surface-container-low overflow-hidden flex-shrink-0 flex items-center justify-center p-1 relative">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="Air Jordan Retro Street OG high top basketball sneaker classic black red white colorway premium leather side angle product shot on pure white backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwfBr0Ubtgy32VjeJ6KHoRhnxHWgMz8Gv0-pFsrhjwjE_efRVmPjj9VO42lITGv-ULCCrjWNpxwQ8TSW2dNPzd2EUuESBjFLmeiAY9DYAls4I7YFsDVCm9kJDL-EEpcRXBEFp6627E5v6zVX98Ni9sMdxogdEoCRD1kFvYZS-6npZdNE7Ai-nERJ1WPnK1OF8fiFXWCHokJ0G4QRaLRlBYRvZsf-0EIFrsWGpwOzlSWDb8E3XWkaVxQw"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-semibold text-on-surface group-hover:text-secondary-container transition-colors truncate">Jordan Retro Street OG</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-badge text-label-badge text-on-surface-variant tracking-wider uppercase font-mono">JD-RET-5190</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Retro / Lifestyle</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-badge text-label-badge font-bold uppercase tracking-wider">Jordan</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-price-md text-price-md text-primary font-bold">S/ 519.00</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-on-surface">3 pares</span>
+<span class="text-on-surface-variant font-label-badge text-label-badge">(EU 42-43)</span>
+</div>
+<div class="w-24 h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 25%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">devices</span>
+<span>Web &amp; POS Miraflores</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#16A34A]/10 text-[#16A34A] font-label-badge text-label-badge font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#16A34A]"></span>
+                    Activo
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Ver ficha rápida">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" title="Editar producto">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" onclick="openDeactivateModal('Jordan Retro Street OG', 'JD-RET-5190')" title="Desactivar producto">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 3: New Balance NB 9060 "Triple Sea" (Critical Stock) -->
+<tr class="hover:bg-surface/70 transition-colors group bg-error-container/10">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-lg bg-surface-container-low overflow-hidden flex-shrink-0 flex items-center justify-center p-1 relative">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="New Balance NB 9060 Triple Sea chunky lifestyle sneaker in marine aqua cyan teal and soft grey mesh overlays luxury streetwear studio shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKKTBCzMW_yPLam-beWC4kWy7ZidlaU-YaZAUjoNwonSVppG8LS35i-QnE12-sE-0rmaiAUuoT1J2jP9Qn5mjogNFb1-DbEP25yDhB3EYcWlOG8YA6pgrSXVWcSYrId60oeqCChGZG9_omANXEf5z7KECxetHIjQCPVXqKO6E0u8O57JTanDtY0LnVS8RrGtYy9nr2kCt5U25JGtWZaz0JfrzQJcdzbGRp87YyE_jQzWuyTqxo8wPh8Q"/>
+<span class="absolute -top-1 -right-1 bg-error text-on-error font-label-badge text-[9px] px-1 rounded-full">CRÍT</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-semibold text-on-surface group-hover:text-secondary-container transition-colors truncate">New Balance NB 9060 "Triple Sea"</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-badge text-label-badge text-on-surface-variant tracking-wider uppercase font-mono">NB-9060-5790</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Retro / Lifestyle</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-badge text-label-badge font-bold uppercase tracking-wider">New Balance</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-price-md text-price-md text-primary font-bold">S/ 579.00</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-error">2 pares</span>
+<span class="text-error font-label-badge text-label-badge font-bold bg-error-container px-1.5 py-0.2 rounded">Crítico</span>
+</div>
+<div class="w-24 h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 15%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">devices</span>
+<span>Web &amp; POS Miraflores</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#16A34A]/10 text-[#16A34A] font-label-badge text-label-badge font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#16A34A]"></span>
+                    Activo
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Ver ficha rápida">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" title="Editar producto">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-error hover:bg-error-container/60 transition-colors" onclick="openDeactivateModal('New Balance NB 9060 Triple Sea', 'NB-9060-5790')" title="Desactivar producto">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 4: Adidas Originals Forum Low -->
+<tr class="hover:bg-surface/70 transition-colors group">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-lg bg-surface-container-low overflow-hidden flex-shrink-0 flex items-center justify-center p-1">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="Adidas Originals Forum Low classic white and collegiate royal blue strap streetwear sneaker side profile clean product studio shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBm3kDC0Q3iznPy060xvbeYgzQP5TQ7TRNu6ujEoeM32_gP_8XU350656AEtPvrY96trYkyJPuuVqcbGs1hU6_7uqU1Gi9W2276phbjfGndIPEKJH1XIXS4tZCd6A4IW-KSnjXcNgl9ZvD0mfUSxFz40mEOJ0cgI17-xNe9qE6-vW7HpAxnHT8tFQQFkiBjRMdmTKKvqGR6QgMFVezetk5N9k1BBmO5Kmlo7BcrrpttWdIXTjEgfqy73w"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-semibold text-on-surface group-hover:text-secondary-container transition-colors truncate">Adidas Originals Forum Low</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-badge text-label-badge text-on-surface-variant tracking-wider uppercase font-mono">AD-FOR-3890</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Retro / Lifestyle</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-badge text-label-badge font-bold uppercase tracking-wider">Adidas</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-price-md text-price-md text-primary font-bold">S/ 389.00</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-on-surface">12 pares</span>
+<span class="text-on-surface-variant font-label-badge text-label-badge">(EU 39-44)</span>
+</div>
+<div class="w-24 h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 80%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">devices</span>
+<span>Web &amp; POS Miraflores</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#16A34A]/10 text-[#16A34A] font-label-badge text-label-badge font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#16A34A]"></span>
+                    Activo
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Ver ficha rápida">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" title="Editar producto">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" onclick="openDeactivateModal('Adidas Originals Forum Low', 'AD-FOR-3890')" title="Desactivar producto">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 5: Nike Dunk Low Retro White/Black (Desactivado/Agotado) -->
+<tr class="hover:bg-surface/70 transition-colors group opacity-60 bg-surface-container-low/40">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-lg bg-surface-container-high overflow-hidden flex-shrink-0 flex items-center justify-center p-1 grayscale">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="Nike Dunk Low Retro Panda black and white two tone skate sneaker flat top profile studio product photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTDmpVfNOBvw8-ZehWzq5kGa9KkJGYpBLSCaW30XxmvDEakYKkkoGVCmU8ydnjSs5LmlYRT4Cr5CRhphLxIsO2hhz9o80_pqx88Mgy79vte2dcMBGVe1s9hhm4-9UwepnEnS4xDi7cLc7T3dR0nR9zdxK8MFIqbCzs22mbaupixLDHayzJPLb4SBdpZ7rRNDQDQEX5DwIHJ1jc5G7ugH48unSMEPz-reSu0VrTAfygQVd8YCZmREyQjQ"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-semibold text-on-surface truncate">Nike Dunk Low Retro "Panda"</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-badge text-label-badge text-on-surface-variant tracking-wider uppercase font-mono">NK-DNK-4690</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Retro / Lifestyle</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant font-label-badge text-label-badge font-bold uppercase tracking-wider">Nike</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-price-md text-price-md text-on-surface-variant font-bold">S/ 469.00</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1">
+<span class="font-semibold text-on-surface-variant">0 pares</span>
+<span class="text-error font-label-badge text-label-badge">Agotado</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">visibility_off</span>
+<span>Oculto en Catálogo</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface-variant font-label-badge text-label-badge font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                    Desactivado
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Ver ficha rápida">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" title="Editar producto">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-[#16A34A] hover:bg-surface-container-high transition-colors" onclick="toggleRowStatus(this)" title="Reactivar producto">
+<span class="material-symbols-outlined text-[18px]">toggle_off</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 6: Nike Air Max Pulse Urban -->
+<tr class="hover:bg-surface/70 transition-colors group">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-lg bg-surface-container-low overflow-hidden flex-shrink-0 flex items-center justify-center p-1">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="Nike Air Max Pulse Urban modern techwear athletic shoe in triple black and reflective accents side angle studio shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMvcVB7Vy72s_VB7a7IfzXQc61bwYj05QDEu-nS8Hp3VGW9x5lCqUaF-sV51EQcwavWJrBRV9GeZ20bOP-LpZtGMnw_S-sFwz3jYs1M2iaVwRSHi-VkoSZf-p1sEfIOptomUr7BAO-raUHsD3hp2UQEVF5c1P5emTDaXdBWRk8v78MtgF09n2uO9nQFvbfeWWxnQH1amXaEbr7kvqVZ11UtZkDQKACbTLFQ19jTYyBXovTA_NVkmZpTQ"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-semibold text-on-surface group-hover:text-secondary-container transition-colors truncate">Nike Air Max Pulse Urban</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-badge text-label-badge text-on-surface-variant tracking-wider uppercase font-mono">NK-PLS-6240</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Running / Performance</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-badge text-label-badge font-bold uppercase tracking-wider">Nike</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-price-md text-price-md text-primary font-bold">S/ 624.00</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-on-surface">15 pares</span>
+<span class="text-on-surface-variant font-label-badge text-label-badge">(EU 39-45)</span>
+</div>
+<div class="w-24 h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 90%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">devices</span>
+<span>Web &amp; POS Miraflores</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#16A34A]/10 text-[#16A34A] font-label-badge text-label-badge font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#16A34A]"></span>
+                    Activo
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Ver ficha rápida">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" title="Editar producto">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" onclick="openDeactivateModal('Nike Air Max Pulse Urban', 'NK-PLS-6240')" title="Desactivar producto">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 7: Jordan 4 Retro Military Black -->
+<tr class="hover:bg-surface/70 transition-colors group">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-lg bg-surface-container-low overflow-hidden flex-shrink-0 flex items-center justify-center p-1 relative">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="Air Jordan 4 Retro Military Black premium suede and smooth white leather collector basketball sneaker dramatic lighting studio photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4YKjeYO-a-aiq9p06sjJ1ZmvQlZVBypIbuFbJW9jt1QGOdgu2ahVK1jzCCGB196HQQVh7u1cgw4qAvFFUqHu8VJ12DaWN6P60nqN9839mccBlqmwdquPT8fbQnhmwWKgJLgzAvJoAG_ia1gpHk-TtQo2cSmX6213gpuv9wZU_dkCbWfDzg7Mqx35SZkAGc_hgg32FAnnsf7BeUrqhbVt7JOvsxCyh1GQVW_zoUeYnv4qbY6d_aDtiYw"/>
+<span class="absolute top-1 left-1 bg-primary text-on-primary font-label-badge text-[9px] px-1 rounded">VIP</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-semibold text-on-surface group-hover:text-secondary-container transition-colors truncate">Jordan 4 Retro "Military Black"</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-badge text-label-badge text-on-surface-variant tracking-wider uppercase font-mono">JD-4MB-8990</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-badge text-label-badge text-secondary font-bold">Collabs VIP</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-badge text-label-badge font-bold uppercase tracking-wider">Jordan</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-price-md text-price-md text-primary font-bold">S/ 899.00</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-secondary">1 par</span>
+<span class="text-secondary font-label-badge text-label-badge font-semibold">(VIP Drop EU 43)</span>
+</div>
+<div class="w-24 h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 10%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">local_mall</span>
+<span class="font-semibold">Solo Tienda Miraflores</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#16A34A]/10 text-[#16A34A] font-label-badge text-label-badge font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#16A34A]"></span>
+                    Activo
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Ver ficha rápida">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" title="Editar producto">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" onclick="openDeactivateModal('Jordan 4 Retro Military Black', 'JD-4MB-8990')" title="Desactivar producto">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Item 8: Adidas Campus 00s Core Black -->
+<tr class="hover:bg-surface/70 transition-colors group">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-lg bg-surface-container-low overflow-hidden flex-shrink-0 flex items-center justify-center p-1">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="Adidas Campus 00s Core Black skateboard lifestyle sneaker fat white laces black suede upper clean modern streetwear product lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuDCrCGiJW8pzLd99uIE9lBYq-mmmmReExqa6u6ErBMYRvidIh3McuDbCK_V-rnEi2jw9uuRrQfLJLqeaNUGQCmR6_59NFNeGM_LnGtgfpFF59aIx1OxRR_ogsmLHYLKcrjzRKiRi2UwLexRVUu2UhdpQd0Nne1OKwgERq7UDed5PANec9dC_LFbCSDJsyOlq6uCDG3X_I-A6XLQo-Woccc0D3tNvxgy42iiJ-4OemDxskmbgmyy95NA"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md font-semibold text-on-surface group-hover:text-secondary-container transition-colors truncate">Adidas Campus 00s "Core Black"</span>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-badge text-label-badge text-on-surface-variant tracking-wider uppercase font-mono">AD-CMP-3590</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Retro / Lifestyle</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-badge text-label-badge font-bold uppercase tracking-wider">Adidas</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-price-md text-price-md text-primary font-bold">S/ 359.00</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="font-semibold text-on-surface">4 pares</span>
+<span class="text-on-surface-variant font-label-badge text-label-badge">(EU 41-43)</span>
+</div>
+<div class="w-24 h-1.5 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 35%"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">devices</span>
+<span>Web &amp; POS Miraflores</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#16A34A]/10 text-[#16A34A] font-label-badge text-label-badge font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#16A34A]"></span>
+                    Activo
+                  </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Ver ficha rápida">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" title="Editar producto">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/40 transition-colors" onclick="openDeactivateModal('Adidas Campus 00s Core Black', 'AD-CMP-3590')" title="Desactivar producto">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Mobile Card List (Responsive) -->
+<div class="block md:hidden space-y-3">
+<!-- Mobile Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-start gap-3">
+<div class="w-16 h-16 rounded-lg bg-surface-container-low flex items-center justify-center p-1.5 flex-shrink-0">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="Nike Air Volt React GT athletic futuristic running sneaker in neon volt and black colorway product photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYgbjpNKH49BusrraKc6J35dSgoa2Se52_W4sSKUX4IjO5ET8S0jOckyujrc7Ickcfn7Wk1vZjOPYwiJtsYgID9TMMpR-LPwZCQ1n6gq01QaTu_OgiERZgNceRF0ys-i0kRpXEMwLQ8J3iFGytGQQ2YBwxRofCyw5E8xP_iFANjGK4qzSc3M7zgivVQGU1YIGE9H5He-lXlyQjOQHOj51qKGN-Mds66UIAqx36zVNrnINPTzxwKf0SMA"/>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-badge text-[10px] font-bold uppercase">Nike</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#16A34A]/10 text-[#16A34A] font-label-badge text-[11px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#16A34A]"></span> Activo
+                </span>
+</div>
+<h3 class="font-body-md text-body-md font-bold text-on-surface truncate mt-1">Nike Air Volt React GT</h3>
+<span class="font-label-badge text-label-badge text-on-surface-variant font-mono">NK-VOLT-8492</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-2 bg-surface-container-low/50 rounded-lg p-2.5">
+<div>
+<span class="font-label-badge text-[10px] text-on-surface-variant uppercase tracking-wider block">Precio</span>
+<span class="font-price-md text-price-md text-primary font-bold">S/ 589.00</span>
+</div>
+<div>
+<span class="font-label-badge text-[10px] text-on-surface-variant uppercase tracking-wider block">Stock</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">8 pares (EU 40-44)</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-badge text-label-badge text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">devices</span> Web &amp; Tienda
+            </span>
+<div class="flex items-center gap-1">
+<button class="p-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-low text-error hover:bg-error-container" onclick="openDeactivateModal('Nike Air Volt React GT', 'NK-VOLT-8492')">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile Card 2: New Balance NB 9060 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-start gap-3">
+<div class="w-16 h-16 rounded-lg bg-surface-container-low flex items-center justify-center p-1.5 flex-shrink-0">
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="New Balance NB 9060 Triple Sea chunky lifestyle sneaker in marine aqua cyan teal and soft grey mesh overlays luxury streetwear studio shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_QvWuw_6vEQAis7whIualF1HkLEcrxqmDST4HwZwpwV3uoQflsgu0DGOT5NnD72aGaKheQ5mM8d8PtUjVGFjYkj0j9zDvw5zByokPnBZd4cAjVzu_Nm9VlZkFAihgQATYZsxlWlbZksYa0u-1mls-5yEDo6V0CjsAQ2WYECesuWf8jWs4f0YvExvAQFhNU2MQQxA2fP3ZwTGAlTCK424OxyPhC2QkbsmgjkQQtfiUR_FPXjIg4PoX1g"/>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-badge text-[10px] font-bold uppercase">New Balance</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container text-error font-label-badge text-[11px] font-bold">
+                  Crítico
+                </span>
+</div>
+<h3 class="font-body-md text-body-md font-bold text-on-surface truncate mt-1">NB 9060 "Triple Sea"</h3>
+<span class="font-label-badge text-label-badge text-on-surface-variant font-mono">NB-9060-5790</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-2 bg-surface-container-low/50 rounded-lg p-2.5">
+<div>
+<span class="font-label-badge text-[10px] text-on-surface-variant uppercase tracking-wider block">Precio</span>
+<span class="font-price-md text-price-md text-primary font-bold">S/ 579.00</span>
+</div>
+<div>
+<span class="font-label-badge text-[10px] text-on-surface-variant uppercase tracking-wider block">Stock</span>
+<span class="font-body-sm text-body-sm font-bold text-error">2 pares (Alerta)</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-badge text-label-badge text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">devices</span> Web &amp; Tienda
+            </span>
+<div class="flex items-center gap-1">
+<button class="p-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-2 rounded-lg bg-error-container text-error" onclick="openDeactivateModal('New Balance NB 9060 Triple Sea', 'NB-9060-5790')">
+<span class="material-symbols-outlined text-[18px]">toggle_on</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination Component -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-4 text-on-surface-variant font-body-sm text-body-sm">
+<span>Mostrando <strong class="text-on-surface">1 a 8</strong> de 34 productos</span>
+<div class="flex items-center gap-2">
+<span class="hidden sm:inline">Filas:</span>
+<select class="h-8 px-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+<option value="8">8 por página</option>
+<option value="16">16 por página</option>
+<option value="32">32 por página</option>
+</select>
+</div>
+</div>
+<nav aria-label="Paginación de productos" class="flex items-center gap-1">
+<button class="h-9 px-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-sm text-body-sm flex items-center gap-1 transition-all disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+<span class="hidden sm:inline">Anterior</span>
+</button>
+<button class="w-9 h-9 rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-semibold shadow-sm">1</button>
+<button class="w-9 h-9 rounded-lg text-on-surface hover:bg-surface-container-high font-body-sm text-body-sm font-semibold transition-all">2</button>
+<button class="w-9 h-9 rounded-lg text-on-surface hover:bg-surface-container-high font-body-sm text-body-sm font-semibold transition-all">3</button>
+<span class="w-6 text-center text-on-surface-variant">...</span>
+<button class="w-9 h-9 rounded-lg text-on-surface hover:bg-surface-container-high font-body-sm text-body-sm font-semibold transition-all">5</button>
+<button class="h-9 px-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-body-sm text-body-sm flex items-center gap-1 transition-all">
+<span class="hidden sm:inline">Siguiente</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</nav>
+</div>
+</div>
+<!-- VIEW 3: EMPTY STATE (Hidden by default, triggered by simulator) -->
+<div class="view-panel hidden w-full bg-surface-container-lowest rounded-xl p-12 text-center shadow-sm" id="view-empty">
+<div class="max-w-md mx-auto flex flex-col items-center">
+<div class="w-20 h-20 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant mb-4">
+<span class="material-symbols-outlined text-[44px]">search_off</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">No se encontraron productos coincidentes</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+          No hay modelos que coincidan con los filtros aplicados (marca, categoría o término de búsqueda). Intenta restablecer los parámetros.
+        </p>
+<div class="flex items-center gap-3">
+<button class="h-11 px-5 rounded-xl bg-primary text-on-primary hover:bg-secondary-container transition-all font-body-sm text-body-sm font-semibold flex items-center gap-2" onclick="switchView('live')">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+<span>Restablecer Filtros</span>
+</button>
+<button class="h-11 px-5 rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-all font-body-sm text-body-sm font-semibold">
+            + Crear nuevo SKU
+          </button>
+</div>
+</div>
+</div>
+<!-- VIEW 4: SKELETON / LOADING STATE -->
+<div class="view-panel hidden w-full bg-surface-container-lowest rounded-xl shadow-sm p-6 space-y-4" id="view-skeleton">
+<div class="flex items-center justify-between pb-4">
+<div class="h-6 w-48 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-8 w-28 bg-surface-container-high rounded-lg animate-pulse"></div>
+</div>
+<!-- Skeleton Rows -->
+<div class="space-y-4">
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low/60 animate-pulse">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 bg-surface-container-high rounded-lg"></div>
+<div class="space-y-2">
+<div class="h-4 w-44 bg-surface-container-high rounded"></div>
+<div class="h-3 w-28 bg-surface-container-high rounded"></div>
+</div>
+</div>
+<div class="h-6 w-20 bg-surface-container-high rounded"></div>
+<div class="h-6 w-24 bg-surface-container-high rounded"></div>
+<div class="h-6 w-16 bg-surface-container-high rounded-full"></div>
+<div class="h-8 w-20 bg-surface-container-high rounded"></div>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low/60 animate-pulse">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 bg-surface-container-high rounded-lg"></div>
+<div class="space-y-2">
+<div class="h-4 w-52 bg-surface-container-high rounded"></div>
+<div class="h-3 w-32 bg-surface-container-high rounded"></div>
+</div>
+</div>
+<div class="h-6 w-20 bg-surface-container-high rounded"></div>
+<div class="h-6 w-24 bg-surface-container-high rounded"></div>
+<div class="h-6 w-16 bg-surface-container-high rounded-full"></div>
+<div class="h-8 w-20 bg-surface-container-high rounded"></div>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low/60 animate-pulse">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 bg-surface-container-high rounded-lg"></div>
+<div class="space-y-2">
+<div class="h-4 w-40 bg-surface-container-high rounded"></div>
+<div class="h-3 w-24 bg-surface-container-high rounded"></div>
+</div>
+</div>
+<div class="h-6 w-20 bg-surface-container-high rounded"></div>
+<div class="h-6 w-24 bg-surface-container-high rounded"></div>
+<div class="h-6 w-16 bg-surface-container-high rounded-full"></div>
+<div class="h-8 w-20 bg-surface-container-high rounded"></div>
+</div>
+</div>
+<div class="pt-4 flex justify-between items-center">
+<div class="h-4 w-36 bg-surface-container-high rounded animate-pulse"></div>
+<div class="h-8 w-56 bg-surface-container-high rounded animate-pulse"></div>
+</div>
+</div>
+</div>
+<!-- FLOATING SUCCESS TOAST -->
+<aside aria-label="Notificación del sistema" class="fixed bottom-6 right-6 z-50 transform transition-all duration-300 translate-y-0 opacity-100 flex items-center gap-3 px-4 py-3 bg-primary text-on-primary rounded-xl shadow-xl" id="success-toast">
+<div class="w-6 h-6 rounded-full bg-[#16A34A] flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[16px] text-on-primary">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold">Producto actualizado correctamente</span>
+<span class="font-label-badge text-label-badge text-on-primary-container">El estado ha sido sincronizado con la app móvil y POS Miraflores</span>
+</div>
+<button class="ml-2 text-on-primary-container hover:text-on-primary transition-colors" onclick="dismissToast()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</aside>
+<!-- MODAL: DESACTIVAR PRODUCTO -->
+<div class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-primary/70 backdrop-blur-sm animate-fade-in" id="deactivate-modal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-xl shadow-2xl p-6 sm:p-7 relative flex flex-col gap-5 transform transition-all">
+<!-- Modal Header -->
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-error-container text-error flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[28px]">warning</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight">¿Desactivar producto del catálogo?</h2>
+<span class="font-label-badge text-label-badge text-error font-bold uppercase tracking-wider mt-0.5">Acción administrativa de catálogo</span>
+</div>
+<button class="ml-auto text-on-surface-variant hover:text-on-surface transition-colors p-1" onclick="closeDeactivateModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Confirmation Body -->
+<div class="text-on-surface-variant font-body-md text-body-md space-y-3">
+<p>
+          Estás a punto de desactivar <strong class="text-on-surface font-semibold" id="modal-product-name">"New Balance NB 9060 Triple Sea"</strong> (<span class="font-mono text-xs" id="modal-product-sku">SKU: NB-9060-5790</span>).
+        </p>
+<p class="font-body-sm text-body-sm bg-surface-container-low p-3 rounded-lg text-on-surface">
+          Este modelo dejará de ser visible en la tienda online y la app móvil de inmediato. Las reservas activas y pedidos en curso no se verán afectados.
+        </p>
+</div>
+<!-- Additional Setting Checkbox -->
+<div class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low/70">
+<input checked="" class="w-4 h-4 rounded text-secondary-container focus:ring-primary accent-primary cursor-pointer" id="hide-pos" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface cursor-pointer select-none" for="hide-pos">
+          Ocultar también del punto de venta en mostrador (POS Miraflores)
+        </label>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center justify-end gap-3 pt-2">
+<button class="h-11 px-5 rounded-xl bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-all font-body-sm text-body-sm font-semibold" onclick="closeDeactivateModal()">
+          Cancelar
+        </button>
+<button class="h-11 px-6 rounded-xl bg-error text-on-error hover:bg-primary transition-all font-body-sm text-body-sm font-semibold flex items-center gap-2 shadow-md" onclick="confirmDeactivation()">
+<span class="material-symbols-outlined text-[18px]">block</span>
+<span>Sí, Desactivar Producto</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // UI Simulator & Modal Control Scripts
+  function switchView(viewName) {
+    // Reset buttons styling
+    const buttons = document.querySelectorAll('.view-btn');
+    buttons.forEach(btn => {
+      btn.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+      btn.classList.add('text-on-surface-variant');
+    });
+
+    const activeBtn = document.getElementById('btn-' + viewName);
+    if (activeBtn) {
+      activeBtn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+      activeBtn.classList.remove('text-on-surface-variant');
+    }
+
+    // Hide all view panels
+    document.querySelectorAll('.view-panel').forEach(panel => {
+      panel.classList.add('hidden');
+      panel.classList.remove('block');
+    });
+
+    // Close modal if open
+    closeDeactivateModal();
+
+    if (viewName === 'live') {
+      document.getElementById('view-live').classList.remove('hidden');
+      document.getElementById('view-live').classList.add('block');
+    } else if (viewName === 'modal') {
+      document.getElementById('view-live').classList.remove('hidden');
+      document.getElementById('view-live').classList.add('block');
+      openDeactivateModal('New Balance NB 9060 Triple Sea', 'NB-9060-5790');
+    } else if (viewName === 'empty') {
+      document.getElementById('view-empty').classList.remove('hidden');
+      document.getElementById('view-empty').classList.add('block');
+    } else if (viewName === 'skeleton') {
+      document.getElementById('view-skeleton').classList.remove('hidden');
+      document.getElementById('view-skeleton').classList.add('block');
+    }
+  }
+
+  function openDeactivateModal(name, sku) {
+    if (name) document.getElementById('modal-product-name').textContent = `"${name}"`;
+    if (sku) document.getElementById('modal-product-sku').textContent = `SKU: ${sku}`;
+    const modal = document.getElementById('deactivate-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeDeactivateModal() {
+    const modal = document.getElementById('deactivate-modal');
+    modal.classList.remove('flex');
+    modal.classList.add('hidden');
+  }
+
+  function confirmDeactivation() {
+    closeDeactivateModal();
+    const toast = document.getElementById('success-toast');
+    toast.classList.remove('translate-y-16', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    
+    // Auto hide after 4 seconds
+    setTimeout(() => {
+      dismissToast();
+    }, 4000);
+  }
+
+  function dismissToast() {
+    const toast = document.getElementById('success-toast');
+    toast.classList.remove('translate-y-0', 'opacity-100');
+    toast.classList.add('translate-y-16', 'opacity-0');
+  }
+
+  function toggleRowStatus(btn) {
+    alert('Acción simulada: El producto ha sido activado de nuevo en la tienda y mostrador.');
+  }
+</script></main></div></body></html>

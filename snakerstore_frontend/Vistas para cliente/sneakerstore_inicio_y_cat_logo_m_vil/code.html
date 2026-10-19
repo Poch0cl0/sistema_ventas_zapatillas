@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "background": "#f9f9fa", "on-surface": "#1a1c1d", "secondary-fixed-dim": "#ffb59d", "on-secondary-fixed": "#390c00", "tertiary-fixed-dim": "#c0c7d6", "on-primary-fixed": "#1c1b1b", "on-primary-fixed-variant": "#474646", "surface-dim": "#dadadb", "surface-bright": "#f9f9fa", "surface-container-highest": "#e2e2e3", "outline": "#747878", "on-primary": "#ffffff", "error-container": "#ffdad6", "secondary-container": "#fe6a34", "primary-container": "#1c1b1b", "on-secondary-fixed-variant": "#832600", "on-primary-container": "#858383", "tertiary": "#000000", "secondary": "#ab3500", "on-secondary-container": "#5d1900", "inverse-on-surface": "#f0f1f2", "inverse-primary": "#c8c6c5", "primary-fixed-dim": "#c8c6c5", "on-surface-variant": "#444748", "surface": "#f9f9fa", "surface-container-high": "#e8e8e9", "primary-fixed": "#e5e2e1", "surface-container-low": "#f3f3f4", "on-tertiary-container": "#7d8492", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#151c27", "tertiary-container": "#151c27", "outline-variant": "#c4c7c7", "surface-tint": "#5f5e5e", "on-tertiary-fixed-variant": "#404754", "secondary-fixed": "#ffdbd0", "surface-variant": "#e2e2e3", "on-secondary": "#ffffff", "on-background": "#1a1c1d", "inverse-surface": "#2f3132", "surface-container": "#eeeeef", "primary": "#000000", "on-tertiary": "#ffffff", "on-error": "#ffffff", "error": "#ba1a1a", "tertiary-fixed": "#dce2f3", "on-error-container": "#93000a" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.5rem", "space-xs": "0.25rem", "margin": "2rem", "margin-mobile": "1rem", "gutter": "1.5rem", "space-md": "1rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "gutter-mobile": "0.75rem" }, fontFamily: { "headline-md": ["Inter"], "headline-sm": ["Inter"], "body-md": ["Inter"], "price-md": ["Inter"], "display-hero": ["Inter"], "price-lg": ["Inter"], "label-size": ["Inter"], "headline-lg-mobile": ["Inter"], "body-sm": ["Inter"], "body-lg": ["Inter"], "headline-lg": ["Inter"], "label-badge": ["Inter"], "display-hero-mobile": ["Inter"] }, fontSize: { "headline-md": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "700"}], "headline-sm": ["18px", {"lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}], "price-md": ["18px", {"lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "display-hero": ["56px", {"lineHeight": "60px", "letterSpacing": "-0.03em", "fontWeight": "800"}], "price-lg": ["24px", {"lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "800"}], "label-size": ["13px", {"lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "600"}], "headline-lg-mobile": ["26px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}], "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}], "headline-lg": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "label-badge": ["11px", {"lineHeight": "12px", "letterSpacing": "0.05em", "fontWeight": "700"}], "display-hero-mobile": ["36px", {"lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "800"}] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-background font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="SneakerStore Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XwnSj5aCSrv7RclT3WoonCoPb1_Cfh77YGDJHlU1ojayTrVXgWmJ5eOxMwrxQldcBxdsV58IIAL9pdOLOt1W3Bf9BN3zAt-YN7AYw8Z7yKknGoKhHNKEIyalfUnr0xPAEGm3523GBgupfPxKsJMQDT6xIiD0LONm4iNf9vzDAg2tOaKSjHL-hRiXiOkqKdz-J0fudDGLbF_9IQiF-vimK6-zXBc0wxLKVXKLYC0eaKxie8GClJKqJlD7Sv"/><span class="font-headline-sm text-headline-sm uppercase tracking-tight text-primary">SneakerStore</span><span class="hidden">Inicio</span></div><div class="flex items-center gap-space-xs"><button aria-label="Buscar" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Carrito de compras" class="w-11 h-11 relative flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-2 right-2 flex items-center justify-center min-w-[16px] h-4 px-1 rounded-full bg-secondary-container text-on-primary font-label-badge text-label-badge leading-none">2</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-background min-h-screen"><div class="flex flex-col w-full px-margin-mobile space-y-space-md">
+<!-- 1. TOP SEARCH & GREETING BAR -->
+<section class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between">
+<div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">¡Hola, Runner! ⚡</p>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">Drop Central Lima</h1>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-high px-space-sm py-1 rounded-full">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="font-label-badge text-label-badge text-on-surface uppercase tracking-wider">En vivo</span>
+</div>
+</div>
+<div class="relative flex items-center gap-space-xs mt-space-xs">
+<div class="relative flex-1 flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px] pointer-events-none">search</span>
+<input class="w-full h-11 pl-10 pr-4 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-full outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all placeholder:text-outline" id="catalog-search" placeholder="Buscar por modelo, marca o estilo..." type="search"/>
+</div>
+<button aria-label="Abrir filtros avanzados" class="h-11 w-11 flex-shrink-0 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high active:scale-95 transition-transform" id="filter-trigger">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+</section>
+<!-- 2. HERO PROMOTIONAL BANNER -->
+<section class="relative overflow-hidden rounded-xl bg-primary text-on-primary shadow-xl shadow-primary/10">
+<!-- Atmospheric kinetic gradient accent -->
+<div class="absolute -top-12 -right-12 w-48 h-48 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-10 -left-10 w-36 h-36 rounded-full bg-secondary/15 blur-2xl pointer-events-none"></div>
+<div class="relative p-space-md flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container/25 text-secondary-fixed font-label-badge text-label-badge tracking-wider uppercase">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>Nueva Colección 2025</span>
+</div>
+<span class="font-label-badge text-label-badge text-surface-container-highest uppercase tracking-wider">Edición Limitada</span>
+</div>
+<!-- Sneaker visual showcase -->
+<div class="relative my-space-xs flex items-center justify-center py-2">
+<img alt="Sneaker Air Velocity Pro Volt Edition" class="w-4/5 max-h-48 object-contain drop-shadow-[0_16px_20px_rgba(0,0,0,0.65)] hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKJmRc0fsDq0EjeXoXCb4HvyAjTWH2u1WFwqC5rNj3N-Yizo9_ypC4HBiCuQeRdbxhQE7nWWgUhizJaCnKgk852zEIZcPyhzCRGtIEtDv0kchx1Xsbopbta2SDxbjb9HsXcBAHDPRy1p5oAxhGClOEhfaly35gkBV0Vj2CxpVbFuo9EVyO0RMT9CC2dTyIsr0reCQAWT-8yJEoBlDUWHwnzXOb2Hn6nPmwDFrUQ-OFuDGOQjQM6O755Q"/>
+</div>
+<div class="space-y-1">
+<div class="flex items-baseline justify-between">
+<h2 class="font-headline-md text-headline-md uppercase tracking-tight text-on-primary">Air Velocity Pro</h2>
+<span class="font-price-md text-price-md text-secondary-fixed">Desde S/ 489.00</span>
+</div>
+<p class="font-body-sm text-body-sm text-surface-container-highest line-clamp-1">
+          Máxima amortiguación reactiva para asfalto y pista.
+        </p>
+<div class="pt-space-sm flex items-center gap-space-xs">
+<button class="flex-1 h-11 bg-secondary-container text-on-primary font-headline-sm text-headline-sm flex items-center justify-center gap-2 rounded-xl shadow-lg shadow-secondary-container/30 active:scale-[0.98] transition-all" type="button">
+<span>Explorar catálogo</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button aria-label="Guardar en favoritos" class="h-11 w-11 flex items-center justify-center rounded-xl bg-surface-container-highest/20 text-on-primary hover:bg-surface-container-highest/30 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">favorite_border</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. QUICK CATEGORY PILLS (Horizontal scrollable) -->
+<section class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-on-surface-variant">Categorías Principales</span>
+<span class="font-label-badge text-label-badge text-secondary-container">Deslizar →</span>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-1 scrollbar-none -mx-margin-mobile px-margin-mobile">
+<button class="category-pill flex-shrink-0 h-8 px-4 rounded-full font-label-badge text-label-badge uppercase tracking-wider transition-all bg-primary text-on-primary shadow-sm" data-cat="all">
+        Todos
+      </button>
+<button class="category-pill flex-shrink-0 h-8 px-4 rounded-full font-label-badge text-label-badge uppercase tracking-wider transition-all bg-surface-container text-on-surface hover:bg-surface-container-high" data-cat="running">
+        Running
+      </button>
+<button class="category-pill flex-shrink-0 h-8 px-4 rounded-full font-label-badge text-label-badge uppercase tracking-wider transition-all bg-surface-container text-on-surface hover:bg-surface-container-high" data-cat="urban">
+        Urban & Streetwear
+      </button>
+<button class="category-pill flex-shrink-0 h-8 px-4 rounded-full font-label-badge text-label-badge uppercase tracking-wider transition-all bg-surface-container text-on-surface hover:bg-surface-container-high" data-cat="basketball">
+        Basketball
+      </button>
+<button class="category-pill flex-shrink-0 h-8 px-4 rounded-full font-label-badge text-label-badge uppercase tracking-wider transition-all bg-surface-container text-on-surface hover:bg-surface-container-high" data-cat="limited">
+        Edición Limitada
+      </button>
+<button class="category-pill flex-shrink-0 h-8 px-4 rounded-full font-label-badge text-label-badge uppercase tracking-wider transition-all bg-surface-container text-on-surface hover:bg-surface-container-high" data-cat="new">
+        Nuevos Lanzamientos
+      </button>
+</div>
+</section>
+<!-- 4. FILTER BAR & QUICK SIZE SELECTOR -->
+<section class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm space-y-space-sm">
+<!-- Brand selector pills -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-0.5 scrollbar-none">
+<span class="font-label-badge text-label-badge text-outline uppercase mr-1">Marca:</span>
+<button class="brand-pill h-7 px-3 rounded-full bg-surface-container-high text-on-surface font-label-badge text-label-badge font-semibold hover:bg-primary hover:text-on-primary transition-colors">Nike</button>
+<button class="brand-pill h-7 px-3 rounded-full bg-surface-container text-on-surface-variant font-label-badge text-label-badge hover:bg-surface-container-high transition-colors">Adidas</button>
+<button class="brand-pill h-7 px-3 rounded-full bg-surface-container text-on-surface-variant font-label-badge text-label-badge hover:bg-surface-container-high transition-colors">Jordan</button>
+<button class="brand-pill h-7 px-3 rounded-full bg-surface-container text-on-surface-variant font-label-badge text-label-badge hover:bg-surface-container-high transition-colors">New Balance</button>
+<button class="brand-pill h-7 px-3 rounded-full bg-surface-container text-on-surface-variant font-label-badge text-label-badge hover:bg-surface-container-high transition-colors">Puma</button>
+</div>
+<!-- Shoe size selector chips -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-outline">Talla EU Perú</span>
+<span class="font-body-sm text-body-sm text-secondary-container font-semibold">Tallas 41 y 42 populares</span>
+</div>
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
+<button class="size-chip h-8 min-w-8 px-2 flex items-center justify-center rounded-lg bg-surface-container text-on-surface font-label-size text-label-size transition-all">38</button>
+<button class="size-chip h-8 min-w-8 px-2 flex items-center justify-center rounded-lg bg-surface-container text-on-surface font-label-size text-label-size transition-all">39</button>
+<button class="size-chip h-8 min-w-8 px-2 flex items-center justify-center rounded-lg bg-surface-container text-on-surface font-label-size text-label-size transition-all">40</button>
+<button class="size-chip h-8 min-w-8 px-2 flex items-center justify-center rounded-lg bg-primary text-on-primary font-label-size text-label-size shadow-sm transition-all">41</button>
+<button class="size-chip h-8 min-w-8 px-2 flex items-center justify-center rounded-lg bg-surface-container-high text-on-surface font-label-size text-label-size font-bold transition-all">42</button>
+<button class="size-chip h-8 min-w-8 px-2 flex items-center justify-center rounded-lg bg-surface-container text-on-surface font-label-size text-label-size transition-all">43</button>
+<button class="size-chip h-8 min-w-8 px-2 flex items-center justify-center rounded-lg bg-surface-container text-on-surface font-label-size text-label-size transition-all">44</button>
+</div>
+</div>
+<!-- Active items counter and reset trigger -->
+<div class="flex items-center justify-between pt-1 border-t-0">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary-container">inventory_2</span>
+<span><strong class="text-on-surface">18 modelos</strong> disponibles para entrega inmediata</span>
+</div>
+<button class="font-label-badge text-label-badge text-secondary-container hover:underline uppercase tracking-wider" id="reset-filters">
+        Limpiar
+      </button>
+</div>
+</section>
+<!-- 5. VIEW MODE SWITCHER & CATALOG STATE TABS -->
+<section class="flex items-center justify-between bg-surface-container-low p-1 rounded-xl">
+<button class="flex-1 py-1.5 text-center rounded-lg font-label-badge text-label-badge uppercase tracking-wider transition-all bg-surface-container-lowest text-primary shadow-sm" id="tab-active">
+      Catálogo Activo (4)
+    </button>
+<button class="flex-1 py-1.5 text-center rounded-lg font-label-badge text-label-badge uppercase tracking-wider transition-all text-on-surface-variant hover:text-primary" id="tab-skeleton">
+      Cargando
+    </button>
+<button class="flex-1 py-1.5 text-center rounded-lg font-label-badge text-label-badge uppercase tracking-wider transition-all text-on-surface-variant hover:text-primary" id="tab-empty">
+      Sin Resultados
+    </button>
+</section>
+<!-- 5.A ACTIVE CATALOG GRID (2 Columns Mobile) -->
+<section class="grid grid-cols-2 gap-gutter-mobile" id="catalog-grid">
+<!-- Card 1: Volt Apex Runner -->
+<article class="flex flex-col justify-between bg-surface-container-lowest rounded-xl p-space-sm shadow-sm relative group hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-700 font-label-badge text-label-badge uppercase font-bold">Nuevo</span>
+<button aria-label="Añadir a lista de deseos" class="w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant active:text-secondary-container">
+<span class="material-symbols-outlined text-[16px]">favorite_border</span>
+</button>
+</div>
+<div class="relative w-full aspect-square bg-surface-container-low rounded-lg p-2 flex items-center justify-center overflow-hidden">
+<img alt="Nike Air Volt React GT zapatilla deportiva" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKJmRc0fsDq0EjeXoXCb4HvyAjTWH2u1WFwqC5rNj3N-Yizo9_ypC4HBiCuQeRdbxhQE7nWWgUhizJaCnKgk852zEIZcPyhzCRGtIEtDv0kchx1Xsbopbta2SDxbjb9HsXcBAHDPRy1p5oAxhGClOEhfaly35gkBV0Vj2CxpVbFuo9EVyO0RMT9CC2dTyIsr0reCQAWT-8yJEoBlDUWHwnzXOb2Hn6nPmwDFrUQ-OFuDGOQjQM6O755Q"/>
+</div>
+<div class="mt-2 space-y-0.5">
+<span class="font-body-sm text-body-sm text-outline uppercase tracking-wider block">Nike Sportswear</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 leading-tight">Air Volt React GT</h3>
+<div class="flex items-baseline gap-1.5 pt-0.5">
+<span class="font-price-md text-price-md text-primary">S/ 529.00</span>
+<span class="font-body-sm text-body-sm text-outline line-through">S/ 599.00</span>
+</div>
+<div class="flex items-center gap-1 pt-1 text-[11px] font-medium text-emerald-800">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+<span>Stock disponible (8 und)</span>
+</div>
+<p class="font-label-badge text-[10px] text-on-surface-variant">Tallas EU 39 - 44</p>
+</div>
+</div>
+<button class="w-full mt-3 h-8 bg-primary text-on-primary rounded-lg font-headline-sm text-[12px] flex items-center justify-center gap-1 active:bg-secondary-container transition-colors">
+<span>Ver detalles</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</article>
+<!-- Card 2: Jordan Retro Street OG -->
+<article class="flex flex-col justify-between bg-surface-container-lowest rounded-xl p-space-sm shadow-sm relative group hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded-full bg-secondary-container/15 text-secondary font-label-badge text-label-badge uppercase font-bold">Exclusivo</span>
+<button aria-label="Añadir a lista de deseos" class="w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant active:text-secondary-container">
+<span class="material-symbols-outlined text-[16px]">favorite_border</span>
+</button>
+</div>
+<div class="relative w-full aspect-square bg-surface-container-low rounded-lg p-2 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300" data-alt="Studio product shot of a high-top retro basketball sneaker in bold varsity black and crisp crimson white accents. Clean isolated studio background with subtle soft under-shoe shadow, urban basketball sneaker aesthetics, high contrast leather textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_T5Nwu8EOXrGIW2LropLFPYsh9Sw8qBol6YDLQy_1qmEpPKgA1ZiKRZn-gE1kmdkNdCepeiIvZS0t0R5aWhJ2dpJoO4Php54AFDG6kHhfx50u3CfPw57zAlAibBECWAVs-s1qBEeFIwZHtoYmEFWow1mBubXDb5ciwR170zzItAtGe7w00ml4l0u2aIYmrPBQzRIP1Sh4qn0ZLE1ndnu0nFzaPSN1PL0R1qmDNShb55bzs-ZY4jL4Ow"/>
+</div>
+<div class="mt-2 space-y-0.5">
+<span class="font-body-sm text-body-sm text-outline uppercase tracking-wider block">Jordan Brand</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 leading-tight">Retro Street OG '85</h3>
+<div class="flex items-baseline gap-1.5 pt-0.5">
+<span class="font-price-md text-price-md text-primary">S/ 649.00</span>
+</div>
+<div class="flex items-center gap-1 pt-1 text-[11px] font-medium text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-pulse"></span>
+<span>Últimos pares en EU 42 y 43</span>
+</div>
+<p class="font-label-badge text-[10px] text-on-surface-variant">Caja original + Pasadores extra</p>
+</div>
+</div>
+<button class="w-full mt-3 h-8 bg-primary text-on-primary rounded-lg font-headline-sm text-[12px] flex items-center justify-center gap-1 active:bg-secondary-container transition-colors">
+<span>Ver detalles</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</article>
+<!-- Card 3: Adidas Originals Forum Low -->
+<article class="flex flex-col justify-between bg-surface-container-lowest rounded-xl p-space-sm shadow-sm relative group hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-badge text-label-badge uppercase font-bold">Envío Gratis Lima</span>
+<button aria-label="Añadir a lista de deseos" class="w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant active:text-secondary-container">
+<span class="material-symbols-outlined text-[16px]">favorite_border</span>
+</button>
+</div>
+<div class="relative w-full aspect-square bg-surface-container-low rounded-lg p-2 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300" data-alt="Modern lifestyle low-top urban court sneaker in clean light grey and cloud white suede leather panels. Studio lighting with warm off-white seamless backdrop, minimalist streetwear athletic styling, hyper-clean silhouette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzaU0wj-mGbv6sPtP-vPvqycRZ_b9hsid5nToagEMaM85v0JwO1JawmOZHexcfkrBOkc-0TXNCiUKCfPLcZzL3c8rGiLk3fA-OEUv8M9JZrlZmDhMfsclMDLfOmZiZosfvHKrlO3PB1cuKnoRioU73MJS3ouBiamGRyNFxCJQkfwEX83yACLE0xrXpzmYJXjHKx7vlGf2299YvVqYfqZgx7U81Ml9BLNcW4N-L7NOEJ7saG1e8C_-Yag"/>
+</div>
+<div class="mt-2 space-y-0.5">
+<span class="font-body-sm text-body-sm text-outline uppercase tracking-wider block">Adidas Originals</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 leading-tight">Forum Low Urban Grey</h3>
+<div class="flex items-baseline gap-1.5 pt-0.5">
+<span class="font-price-md text-price-md text-primary">S/ 389.00</span>
+</div>
+<div class="flex items-center gap-1 pt-1 text-[11px] font-medium text-emerald-800">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+<span>Disponible en tienda</span>
+</div>
+<p class="font-label-badge text-[10px] text-on-surface-variant">Tallas EU 38 - 43</p>
+</div>
+</div>
+<button class="w-full mt-3 h-8 bg-primary text-on-primary rounded-lg font-headline-sm text-[12px] flex items-center justify-center gap-1 active:bg-secondary-container transition-colors">
+<span>Ver detalles</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</article>
+<!-- Card 4: New Balance 9060 -->
+<article class="flex flex-col justify-between bg-surface-container-lowest rounded-xl p-space-sm shadow-sm relative group hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded-full bg-primary text-on-primary font-label-badge text-label-badge uppercase font-bold">Top Ventas</span>
+<button aria-label="Añadir a lista de deseos" class="w-7 h-7 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface-variant active:text-secondary-container">
+<span class="material-symbols-outlined text-[16px]">favorite_border</span>
+</button>
+</div>
+<div class="relative w-full aspect-square bg-surface-container-low rounded-lg p-2 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300" data-alt="Futuristic chunky lifestyle runner sneaker in deep monochrome triple charcoal grey with sculpted wavy midsole geometry. Cinematic soft key lighting highlighting technical mesh and premium nubuck materials, angled dynamic sneaker composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzujg-7TtOZZXTJD-B8AYlDdVJ4KekDMvY9Z-UKUyV_va6Sx6c0azvzgcHNxhabkbAiFo1v6sAi3ioCQI1mpinyOtoWloCG0Ny8vQB40DzLdGQhasckqnpomQLzwweZRaL73Yi2YzHo6JC9rYrO98lHd-sLARBeig8uXdysr4AKcdlmKTZ74Xvf9gpPzorQ5OgPnyuOkTYfi0DkIe09QxqO_kGnbAxVEu0NFi0w9zzQ4RTlm38d219wA"/>
+</div>
+<div class="mt-2 space-y-0.5">
+<span class="font-body-sm text-body-sm text-outline uppercase tracking-wider block">New Balance</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 leading-tight">9060 Triple Monochrome</h3>
+<div class="flex items-baseline gap-1.5 pt-0.5">
+<span class="font-price-md text-price-md text-primary">S/ 579.00</span>
+</div>
+<div class="flex items-center gap-1 pt-1 text-[11px] font-medium text-emerald-800">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+<span>Stock disponible</span>
+</div>
+<p class="font-label-badge text-[10px] text-on-surface-variant">Tallas EU 40 - 45</p>
+</div>
+</div>
+<button class="w-full mt-3 h-8 bg-primary text-on-primary rounded-lg font-headline-sm text-[12px] flex items-center justify-center gap-1 active:bg-secondary-container transition-colors">
+<span>Ver detalles</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</article>
+</section>
+<!-- 5.B SKELETON LOADER STATE (Initially Hidden) -->
+<section class="hidden grid-cols-2 gap-gutter-mobile" id="skeleton-grid">
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm space-y-3 animate-pulse">
+<div class="h-4 bg-surface-container-high rounded w-1/3"></div>
+<div class="w-full aspect-square bg-surface-container rounded-lg"></div>
+<div class="h-3 bg-surface-container-high rounded w-1/2"></div>
+<div class="h-4 bg-surface-container-highest rounded w-3/4"></div>
+<div class="h-4 bg-surface-container-high rounded w-1/4"></div>
+<div class="h-8 bg-surface-container-highest rounded-lg w-full"></div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm space-y-3 animate-pulse">
+<div class="h-4 bg-surface-container-high rounded w-1/3"></div>
+<div class="w-full aspect-square bg-surface-container rounded-lg"></div>
+<div class="h-3 bg-surface-container-high rounded w-1/2"></div>
+<div class="h-4 bg-surface-container-highest rounded w-3/4"></div>
+<div class="h-4 bg-surface-container-high rounded w-1/4"></div>
+<div class="h-8 bg-surface-container-highest rounded-lg w-full"></div>
+</div>
+</section>
+<!-- 5.C EMPTY STATE (Initially Hidden) -->
+<section class="hidden flex-col items-center justify-center py-8 px-4 text-center bg-surface-container-lowest rounded-xl shadow-sm" id="empty-state">
+<div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center text-secondary-container mb-3">
+<span class="material-symbols-outlined text-[36px]">search_off</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">No encontramos ese sneaker</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs mb-4">
+      Prueba ajustando el filtro de tallas, cambiando de marca o buscando palabras clave más generales.
+    </p>
+<button class="h-10 px-6 rounded-xl bg-primary text-on-primary font-headline-sm text-headline-sm shadow-sm active:scale-95 transition-all" id="btn-empty-clear">
+      Restablecer todos los filtros
+    </button>
+</section>
+<!-- 6. INFORMATIVE TRUST BADGES BANNER -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-secondary-container/15 flex items-center justify-center text-secondary-container flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-body-md text-on-surface font-bold">Autenticidad y Pago Seguro</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Pagos 100% seguros con Yape, Plin y transferencia directa BCP / BBVA.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">timer</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-body-md text-on-surface font-bold">Reserva de Stock por 24 Horas</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Tu par queda reservado al confirmar pedido para evitar quedarte sin talla.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-body-md text-on-surface font-bold">Envíos a todo el Perú</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Entrega express en Lima Metropolitana (24-48h) y Olva Courier a Provincias.
+        </p>
+</div>
+</div>
+</section>
+<!-- 7. FOOTER & LOCAL POLICIES SECTION (Mobile Accordion Style) -->
+<footer class="pt-space-xs pb-space-lg space-y-space-sm">
+<!-- Payment badging -->
+<div class="bg-surface-container-low rounded-xl p-space-sm text-center space-y-2">
+<span class="font-label-badge text-label-badge text-outline uppercase tracking-wider block">Métodos de pago aceptados</span>
+<div class="flex items-center justify-center gap-2 flex-wrap">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-lowest text-on-surface font-label-badge text-label-badge font-bold shadow-xs">YAPE</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container-lowest text-on-surface font-label-badge text-label-badge font-bold shadow-xs">PLIN</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container-lowest text-on-surface font-label-badge text-label-badge font-bold shadow-xs">BCP</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container-lowest text-on-surface font-label-badge text-label-badge font-bold shadow-xs">BBVA</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container-lowest text-on-surface font-label-badge text-label-badge font-bold shadow-xs">INTERBANK</span>
+</div>
+</div>
+<!-- Quick Support Trigger Card -->
+<a class="flex items-center justify-between p-space-sm bg-[#25D366]/10 rounded-xl text-[#128C7E] active:scale-[0.99] transition-transform" href="https://wa.me/51999999999" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[22px]">chat</span>
+<div>
+<p class="font-headline-sm text-body-md font-bold leading-tight">Asesoría Inmediata por WhatsApp</p>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Resolvemos tus dudas de tallas y despachos</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</a>
+<!-- Legal & Policies links -->
+<div class="bg-surface-container-lowest rounded-xl divide-y-0 shadow-sm p-space-sm space-y-2">
+<details class="group py-1 cursor-pointer">
+<summary class="flex items-center justify-between font-label-badge text-label-badge text-on-surface uppercase tracking-wider list-none">
+<span>Cambios de Talla y Garantía</span>
+<span class="material-symbols-outlined text-[18px] group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-2 leading-relaxed">
+          Dispones de hasta 7 días calendario para solicitar cambio de talla siempre que el calzado se encuentre sin uso y en su empaque original con etiquetas intactas.
+        </p>
+</details>
+<details class="group py-1 cursor-pointer">
+<summary class="flex items-center justify-between font-label-badge text-label-badge text-on-surface uppercase tracking-wider list-none">
+<span>Tiempos de Entrega & Tarifas</span>
+<span class="material-symbols-outlined text-[18px] group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant pt-2 leading-relaxed">
+          Lima Centro y distritos seleccionados: Entrega el mismo día o 24 hrs. Otras zonas de Lima: 24-48 hrs. Provincias vía Olva Courier: 2 a 4 días hábiles.
+        </p>
+</details>
+<div class="pt-2 flex items-center justify-between font-label-badge text-label-badge text-on-surface-variant">
+<a class="hover:text-primary" href="#">Términos del Servicio</a>
+<span>•</span>
+<a class="hover:text-primary" href="#">Políticas de Privacidad</a>
+<span>•</span>
+<a class="flex items-center gap-1 hover:text-primary" href="#">
+<span class="material-symbols-outlined text-[14px]">menu_book</span>
+<span>Libro de Reclamaciones</span>
+</a>
+</div>
+</div>
+<!-- Small footer branding copyright -->
+<div class="text-center font-body-sm text-[11px] text-outline pt-2">
+      SneakerStore Perú © 2025. Todos los derechos reservados.
+    </div>
+</footer>
+</div>
+<script>
+  (function initSneakerCatalogInteractions() {
+    const tabActive = document.getElementById('tab-active');
+    const tabSkeleton = document.getElementById('tab-skeleton');
+    const tabEmpty = document.getElementById('tab-empty');
+
+    const catalogGrid = document.getElementById('catalog-grid');
+    const skeletonGrid = document.getElementById('skeleton-grid');
+    const emptyState = document.getElementById('empty-state');
+    const resetFiltersBtn = document.getElementById('reset-filters');
+    const btnEmptyClear = document.getElementById('btn-empty-clear');
+    const searchInput = document.getElementById('catalog-search');
+
+    function setActiveTab(selectedTab) {
+      [tabActive, tabSkeleton, tabEmpty].forEach(tab => {
+        tab.className = 'flex-1 py-1.5 text-center rounded-lg font-label-badge text-label-badge uppercase tracking-wider transition-all text-on-surface-variant hover:text-primary';
+      });
+      selectedTab.className = 'flex-1 py-1.5 text-center rounded-lg font-label-badge text-label-badge uppercase tracking-wider transition-all bg-surface-container-lowest text-primary shadow-sm';
+    }
+
+    function showState(view) {
+      catalogGrid.classList.add('hidden');
+      skeletonGrid.classList.add('hidden');
+      skeletonGrid.classList.remove('grid');
+      emptyState.classList.add('hidden');
+      emptyState.classList.remove('flex');
+
+      if (view === 'active') {
+        catalogGrid.classList.remove('hidden');
+        setActiveTab(tabActive);
+      } else if (view === 'skeleton') {
+        skeletonGrid.classList.remove('hidden');
+        skeletonGrid.classList.add('grid');
+        setActiveTab(tabSkeleton);
+      } else if (view === 'empty') {
+        emptyState.classList.remove('hidden');
+        emptyState.classList.add('flex');
+        setActiveTab(tabEmpty);
+      }
+    }
+
+    tabActive?.addEventListener('click', () => showState('active'));
+    tabSkeleton?.addEventListener('click', () => showState('skeleton'));
+    tabEmpty?.addEventListener('click', () => showState('empty'));
+
+    function resetFilters() {
+      if (searchInput) searchInput.value = '';
+      showState('active');
+
+      document.querySelectorAll('.size-chip').forEach(c => {
+        c.className = 'size-chip h-8 min-w-8 px-2 flex items-center justify-center rounded-lg bg-surface-container text-on-surface font-label-size text-label-size transition-all';
+      });
+      const chip41 = document.querySelectorAll('.size-chip')[3];
+      if (chip41) {
+        chip41.className = 'size-chip h-8 min-w-8 px-2 flex items-center justify-center rounded-lg bg-primary text-on-primary font-label-size text-label-size shadow-sm transition-all';
+      }
+    }
+
+    resetFiltersBtn?.addEventListener('click', resetFilters);
+    btnEmptyClear?.addEventListener('click', resetFilters);
+
+    // Interactive Category Pills
+    const catPills = document.querySelectorAll('.category-pill');
+    catPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        catPills.forEach(p => {
+          p.className = 'category-pill flex-shrink-0 h-8 px-4 rounded-full font-label-badge text-label-badge uppercase tracking-wider transition-all bg-surface-container text-on-surface hover:bg-surface-container-high';
+        });
+        pill.className = 'category-pill flex-shrink-0 h-8 px-4 rounded-full font-label-badge text-label-badge uppercase tracking-wider transition-all bg-primary text-on-primary shadow-sm';
+      });
+    });
+
+    // Interactive Size Chips
+    const sizeChips = document.querySelectorAll('.size-chip');
+    sizeChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        sizeChips.forEach(c => {
+          c.className = 'size-chip h-8 min-w-8 px-2 flex items-center justify-center rounded-lg bg-surface-container text-on-surface font-label-size text-label-size transition-all';
+        });
+        chip.className = 'size-chip h-8 min-w-8 px-2 flex items-center justify-center rounded-lg bg-primary text-on-primary font-label-size text-label-size shadow-sm transition-all';
+      });
+    });
+
+    // Search instant simulator
+    searchInput?.addEventListener('input', (e) => {
+      const val = e.target.value.toLowerCase().trim();
+      if (val === 'nada' || val === 'xxx') {
+        showState('empty');
+      } else if (val.length > 0) {
+        showState('active');
+      }
+    });
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-4px_16px_-2px_rgba(17,17,17,0.06)]" data-active-classes="text-primary font-semibold [&_span.indicator]:opacity-100"><div class="flex items-center justify-around h-16 px-gutter-mobile"><a aria-current="page" class="group relative flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 transition-all text-primary font-semibold [&_span.indicator]:opacity-100" data-path="inicio" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-badge text-label-badge mt-0.5">Inicio</span><span class="indicator opacity-0 w-1 h-1 rounded-full bg-secondary-container mt-0.5 transition-opacity"></span></a><a class="group relative flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-surface-variant hover:text-primary transition-all" data-path="catalogo" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span class="font-label-badge text-label-badge mt-0.5">Catálogo</span><span class="indicator opacity-0 w-1 h-1 rounded-full bg-secondary-container mt-0.5 transition-opacity"></span></a><a class="group relative flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-surface-variant hover:text-primary transition-all" data-path="carrito" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute -top-1 -right-2 flex items-center justify-center min-w-[15px] h-[15px] px-1 rounded-full bg-secondary-container text-on-primary font-label-badge text-[9px] font-bold leading-none">2</span></div><span class="font-label-badge text-label-badge mt-0.5">Carrito</span><span class="indicator opacity-0 w-1 h-1 rounded-full bg-secondary-container mt-0.5 transition-opacity"></span></a><a class="group relative flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-surface-variant hover:text-primary transition-all" data-path="pedidos" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-badge text-label-badge mt-0.5">Pedidos</span><span class="indicator opacity-0 w-1 h-1 rounded-full bg-secondary-container mt-0.5 transition-opacity"></span></a><a class="group relative flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-surface-variant hover:text-primary transition-all" data-path="perfil" href="#"><span class="material-symbols-outlined text-[22px]">person</span><span class="font-label-badge text-label-badge mt-0.5">Perfil</span><span class="indicator opacity-0 w-1 h-1 rounded-full bg-secondary-container mt-0.5 transition-opacity"></span></a></div></nav></body></html>

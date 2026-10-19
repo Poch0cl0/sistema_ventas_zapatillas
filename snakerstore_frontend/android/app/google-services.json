@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "266199614571",
+    "project_id": "snakerstore-e74cd",
+    "storage_bucket": "snakerstore-e74cd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266199614571:android:340c05a6d082d69986dd2e",
+        "android_client_info": {
+          "package_name": "com.example.sneakerstore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhYV97diOLD0KRVoENlwlJ5MgAl1z-hWQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

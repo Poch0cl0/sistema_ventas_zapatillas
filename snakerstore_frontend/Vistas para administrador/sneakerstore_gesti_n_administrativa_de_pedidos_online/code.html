@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface":"#f9f9fa","surface-variant":"#e2e2e3","on-surface-variant":"#444748","secondary-container":"#fe6a34","on-surface":"#1a1c1d","surface-container":"#eeeeef","secondary-fixed":"#ffdbd0","inverse-primary":"#c8c6c5","on-background":"#1a1c1d","surface-dim":"#dadadb","tertiary":"#000000","outline-variant":"#c4c7c7","tertiary-container":"#151c27","primary-fixed-dim":"#c8c6c5","surface-container-high":"#e8e8e9","tertiary-fixed-dim":"#c0c7d6","on-primary-fixed-variant":"#474646","on-secondary-fixed":"#390c00","surface-tint":"#5f5e5e","surface-bright":"#f9f9fa","on-primary-container":"#858383","secondary":"#ab3500","background":"#f9f9fa","on-primary":"#ffffff","tertiary-fixed":"#dce2f3","surface-container-low":"#f3f3f4","on-tertiary-fixed":"#151c27","on-secondary-fixed-variant":"#832600","surface-container-highest":"#e2e2e3","on-primary-fixed":"#1c1b1b","on-error":"#ffffff","primary":"#000000","on-error-container":"#93000a","on-tertiary":"#ffffff","outline":"#747878","error":"#ba1a1a","primary-fixed":"#e5e2e1","on-secondary-container":"#5d1900","primary-container":"#1c1b1b","on-tertiary-fixed-variant":"#404754","surface-container-lowest":"#ffffff","inverse-on-surface":"#f0f1f2","error-container":"#ffdad6","secondary-fixed-dim":"#ffb59d","on-secondary":"#ffffff","on-tertiary-container":"#7d8492","inverse-surface":"#2f3132"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-mobile":"1rem","gutter":"1.5rem","space-md":"1rem","margin":"2rem","space-xs":"0.25rem","gutter-mobile":"0.75rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xl":"2.5rem"},"fontFamily":{"display-hero":["Inter"],"headline-lg":["Inter"],"headline-sm":["Inter"],"body-lg":["Inter"],"price-lg":["Inter"],"label-size":["Inter"],"body-sm":["Inter"],"label-badge":["Inter"],"display-hero-mobile":["Inter"],"body-md":["Inter"],"headline-lg-mobile":["Inter"],"headline-md":["Inter"],"price-md":["Inter"]},"fontSize":{"display-hero":["56px",{"lineHeight":"60px","letterSpacing":"-0.03em","fontWeight":"800"}],"headline-lg":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"price-lg":["24px",{"lineHeight":"28px","letterSpacing":"-0.02em","fontWeight":"800"}],"label-size":["13px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"label-badge":["11px",{"lineHeight":"12px","letterSpacing":"0.05em","fontWeight":"700"}],"display-hero-mobile":["36px",{"lineHeight":"40px","letterSpacing":"-0.025em","fontWeight":"800"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"700"}],"price-md":["18px",{"lineHeight":"22px","letterSpacing":"-0.01em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col flex-1 overflow-y-auto"><div class="px-6 pt-6 pb-5 flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">question_mark</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-tight text-primary leading-none">SneakerStore</span><span class="font-label-badge text-label-badge text-on-surface-variant tracking-wider uppercase mt-0.5">Admin Panel</span></div></div><span class="bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge px-2 py-0.5 rounded-full">HQ LIMA</span></div><div class="px-6 py-2"><div class="p-3 rounded-lg bg-surface-container-low flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary-container text-[18px]">store</span><div class="flex flex-col"><span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">Almacén Central</span><span class="font-label-badge text-label-badge text-on-surface-variant">Miraflores, Lima PE</span></div></div></div><nav class="flex-1 px-4 py-4 space-y-1" data-active-classes="bg-primary text-on-primary font-semibold shadow-sm"><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="resumen" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Resumen</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="productos" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-body-md text-body-md">Productos</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="inventario" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">warehouse</span><span class="font-body-md text-body-md">Inventario</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="pedidos" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span class="font-body-md text-body-md">Pedidos</span></div><span class="bg-secondary-container text-on-primary font-label-badge text-label-badge px-2 py-0.5 rounded-full">12 Pend</span></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="ventas-presenciales" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">point_of_sale</span><span class="font-body-md text-body-md">Ventas Presenciales</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="zonas-de-delivery" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">map</span><span class="font-body-md text-body-md">Zonas de Delivery</span></div></a></nav></div><div class="p-4 border-t border-surface-container-high bg-surface-container-lowest"><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-error hover:bg-error-container hover:text-on-error-container transition-all mb-3" data-path="cerrar-sesion" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span class="font-body-md text-body-md font-medium">Cerrar sesión</span></a><div class="flex items-center justify-between pt-2"><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Admin General</span><span class="font-label-badge text-label-badge text-on-surface-variant">ops@sneakerstore.pe</span></div></div><span class="material-symbols-outlined text-outline text-[18px]">verified</span></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span class="hover:text-on-surface cursor-pointer">Admin</span><span class="material-symbols-outlined text-[16px]">chevron_right</span><span class="font-semibold text-on-surface">Dashboard</span></div><div class="hidden lg:flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-badge text-label-badge"><span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span><span>Sistema Operativo (Firebase Ready)</span></div></div><div class="flex items-center gap-4"><div class="relative hidden sm:block w-72"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full h-10 pl-9 pr-4 rounded-full bg-surface-container-low text-on-surface placeholder:text-on-surface-variant text-body-sm font-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary transition-all" placeholder="Buscar pedido, SKU, cliente..." type="text"/></div><button class="relative p-2 rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary-container"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface flex-1 w-full px-gutter py-space-md"><div class="flex flex-col w-full space-y-space-lg pb-16">
+<!-- Interactive State Controller (UX Simulator Bar) -->
+<aside aria-label="Simulador de estados del sistema" class="w-full bg-surface-container-lowest rounded-xl p-3 shadow-sm flex flex-col md:flex-row items-center justify-between gap-3 border-l-4 border-secondary-container">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-secondary-container text-[20px]">science</span>
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-on-surface-variant font-bold">Modo de Demostración:</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold" id="current-view-badge">Vista Principal (En vivo)</span>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 w-full md:w-auto">
+<button class="sim-btn px-2.5 py-1 rounded bg-primary text-on-primary font-body-sm text-body-sm hover:opacity-90 transition-all flex items-center gap-1" onclick="switchView('live')">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+        1. En vivo
+      </button>
+<button class="sim-btn px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container-high transition-all flex items-center gap-1" onclick="switchView('urgent')">
+<span class="material-symbols-outlined text-[14px] text-secondary">bolt</span>
+        2. Urgentes (8)
+      </button>
+<button class="sim-btn px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container-high transition-all flex items-center gap-1" onclick="switchView('expiring')">
+<span class="material-symbols-outlined text-[14px] text-secondary-container">timer</span>
+        3. Por vencer (&lt;2h)
+      </button>
+<button class="sim-btn px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container-high transition-all" onclick="switchView('empty')">
+        4. Estado Vacío
+      </button>
+<button class="sim-btn px-2.5 py-1 rounded bg-secondary-container text-on-primary font-body-sm text-body-sm hover:opacity-95 transition-all flex items-center gap-1 shadow-sm" onclick="toggleModal(true)">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+        5. Modal Voucher
+      </button>
+<button class="sim-btn px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-body-sm text-body-sm hover:bg-surface-container-high transition-all" onclick="switchView('skeleton')">
+        6. Skeleton
+      </button>
+</div>
+</aside>
+<!-- Page Header & Action Bar -->
+<section class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="space-y-1">
+<nav aria-label="Ruta de navegación" class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span>Admin</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Dashboard</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-semibold">Pedidos Online</span>
+</nav>
+<div class="flex flex-wrap items-center gap-3 pt-1">
+<h1 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">Gestión de Pedidos Online</h1>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-ping"></span>
+          12 REQUIEREN ATENCIÓN
+        </div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-badge text-label-badge font-medium">142 Pedidos Totales</span>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md max-w-3xl">
+        Monitoreo omnicanal, verificación de comprobantes Yape / Plin / BCP y orquestación de despachos Same-Day en Lima y envíos a provincia vía Olva Courier.
+      </p>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center gap-2 self-start lg:self-end">
+<button class="h-11 px-4 rounded-xl bg-surface-container-lowest text-on-surface font-body-sm text-body-sm font-semibold hover:bg-surface-container transition-all flex items-center gap-2 shadow-sm" onclick="toastMessage('Exportando reporte CSV estructurado de 142 pedidos...')">
+<span class="material-symbols-outlined text-[18px]">download</span>
+        Exportar Reporte (CSV)
+      </button>
+<button class="h-11 px-5 rounded-xl bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-secondary-container transition-all flex items-center gap-2 shadow-sm" id="sync-button" onclick="simulateSync()">
+<span class="material-symbols-outlined text-[18px]" id="sync-icon">sync</span>
+        Actualizar en vivo
+      </button>
+</div>
+</section>
+<!-- KPI Metrics Grid (High Contrast Kinetic Cards) -->
+<section aria-label="Métricas de atención inmediata" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+<!-- Card 1: Urgent Vouchers -->
+<article class="bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-secondary-fixed/40 pointer-events-none transition-transform group-hover:scale-125"></div>
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-secondary font-bold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+            Revisión Manual
+          </span>
+<span class="p-1.5 rounded-lg bg-secondary-fixed text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</span>
+</div>
+<h3 class="font-body-md text-body-md text-on-surface-variant font-medium">Pagos Pendientes</h3>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-hero text-headline-lg text-on-surface font-extrabold tracking-tight">8</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">pedidos</span>
+</div>
+<div class="font-price-md text-price-md text-secondary-container mt-0.5">S/ 4,890.00</div>
+</div>
+<div class="mt-4 pt-3 bg-surface-container-low -mx-5 -mb-5 px-5 py-2.5 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-secondary font-semibold">Vouchers Yape/Plin esperando</span>
+<button class="font-label-badge text-label-badge uppercase tracking-wider text-primary font-bold hover:underline flex items-center" onclick="filterByState('urgent')">
+          Validar
+          <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 2: Reservations Expiring -->
+<article class="bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-secondary-fixed-dim/30 pointer-events-none transition-transform group-hover:scale-125"></div>
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-secondary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">alarm</span>
+            Vence en &lt; 4h
+          </span>
+<span class="p-1.5 rounded-lg bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-[18px]">hourglass_top</span>
+</span>
+</div>
+<h3 class="font-body-md text-body-md text-on-surface-variant font-medium">Reservas por Vencer</h3>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-hero text-headline-lg text-on-surface font-extrabold tracking-tight">4</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">órdenes activas</span>
+</div>
+<div class="font-price-md text-price-md text-on-surface mt-0.5">S/ 2,450.00</div>
+</div>
+<div class="mt-4 pt-3 bg-surface-container-low -mx-5 -mb-5 px-5 py-2.5 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Liberación automática stock</span>
+<button class="font-label-badge text-label-badge uppercase tracking-wider text-primary font-bold hover:underline flex items-center" onclick="filterByState('expiring')">
+          Revisar
+          <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 3: Ready to Pack / Ship -->
+<article class="bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-on-surface-variant font-bold">Listos en Almacén</span>
+<span class="p-1.5 rounded-lg bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-[18px]">package_2</span>
+</span>
+</div>
+<h3 class="font-body-md text-body-md text-on-surface-variant font-medium">Por Empacar / Despachar</h3>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-hero text-headline-lg text-on-surface font-extrabold tracking-tight">15</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">órdenes</span>
+</div>
+<div class="font-price-md text-price-md text-on-surface mt-0.5">S/ 9,840.00</div>
+</div>
+<div class="mt-4 pt-3 bg-surface-container-low -mx-5 -mb-5 px-5 py-2.5 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Olva Courier &amp; Express</span>
+<button class="font-label-badge text-label-badge uppercase tracking-wider text-primary font-bold hover:underline flex items-center" onclick="filterByState('shipping')">
+          Ver lotes
+          <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 4: Delivered Today -->
+<article class="bg-surface-container-lowest rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-on-surface-variant font-bold">Completados Hoy</span>
+<span class="p-1.5 rounded-lg bg-surface-container-high text-on-surface">
+<span class="material-symbols-outlined text-[18px]">task_alt</span>
+</span>
+</div>
+<h3 class="font-body-md text-body-md text-on-surface-variant font-medium">Entregas Exitosas</h3>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-hero text-headline-lg text-on-surface font-extrabold tracking-tight">22</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">pedidos</span>
+</div>
+<div class="font-price-md text-price-md text-on-surface mt-0.5">S/ 14,210.00</div>
+</div>
+<div class="mt-4 pt-3 bg-surface-container-low -mx-5 -mb-5 px-5 py-2.5 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tasa de entrega 98.4%</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant font-bold uppercase">Lima + Provincias</span>
+</div>
+</article>
+</section>
+<!-- Filter & Search Controls Deck -->
+<section class="bg-surface-container-lowest rounded-xl p-4 shadow-sm space-y-3">
+<!-- Top Row: Full search + Select dropdowns -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-center">
+<!-- Search Input -->
+<div class="md:col-span-5 relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full h-11 pl-11 pr-10 rounded-full bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all" id="search-input" oninput="handleSearch()" placeholder="Buscar por código (#SK-...), cliente, DNI o teléfono..." type="text"/>
+<button class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-on-surface" id="clear-search-btn" onclick="clearSearch()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Date Range Filter -->
+<div class="md:col-span-2">
+<div class="relative">
+<select class="w-full h-11 px-3 pr-8 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer" id="filter-date" onchange="applyFilters()">
+<option value="today">Hoy (24 Oct)</option>
+<option selected="" value="week">Últimos 7 días</option>
+<option value="month">Este mes (Octubre)</option>
+<option value="custom">Rango personalizado...</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[18px]">calendar_today</span>
+</div>
+</div>
+<!-- Payment Status Filter -->
+<div class="md:col-span-2">
+<div class="relative">
+<select class="w-full h-11 px-3 pr-8 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer" id="filter-payment" onchange="applyFilters()">
+<option value="all">Todos los pagos</option>
+<option value="pending">Pendiente Validación</option>
+<option value="approved">Pago Aprobado</option>
+<option value="rejected">Pago Rechazado</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[18px]">payments</span>
+</div>
+</div>
+<!-- Order Status Filter -->
+<div class="md:col-span-3">
+<div class="relative">
+<select class="w-full h-11 px-3 pr-8 rounded-xl bg-surface-container-low text-on-surface font-body-sm text-body-sm font-medium focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer" id="filter-delivery" onchange="applyFilters()">
+<option value="all">Todas las modalidades</option>
+<option value="express">Lima Express (Motorizado)</option>
+<option value="olva">Envío Nacional (Olva Courier)</option>
+<option value="pickup">Retiro en Almacén Miraflores</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[18px]">local_shipping</span>
+</div>
+</div>
+</div>
+<!-- Bottom Row: Quick Filter Badges -->
+<div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-surface-container">
+<div class="flex flex-wrap items-center gap-1.5" id="filter-pills-container">
+<button class="pill-btn px-3 py-1.5 rounded-full font-label-badge text-label-badge uppercase tracking-wider bg-primary text-on-primary font-bold shadow-sm flex items-center gap-1.5 transition-all" onclick="setQuickPill('all')">
+<span>Todos</span>
+<span class="bg-surface-container-lowest/20 text-on-primary px-1.5 py-0.2 rounded-full text-[10px]">142</span>
+</button>
+<button class="pill-btn px-3 py-1.5 rounded-full font-label-badge text-label-badge uppercase tracking-wider bg-surface-container text-on-surface font-bold hover:bg-surface-container-high flex items-center gap-1.5 transition-all" onclick="setQuickPill('urgent')">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+<span>Revisión Urgente</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed px-1.5 py-0.2 rounded-full text-[10px]">8</span>
+</button>
+<button class="pill-btn px-3 py-1.5 rounded-full font-label-badge text-label-badge uppercase tracking-wider bg-surface-container text-on-surface font-bold hover:bg-surface-container-high flex items-center gap-1.5 transition-all" onclick="setQuickPill('expiring')">
+<span class="material-symbols-outlined text-[13px] text-secondary">hourglass_bottom</span>
+<span>Reserva por Vencer</span>
+<span class="bg-surface-container-highest text-on-surface px-1.5 py-0.2 rounded-full text-[10px]">4</span>
+</button>
+<button class="pill-btn px-3 py-1.5 rounded-full font-label-badge text-label-badge uppercase tracking-wider bg-surface-container text-on-surface font-bold hover:bg-surface-container-high flex items-center gap-1.5 transition-all" onclick="setQuickPill('shipping')">
+<span class="material-symbols-outlined text-[13px]">local_shipping</span>
+<span>Por Despachar</span>
+<span class="bg-surface-container-highest text-on-surface px-1.5 py-0.2 rounded-full text-[10px]">15</span>
+</button>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span>Mostrando <strong class="text-on-surface" id="visible-count">6</strong> de 142 órdenes</span>
+<button class="text-secondary font-semibold hover:underline flex items-center gap-1 ml-2" onclick="resetAllFilters()">
+<span class="material-symbols-outlined text-[14px]">restart_alt</span>
+          Limpiar filtros
+        </button>
+</div>
+</div>
+</section>
+<!-- Orders Table Container -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Active Table View -->
+<div class="overflow-x-auto w-full" id="table-view">
+<table class="w-full text-left border-collapse min-w-[1040px]">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-badge text-label-badge uppercase tracking-wider">
+<th class="py-3.5 px-4 font-bold" scope="col">Código &amp; Fecha</th>
+<th class="py-3.5 px-4 font-bold" scope="col">Cliente &amp; Contacto</th>
+<th class="py-3.5 px-4 font-bold" scope="col">Artículos &amp; Tallas</th>
+<th class="py-3.5 px-4 font-bold" scope="col">Total (PEN)</th>
+<th class="py-3.5 px-4 font-bold" scope="col">Entrega</th>
+<th class="py-3.5 px-4 font-bold" scope="col">Estado Pago</th>
+<th class="py-3.5 px-4 font-bold" scope="col">Estado Pedido</th>
+<th class="py-3.5 px-4 font-bold text-right" scope="col">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container text-body-sm font-body-sm text-on-surface" id="orders-tbody">
+<!-- Row 1: Urgent Yape Verification -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group" data-category="urgent" data-order-id="SK-84920">
+<td class="py-4 px-4 align-top">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-body-md font-bold text-on-surface group-hover:text-secondary-container transition-colors">#SK-84920</span>
+<span class="px-1.5 py-0.5 rounded bg-primary text-on-primary font-label-badge text-[10px] font-bold">NUEVO</span>
+</div>
+<span class="text-on-surface-variant font-body-sm text-body-sm">24 Oct 2025 · 18:35</span>
+<span class="font-label-badge text-[11px] text-secondary font-semibold flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-ping"></span>
+                  Hace 15 min
+                </span>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Carlos Mendoza Poma</span>
+<span class="text-on-surface-variant text-[11px]">DNI: 72481920</span>
+<span class="text-on-surface-variant text-[11px] flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[12px]">location_on</span>
+                  Miraflores, Lima
+                </span>
+<a class="text-secondary font-semibold text-[11px] hover:underline flex items-center gap-1 mt-0.5" href="https://wa.me/51987654321" target="_blank">
+<span class="material-symbols-outlined text-[12px]">chat</span>
+                  +51 987 654 321
+                </a>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-lg bg-surface-container-low overflow-hidden flex-shrink-0 p-1 flex items-center justify-center">
+<img class="w-full h-full object-contain" data-alt="Nike Air Volt React GT in neon athletic volt and black mesh running sneaker placed on clean studio light concrete floor, sharp contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRLHeZts23xskbTLJYhvEcMCdWRnIWCcm2BXFgLbgC_26QQOkxLbXg0QhGZhEgLCYQ44CMXw-2A-5oigBqdLe3RnKu5XRpOpQhkAALSGDDhAHxHS2M7hq4ZsVG_PDno8JnRE_NxzA5iAQbtHK2Yxhb697XoELl1i-GE2lAoFrBaXIXKEVAdIsE_wXpi88EivaxYTaEU-V8VjgZden_-uIVsINTsZUJTyiXgorEar4MYAtce9f_IVYSaA"/>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface line-clamp-1">Nike Air Volt React GT</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high font-label-badge text-[10px] font-bold">EU 41</span>
+<span class="text-on-surface-variant text-[11px]">+ Jordan Retro (EU 42.5)</span>
+</div>
+<span class="text-on-surface-variant text-[11px] mt-0.5 font-medium">2 pares seleccionados</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex flex-col">
+<span class="font-price-md text-price-md text-on-surface font-extrabold">S/ 1,108.00</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 mt-1 rounded-md bg-secondary-fixed text-on-secondary-fixed font-label-badge text-[10px] font-bold w-fit">
+<span class="material-symbols-outlined text-[12px]">smartphone</span>
+                  Yape Móvil
+                </span>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container text-on-surface w-fit">
+<span class="material-symbols-outlined text-[16px] text-secondary-container">moped</span>
+<div class="flex flex-col leading-tight">
+<span class="font-semibold text-[11px]">Lima Express</span>
+<span class="text-[10px] text-on-surface-variant">Motorizado Hoy</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+                Pendiente Validación
+              </div>
+<div class="text-[11px] text-secondary font-medium mt-1">Op #84920491</div>
+</td>
+<td class="py-4 px-4 align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-badge text-label-badge font-semibold">
+                Por Confirmar
+              </span>
+</td>
+<td class="py-4 px-4 align-top text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-3 py-1.5 rounded-lg bg-secondary-container text-on-primary font-body-sm text-[12px] font-bold hover:opacity-90 transition-all shadow-sm flex items-center gap-1" onclick="toggleModal(true)">
+<span class="material-symbols-outlined text-[14px]">receipt</span>
+                  Validar
+                </button>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" onclick="toggleModal(true)" title="Ver detalle completo">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Expiring Reservation (Plin) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group" data-category="expiring" data-order-id="SK-84915">
+<td class="py-4 px-4 align-top">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-body-md font-bold text-on-surface group-hover:text-secondary-container transition-colors">#SK-84915</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface font-label-badge text-[10px] font-bold">EXPIRA PRONTO</span>
+</div>
+<span class="text-on-surface-variant font-body-sm text-body-sm">24 Oct 2025 · 16:40</span>
+<span class="font-label-badge text-[11px] text-secondary font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">timer</span>
+                  Quedan 1h 45m
+                </span>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Lucía Paredes Silva</span>
+<span class="text-on-surface-variant text-[11px]">DNI: 45892014</span>
+<span class="text-on-surface-variant text-[11px] flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[12px]">store</span>
+                  Retiro Tienda
+                </span>
+<a class="text-secondary font-semibold text-[11px] hover:underline flex items-center gap-1 mt-0.5" href="https://wa.me/51971234567" target="_blank">
+<span class="material-symbols-outlined text-[12px]">chat</span>
+                  +51 971 234 567
+                </a>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-lg bg-surface-container-low overflow-hidden flex-shrink-0 p-1 flex items-center justify-center">
+<img class="w-full h-full object-contain" data-alt="New Balance 9060 grey athletic lifestyle sneaker with sculpted futuristic wavy midsole against architectural neutral background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4icLAX5cJ_PwRAtnr9jbk1sS7fifWMngyZgqBdj02QBt05uqmpIYx-DLNCj68yYf9TDdyP8K7qld6ZUFTbCdYo4cDNTSPDH4H2P-05Kt8jNGHprCU1LBE5PFKZnrddB27lei_T_XPeFUonXa-9EIPc5af0Ya10XSyH93fr1KFD48xZqtABwzk-qNY-eM5Ic-iIeeAGqjKcFt1mOkNDzzOd1arnWOtRv0j-pg0EtE6wRBTTbxsIwHEvQ"/>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface line-clamp-1">New Balance 9060 Castlerock</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high font-label-badge text-[10px] font-bold">EU 38.5</span>
+</div>
+<span class="text-on-surface-variant text-[11px] mt-0.5 font-medium">1 par en reserva</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex flex-col">
+<span class="font-price-md text-price-md text-on-surface font-extrabold">S/ 589.00</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 mt-1 rounded-md bg-surface-container-high text-on-surface font-label-badge text-[10px] font-bold w-fit">
+<span class="material-symbols-outlined text-[12px]">contactless</span>
+                  Plin BBVA
+                </span>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container text-on-surface w-fit">
+<span class="material-symbols-outlined text-[16px] text-primary">storefront</span>
+<div class="flex flex-col leading-tight">
+<span class="font-semibold text-[11px]">Retiro Miraflores</span>
+<span class="text-[10px] text-on-surface-variant">Almacén Central</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+                Esperando Comprobante
+              </div>
+<div class="text-[11px] text-on-surface-variant mt-1">Sin voucher adjunto</div>
+</td>
+<td class="py-4 px-4 align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-badge text-label-badge font-semibold">
+                Por Confirmar
+              </span>
+</td>
+<td class="py-4 px-4 align-top text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-[12px] font-semibold transition-all flex items-center gap-1" onclick="toastMessage('Recordatorio enviado por WhatsApp a Lucía (+51 971 234 567)')">
+<span class="material-symbols-outlined text-[14px]">send</span>
+                  Recordar
+                </button>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" onclick="toggleModal(true)">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Approved & In Packing (Olva Provincial) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group" data-category="shipping" data-order-id="SK-84910">
+<td class="py-4 px-4 align-top">
+<div class="flex flex-col gap-1">
+<span class="font-headline-sm text-body-md font-bold text-on-surface group-hover:text-secondary-container transition-colors">#SK-84910</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">24 Oct 2025 · 15:10</span>
+<span class="font-label-badge text-[11px] text-on-surface-variant">Hace 3h 25m</span>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Diego Urbina Carpio</span>
+<span class="text-on-surface-variant text-[11px]">DNI: 09847162</span>
+<span class="text-on-surface-variant text-[11px] flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[12px]">flight_takeoff</span>
+                  Arequipa (Cerro Colorado)
+                </span>
+<span class="text-on-surface-variant text-[11px] mt-0.5">+51 954 112 899</span>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-lg bg-surface-container-low overflow-hidden flex-shrink-0 p-1 flex items-center justify-center">
+<img class="w-full h-full object-contain" data-alt="Adidas Campus 00s core black suede skateboard sneaker with chunky white stripes and gum rubber sole on minimalist pedestal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsnW6vsJMdVFmUW6soKWHxXU-Cxgbk3dVoc0NsMjijQstX9QldXcAgushaYKcF3kmLPWI4uNxRyDem2YMYqw9AV_4nfHp3P9s0Trb2fT8gLOwECxBsyoiVmkS9WF74lizr7x19E7t7SCaSKJoPGTyF6G3xAGrRmTCRMb-lmb6DzYB0waO24KIqK_dU0vG918DhuT2vQV8SDF-B2OtWCihgU3Mu2tQjOvyke8wP5Yz31V1N8rnDhFH1XA"/>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface line-clamp-1">Adidas Campus 00s Black</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high font-label-badge text-[10px] font-bold">EU 42</span>
+</div>
+<span class="text-on-surface-variant text-[11px] mt-0.5 font-medium">1 par · SKU-ADI-CMP-00</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex flex-col">
+<span class="font-price-md text-price-md text-on-surface font-extrabold">S/ 359.00</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 mt-1 rounded-md bg-secondary-fixed text-on-secondary-fixed font-label-badge text-[10px] font-bold w-fit">
+<span class="material-symbols-outlined text-[12px]">smartphone</span>
+                  Yape Móvil
+                </span>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container text-on-surface w-fit">
+<span class="material-symbols-outlined text-[16px] text-on-surface">local_shipping</span>
+<div class="flex flex-col leading-tight">
+<span class="font-semibold text-[11px]">Olva Courier</span>
+<span class="text-[10px] text-on-surface-variant">Envío Nacional</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-badge text-label-badge font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                Pago Aprobado
+              </div>
+<div class="text-[11px] text-on-surface-variant mt-1">Validado por Admin #2</div>
+</td>
+<td class="py-4 px-4 align-top">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-primary text-on-primary font-label-badge text-label-badge font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+                En Preparación
+              </span>
+</td>
+<td class="py-4 px-4 align-top text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-[12px] font-semibold transition-all flex items-center gap-1" onclick="toastMessage('Generando guía Olva y etiqueta térmica para #SK-84910...')">
+<span class="material-symbols-outlined text-[14px]">print</span>
+                  Guía Olva
+                </button>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" onclick="toggleModal(true)">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Ready for Pickup (Almacén Miraflores) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group" data-category="shipping" data-order-id="SK-84898">
+<td class="py-4 px-4 align-top">
+<div class="flex flex-col gap-1">
+<span class="font-headline-sm text-body-md font-bold text-on-surface group-hover:text-secondary-container transition-colors">#SK-84898</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">24 Oct 2025 · 13:20</span>
+<span class="font-label-badge text-[11px] text-on-surface-variant">Hace 5h 15m</span>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Valeria Rojas Gil</span>
+<span class="text-on-surface-variant text-[11px]">DNI: 71029384</span>
+<span class="text-on-surface-variant text-[11px] flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[12px]">store</span>
+                  Locker Miraflores
+                </span>
+<span class="text-on-surface-variant text-[11px] mt-0.5">+51 940 338 291</span>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-lg bg-surface-container-low overflow-hidden flex-shrink-0 p-1 flex items-center justify-center">
+<img class="w-full h-full object-contain" data-alt="Nike Air Max Pulse triple white running sneaker with air bubble unit in heel on pure studio background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfXDJb7DEfkNAD4kwmjFh3IXsNStSZqIse6PKopOJpAThVh4iMrZdFvSN_YJEtzliSXMl6LJOK8nmOnNGsEAqoZ1bXKPoQdWDX2NawHShvhTQYX2x6DSOVAGUH-D44TGXrzuckfQHh2AQiqDaTOEGjbqjHRoPzGHpbf1J_Zlr9w7u5EJfmvGE4UBK7u45UDS2nsKcuJuoTJBkoqGbvyVe8fqGzCqMe5XSRXXtbF7pw9Q2Tqm1TgtVrgQ"/>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface line-clamp-1">Nike Air Max Pulse Photon</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high font-label-badge text-[10px] font-bold">EU 39</span>
+</div>
+<span class="text-on-surface-variant text-[11px] mt-0.5 font-medium">1 par · En mostrador</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex flex-col">
+<span class="font-price-md text-price-md text-on-surface font-extrabold">S/ 624.00</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 mt-1 rounded-md bg-surface-container-high text-on-surface font-label-badge text-[10px] font-bold w-fit">
+<span class="material-symbols-outlined text-[12px]">credit_card</span>
+                  Tarjeta Visa
+                </span>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container text-on-surface w-fit">
+<span class="material-symbols-outlined text-[16px] text-primary">storefront</span>
+<div class="flex flex-col leading-tight">
+<span class="font-semibold text-[11px]">Retiro Miraflores</span>
+<span class="text-[10px] text-on-surface-variant">Almacén Central</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-badge text-label-badge font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                Pago Aprobado
+              </div>
+<div class="text-[11px] text-on-surface-variant mt-1">Culqi Gateway Automático</div>
+</td>
+<td class="py-4 px-4 align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge font-bold">
+                Listo para Retiro
+              </span>
+</td>
+<td class="py-4 px-4 align-top text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-[12px] font-semibold transition-all flex items-center gap-1" onclick="toastMessage('Código QR de retiro reenviado a Valeria Rojas')">
+<span class="material-symbols-outlined text-[14px]">qr_code_2</span>
+                  Ver QR
+                </button>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" onclick="toggleModal(true)">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Rejected Fake Voucher -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group" data-category="rejected" data-order-id="SK-84880">
+<td class="py-4 px-4 align-top">
+<div class="flex flex-col gap-1">
+<span class="font-headline-sm text-body-md font-bold text-on-surface group-hover:text-secondary-container transition-colors">#SK-84880</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">24 Oct 2025 · 11:15</span>
+<span class="font-label-badge text-[11px] text-error font-semibold">Stock Reintegrado</span>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface line-through text-on-surface-variant">Jorge Benavides Paz</span>
+<span class="text-on-surface-variant text-[11px]">DNI: 42194058</span>
+<span class="text-on-surface-variant text-[11px] flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[12px]">location_on</span>
+                  San Isidro, Lima
+                </span>
+<span class="text-on-surface-variant text-[11px] mt-0.5">+51 988 201 029</span>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex items-center gap-3 opacity-60">
+<div class="w-14 h-14 rounded-lg bg-surface-container-low overflow-hidden flex-shrink-0 p-1 flex items-center justify-center">
+<img class="w-full h-full object-contain" data-alt="Air Jordan 4 Retro Bred Reimagined black leather high top sneaker with red accents on clean neutral concrete platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDed6XfZ61NmDaz6PnVErEmaJTbcjmnyvA3CDRepk3WuQdNwjhfVMdOEUKEXOrvr8QSTJ9K7twouoVSlUg2zkC4j7n1VhF8ZcDupxLuPnSrX5SF3Yh3jeKsHjdhiKBcXwHUnqvoZ83xCXVHwC9sUoeaYqM3iqbDKcYehAeezFVycOZddIhCfosu3R_qTxMGm-DKHx5itivMQZsd604ZAcnklh8AB3zNKeIwN9OOEUxtuesBPe-tfOQomw"/>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface line-clamp-1">Jordan 4 Retro Bred</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high font-label-badge text-[10px] font-bold">EU 43</span>
+</div>
+<span class="text-on-surface-variant text-[11px] mt-0.5 font-medium">1 par devuelto a stock</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex flex-col">
+<span class="font-price-md text-price-md text-on-surface-variant line-through font-bold">S/ 899.00</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 mt-1 rounded-md bg-error-container text-on-error-container font-label-badge text-[10px] font-bold w-fit">
+<span class="material-symbols-outlined text-[12px]">cancel</span>
+                  Rechazado
+                </span>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface-variant w-fit">
+<span class="material-symbols-outlined text-[16px]">moped</span>
+<div class="flex flex-col leading-tight">
+<span class="font-semibold text-[11px]">Lima Express</span>
+<span class="text-[10px]">Cancelado</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-badge text-label-badge font-bold">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+                Pago Rechazado
+              </div>
+<div class="text-[11px] text-error font-medium mt-1">Comprobante no hallado en cuenta</div>
+</td>
+<td class="py-4 px-4 align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface-variant font-label-badge text-label-badge font-semibold">
+                Cancelado
+              </span>
+</td>
+<td class="py-4 px-4 align-top text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-body-sm text-[12px] font-semibold transition-all" onclick="toastMessage('Historial de intento fraudulento registrado en bitácora de seguridad.')">
+                  Bitácora
+                </button>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" onclick="toggleModal(true)">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Completed and Delivered -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group" data-category="delivered" data-order-id="SK-84850">
+<td class="py-4 px-4 align-top">
+<div class="flex flex-col gap-1">
+<span class="font-headline-sm text-body-md font-bold text-on-surface group-hover:text-secondary-container transition-colors">#SK-84850</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">24 Oct 2025 · 09:45</span>
+<span class="font-label-badge text-[11px] text-on-surface-variant">Entregado 14:10</span>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Camila Soto Alva</span>
+<span class="text-on-surface-variant text-[11px]">DNI: 70918234</span>
+<span class="text-on-surface-variant text-[11px] flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[12px]">location_on</span>
+                  Surco, Lima
+                </span>
+<span class="text-on-surface-variant text-[11px] mt-0.5">+51 965 882 109</span>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-lg bg-surface-container-low overflow-hidden flex-shrink-0 p-1 flex items-center justify-center">
+<img class="w-full h-full object-contain" data-alt="Adidas Forum Low white and collegiate royal blue leather street basketball sneaker on crisp white studio setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUbViDSEs0zzCYMcvONSM5u1x_pt_uG_cvCwsWWzGZRR14FiWSAeo5MKKQH_JdmEU41O7QA0mznwyrI2eXIIMGRp0cvNTyuqH4Xsi77R6M4litCJGC_nM5w3fu4jRXmIjqEheajkUkV-w6R6-aIwXkADd2M5gHhEGdMPr3J6wGKCT67h-rrg5vpdbxsWTOQ24wwsD-aMQoWuSMQ8XkJwr3U5IApQVfY15qxefXVlCfonr2BTCIEfviiw"/>
+</div>
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface line-clamp-1">Adidas Forum Low White Royal</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high font-label-badge text-[10px] font-bold">EU 37.5</span>
+</div>
+<span class="text-on-surface-variant text-[11px] mt-0.5 font-medium">1 par · Recibido conforme</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex flex-col">
+<span class="font-price-md text-price-md text-on-surface font-extrabold">S/ 389.00</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 mt-1 rounded-md bg-secondary-fixed text-on-secondary-fixed font-label-badge text-[10px] font-bold w-fit">
+<span class="material-symbols-outlined text-[12px]">smartphone</span>
+                  Yape Móvil
+                </span>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container text-on-surface w-fit">
+<span class="material-symbols-outlined text-[16px] text-secondary-container">moped</span>
+<div class="flex flex-col leading-tight">
+<span class="font-semibold text-[11px]">Lima Express</span>
+<span class="text-[10px] text-on-surface-variant">Rider Pedro Q.</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-badge text-label-badge font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                Pago Aprobado
+              </div>
+<div class="text-[11px] text-on-surface-variant mt-1">Conciliado BCP</div>
+</td>
+<td class="py-4 px-4 align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container-highest text-on-surface font-label-badge text-label-badge font-bold">
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+                Entregado
+              </span>
+</td>
+<td class="py-4 px-4 align-top text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-[12px] font-semibold transition-all" onclick="toggleModal(true)">
+                  Ver detalle
+                </button>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" onclick="toggleModal(true)">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Empty State View (Hidden by default, triggered by simulator/filters) -->
+<div class="hidden py-16 px-6 flex flex-col items-center justify-center text-center" id="empty-state-view">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-low flex items-center justify-center mb-4 text-on-surface-variant">
+<span class="material-symbols-outlined text-[36px]">filter_alt_off</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">No se encontraron pedidos</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-1 mb-6">
+        No hay órdenes que coincidan con los criterios de búsqueda o filtros seleccionados en este período.
+      </p>
+<div class="flex items-center gap-3">
+<button class="h-10 px-5 rounded-xl bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-secondary-container transition-all flex items-center gap-2" onclick="resetAllFilters()">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+          Restablecer filtros
+        </button>
+<button class="h-10 px-4 rounded-xl bg-surface-container text-on-surface font-body-sm text-body-sm font-semibold hover:bg-surface-container-high transition-all" onclick="switchView('live')">
+          Ver todos los 142 pedidos
+        </button>
+</div>
+</div>
+<!-- Skeleton Loading View (Hidden by default, triggered by simulator) -->
+<div class="hidden p-6 space-y-4" id="skeleton-view">
+<div class="h-10 bg-surface-container-low rounded-lg animate-pulse w-full"></div>
+<div class="space-y-3">
+<div class="h-16 bg-surface-container-low rounded-xl animate-pulse"></div>
+<div class="h-16 bg-surface-container-low rounded-xl animate-pulse"></div>
+<div class="h-16 bg-surface-container-low rounded-xl animate-pulse"></div>
+<div class="h-16 bg-surface-container-low rounded-xl animate-pulse"></div>
+</div>
+</div>
+<!-- Table Pagination Footer -->
+<div class="p-4 bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-3 text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span>Filas por página:</span>
+<select class="h-8 px-2 rounded-lg bg-surface-container-lowest text-on-surface font-semibold focus:outline-none">
+<option>6</option>
+<option>12</option>
+<option>25</option>
+<option>50</option>
+</select>
+<span class="ml-2">Mostrando <strong class="text-on-surface">1 - 6</strong> de 142</span>
+</div>
+<nav aria-label="Paginación de resultados" class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface-variant flex items-center justify-center opacity-50 cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-bold flex items-center justify-center">1</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface font-medium hover:bg-surface-container flex items-center justify-center" onclick="toastMessage('Cargando página 2...')">2</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface font-medium hover:bg-surface-container flex items-center justify-center" onclick="toastMessage('Cargando página 3...')">3</button>
+<span class="px-1 text-on-surface-variant">...</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface font-medium hover:bg-surface-container flex items-center justify-center" onclick="toastMessage('Cargando página 24...')">24</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface font-medium hover:bg-surface-container flex items-center justify-center" onclick="toastMessage('Cargando página 2...')">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</nav>
+</div>
+</section>
+<!-- Modal / Drawer: Detalle de Pedido y Validación de Voucher -->
+<aside aria-labelledby="modal-title" aria-modal="true" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 hidden" id="order-modal" role="dialog">
+<div class="bg-surface-container-lowest rounded-2xl w-full max-w-4xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+<!-- Modal Header -->
+<div class="px-6 py-4 bg-surface-container-low flex items-center justify-between border-b border-surface-container">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">receipt_long</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold" id="modal-title">Validación de Voucher #SK-84920</h2>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-[10px] font-bold">REVISIÓN URGENTE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Registrado hoy a las 18:35 · Cliente esperando confirmación para despacho Same-Day</p>
+</div>
+</div>
+<button aria-label="Cerrar modal" class="w-9 h-9 rounded-full bg-surface-container-lowest hover:bg-surface-container flex items-center justify-center text-on-surface transition-colors" onclick="toggleModal(false)">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body (Two-Column Layout: Voucher preview vs Order Items) -->
+<div class="flex-1 overflow-y-auto p-6 grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Left Column: Voucher Preview & Transfer Data -->
+<div class="md:col-span-5 flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-on-surface-variant font-bold">Comprobante Adjunto</span>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">Yape Móvil</span>
+</div>
+<!-- Voucher Simulated Card -->
+<div class="bg-surface-container-low rounded-xl p-4 shadow-inner flex flex-col items-center text-center relative overflow-hidden">
+<div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center mb-2 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">smartphone</span>
+</div>
+<span class="font-label-badge text-[11px] text-on-surface-variant uppercase tracking-wider">¡Yapeaste!</span>
+<span class="font-headline-lg text-headline-lg font-black text-on-surface my-1">S/ 1,108.00</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">SneakerStore Perú SAC</span>
+<span class="text-on-surface-variant text-[11px]">RUC: 20608920191</span>
+<div class="w-full bg-surface-container-lowest rounded-lg p-3 my-3 text-left space-y-1.5 text-[12px]">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">N° Operación:</span>
+<strong class="text-on-surface font-mono">84920491</strong>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Remitente:</span>
+<strong class="text-on-surface">Carlos Mendoza Poma</strong>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Celular origen:</span>
+<strong class="text-on-surface">*** *** 321</strong>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Fecha y hora:</span>
+<span class="text-on-surface">24 Oct 2025 · 18:33</span>
+</div>
+</div>
+<!-- Full voucher preview trigger -->
+<button class="font-body-sm text-body-sm text-secondary font-semibold hover:underline flex items-center gap-1" onclick="toastMessage('Descargando imagen original de comprobante en alta resolución...')">
+<span class="material-symbols-outlined text-[16px]">zoom_in</span>
+              Ver imagen original (PNG)
+            </button>
+</div>
+<!-- Quick Telephony & DNI Validation Box -->
+<div class="p-3 rounded-xl bg-surface-container-low text-[12px] space-y-1">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-semibold">Coincidencia de Titular:</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface font-bold">100% Match</span>
+</div>
+<p class="text-on-surface-variant text-[11px]">El nombre del remitente en Yape coincide con los datos fiscales del cliente registrado.</p>
+</div>
+</div>
+<!-- Right Column: Customer Details, Shoes in Order & Address -->
+<div class="md:col-span-7 flex flex-col space-y-4">
+<!-- Client & Delivery Card -->
+<div class="p-4 rounded-xl bg-surface-container-low space-y-2">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-on-surface-variant font-bold">Datos de Despacho Express</span>
+<div class="grid grid-cols-2 gap-3 text-body-sm text-on-surface pt-1">
+<div>
+<span class="text-on-surface-variant text-[11px] block">Destinatario:</span>
+<strong>Carlos Mendoza Poma</strong>
+<span class="text-[11px] text-on-surface-variant block">DNI: 72481920</span>
+</div>
+<div>
+<span class="text-on-surface-variant text-[11px] block">Teléfono / WhatsApp:</span>
+<a class="text-secondary font-semibold hover:underline" href="https://wa.me/51987654321">+51 987 654 321</a>
+</div>
+<div class="col-span-2">
+<span class="text-on-surface-variant text-[11px] block">Dirección de Entrega:</span>
+<span class="font-medium">Av. José Larco 812, Dpto 402, Miraflores, Lima</span>
+<span class="text-[11px] text-on-surface-variant block mt-0.5">Ref: Frente al Parque Kennedy · Motorizado Same-Day</span>
+</div>
+</div>
+</div>
+<!-- Shoes in Order -->
+<div class="space-y-2">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-on-surface-variant font-bold">Artículos en la Orden (2 pares)</span>
+<!-- Item 1 -->
+<div class="p-3 rounded-xl bg-surface-container-low flex items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest p-1 flex-shrink-0 flex items-center justify-center">
+<img class="w-full h-full object-contain" data-alt="Nike Air Volt React GT performance neon running shoe on pure clean white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDRNSaPWpN0Fi_QA6v9olEBl3kx3SLIqOrXkQQLnGtFLJBgzXl3oB9k9HPKVjrUv2nTLnyNwm2V5cHAA1RBu2vHfebtMNz-ZV-4h0jZcysZwrjjnkzhMepTAAW8FzFxpMM7VVCcpp-X8y16MLLkREbma1zvFhDLHZZtPvCNtIsEkzOiTEY6p2f-zfUUmpcRrHWBZzwTedk5NpVE9Px1zazhx40Ee_RW45WCs-Pxj-kTWhZMKlwYbZwEg"/>
+</div>
+<div>
+<h4 class="font-semibold text-body-sm text-on-surface">Nike Air Volt React GT</h4>
+<div class="flex items-center gap-2 text-[11px] text-on-surface-variant mt-0.5">
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high font-bold text-on-surface">EU 41</span>
+<span>SKU: NIK-VOLT-41</span>
+</div>
+</div>
+</div>
+<span class="font-price-md text-body-md font-bold text-on-surface">S/ 549.00</span>
+</div>
+<!-- Item 2 -->
+<div class="p-3 rounded-xl bg-surface-container-low flex items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest p-1 flex-shrink-0 flex items-center justify-center">
+<img class="w-full h-full object-contain" data-alt="Air Jordan 1 High OG Chicago Lost and Found sneaker on crisp studio minimal white pedestal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9G4MkeisbkC1B6PgtkgYCVgQYCTt1uC19SezsrH6G4R4F-C2TOqf_u-4PLJRZIaU26lAUeLHYiYxwHfk91u7G5-gFz-i40A1pG_c8jkAK9EfOYbJ3L43o0Zn-4-tuLdnFlCz4cOMDKnsbS0oOQNFnZZEZ3d9AXKasBXm8azPg10yj6Whq7VL0Pd93ly_JQ37SvLdQXyt7CwLSZ8OLSz1yeeEOldD2uau3ufshIglNAJnotUd-Twos6Q"/>
+</div>
+<div>
+<h4 class="font-semibold text-body-sm text-on-surface">Air Jordan 1 High OG Chicago</h4>
+<div class="flex items-center gap-2 text-[11px] text-on-surface-variant mt-0.5">
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high font-bold text-on-surface">EU 42.5</span>
+<span>SKU: JOR-1CHI-425</span>
+</div>
+</div>
+</div>
+<span class="font-price-md text-body-md font-bold text-on-surface">S/ 559.00</span>
+</div>
+<!-- Financial Calculation Summary -->
+<div class="pt-2 px-1 space-y-1 text-body-sm">
+<div class="flex justify-between text-on-surface-variant">
+<span>Subtotal (2 pares):</span>
+<span>S/ 1,108.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Envío Lima Express (Promo):</span>
+<span class="text-secondary font-semibold">GRATIS</span>
+</div>
+<div class="flex justify-between text-on-surface font-headline-sm pt-1 border-t border-surface-container">
+<span class="font-bold">Total a Cobrar:</span>
+<span class="font-extrabold text-price-md text-on-surface">S/ 1,108.00</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Footer Decision Actions -->
+<div class="px-6 py-4 bg-surface-container-low border-t border-surface-container flex flex-wrap items-center justify-between gap-3">
+<a class="px-4 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm font-semibold transition-all flex items-center gap-2" href="https://wa.me/51987654321?text=Hola%20Carlos,%20te%20escribimos%20de%20SneakerStore%20sobre%20tu%20pedido%20SK-84920" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+          Contactar por WhatsApp
+        </a>
+<div class="flex items-center gap-2">
+<button class="px-4 py-2.5 rounded-xl bg-surface-container-lowest text-error hover:bg-error-container hover:text-on-error-container font-body-sm text-body-sm font-semibold transition-all flex items-center gap-1.5" onclick="rejectOrderAction()">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+            Rechazar Comprobante
+          </button>
+<button class="px-6 py-2.5 rounded-xl bg-primary text-on-primary font-body-sm text-body-sm font-bold hover:bg-secondary-container transition-all flex items-center gap-2 shadow-sm" onclick="approveOrderAction()">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+            Aprobar Pago y Pasar a Empaque
+          </button>
+</div>
+</div>
+</div>
+</aside>
+<!-- Interactive Toast Notification Container -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none bg-primary text-on-primary px-5 py-3 rounded-xl shadow-xl flex items-center gap-3" id="toast">
+<span class="material-symbols-outlined text-secondary-container text-[22px]" id="toast-icon">check_circle</span>
+<span class="font-body-sm text-body-sm font-medium" id="toast-text">Acción ejecutada con éxito</span>
+</div>
+</div>
+<!-- Inline Interactive Script for Instant Administrative Response -->
+<script>
+  // Ensure the App Shell navigation active state points to 'pedidos'
+  (function activateSidebarTab() {
+    const navLinks = document.querySelectorAll('aside nav a');
+    navLinks.forEach(link => {
+      const path = link.getAttribute('data-path');
+      if (path === 'pedidos') {
+        link.className = 'flex items-center justify-between px-3 py-2.5 rounded-lg bg-primary text-on-primary font-semibold shadow-sm transition-all group';
+      } else {
+        link.className = 'flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group';
+      }
+    });
+  })();
+
+  // Toast Helper
+  function toastMessage(message, icon = 'check_circle') {
+    const toast = document.getElementById('toast');
+    const toastText = document.getElementById('toast-text');
+    const toastIcon = document.getElementById('toast-icon');
+    
+    toastText.innerText = message;
+    toastIcon.innerText = icon;
+    
+    toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    
+    setTimeout(() => {
+      toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 3800);
+  }
+
+  // Modal Control
+  function toggleModal(open) {
+    const modal = document.getElementById('order-modal');
+    if (open) {
+      modal.classList.remove('hidden');
+    } else {
+      modal.classList.add('hidden');
+    }
+  }
+
+  // Modal Quick Actions
+  function approveOrderAction() {
+    toggleModal(false);
+    toastMessage('¡Pago aprobado! Pedido #SK-84920 enviado a cola de empaque en Almacén Central.');
+    // Change first row visually
+    const row = document.querySelector('tr[data-order-id="SK-84920"]');
+    if (row) {
+      const statusPaymentCell = row.children[5];
+      const statusOrderCell = row.children[6];
+      statusPaymentCell.innerHTML = `
+        <div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-badge text-label-badge font-bold">
+          <span class="material-symbols-outlined text-[14px]">check_circle</span>
+          Pago Aprobado
+        </div>
+        <div class="text-[11px] text-on-surface-variant mt-1">Validado ahora mismo</div>
+      `;
+      statusOrderCell.innerHTML = `
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-primary text-on-primary font-label-badge text-label-badge font-semibold">
+          <span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+          En Preparación
+        </span>
+      `;
+    }
+  }
+
+  function rejectOrderAction() {
+    const motivo = prompt('Ingresa el motivo del rechazo del comprobante (ej: Voucher ilegible, monto no coincide, remitente desconocido):', 'El comprobante no figura en extracto de cuenta BCP');
+    if (motivo) {
+      toggleModal(false);
+      toastMessage('Comprobante rechazado. Notificación automática enviada al cliente con solicitud de nuevo pago.', 'warning');
+    }
+  }
+
+  // Simulator View Switcher
+  function switchView(view) {
+    const tableView = document.getElementById('table-view');
+    const emptyStateView = document.getElementById('empty-state-view');
+    const skeletonView = document.getElementById('skeleton-view');
+    const currentBadge = document.getElementById('current-view-badge');
+    const visibleCount = document.getElementById('visible-count');
+
+    // Reset visibility
+    tableView.classList.remove('hidden');
+    emptyStateView.classList.add('hidden');
+    skeletonView.classList.add('hidden');
+
+    const rows = document.querySelectorAll('#orders-tbody tr');
+
+    if (view === 'live') {
+      currentBadge.innerText = 'Vista Principal (En vivo)';
+      rows.forEach(r => r.style.display = '');
+      visibleCount.innerText = rows.length;
+      toastMessage('Mostrando todos los pedidos del flujo actual');
+    } else if (view === 'urgent') {
+      currentBadge.innerText = 'Pendientes de Revisión (Urgentes)';
+      filterByState('urgent');
+    } else if (view === 'expiring') {
+      currentBadge.innerText = 'Reservas por Vencer (< 2h)';
+      filterByState('expiring');
+    } else if (view === 'empty') {
+      currentBadge.innerText = 'Estado Vacío (Sin resultados)';
+      tableView.classList.add('hidden');
+      emptyStateView.classList.remove('hidden');
+      visibleCount.innerText = '0';
+    } else if (view === 'skeleton') {
+      currentBadge.innerText = 'Cargando datos (Skeleton)...';
+      tableView.classList.add('hidden');
+      skeletonView.classList.remove('hidden');
+      setTimeout(() => {
+        switchView('live');
+      }, 1600);
+    }
+  }
+
+  // Filter Pills Handling
+  function setQuickPill(type) {
+    const buttons = document.querySelectorAll('.pill-btn');
+    buttons.forEach(btn => {
+      btn.className = 'pill-btn px-3 py-1.5 rounded-full font-label-badge text-label-badge uppercase tracking-wider bg-surface-container text-on-surface font-bold hover:bg-surface-container-high flex items-center gap-1.5 transition-all';
+    });
+
+    // highlight active
+    event.currentTarget.className = 'pill-btn px-3 py-1.5 rounded-full font-label-badge text-label-badge uppercase tracking-wider bg-primary text-on-primary font-bold shadow-sm flex items-center gap-1.5 transition-all';
+
+    filterByState(type);
+  }
+
+  function filterByState(category) {
+    const rows = document.querySelectorAll('#orders-tbody tr');
+    let count = 0;
+
+    rows.forEach(row => {
+      if (category === 'all') {
+        row.style.display = '';
+        count++;
+      } else if (row.getAttribute('data-category') === category) {
+        row.style.display = '';
+        count++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    document.getElementById('visible-count').innerText = count;
+
+    if (count === 0) {
+      document.getElementById('table-view').classList.add('hidden');
+      document.getElementById('empty-state-view').classList.remove('hidden');
+    } else {
+      document.getElementById('table-view').classList.remove('hidden');
+      document.getElementById('empty-state-view').classList.add('hidden');
+    }
+  }
+
+  // Client-side text search
+  function handleSearch() {
+    const input = document.getElementById('search-input');
+    const clearBtn = document.getElementById('clear-search-btn');
+    const term = input.value.toLowerCase().trim();
+    const rows = document.querySelectorAll('#orders-tbody tr');
+    let visible = 0;
+
+    if (term.length > 0) {
+      clearBtn.classList.remove('hidden');
+    } else {
+      clearBtn.classList.add('hidden');
+    }
+
+    rows.forEach(row => {
+      const text = row.innerText.toLowerCase();
+      if (text.includes(term)) {
+        row.style.display = '';
+        visible++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    document.getElementById('visible-count').innerText = visible;
+
+    if (visible === 0) {
+      document.getElementById('table-view').classList.add('hidden');
+      document.getElementById('empty-state-view').classList.remove('hidden');
+    } else {
+      document.getElementById('table-view').classList.remove('hidden');
+      document.getElementById('empty-state-view').classList.add('hidden');
+    }
+  }
+
+  function clearSearch() {
+    const input = document.getElementById('search-input');
+    input.value = '';
+    handleSearch();
+  }
+
+  function resetAllFilters() {
+    document.getElementById('search-input').value = '';
+    document.getElementById('filter-payment').value = 'all';
+    document.getElementById('filter-delivery').value = 'all';
+    document.getElementById('filter-date').value = 'week';
+    clearSearch();
+    filterByState('all');
+    toastMessage('Filtros restablecidos');
+  }
+
+  function applyFilters() {
+    const payment = document.getElementById('filter-payment').value;
+    if (payment === 'pending') {
+      filterByState('urgent');
+    } else if (payment === 'rejected') {
+      filterByState('rejected');
+    } else {
+      filterByState('all');
+    }
+  }
+
+  function simulateSync() {
+    const icon = document.getElementById('sync-icon');
+    icon.classList.add('animate-spin');
+    setTimeout(() => {
+      icon.classList.remove('animate-spin');
+      toastMessage('Sincronización con pasarelas y banco completada (Hace 2 segundos).');
+    }, 850);
+  }
+</script></main></div></body></html>

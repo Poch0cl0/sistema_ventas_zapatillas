@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "background": "#f9f9fa", "on-surface": "#1a1c1d", "secondary-fixed-dim": "#ffb59d", "on-secondary-fixed": "#390c00", "tertiary-fixed-dim": "#c0c7d6", "on-primary-fixed": "#1c1b1b", "on-primary-fixed-variant": "#474646", "surface-dim": "#dadadb", "surface-bright": "#f9f9fa", "surface-container-highest": "#e2e2e3", "outline": "#747878", "on-primary": "#ffffff", "error-container": "#ffdad6", "secondary-container": "#fe6a34", "primary-container": "#1c1b1b", "on-secondary-fixed-variant": "#832600", "on-primary-container": "#858383", "tertiary": "#000000", "secondary": "#ab3500", "on-secondary-container": "#5d1900", "inverse-on-surface": "#f0f1f2", "inverse-primary": "#c8c6c5", "primary-fixed-dim": "#c8c6c5", "on-surface-variant": "#444748", "surface": "#f9f9fa", "surface-container-high": "#e8e8e9", "primary-fixed": "#e5e2e1", "surface-container-low": "#f3f3f4", "on-tertiary-container": "#7d8492", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#151c27", "tertiary-container": "#151c27", "outline-variant": "#c4c7c7", "surface-tint": "#5f5e5e", "on-tertiary-fixed-variant": "#404754", "secondary-fixed": "#ffdbd0", "surface-variant": "#e2e2e3", "on-secondary": "#ffffff", "on-background": "#1a1c1d", "inverse-surface": "#2f3132", "surface-container": "#eeeeef", "primary": "#000000", "on-tertiary": "#ffffff", "on-error": "#ffffff", "error": "#ba1a1a", "tertiary-fixed": "#dce2f3", "on-error-container": "#93000a" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.5rem", "space-xs": "0.25rem", "margin": "2rem", "margin-mobile": "1rem", "gutter": "1.5rem", "space-md": "1rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "gutter-mobile": "0.75rem" }, fontFamily: { "headline-md": ["Inter"], "headline-sm": ["Inter"], "body-md": ["Inter"], "price-md": ["Inter"], "display-hero": ["Inter"], "price-lg": ["Inter"], "label-size": ["Inter"], "headline-lg-mobile": ["Inter"], "body-sm": ["Inter"], "body-lg": ["Inter"], "headline-lg": ["Inter"], "label-badge": ["Inter"], "display-hero-mobile": ["Inter"] }, fontSize: { "headline-md": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "700"}], "headline-sm": ["18px", {"lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}], "price-md": ["18px", {"lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "display-hero": ["56px", {"lineHeight": "60px", "letterSpacing": "-0.03em", "fontWeight": "800"}], "price-lg": ["24px", {"lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "800"}], "label-size": ["13px", {"lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "600"}], "headline-lg-mobile": ["26px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}], "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}], "headline-lg": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "label-badge": ["11px", {"lineHeight": "12px", "letterSpacing": "0.05em", "fontWeight": "700"}], "display-hero-mobile": ["36px", {"lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "800"}] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-background font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="SneakerStore Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XwnSj5aCSrv7RclT3WoonCoPb1_Cfh77YGDJHlU1ojayTrVXgWmJ5eOxMwrxQldcBxdsV58IIAL9pdOLOt1W3Bf9BN3zAt-YN7AYw8Z7yKknGoKhHNKEIyalfUnr0xPAEGm3523GBgupfPxKsJMQDT6xIiD0LONm4iNf9vzDAg2tOaKSjHL-hRiXiOkqKdz-J0fudDGLbF_9IQiF-vimK6-zXBc0wxLKVXKLYC0eaKxie8GClJKqJlD7Sv"/><span class="font-headline-sm text-headline-sm uppercase tracking-tight text-primary">SneakerStore</span><span class="hidden">Inicio</span></div><div class="flex items-center gap-space-xs"><button aria-label="Buscar" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Carrito de compras" class="w-11 h-11 relative flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-2 right-2 flex items-center justify-center min-w-[16px] h-4 px-1 rounded-full bg-secondary-container text-on-primary font-label-badge text-label-badge leading-none">2</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-background min-h-screen"><div class="flex flex-col w-full pb-20">
+<!-- Toast Notification System (State 3 Demo) -->
+<aside aria-live="polite" class="fixed top-20 left-4 right-4 z-50 transform -translate-y-28 opacity-0 transition-all duration-300 pointer-events-none" id="toast-notification">
+<div class="bg-primary text-on-primary px-space-md py-space-sm rounded-xl shadow-xl flex items-center justify-between gap-space-sm border-0">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-secondary-container text-[20px] flex-shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="truncate">
+<p class="font-headline-sm text-body-sm text-on-primary truncate font-bold">¡Agregado al carrito!</p>
+<p class="font-body-sm text-[11px] text-on-primary-container truncate" id="toast-details">1x Nike Air Volt React GT (EU 41)</p>
+</div>
+</div>
+<a class="flex-shrink-0 px-space-sm py-1 rounded-lg bg-surface-container-highest text-primary font-headline-sm text-body-sm hover:bg-surface-bright transition-colors" href="#">
+        Ver carrito
+      </a>
+</div>
+</aside>
+<!-- Interactive UX State Playground (Simulator Bar) -->
+<section class="mx-margin-mobile mt-space-sm mb-space-sm p-space-sm bg-surface-container rounded-xl">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-badge text-label-badge uppercase tracking-wider">
+<span class="material-symbols-outlined text-[15px] text-secondary-container">tune</span>
+<span>Simulador de Estados UX (Requisitos)</span>
+</div>
+<span class="font-body-sm text-[10px] text-on-surface-variant bg-surface-container-lowest px-2 py-0.5 rounded-full font-medium">Demo Interactiva</span>
+</div>
+<div class="grid grid-cols-4 gap-1.5" role="tablist">
+<button class="py-1.5 px-1 rounded text-center font-headline-sm text-[10px] bg-primary text-on-primary transition-all" id="state-tab-1" onclick="setScreenState(1)" type="button">
+        1. Normal
+      </button>
+<button class="py-1.5 px-1 rounded text-center font-headline-sm text-[10px] bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-all" id="state-tab-2" onclick="setScreenState(2)" type="button">
+        2. Sin Talla
+      </button>
+<button class="py-1.5 px-1 rounded text-center font-headline-sm text-[10px] bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-all" id="state-tab-3" onclick="setScreenState(3)" type="button">
+        3. Éxito Toast
+      </button>
+<button class="py-1.5 px-1 rounded text-center font-headline-sm text-[10px] bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-all" id="state-tab-4" onclick="setScreenState(4)" type="button">
+        4. Agotado
+      </button>
+</div>
+</section>
+<!-- Contextual Breadcrumbs & Actions -->
+<div class="px-margin-mobile py-space-xs flex items-center justify-between gap-space-sm">
+<nav aria-label="Breadcrumb" class="min-w-0 flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<a class="flex items-center hover:text-primary transition-colors text-primary font-semibold flex-shrink-0" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+</a>
+<span class="truncate hover:underline cursor-pointer">Catálogo</span>
+<span>/</span>
+<span class="truncate hover:underline cursor-pointer">Running</span>
+<span>/</span>
+<span class="text-primary font-semibold truncate">Air Volt React</span>
+</nav>
+<div class="flex items-center gap-space-xs flex-shrink-0">
+<button aria-label="Compartir zapatilla" class="w-9 h-9 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-on-surface hover:text-primary transition-colors active:scale-95" id="share-button" onclick="handleShare()">
+<span class="material-symbols-outlined text-[19px]">share</span>
+</button>
+<button aria-label="Guardar en favoritos" class="w-9 h-9 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-on-surface hover:text-secondary-container transition-colors active:scale-95" id="wishlist-button" onclick="toggleWishlist()">
+<span class="material-symbols-outlined text-[20px]" id="wishlist-icon">favorite</span>
+</button>
+</div>
+</div>
+<!-- Dynamic Gallery Section -->
+<section class="px-margin-mobile pt-space-xs">
+<div class="relative w-full aspect-square bg-surface-container-lowest rounded-xl p-space-md flex items-center justify-center shadow-sm overflow-hidden group">
+<!-- High contrast Badges -->
+<div class="absolute top-3 left-3 flex flex-col gap-1.5 z-10 pointer-events-none">
+<span class="bg-primary text-on-primary font-label-badge text-label-badge uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+          Edición Limitada
+        </span>
+<span class="bg-surface-container-high text-on-surface font-label-badge text-label-badge px-2.5 py-0.5 rounded-full shadow-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-secondary-container">verified</span>
+          Auténtico 100%
+        </span>
+</div>
+<!-- Quick 360 / Zoom Floater -->
+<button aria-label="Ver zapatilla en 360 grados" class="absolute bottom-3 right-3 z-10 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-md flex items-center gap-1.5 text-primary text-body-sm font-label-size hover:bg-surface-container-lowest transition-transform active:scale-95" onclick="trigger360Animation()" type="button">
+<span class="material-symbols-outlined text-[17px] text-secondary-container animate-spin" style="animation-duration: 9s;">360</span>
+<span class="text-body-sm font-semibold">Vista 360°</span>
+</button>
+<!-- Main Display Sneaker Image -->
+<div class="w-full h-full flex items-center justify-center transition-all duration-300" id="hero-image-wrapper">
+<img alt="Nike Air Volt React GT - Ángulo principal" class="w-full h-full object-contain filter drop-shadow-lg transition-transform duration-300 group-hover:scale-105" data-alt="Dynamic studio hero photograph of a sleek Nike Air Volt React GT sneaker angled aggressively at three-quarters. Jet black technical mesh knit upper contrasted with vibrant electric volt orange Swoosh and midsole accents. Crisp white and neutral light gray backdrop, sharp studio softbox lighting highlighting the performance running silhouette." id="main-product-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_urOe9WcoazsSbJKj6nMxT6zeaCr_mcaAsWXaN5_mmeWzkBSi_5436YZl8jEkX9aBwUCeIvcoPYq0VJ5Ix6-1ifIwqwxEpOSuROnZ29lUEZXMjjhRce857x1Cv4zH0pOmbcOZDfWsR_-4zQFhLtprzuqX3i6YkdW7TnjFEeNhUfinkZMeCFaJlKuJOWlEOuwOKWmfshEhSLgfsst1lH6lsY1lj-XnLzRqYhbm_AxeJmLAT0hBhALpTg"/>
+</div>
+</div>
+<!-- 4 Tactile Thumbnails -->
+<div aria-label="Galería de miniaturas" class="grid grid-cols-4 gap-space-xs mt-space-sm" role="region">
+<button class="thumb-btn group relative aspect-square rounded-xl bg-surface-container-lowest p-1.5 shadow-sm transition-all shadow-[0_0_0_2px_#fe6a34]" onclick="selectThumbnail(0, this)" type="button">
+<img alt="Miniatura Lateral Exterior" class="w-full h-full object-contain rounded-lg" data-alt="Close up studio side profile view of Nike Air Volt React GT sneaker showing technical foam midsole and black knit upper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj_Mi8anVXlydanBtaPA2j9hk4KWtJ577INEtJe4nwvHM4sXWqztrXEsSPIR8mQhHEfmrUXemFZaCLwO0tib3Rmr-3MkMN0aHex3XOdTnnbotNKuj-thZMB4M8QwYyAEQlloK1cOEMq_A7E8jxH3wdcrnn-0yFZBULyyE34AmMWaYzQtqPRkBZuhi_1YZymN0ImgFYDBH6vbzZvWbbu9n-MvyrQZ8kRqMBd3OcHMq2-PkQDSG-vB_GXA"/>
+<span class="absolute bottom-1 inset-x-1 text-center font-label-badge text-[9px] text-on-surface bg-surface-bright/80 backdrop-blur-xs rounded py-0.5 truncate">Lateral</span>
+</button>
+<button class="thumb-btn group relative aspect-square rounded-xl bg-surface-container-lowest p-1.5 shadow-sm transition-all" onclick="selectThumbnail(1, this)" type="button">
+<img alt="Miniatura Vista Cenital" class="w-full h-full object-contain rounded-lg" data-alt="Direct overhead top-down view of Nike Air Volt React GT sneakers showcasing aerodynamic lacing system and volt insole logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgX8Tl5oRXOPoPjFmlv9wlAAOHw7tqIIK0ykMKEGJpMlANAfsyyUsGLkNCXjZIYanAzOWM191QNb4BOJ3GZJqa2t8rzShOMDS7_YNXN2SAbyfqUD5nNIpWQp8RGLwjngdIcFLFeT_sZpXnuF0B2hyx_OFK3PLHJXwAKflMasVLQvzCemWRtaOQybu5UeYeVcY1KkYj0lVVQoEt5XkdZTyfXPHCKD0Gc20wOQnPXBdER6hJDM40Xec2Dw"/>
+<span class="absolute bottom-1 inset-x-1 text-center font-label-badge text-[9px] text-on-surface bg-surface-bright/80 backdrop-blur-xs rounded py-0.5 truncate">Cenital</span>
+</button>
+<button class="thumb-btn group relative aspect-square rounded-xl bg-surface-container-lowest p-1.5 shadow-sm transition-all" onclick="selectThumbnail(2, this)" type="button">
+<img alt="Miniatura Suela React" class="w-full h-full object-contain rounded-lg" data-alt="Detailed macro product view of the React GT dual-density traction outsole with orange volt rubber pods and cushioning grooves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr_14QjtJ43Bb31pGjkJYapo7_ivutd7zSXK0NJcsyy9YxCyuOuZ7rCIGZgWS3qbUI7jmSlLHrc1R_BmeLIUlzqmy43xGGrB2BRngbXizOMr_sSkGFCmAWN99r_axkVIJD9M-ZQ6z-80KX0AxqhFkvEKASeW_pIfwI0_RFr77GqKwHlz7Ahr527mELZfGf34HSHwQsBQtDapmFY2jDkIvHnV8HR3eLeOF6aQU7hHuSmmus4mKkRWsEag"/>
+<span class="absolute bottom-1 inset-x-1 text-center font-label-badge text-[9px] text-on-surface bg-surface-bright/80 backdrop-blur-xs rounded py-0.5 truncate">Suela GT</span>
+</button>
+<button class="thumb-btn group relative aspect-square rounded-xl bg-surface-container-lowest p-1.5 shadow-sm transition-all" onclick="selectThumbnail(3, this)" type="button">
+<img alt="Miniatura Talón y Logo" class="w-full h-full object-contain rounded-lg" data-alt="Macro close-up shot of the reinforced ergonomic heel counter with reflective Nike Volt typography and pull tab badge" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQNP_52g8Rg6H8IaDlA8VGa2V5-eiNZTSy7-z79cpNsYp8FWPGjMoA2GTzzT1I8trjkJfAgTXGkfvCI7Y6lSoO91ncrMtP4D24_Sdayp4HFg3RMg2Of0lfTyrz90GJdjyh440zfrx1bBKxpuglPYNDHj2iv429BFpwLupW27hT8TDF9u3SU8khx9PHzUJPHO-vyhy40OwHCQXFaExpVOp4PDG_uQgsVohMePIdhzAbfjSHPxaPHklnzQ"/>
+<span class="absolute bottom-1 inset-x-1 text-center font-label-badge text-[9px] text-on-surface bg-surface-bright/80 backdrop-blur-xs rounded py-0.5 truncate">Talón</span>
+</button>
+</div>
+</section>
+<!-- Product Title & Pricing Specs -->
+<section class="px-margin-mobile pt-space-md">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="font-label-badge text-label-badge font-bold uppercase tracking-widest text-on-surface-variant">NIKE SPORTSWEAR</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="bg-surface-container px-2 py-0.5 rounded text-body-sm text-[11px] font-semibold text-primary">Running &amp; Street</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low px-2 py-1 rounded-full flex-shrink-0">
+<span class="material-symbols-outlined text-[15px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-headline-sm text-body-sm font-bold text-on-surface">4.9</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">(128)</span>
+</div>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mt-1 leading-tight">
+      Air Volt React GT <span class="font-body-lg text-body-md text-on-surface-variant font-normal block sm:inline">— Black &amp; Orange Volt</span>
+</h1>
+<div class="mt-space-xs flex items-baseline gap-space-sm flex-wrap">
+<span class="font-price-lg text-price-lg text-primary font-extrabold tracking-tight">S/ 529.00</span>
+<span class="font-body-md text-body-md text-on-surface-variant line-through">S/ 599.00</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge uppercase tracking-wider px-2 py-0.5 rounded-full font-bold">
+        -12% Ahorro
+      </span>
+</div>
+<!-- Local payment banner Peru -->
+<div class="mt-space-sm p-space-sm rounded-xl bg-surface-container-low flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[19px] text-secondary-container">payments</span>
+</div>
+<div class="min-w-0">
+<p class="font-headline-sm text-body-sm font-bold text-on-surface">Facilidades de Pago en Lima y Perú</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Paga en hasta 3 cuotas sin intereses o al instante con <strong class="text-primary font-semibold">Yape / Plin</strong>.</p>
+</div>
+</div>
+</section>
+<!-- Size Selection System -->
+<section class="px-margin-mobile pt-space-md" id="size-selector-section">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Tallas EU</span>
+<span class="text-on-surface-variant text-body-sm font-normal">(Medida Perú)</span>
+</div>
+<button class="text-secondary hover:text-secondary-container text-body-sm font-semibold flex items-center gap-1 transition-colors" onclick="toggleSizeGuideModal(true)" type="button">
+<span class="material-symbols-outlined text-[17px]">straighten</span>
+<span>¿Cuál es mi talla?</span>
+</button>
+</div>
+<!-- No Size Selected Alert Notice (State 2 Display) -->
+<div class="hidden mb-space-sm p-space-sm rounded-xl bg-error-container text-on-error-container flex items-center gap-space-sm transition-all" id="no-size-alert">
+<span class="material-symbols-outlined text-[20px] text-error flex-shrink-0">info</span>
+<p class="font-headline-sm text-body-sm font-semibold">Por favor selecciona una talla antes de continuar al carrito.</p>
+</div>
+<!-- EU Sizes Grid -->
+<div aria-label="Selección de talla europea" class="grid grid-cols-4 gap-2" role="radiogroup">
+<!-- EU 38 -->
+<button class="size-btn h-12 flex flex-col items-center justify-center rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all relative" onclick="selectSize('38', this, 5)" type="button">
+<span class="font-headline-sm text-label-size font-bold text-on-surface">EU 38</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant">24.0 cm</span>
+</button>
+<!-- EU 39 -->
+<button class="size-btn h-12 flex flex-col items-center justify-center rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all relative" onclick="selectSize('39', this, 4)" type="button">
+<span class="font-headline-sm text-label-size font-bold text-on-surface">EU 39</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant">24.5 cm</span>
+</button>
+<!-- EU 40 -->
+<button class="size-btn h-12 flex flex-col items-center justify-center rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all relative" onclick="selectSize('40', this, 6)" type="button">
+<span class="font-headline-sm text-label-size font-bold text-on-surface">EU 40</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant">25.5 cm</span>
+</button>
+<!-- EU 41 (Default Active) -->
+<button class="size-btn h-12 flex flex-col items-center justify-center rounded-xl bg-primary text-on-primary shadow-md transition-all relative ring-0" id="size-btn-41" onclick="selectSize('41', this, 8)" type="button">
+<span class="font-headline-sm text-label-size font-bold text-on-primary">EU 41</span>
+<span class="font-body-sm text-[10px] text-primary-fixed">26.5 cm</span>
+<span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+</button>
+<!-- EU 42 (Low Stock Pill) -->
+<button class="size-btn h-12 flex flex-col items-center justify-center rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all relative" onclick="selectSize('42', this, 2)" type="button">
+<span class="font-headline-sm text-label-size font-bold text-on-surface">EU 42</span>
+<span class="font-body-sm text-[10px] text-secondary font-semibold">Últimos 2</span>
+<span class="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+</button>
+<!-- EU 43 (Disabled / Out of Stock) -->
+<button aria-disabled="true" class="size-btn h-12 flex flex-col items-center justify-center rounded-xl bg-surface-container opacity-50 cursor-not-allowed relative overflow-hidden" disabled="" onclick="selectSize('43', this, 0)" type="button">
+<span class="font-headline-sm text-label-size font-bold text-outline line-through">EU 43</span>
+<span class="font-body-sm text-[9px] uppercase font-bold text-error">Agotado</span>
+</button>
+<!-- EU 44 -->
+<button class="size-btn h-12 flex flex-col items-center justify-center rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all relative" onclick="selectSize('44', this, 3)" type="button">
+<span class="font-headline-sm text-label-size font-bold text-on-surface">EU 44</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant">28.5 cm</span>
+</button>
+<!-- EU 45 -->
+<button class="size-btn h-12 flex flex-col items-center justify-center rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all relative" onclick="selectSize('45', this, 1)" type="button">
+<span class="font-headline-sm text-label-size font-bold text-on-surface">EU 45</span>
+<span class="font-body-sm text-[10px] text-on-surface-variant">29.0 cm</span>
+</button>
+</div>
+<!-- Stock Status Dynamic Indicator -->
+<div class="mt-space-sm p-space-sm rounded-xl bg-surface-container-lowest shadow-xs flex flex-col gap-1.5" id="stock-feedback-box">
+<div class="flex items-center gap-2" id="stock-status-row">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse" id="stock-dot"></span>
+<p class="font-headline-sm text-body-sm text-on-surface font-semibold" id="stock-status-text">
+          En stock para entrega en Lima (8 unidades disponibles)
+        </p>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-[12px]">
+<span class="material-symbols-outlined text-[15px] text-secondary-container">timer</span>
+<span>¡Reserva de stock activa por 24h al generar tu pedido!</span>
+</div>
+</div>
+</section>
+<!-- Quantity Stepper & Main In-Page Action -->
+<section class="px-margin-mobile pt-space-md" id="purchase-cta-block">
+<div class="flex items-center gap-space-sm">
+<!-- Modern Stepper -->
+<div class="flex items-center bg-surface-container-lowest rounded-xl shadow-sm p-1">
+<button aria-label="Disminuir cantidad" class="w-10 h-10 flex items-center justify-center rounded-lg text-on-surface hover:bg-surface-container transition-colors active:scale-90" onclick="changeQuantity(-1)" type="button">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<span class="w-10 text-center font-headline-sm text-headline-sm font-bold text-primary" id="qty-counter">1</span>
+<button aria-label="Aumentar cantidad" class="w-10 h-10 flex items-center justify-center rounded-lg text-on-surface hover:bg-surface-container transition-colors active:scale-90" onclick="changeQuantity(1)" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+<!-- Action Button (Toggles dynamically for Out of Stock) -->
+<button class="flex-1 h-12 bg-primary hover:bg-secondary-container text-on-primary rounded-xl font-headline-sm text-body-lg font-bold flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all active:scale-[0.98]" id="add-to-cart-main-btn" onclick="handleAddToCartAction()" type="button">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span id="main-btn-label">Agregar al carrito</span>
+</button>
+</div>
+<!-- Out of Stock Notification Subscribe Box (State 4) -->
+<div class="hidden mt-space-sm p-space-sm rounded-xl bg-surface-container flex flex-col gap-2" id="notify-stock-box">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[20px] text-error">notifications_active</span>
+<span class="font-headline-sm text-body-sm font-bold">Zapatilla temporalmente agotada</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Déjanos tu correo o WhatsApp y te avisaremos en cuanto recibamos el reabastecimiento en Lima.</p>
+<div class="flex gap-2 mt-1">
+<input class="flex-1 px-3 py-2 rounded-lg bg-surface-container-lowest text-body-sm text-on-surface outline-none focus:ring-1 focus:ring-primary placeholder:text-outline" placeholder="tu@email.com o teléfono" type="email"/>
+<button class="px-4 py-2 bg-primary text-on-primary font-headline-sm text-body-sm rounded-lg hover:bg-secondary-container transition-colors" onclick="alert('¡Te avisaremos apenas tengamos reposición!')" type="button">
+          Avisarme
+        </button>
+</div>
+</div>
+</section>
+<!-- Technical Accordions & Peruvian Logistics Details -->
+<section class="px-margin-mobile pt-space-lg space-y-space-xs">
+<!-- Accordion 1: Especificaciones -->
+<details class="group bg-surface-container-lowest rounded-xl p-space-sm shadow-sm transition-all" open="">
+<summary class="flex items-center justify-between cursor-pointer list-none select-none font-headline-sm text-body-lg text-primary font-bold">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary-container">bolt</span>
+          Especificaciones Técnicas
+        </span>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="pt-space-sm mt-space-xs text-body-md text-on-surface-variant space-y-2">
+<div class="flex justify-between py-1 bg-surface-container-low px-2 rounded">
+<span class="font-medium text-on-surface">Amortiguación:</span>
+<span class="text-primary font-semibold">Espuma React GT doble densidad</span>
+</div>
+<div class="flex justify-between py-1 px-2">
+<span class="font-medium text-on-surface">Drop Talón-Puntera:</span>
+<span class="text-primary font-semibold">10 mm (Óptimo para running urbano)</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-low px-2 rounded">
+<span class="font-medium text-on-surface">Peso Aprox.:</span>
+<span class="text-primary font-semibold">285 gramos (Talla EU 41)</span>
+</div>
+<div class="flex justify-between py-1 px-2">
+<span class="font-medium text-on-surface">Capellada:</span>
+<span class="text-primary font-semibold">Knit técnico ultra transpirable</span>
+</div>
+</div>
+</details>
+<!-- Accordion 2: Envíos Lima y Provincias -->
+<details class="group bg-surface-container-lowest rounded-xl p-space-sm shadow-sm transition-all">
+<summary class="flex items-center justify-between cursor-pointer list-none select-none font-headline-sm text-body-lg text-primary font-bold">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary-container">local_shipping</span>
+          Envíos a Lima y Provincias
+        </span>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="pt-space-sm mt-space-xs text-body-md text-on-surface-variant space-y-2.5">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-secondary-container mt-0.5">rocket_launch</span>
+<div>
+<strong class="text-on-surface block font-semibold">Lima Metropolitana Express (24 a 48h)</strong>
+<span>Envío gratis por compras superiores a S/ 299 a distritos seleccionados (Miraflores, San Isidro, Surco, Barranco, San Borja, etc.).</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-secondary-container mt-0.5">inventory_2</span>
+<div>
+<strong class="text-on-surface block font-semibold">Envíos a todo el Perú (Olva Courier / Shalom)</strong>
+<span>Tiempo promedio de llegada: 48 a 72 horas hábiles con tracking en tiempo real.</span>
+</div>
+</div>
+</div>
+</details>
+<!-- Accordion 3: Cambios de Talla -->
+<details class="group bg-surface-container-lowest rounded-xl p-space-sm shadow-sm transition-all">
+<summary class="flex items-center justify-between cursor-pointer list-none select-none font-headline-sm text-body-lg text-primary font-bold">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary-container">published_with_changes</span>
+          Cambio de Talla Gratuito
+        </span>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="pt-space-sm mt-space-xs text-body-md text-on-surface-variant">
+<p>¿No te quedó la talla perfecta? No te preocupes. Tienes hasta <strong class="text-on-surface">7 días naturales</strong> desde recibido tu pedido para solicitar cambio de talla 100% gratuito en nuestras tiendas físicas de Lima o vía mensajería.</p>
+</div>
+</details>
+</section>
+<!-- Cross-selling / Related Sneakers -->
+<section class="mt-space-lg">
+<div class="px-margin-mobile flex items-center justify-between mb-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-primary">Completa tu Rotación</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Zapatillas recomendadas para tu estilo</p>
+</div>
+<a class="text-secondary hover:text-secondary-container font-headline-sm text-body-sm font-semibold flex items-center" href="#">
+        Ver más <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<!-- Horizontal Sneaker Carousel -->
+<div class="flex gap-space-sm overflow-x-auto px-margin-mobile pb-space-sm scrollbar-none snap-x snap-mandatory">
+<!-- Card 1 -->
+<article class="flex-shrink-0 w-44 snap-start bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between">
+<div>
+<div class="relative w-full aspect-square bg-surface-container-low rounded-lg p-2 flex items-center justify-center overflow-hidden">
+<span class="absolute top-1.5 left-1.5 bg-primary text-on-primary font-label-badge text-[9px] uppercase px-1.5 py-0.5 rounded font-bold">Retro</span>
+<img alt="Jordan Retro Street OG" class="w-full h-full object-contain" data-alt="High contrast crisp studio photo of Air Jordan Retro Street OG sneaker in classic red black and white leather colorway against minimalist backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8_vdcE0sA20cEuB9UMRAMFvhnmdFZ7fS3D-ahfjZlLPv3G12ifXD9OUeX_DP-7zV46pXYTDaiQ9cQ26YSMwuB2eyU7BvSibEzbNJk5urPXl5euapS5ZPS6wz9M0ltOrk_7akMZXEzTleqLD3zIZp-w2x-vHrVnQDdl8Bb0A_xT3mWK9sEgM-CN0NsnLvoYmaN-ndJZQ39vMOCZloLqFak7S8Mjl7Pj93oVNJ9k8a-L9dYe8YKMwOILQ"/>
+</div>
+<span class="block mt-2 font-label-badge text-[10px] uppercase font-bold text-on-surface-variant">Jordan</span>
+<h3 class="font-headline-sm text-body-md font-bold text-primary truncate">Jordan Retro Street OG</h3>
+</div>
+<div class="mt-2 flex items-center justify-between">
+<span class="font-price-md text-price-md font-bold text-primary">S/ 649.00</span>
+<button aria-label="Ver Jordan Retro" class="w-8 h-8 rounded-full bg-surface-container hover:bg-primary hover:text-on-primary flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="flex-shrink-0 w-44 snap-start bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between">
+<div>
+<div class="relative w-full aspect-square bg-surface-container-low rounded-lg p-2 flex items-center justify-center overflow-hidden">
+<span class="absolute top-1.5 left-1.5 bg-secondary-container text-on-primary font-label-badge text-[9px] uppercase px-1.5 py-0.5 rounded font-bold">Top Trend</span>
+<img alt="New Balance 9060 Triple" class="w-full h-full object-contain" data-alt="Futuristic athletic photograph of New Balance 9060 Triple sneakers in tonal gray and bone aesthetic mesh and suede overlays on clean reflective studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6SJP5snsJ61-QC02zVSd4c_oYBWxjLna_WpbmWQtTW0-F83pIbGvF4y1hfQerf75B1QuU61EEeuONtly4rp3DtHtTJWbMKbGk5Mq9Q1Udvgc-ID1YPmRJaX_db-3mkVgSzW2H3SMvhBYAOmgl3UtXxr7KXgIEtct1VGMvG5prUYNtZyvnILKYfrRpzF7qx9-UNI8g6-Odc-QYcXZkaZkRBmG6IAqt1fxkjNAHqC0ilyXiFzk-DXzBbQ"/>
+</div>
+<span class="block mt-2 font-label-badge text-[10px] uppercase font-bold text-on-surface-variant">New Balance</span>
+<h3 class="font-headline-sm text-body-md font-bold text-primary truncate">NB 9060 Triple Sea</h3>
+</div>
+<div class="mt-2 flex items-center justify-between">
+<span class="font-price-md text-price-md font-bold text-primary">S/ 579.00</span>
+<button aria-label="Ver New Balance 9060" class="w-8 h-8 rounded-full bg-surface-container hover:bg-primary hover:text-on-primary flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="flex-shrink-0 w-44 snap-start bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between">
+<div>
+<div class="relative w-full aspect-square bg-surface-container-low rounded-lg p-2 flex items-center justify-center overflow-hidden">
+<img alt="Adidas Forum Low Urban" class="w-full h-full object-contain" data-alt="Clean aesthetic studio photo of Adidas Forum Low Urban sneaker in minimalist white leather with collegiate navy accents and ankle velcro strap" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN8olMxoYNQW_D64HKBgYC5xEldP1fWuFi0741ShXJeBZlJRNLMPHLwu80n8tXU0Pe9T1VjUWfPYEDjKL5kGJv0E0kd2pkUuem7SH9HdE_uixnaTwxn4P5sjy0JVj7shJ68Y2sigLlMqJOev9Si7Fe1bpYdPeRH8QCWQilWBKkYdp6Z3r1Nlyid5hU2mXn6ctfbQjvKWncAlffjmRDQ3oJwYynJnb1neCL8X5xZCDlGMVl0i4JEg2vKA"/>
+</div>
+<span class="block mt-2 font-label-badge text-[10px] uppercase font-bold text-on-surface-variant">Adidas Originals</span>
+<h3 class="font-headline-sm text-body-md font-bold text-primary truncate">Forum Low Urban OG</h3>
+</div>
+<div class="mt-2 flex items-center justify-between">
+<span class="font-price-md text-price-md font-bold text-primary">S/ 389.00</span>
+<button aria-label="Ver Adidas Forum Low" class="w-8 h-8 rounded-full bg-surface-container hover:bg-primary hover:text-on-primary flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</article>
+</div>
+</section>
+<!-- Size Guide Modal Drawer -->
+<aside class="fixed inset-0 z-50 bg-primary/60 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4" id="size-guide-modal">
+<div class="w-full sm:max-w-md bg-surface-container-lowest rounded-t-2xl sm:rounded-2xl p-space-lg shadow-2xl flex flex-col gap-space-md max-h-[85vh] overflow-y-auto">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[24px] text-secondary-container">straighten</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-primary">Guía de Tallas Oficial</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface" onclick="toggleSizeGuideModal(false)" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Mide tu pie apoyando el talón contra la pared y midiendo la distancia hasta la punta del dedo pulgar.
+      </p>
+<div class="overflow-x-auto rounded-xl bg-surface-container-low">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-highest text-primary font-bold">
+<tr>
+<th class="p-2.5">EU</th>
+<th class="p-2.5">US Men</th>
+<th class="p-2.5">CM (Pie)</th>
+<th class="p-2.5">Equiv. Perú</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<tr><td class="p-2.5 font-bold">38</td><td class="p-2.5">5.5</td><td class="p-2.5">24.0 cm</td><td class="p-2.5">37 - 37.5</td></tr>
+<tr><td class="p-2.5 font-bold">39</td><td class="p-2.5">6.5</td><td class="p-2.5">24.5 cm</td><td class="p-2.5">38</td></tr>
+<tr><td class="p-2.5 font-bold">40</td><td class="p-2.5">7.0</td><td class="p-2.5">25.5 cm</td><td class="p-2.5">39</td></tr>
+<tr class="bg-secondary-fixed/30 font-bold"><td class="p-2.5">41</td><td class="p-2.5">8.0</td><td class="p-2.5">26.5 cm</td><td class="p-2.5">40</td></tr>
+<tr><td class="p-2.5 font-bold">42</td><td class="p-2.5">8.5</td><td class="p-2.5">27.0 cm</td><td class="p-2.5">41</td></tr>
+<tr><td class="p-2.5 font-bold">43</td><td class="p-2.5">9.5</td><td class="p-2.5">27.5 cm</td><td class="p-2.5">42</td></tr>
+<tr><td class="p-2.5 font-bold">44</td><td class="p-2.5">10.0</td><td class="p-2.5">28.5 cm</td><td class="p-2.5">43</td></tr>
+</tbody>
+</table>
+</div>
+<button class="w-full py-3 bg-primary text-on-primary rounded-xl font-headline-sm text-body-md font-bold" onclick="toggleSizeGuideModal(false)" type="button">
+        Entendido, volver al producto
+      </button>
+</div>
+</aside>
+<!-- Fixed Mobile Purchase Action Bar (Sticky Action Bar above App Shell bottom nav) -->
+<aside aria-label="Barra de compra rápida" class="fixed bottom-16 inset-x-0 z-40 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_-4px_16px_-2px_rgba(17,17,17,0.08)] px-gutter-mobile py-2.5">
+<div class="flex items-center justify-between gap-space-sm max-w-lg mx-auto">
+<!-- Mini Preview & Price -->
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-11 h-11 rounded-lg bg-surface-container-low p-1 flex-shrink-0 flex items-center justify-center">
+<img alt="Nike Air Volt React GT Mini" class="w-full h-full object-contain" data-alt="Micro thumbnail icon of Nike Air Volt React GT in black and orange volt sneaker" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEfKKzRmvvEYlqyC3XQHvK-cN_EL6Lv6Kep4OWLNec6BF7T2SLW0jW0jQDpB-phk-_WePuP_6dc7wjxopHRSrwGurSbsTRGvl1zvMzhw_DIFm1mHp8HHs4Pvs2_m7mMAaQwXOtzY7t8TAkOx5p2Rq5Sb36L5wol-sHYh4H4zPkAbIMy6jrxWgEeNNH1AsEiacox6QzTmq6YIBBJIaM2HQcUyCUZanIaVI92DXnEyWsCWHJcU6j3TkM5g"/>
+</div>
+<div class="truncate">
+<div class="flex items-center gap-1.5">
+<span class="font-price-md text-price-md font-extrabold text-primary leading-tight">S/ 529</span>
+<span class="font-label-badge text-[10px] bg-primary text-on-primary px-1.5 py-0.5 rounded font-bold" id="sticky-size-tag">EU 41</span>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant truncate">Nike Volt React GT</p>
+</div>
+</div>
+<!-- Quick Add to Cart CTA -->
+<button class="flex-shrink-0 h-11 px-5 rounded-xl bg-secondary-container hover:bg-secondary text-on-primary font-headline-sm text-body-md font-bold flex items-center gap-1.5 shadow-md shadow-secondary-container/20 active:scale-95 transition-all" id="sticky-add-btn" onclick="handleAddToCartAction()" type="button">
+<span class="material-symbols-outlined text-[19px]">shopping_bag</span>
+<span id="sticky-btn-text">Agregar</span>
+</button>
+</div>
+</aside>
+</div>
+<!-- Inline JavaScript for state simulation and micro-interactions -->
+<script>
+  let currentSelectedSize = '41';
+  let currentStock = 8;
+  let currentQty = 1;
+  let isWishlisted = false;
+
+  const galleryImages = [
+    {
+      alt: "Dynamic studio hero photograph of a sleek Nike Air Volt React GT sneaker angled aggressively at three-quarters. Jet black technical mesh knit upper contrasted with vibrant electric volt orange Swoosh and midsole accents. Crisp white and neutral light gray backdrop, sharp studio softbox lighting highlighting the performance running silhouette."
+    },
+    {
+      alt: "Direct overhead top-down view of Nike Air Volt React GT sneakers showcasing aerodynamic lacing system and volt insole logo"
+    },
+    {
+      alt: "Detailed macro product view of the React GT dual-density traction outsole with orange volt rubber pods and cushioning grooves"
+    },
+    {
+      alt: "Macro close-up shot of the reinforced ergonomic heel counter with reflective Nike Volt typography and pull tab badge"
+    }
+  ];
+
+  function selectThumbnail(index, el) {
+    document.querySelectorAll('.thumb-btn').forEach(btn => {
+      btn.classList.remove('shadow-[0_0_0_2px_#fe6a34]');
+    });
+    el.classList.add('shadow-[0_0_0_2px_#fe6a34]');
+
+    const mainImg = document.getElementById('main-product-img');
+    const wrapper = document.getElementById('hero-image-wrapper');
+    
+    // Quick micro-fade
+    wrapper.style.opacity = '0.3';
+    wrapper.style.transform = 'scale(0.96)';
+    setTimeout(() => {
+      mainImg.setAttribute('data-alt', galleryImages[index].alt);
+      wrapper.style.opacity = '1';
+      wrapper.style.transform = 'scale(1)';
+    }, 150);
+  }
+
+  function trigger360Animation() {
+    const wrapper = document.getElementById('hero-image-wrapper');
+    wrapper.classList.add('rotate-6', 'scale-105');
+    setTimeout(() => {
+      wrapper.classList.remove('rotate-6', 'scale-105');
+    }, 400);
+  }
+
+  function selectSize(size, el, stockCount) {
+    currentSelectedSize = size;
+    currentStock = stockCount;
+
+    // Reset styles on all size buttons
+    document.querySelectorAll('.size-btn:not([disabled])').forEach(btn => {
+      btn.className = "size-btn h-12 flex flex-col items-center justify-center rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all relative";
+      const titleSpan = btn.querySelector('span:first-child');
+      if (titleSpan) titleSpan.className = "font-headline-sm text-label-size font-bold text-on-surface";
+    });
+
+    // Apply active styles to selected button
+    el.className = "size-btn h-12 flex flex-col items-center justify-center rounded-xl bg-primary text-on-primary shadow-md transition-all relative ring-0";
+    const activeTitle = el.querySelector('span:first-child');
+    if (activeTitle) activeTitle.className = "font-headline-sm text-label-size font-bold text-on-primary";
+
+    // Update sticky pill
+    const stickyTag = document.getElementById('sticky-size-tag');
+    if (stickyTag) stickyTag.textContent = `EU ${size}`;
+
+    // Hide alert if visible
+    const alertBox = document.getElementById('no-size-alert');
+    if (alertBox) alertBox.classList.add('hidden');
+
+    // Update stock UI
+    updateStockDisplay(stockCount, size);
+  }
+
+  function updateStockDisplay(stockCount, size) {
+    const dot = document.getElementById('stock-dot');
+    const text = document.getElementById('stock-status-text');
+    const mainBtn = document.getElementById('add-to-cart-main-btn');
+    const stickyBtn = document.getElementById('sticky-add-btn');
+    const notifyBox = document.getElementById('notify-stock-box');
+
+    if (stockCount > 0) {
+      dot.className = "w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse";
+      text.innerHTML = `En stock para entrega en Lima (<strong class="text-primary">${stockCount} unidades disponibles</strong> para talla EU ${size})`;
+      mainBtn.classList.remove('bg-surface-container', 'text-on-surface-variant', 'pointer-events-none');
+      mainBtn.classList.add('bg-primary', 'text-on-primary');
+      document.getElementById('main-btn-label').textContent = "Agregar al carrito";
+      stickyBtn.classList.remove('hidden');
+      if (notifyBox) notifyBox.classList.add('hidden');
+    } else {
+      dot.className = "w-2.5 h-2.5 rounded-full bg-error";
+      text.innerHTML = `<span class="text-error font-semibold">Talla EU ${size} actualmente agotada en almacén Lima</span>`;
+      mainBtn.classList.remove('bg-primary', 'text-on-primary');
+      mainBtn.classList.add('bg-surface-container', 'text-on-surface-variant');
+      document.getElementById('main-btn-label').textContent = "Agotado temporalmente";
+      if (notifyBox) notifyBox.classList.remove('hidden');
+    }
+  }
+
+  function changeQuantity(delta) {
+    const qtySpan = document.getElementById('qty-counter');
+    currentQty = Math.max(1, Math.min(5, currentQty + delta));
+    qtySpan.textContent = currentQty;
+  }
+
+  function toggleWishlist() {
+    isWishlisted = !isWishlisted;
+    const icon = document.getElementById('wishlist-icon');
+    if (isWishlisted) {
+      icon.style.fontVariationSettings = "'FILL' 1";
+      icon.classList.add('text-secondary-container');
+    } else {
+      icon.style.fontVariationSettings = "'FILL' 0";
+      icon.classList.remove('text-secondary-container');
+    }
+  }
+
+  function handleShare() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Nike Air Volt React GT - SneakerStore',
+        text: '¡Mira estas zapatillas increíbles en SneakerStore Perú!',
+        url: window.location.href,
+      }).catch(() => {});
+    } else {
+      alert("Enlace copiado al portapapeles: Nike Air Volt React GT");
+    }
+  }
+
+  function toggleSizeGuideModal(show) {
+    const modal = document.getElementById('size-guide-modal');
+    if (show) {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    } else {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  }
+
+  function showToastNotification(message) {
+    const toast = document.getElementById('toast-notification');
+    const toastDetails = document.getElementById('toast-details');
+    if (toastDetails && message) toastDetails.textContent = message;
+    
+    toast.classList.remove('opacity-0', '-translate-y-28', 'pointer-events-none');
+    toast.classList.add('opacity-100', 'translate-y-0');
+
+    setTimeout(() => {
+      toast.classList.remove('opacity-100', 'translate-y-0');
+      toast.classList.add('opacity-0', '-translate-y-28', 'pointer-events-none');
+    }, 3800);
+  }
+
+  function handleAddToCartAction() {
+    if (!currentSelectedSize) {
+      const alertBox = document.getElementById('no-size-alert');
+      alertBox.classList.remove('hidden');
+      alertBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+    if (currentStock <= 0) {
+      alert("Esta talla se encuentra agotada temporalmente.");
+      return;
+    }
+    showToastNotification(`${currentQty}x Nike Air Volt React GT (EU ${currentSelectedSize})`);
+  }
+
+  // Simulator tabs state switcher for UX testing
+  function setScreenState(stateIndex) {
+    // Reset tab pills
+    for (let i = 1; i <= 4; i++) {
+      const tab = document.getElementById(`state-tab-${i}`);
+      if (tab) {
+        tab.className = "py-1.5 px-1 rounded text-center font-headline-sm text-[10px] bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-all";
+      }
+    }
+    const activeTab = document.getElementById(`state-tab-${stateIndex}`);
+    if (activeTab) {
+      activeTab.className = "py-1.5 px-1 rounded text-center font-headline-sm text-[10px] bg-primary text-on-primary transition-all";
+    }
+
+    const alertBox = document.getElementById('no-size-alert');
+    const notifyBox = document.getElementById('notify-stock-box');
+    const stickyTag = document.getElementById('sticky-size-tag');
+
+    if (stateIndex === 1) {
+      // Normal: EU 41 selected
+      alertBox.classList.add('hidden');
+      notifyBox.classList.add('hidden');
+      const btn41 = document.getElementById('size-btn-41');
+      if (btn41) selectSize('41', btn41, 8);
+    } else if (stateIndex === 2) {
+      // No size selected warning
+      currentSelectedSize = null;
+      document.querySelectorAll('.size-btn:not([disabled])').forEach(btn => {
+        btn.className = "size-btn h-12 flex flex-col items-center justify-center rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all relative";
+        const titleSpan = btn.querySelector('span:first-child');
+        if (titleSpan) titleSpan.className = "font-headline-sm text-label-size font-bold text-on-surface";
+      });
+      alertBox.classList.remove('hidden');
+      stickyTag.textContent = "Elegir talla";
+      document.getElementById('stock-status-text').textContent = "Selecciona una talla para consultar el stock disponible en Lima";
+    } else if (stateIndex === 3) {
+      // Success toast feedback
+      const btn41 = document.getElementById('size-btn-41');
+      if (btn41) selectSize('41', btn41, 8);
+      showToastNotification(`1x Nike Air Volt React GT (EU 41)`);
+    } else if (stateIndex === 4) {
+      // Out of Stock state simulation
+      alertBox.classList.add('hidden');
+      updateStockDisplay(0, '43');
+      stickyTag.textContent = "Agotado";
+    }
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-4px_16px_-2px_rgba(17,17,17,0.06)]" data-active-classes="text-primary font-semibold [&amp;_span.indicator]:opacity-100"><div class="flex items-center justify-around h-16 px-gutter-mobile"><a class="group relative flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-surface-variant hover:text-primary transition-all" data-path="inicio" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-badge text-label-badge mt-0.5">Inicio</span><span class="indicator opacity-0 w-1 h-1 rounded-full bg-secondary-container mt-0.5 transition-opacity"></span></a><a class="group relative flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-surface-variant hover:text-primary transition-all" data-path="catalogo" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span class="font-label-badge text-label-badge mt-0.5">Catálogo</span><span class="indicator opacity-0 w-1 h-1 rounded-full bg-secondary-container mt-0.5 transition-opacity"></span></a><a class="group relative flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-surface-variant hover:text-primary transition-all" data-path="carrito" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute -top-1 -right-2 flex items-center justify-center min-w-[15px] h-[15px] px-1 rounded-full bg-secondary-container text-on-primary font-label-badge text-[9px] font-bold leading-none">2</span></div><span class="font-label-badge text-label-badge mt-0.5">Carrito</span><span class="indicator opacity-0 w-1 h-1 rounded-full bg-secondary-container mt-0.5 transition-opacity"></span></a><a class="group relative flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-surface-variant hover:text-primary transition-all" data-path="pedidos" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-badge text-label-badge mt-0.5">Pedidos</span><span class="indicator opacity-0 w-1 h-1 rounded-full bg-secondary-container mt-0.5 transition-opacity"></span></a><a class="group relative flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-surface-variant hover:text-primary transition-all" data-path="perfil" href="#"><span class="material-symbols-outlined text-[22px]">person</span><span class="font-label-badge text-label-badge mt-0.5">Perfil</span><span class="indicator opacity-0 w-1 h-1 rounded-full bg-secondary-container mt-0.5 transition-opacity"></span></a></div></nav></body></html>

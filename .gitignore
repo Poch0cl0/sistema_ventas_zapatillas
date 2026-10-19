@@ -1,0 +1,66 @@
+# Credenciales y configuración local
+.env
+.env.*
+!.env.example
+!.env.*.example
+*service-account*.json
+*service_account*.json
+*-firebase-adminsdk-*.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+key.properties
+.npmrc
+.netrc
+
+# Dependencias, compilaciones y cachés
+node_modules/
+dist/
+build/
+coverage/
+.nyc_output/
+*.tsbuildinfo
+.dart_tool/
+.pub-cache/
+.pub/
+.flutter-plugins
+.flutter-plugins-dependencies
+.gradle/
+.kotlin/
+.cxx/
+local.properties
+
+# Registros y datos locales de emuladores
+*.log
+logs/
+.firebase/
+firebase-export-*/
+emulator-data/
+*.pid
+*.pid.lock
+.tmp/
+.temp/
+
+# Editores y sistema operativo
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+*.swp
+*.pyc
+__pycache__/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Instaladores, volcados y archivos de distribución
+*.apk
+*.aab
+*.ipa
+*.hprof
+*.zip
+*.7z

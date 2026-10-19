@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface":"#f9f9fa","surface-variant":"#e2e2e3","on-surface-variant":"#444748","secondary-container":"#fe6a34","on-surface":"#1a1c1d","surface-container":"#eeeeef","secondary-fixed":"#ffdbd0","inverse-primary":"#c8c6c5","on-background":"#1a1c1d","surface-dim":"#dadadb","tertiary":"#000000","outline-variant":"#c4c7c7","tertiary-container":"#151c27","primary-fixed-dim":"#c8c6c5","surface-container-high":"#e8e8e9","tertiary-fixed-dim":"#c0c7d6","on-primary-fixed-variant":"#474646","on-secondary-fixed":"#390c00","surface-tint":"#5f5e5e","surface-bright":"#f9f9fa","on-primary-container":"#858383","secondary":"#ab3500","background":"#f9f9fa","on-primary":"#ffffff","tertiary-fixed":"#dce2f3","surface-container-low":"#f3f3f4","on-tertiary-fixed":"#151c27","on-secondary-fixed-variant":"#832600","surface-container-highest":"#e2e2e3","on-primary-fixed":"#1c1b1b","on-error":"#ffffff","primary":"#000000","on-error-container":"#93000a","on-tertiary":"#ffffff","outline":"#747878","error":"#ba1a1a","primary-fixed":"#e5e2e1","on-secondary-container":"#5d1900","primary-container":"#1c1b1b","on-tertiary-fixed-variant":"#404754","surface-container-lowest":"#ffffff","inverse-on-surface":"#f0f1f2","error-container":"#ffdad6","secondary-fixed-dim":"#ffb59d","on-secondary":"#ffffff","on-tertiary-container":"#7d8492","inverse-surface":"#2f3132"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-mobile":"1rem","gutter":"1.5rem","space-md":"1rem","margin":"2rem","space-xs":"0.25rem","gutter-mobile":"0.75rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xl":"2.5rem"},"fontFamily":{"display-hero":["Inter"],"headline-lg":["Inter"],"headline-sm":["Inter"],"body-lg":["Inter"],"price-lg":["Inter"],"label-size":["Inter"],"body-sm":["Inter"],"label-badge":["Inter"],"display-hero-mobile":["Inter"],"body-md":["Inter"],"headline-lg-mobile":["Inter"],"headline-md":["Inter"],"price-md":["Inter"]},"fontSize":{"display-hero":["56px",{"lineHeight":"60px","letterSpacing":"-0.03em","fontWeight":"800"}],"headline-lg":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"price-lg":["24px",{"lineHeight":"28px","letterSpacing":"-0.02em","fontWeight":"800"}],"label-size":["13px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"label-badge":["11px",{"lineHeight":"12px","letterSpacing":"0.05em","fontWeight":"700"}],"display-hero-mobile":["36px",{"lineHeight":"40px","letterSpacing":"-0.025em","fontWeight":"800"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"700"}],"price-md":["18px",{"lineHeight":"22px","letterSpacing":"-0.01em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col flex-1 overflow-y-auto"><div class="px-6 pt-6 pb-5 flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[20px]">question_mark</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-tight text-primary leading-none">SneakerStore</span><span class="font-label-badge text-label-badge text-on-surface-variant tracking-wider uppercase mt-0.5">Admin Panel</span></div></div><span class="bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge px-2 py-0.5 rounded-full">HQ LIMA</span></div><div class="px-6 py-2"><div class="p-3 rounded-lg bg-surface-container-low flex items-center gap-space-sm"><span class="material-symbols-outlined text-secondary-container text-[18px]">store</span><div class="flex flex-col"><span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">Almacén Central</span><span class="font-label-badge text-label-badge text-on-surface-variant">Miraflores, Lima PE</span></div></div></div><nav class="flex-1 px-4 py-4 space-y-1" data-active-classes="bg-primary text-on-primary font-semibold shadow-sm"><a aria-current="page" class="flex items-center justify-between px-3 py-2.5 rounded-lg transition-all group bg-primary text-on-primary font-semibold shadow-sm" data-path="resumen" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-body-md text-body-md">Resumen</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="productos" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-body-md text-body-md">Productos</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="inventario" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">warehouse</span><span class="font-body-md text-body-md">Inventario</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="pedidos" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span class="font-body-md text-body-md">Pedidos</span></div><span class="bg-secondary-container text-on-primary font-label-badge text-label-badge px-2 py-0.5 rounded-full">12 Pend</span></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="ventas-presenciales" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">point_of_sale</span><span class="font-body-md text-body-md">Ventas Presenciales</span></div></a><a class="flex items-center justify-between px-3 py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="zonas-de-delivery" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">map</span><span class="font-body-md text-body-md">Zonas de Delivery</span></div></a></nav></div><div class="p-4 border-t border-surface-container-high bg-surface-container-lowest"><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-error hover:bg-error-container hover:text-on-error-container transition-all mb-3" data-path="cerrar-sesion" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span class="font-body-md text-body-md font-medium">Cerrar sesión</span></a><div class="flex items-center justify-between pt-2"><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Admin General</span><span class="font-label-badge text-label-badge text-on-surface-variant">ops@sneakerstore.pe</span></div></div><span class="material-symbols-outlined text-outline text-[18px]">verified</span></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span class="hover:text-on-surface cursor-pointer">Admin</span><span class="material-symbols-outlined text-[16px]">chevron_right</span><span class="font-semibold text-on-surface">Dashboard</span></div><div class="hidden lg:flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-badge text-label-badge"><span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span><span>Sistema Operativo (Firebase Ready)</span></div></div><div class="flex items-center gap-4"><div class="relative hidden sm:block w-72"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full h-10 pl-9 pr-4 rounded-full bg-surface-container-low text-on-surface placeholder:text-on-surface-variant text-body-sm font-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary transition-all" placeholder="Buscar pedido, SKU, cliente..." type="text"/></div><button class="relative p-2 rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary-container"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface flex-1 w-full px-gutter py-space-md"><div class="flex flex-col w-full pb-12">
+<!-- Top Prototype State Switcher -->
+<div class="w-full bg-surface-container-low px-4 py-2.5 mb-6 rounded-xl shadow-sm flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container text-[20px]">science</span>
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-on-surface-variant font-bold">Modo Prototipo Interactivo:</span>
+</div>
+<div class="inline-flex p-1 bg-surface-container rounded-lg gap-1">
+<button class="px-3 py-1 rounded text-body-sm font-body-sm font-semibold transition-all bg-primary text-on-primary shadow-sm flex items-center gap-1.5" id="btn-state-live" onclick="switchState('live')">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+        1. Datos en Vivo
+      </button>
+<button class="px-3 py-1 rounded text-body-sm font-body-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface flex items-center gap-1.5" id="btn-state-empty" onclick="switchState('empty')">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+        2. Estado Vacío
+      </button>
+<button class="px-3 py-1 rounded text-body-sm font-body-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface flex items-center gap-1.5" id="btn-state-loading" onclick="switchState('loading')">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+        3. Carga (Skeletons)
+      </button>
+</div>
+</div>
+<!-- Header & Commercial Quick Actions -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-6 mb-8">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-3">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Panel de Control Comercial</h1>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-ping"></span>
+<span class="font-label-badge text-label-badge uppercase font-bold text-secondary">En Vivo</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Resumen general de operaciones, tesorería Yape/Plin e inventario en almacén Miraflores.
+      </p>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm mt-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Actualizado hoy, 24 Octubre 2025 • 18:45 hrs</span>
+<span class="text-outline-variant">•</span>
+<span>Sincronización en tiempo real con pasarelas locales</span>
+</div>
+</div>
+<!-- Quick CTA Action Buttons -->
+<div class="flex items-center gap-3 shrink-0">
+<button class="px-5 h-12 rounded-xl bg-secondary-container text-on-primary font-body-sm text-body-sm font-semibold flex items-center gap-2 hover:opacity-90 active:scale-95 transition-all shadow-md shadow-secondary-container/20" onclick="openPosModal()">
+<span class="material-symbols-outlined text-[20px]">point_of_sale</span>
+        + Registrar Venta Presencial
+      </button>
+<button class="px-5 h-12 rounded-xl bg-primary text-on-primary font-body-sm text-body-sm font-semibold flex items-center gap-2 hover:bg-neutral-800 active:scale-95 transition-all shadow-sm" onclick="openProductModal()">
+<span class="material-symbols-outlined text-[20px]">add_box</span>
+        + Nuevo Producto
+      </button>
+</div>
+</div>
+<!-- VIEW CONTAINER 1: LIVE DATA -->
+<div class="flex flex-col gap-8" id="view-live">
+<!-- 4 High-Impact KPI Metric Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- KPI 1 -->
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-on-surface-variant">Ventas Registradas (Mes)</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</div>
+</div>
+<div class="my-3">
+<div class="font-price-lg text-price-lg text-on-surface font-extrabold tracking-tight">S/ 48,920.00</div>
+<div class="inline-flex items-center gap-1 text-label-size font-label-size text-on-secondary-fixed bg-secondary-fixed px-2 py-0.5 rounded-full mt-1.5 font-bold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+            +14.2% vs. mes anterior
+          </div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">86 pares entregados y liquidados</p>
+</div>
+<!-- KPI 2 -->
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-on-surface-variant">Pedidos Pendientes de Pago</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</div>
+</div>
+<div class="my-3">
+<div class="font-price-lg text-price-lg text-on-surface font-extrabold tracking-tight">S/ 3,420.00</div>
+<div class="inline-flex items-center gap-1 text-label-size font-label-size bg-secondary-fixed text-on-secondary-fixed-variant px-2 py-0.5 rounded-full mt-1.5 font-bold">
+<span class="material-symbols-outlined text-[14px]">hourglass_top</span>
+            3 órdenes con reserva de 24h
+          </div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Liberación programada si no envían voucher</p>
+</div>
+<!-- KPI 3 -->
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-on-surface-variant">Productos Activos</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">storefront</span>
+</div>
+</div>
+<div class="my-3">
+<div class="font-price-lg text-price-lg text-on-surface font-extrabold tracking-tight">34 Modelos</div>
+<div class="inline-flex items-center gap-1 text-label-size font-label-size bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded-full mt-1.5 font-medium">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+            Catálogo público 98% visible
+          </div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">128 SKUs en tallas EU 38 a 45</p>
+</div>
+<!-- KPI 4 -->
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-on-surface-variant">Stock Bajo (Alerta Inmediata)</span>
+<div class="w-8 h-8 rounded-lg bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+</div>
+</div>
+<div class="my-3">
+<div class="font-price-lg text-price-lg text-error font-extrabold tracking-tight">5 Tallas Críticas</div>
+<div class="inline-flex items-center gap-1 text-label-size font-label-size bg-error-container text-on-error-container px-2 py-0.5 rounded-full mt-1.5 font-bold">
+<span class="material-symbols-outlined text-[14px]">priority_high</span>
+            Requiere reposición urgente
+          </div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">< 2 pares disponibles en alta rotación</p>
+</div>
+</div>
+<!-- Treasury Section: Pending Payments Validation (Yape / Plin / BCP) -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-[22px]">account_balance_wallet</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Validación de Tesorería (Yape / Plin / Transferencia)</h2>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-primary font-label-badge text-label-badge font-bold">2 Comprobantes por revisar</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Al aprobar el abono, el pedido pasa de inmediato a <span class="font-semibold text-on-surface">En Preparación</span> y se notifica al almacén de Miraflores.
+            </p>
+</div>
+</div>
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+          Validación Manual Requerida
+        </div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-2">
+<!-- Payment Item 1: Yape -->
+<div class="p-4 rounded-xl bg-surface-container-low transition-all" id="voucher-card-1">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-bold text-on-surface text-body-sm">
+                CM
+              </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-body-lg font-bold text-on-surface">Carlos Mendoza Poma</span>
+<span class="font-label-badge text-label-badge bg-primary text-on-primary px-2 py-0.5 rounded">#SK-84920</span>
+</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">
+                  Método: <strong class="text-on-surface font-semibold">Yape Móvil</strong> • Ref: <span class="font-mono">84920491</span> • Hace 12 min
+                </div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-price-md text-price-md font-extrabold text-on-surface">S/ 1,108.00</span>
+<span class="block text-body-sm font-body-sm text-on-surface-variant">2 Zapatillas</span>
+</div>
+</div>
+<div class="mt-3 pt-3 flex flex-wrap items-center justify-between gap-3">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-highest hover:bg-surface-variant text-on-surface text-body-sm font-body-sm transition-colors" onclick="previewVoucher('Carlos Mendoza', 'S/ 1,108.00', 'Yape', '84920491', 'voucher_yape_84920.jpg')">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+              Ver Voucher Adjunto (voucher_yape_84920.jpg)
+            </button>
+<div class="flex items-center gap-2">
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-highest text-error hover:bg-error-container hover:text-on-error-container text-body-sm font-body-sm font-semibold transition-all" onclick="rejectPayment('voucher-card-1', '#SK-84920')">
+                Rechazar ✕
+              </button>
+<button class="px-4 py-1.5 rounded-lg bg-primary text-on-primary hover:bg-secondary-container text-body-sm font-body-sm font-semibold transition-all" onclick="approvePayment('voucher-card-1', '#SK-84920')">
+                Aprobar Pago ✓
+              </button>
+</div>
+</div>
+</div>
+<!-- Payment Item 2: Plin -->
+<div class="p-4 rounded-xl bg-surface-container-low transition-all" id="voucher-card-2">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-bold text-on-surface text-body-sm">
+                LP
+              </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-body-lg font-bold text-on-surface">Lucía Paredes R.</span>
+<span class="font-label-badge text-label-badge bg-primary text-on-primary px-2 py-0.5 rounded">#SK-84918</span>
+</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">
+                  Método: <strong class="text-on-surface font-semibold">Plin Interbank</strong> • Ref: <span class="font-mono">PLN-991204</span> • Hace 38 min
+                </div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-price-md text-price-md font-extrabold text-on-surface">S/ 589.00</span>
+<span class="block text-body-sm font-body-sm text-on-surface-variant">1 Zapatilla</span>
+</div>
+</div>
+<div class="mt-3 pt-3 flex flex-wrap items-center justify-between gap-3">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-highest hover:bg-surface-variant text-on-surface text-body-sm font-body-sm transition-colors" onclick="previewVoucher('Lucía Paredes', 'S/ 589.00', 'Plin', 'PLN-991204', 'captura_plin.png')">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+              Ver Voucher Adjunto (captura_plin.png)
+            </button>
+<div class="flex items-center gap-2">
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-highest text-error hover:bg-error-container hover:text-on-error-container text-body-sm font-body-sm font-semibold transition-all" onclick="rejectPayment('voucher-card-2', '#SK-84918')">
+                Rechazar ✕
+              </button>
+<button class="px-4 py-1.5 rounded-lg bg-primary text-on-primary hover:bg-secondary-container text-body-sm font-body-sm font-semibold transition-all" onclick="approvePayment('voucher-card-2', '#SK-84918')">
+                Aprobar Pago ✓
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Grid: Orders & Stock Alerts -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Recent Orders (60% Desktop) -->
+<div class="lg:col-span-7 flex flex-col gap-4">
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col h-full">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Pedidos Recientes (Omnicanal)</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Compras Web directas y mostrador tienda física</p>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-badge text-label-badge font-bold">142 Órdenes Totales</span>
+</div>
+<!-- Orders Table Container -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left">
+<thead>
+<tr class="text-on-surface-variant font-label-badge text-label-badge uppercase tracking-wider bg-surface-container-low rounded-lg">
+<th class="py-3 px-3 rounded-l-lg">Pedido / Cliente</th>
+<th class="py-3 px-3">Zapatillas / Tallas</th>
+<th class="py-3 px-3">Monto</th>
+<th class="py-3 px-3">Estado Pago</th>
+<th class="py-3 px-3">Despacho</th>
+<th class="py-3 px-3 rounded-r-lg text-right">Detalle</th>
+</tr>
+</thead>
+<tbody class="text-body-sm font-body-sm text-on-surface">
+<!-- Order 1 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-3">
+<div class="font-bold text-on-surface">#SK-84920</div>
+<div class="text-on-surface-variant text-body-sm font-body-sm">Carlos Mendoza</div>
+</td>
+<td class="py-3.5 px-3">
+<div class="font-semibold truncate max-w-[190px]">Nike Air Volt GT (EU 41)</div>
+<div class="text-on-surface-variant text-body-sm truncate max-w-[190px]">+ Jordan Retro (EU 42)</div>
+</td>
+<td class="py-3.5 px-3 font-price-md text-price-md font-bold whitespace-nowrap">
+                    S/ 1,108.00
+                  </td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-badge font-label-badge font-bold whitespace-nowrap">
+                      Pendiente Validación
+                    </span>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant text-label-badge font-label-badge font-medium">
+                      En espera
+                    </span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="viewOrderDetail('SK-84920')">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Order 2 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-3">
+<div class="font-bold text-on-surface">#SK-83105</div>
+<div class="text-on-surface-variant text-body-sm font-body-sm">Diego Urbina</div>
+</td>
+<td class="py-3.5 px-3">
+<div class="font-semibold truncate max-w-[190px]">NB 9060 Triple Sea</div>
+<div class="text-on-surface-variant text-body-sm">Talla EU 42 • Box Original</div>
+</td>
+<td class="py-3.5 px-3 font-price-md text-price-md font-bold whitespace-nowrap">
+                    S/ 579.00
+                  </td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-primary text-label-badge font-label-badge font-bold whitespace-nowrap">
+                      ✓ Pago Verificado (Yape)
+                    </span>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-label-badge font-label-badge font-semibold whitespace-nowrap">
+<span class="material-symbols-outlined text-[12px]">two_wheeler</span> Motorizado
+                    </span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="viewOrderDetail('SK-83105')">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Order 3 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-3">
+<div class="font-bold text-on-surface">#SK-82990</div>
+<div class="text-secondary-container font-semibold text-body-sm font-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">store</span> Tienda Física POS
+                    </div>
+</td>
+<td class="py-3.5 px-3">
+<div class="font-semibold truncate max-w-[190px]">Adidas Forum Low</div>
+<div class="text-on-surface-variant text-body-sm">Talla EU 40 • Mostrador</div>
+</td>
+<td class="py-3.5 px-3 font-price-md text-price-md font-bold whitespace-nowrap">
+                    S/ 389.00
+                  </td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-primary text-label-badge font-label-badge font-bold whitespace-nowrap">
+                      Pagado Efectivo/POS
+                    </span>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-label-badge font-label-badge font-medium">
+                      Entregado en Mano
+                    </span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="viewOrderDetail('SK-82990')">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Order 4 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-3">
+<div class="font-bold text-on-surface">#SK-81402</div>
+<div class="text-on-surface-variant text-body-sm font-body-sm">Andrea Morales</div>
+</td>
+<td class="py-3.5 px-3">
+<div class="font-semibold truncate max-w-[190px]">Nike Dunk Low Retro</div>
+<div class="text-on-surface-variant text-body-sm">Talla EU 39 • White/Black</div>
+</td>
+<td class="py-3.5 px-3 font-price-md text-price-md font-bold whitespace-nowrap">
+                    S/ 469.00
+                  </td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-primary text-label-badge font-label-badge font-bold whitespace-nowrap">
+                      ✓ Pago Verificado (Plin)
+                    </span>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-badge font-label-badge font-semibold whitespace-nowrap">
+                      Listo p/ Recojo
+                    </span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="viewOrderDetail('SK-81402')">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pt-4 mt-auto flex items-center justify-between">
+<span class="text-body-sm font-body-sm text-on-surface-variant">Mostrando 4 de 142 órdenes registradas</span>
+<a class="inline-flex items-center gap-1 font-body-sm text-body-sm font-semibold text-secondary-container hover:underline" href="#">
+              Ver todos los pedidos completos
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Right Column: Inventory & Critical Stock Alerts (40% Desktop) -->
+<div class="lg:col-span-5 flex flex-col gap-4">
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container text-[20px]">warning</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Alertas de Inventario</h2>
+</div>
+<span class="bg-error-container text-on-error-container px-2 py-0.5 rounded-full font-label-badge text-label-badge font-bold">5 Tallas Críticas</span>
+</div>
+<!-- List of Critical SKUs -->
+<div class="flex flex-col gap-3">
+<!-- Item 1 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center shrink-0 overflow-hidden">
+<img class="w-full h-full object-contain" data-alt="Nike Air Max Pulse Black Volt athletic sneaker minimalist commercial product shot on pure light grey studio backdrop high resolution sharp contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4idS0yKQcMeo26Khm-P43y7VB74436ZlqlH6N-YigJK9rTxhSCAZP5Et-XMUR8ZVh-CDFRg3z36Zsg4tnc7Va4c4jQFq7qdfsyr1YlkGeE-Zeok0Sh5hDvTSpT2SUsAFYC1lOzr8ys--rkpgDlPvtG6cuqBqKwPJSd76WtINw_rHoeYIwc5FvDifceQ0hqkrzQK8gm_UW0i_tB70UVvOPSINK08LiKdU9bfYfUT_fYKvCj-UAGiqLwg"/>
+</div>
+<div>
+<div class="font-semibold text-body-sm font-body-sm text-on-surface truncate max-w-[150px]">Nike Air Max Pulse</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm">Talla: <strong class="text-on-surface font-semibold">EU 41</strong></div>
+<div class="w-24 bg-surface-container-high h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 15%"></div>
+</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="text-error font-label-badge text-label-badge font-bold block">1 par restante</span>
+<button class="mt-1 px-3 py-1 bg-primary text-on-primary hover:bg-secondary-container rounded text-label-size font-label-size font-semibold transition-all" onclick="restockItem('Nike Air Max Pulse - EU 41')">
+                    Reponer
+                  </button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center shrink-0 overflow-hidden">
+<img class="w-full h-full object-contain" data-alt="Air Jordan Retro High OG premium streetwear basketball sneaker studio white background studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmCL1NYhQTYhS8lRPIZrwyc_HY5RJesWnILzTc6pPX_tcRDIMqY26RzJEdt7pJW0SpiFjnrngGf732u9npxewVlNjylKbma6s7QgXd7U7yLgIiVjL4133lKqeiRSSVh_FJMbS99Yj9XGk8MAjel4kT4SeSPtVfraxdpQQU5PWlpxvMvD2dd-cZ72-D-csGO_p2AKnmqfh_fkOWkKelHlcFJRP4FXIrvjNfVZhKOQgj3falmerJb3a6HQ"/>
+</div>
+<div>
+<div class="font-semibold text-body-sm font-body-sm text-on-surface truncate max-w-[150px]">Jordan Retro High OG</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm">Talla: <strong class="text-on-surface font-semibold">EU 42.5</strong></div>
+<div class="w-24 bg-surface-container-high h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full" style="width: 25%"></div>
+</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="text-on-secondary-fixed-variant font-label-badge text-label-badge font-bold block">2 pares restantes</span>
+<button class="mt-1 px-3 py-1 bg-primary text-on-primary hover:bg-secondary-container rounded text-label-size font-label-size font-semibold transition-all" onclick="restockItem('Jordan Retro High OG - EU 42.5')">
+                    Reponer
+                  </button>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center shrink-0 overflow-hidden">
+<img class="w-full h-full object-contain" data-alt="New Balance 9060 Triple Sea running and lifestyle sneaker clean studio photography neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeryR6C_Zn5BapvQJtMo-naTP-StTdBON9-zC0GsRgPqdX30MxEYzhTQm7b2JCRgm1CaPOLJOS0GjmtzfudGsiY1c2BXyAHYMXxJ5JZ_WjttR8xz3-fSYWco4YiMZF8TUKseLfxWozla42vhEKbbI0I_bYyXhATPwaf4iYotpsPuLZKRllSqUFd-qiQ49EvGbjqpZHhfJBSFcAYtuKbRGJtPkyRQBfflTZ2HzIhoDG3d81K-YWmR2wEw"/>
+</div>
+<div>
+<div class="font-semibold text-body-sm font-body-sm text-on-surface truncate max-w-[150px]">NB 9060 Triple Sea</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm">Talla: <strong class="text-on-surface font-semibold">EU 40</strong></div>
+<div class="w-24 bg-surface-container-high h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 12%"></div>
+</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="text-error font-label-badge text-label-badge font-bold block">1 par restante</span>
+<button class="mt-1 px-3 py-1 bg-primary text-on-primary hover:bg-secondary-container rounded text-label-size font-label-size font-semibold transition-all" onclick="restockItem('NB 9060 Triple Sea - EU 40')">
+                    Reponer
+                  </button>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center shrink-0 overflow-hidden">
+<img class="w-full h-full object-contain" data-alt="Adidas Campus 00s Grey skate sneaker side profile shot urban athletic lifestyle isolated cleanly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA0z0Zddz9sbpCh3k7tgB4oNnWz9rMt7czdmoxla9GG4yQPisSecerHXVDn-2YrljCup_DudVBaUqAC_WD-7MCEgQu0CQYhgzJdqxZPDujic0ZgrghLsOGXuW35It0iIcaYCSXt4fUCpyg24QlPo3HGnDO6iyceynutFDilhXqU8qBFOriYj6q7EAYTswgahsE5X3JqAlM8BcugelNWtEqbSdn2maV5qRK4wpB4yZ6IuKuFCc7mogIgw"/>
+</div>
+<div>
+<div class="font-semibold text-body-sm font-body-sm text-on-surface truncate max-w-[150px]">Adidas Campus 00s</div>
+<div class="text-on-surface-variant font-body-sm text-body-sm">Talla: <strong class="text-on-surface font-semibold">EU 43</strong></div>
+<div class="w-24 bg-surface-container-high h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full" style="width: 25%"></div>
+</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="text-on-secondary-fixed-variant font-label-badge text-label-badge font-bold block">2 pares restantes</span>
+<button class="mt-1 px-3 py-1 bg-primary text-on-primary hover:bg-secondary-container rounded text-label-size font-label-size font-semibold transition-all" onclick="restockItem('Adidas Campus 00s - EU 43')">
+                    Reponer
+                  </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Almacén Miraflores Overview Badge Card -->
+<div class="p-4 rounded-xl bg-surface-container mt-5">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">domain</span>
+                Almacén Miraflores (HQ)
+              </span>
+<span class="font-bold text-on-surface">82% Capacidad</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full mt-2.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 82%"></div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant mt-2">
+<span>230 pares en stock físico</span>
+<span>Límite seguro: 280 pares</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- VIEW CONTAINER 2: EMPTY STATE -->
+<div class="hidden flex-col items-center justify-center p-12 bg-surface-container-lowest rounded-xl shadow-sm text-center" id="view-empty">
+<div class="w-20 h-20 rounded-full bg-surface-container flex items-center justify-center mb-4 text-on-surface-variant">
+<span class="material-symbols-outlined text-[40px]">inventory</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Sin Pedidos ni Alertas Pendientes</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-6">
+      No existen transferencias pendientes de validación en Yape/Plin, y todo el inventario de calzado cuenta con stock suficiente.
+    </p>
+<div class="flex gap-3">
+<button class="px-5 h-11 rounded-xl bg-secondary-container text-on-primary font-body-sm text-body-sm font-semibold flex items-center gap-2 hover:opacity-90" onclick="openPosModal()">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+        Registrar Nueva Venta
+      </button>
+<button class="px-5 h-11 rounded-xl bg-surface-container-high text-on-surface font-body-sm text-body-sm font-semibold hover:bg-surface-variant" onclick="switchState('live')">
+        Regresar al Dashboard
+      </button>
+</div>
+</div>
+<!-- VIEW CONTAINER 3: SKELETON LOADING STATE -->
+<div class="hidden flex-col gap-8 animate-pulse" id="view-loading">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="p-5 rounded-xl bg-surface-container-lowest h-36 flex flex-col justify-between">
+<div class="h-4 bg-surface-container rounded w-1/2"></div>
+<div class="h-8 bg-surface-container-high rounded w-3/4"></div>
+<div class="h-3 bg-surface-container rounded w-2/3"></div>
+</div>
+<div class="p-5 rounded-xl bg-surface-container-lowest h-36 flex flex-col justify-between">
+<div class="h-4 bg-surface-container rounded w-1/2"></div>
+<div class="h-8 bg-surface-container-high rounded w-3/4"></div>
+<div class="h-3 bg-surface-container rounded w-2/3"></div>
+</div>
+<div class="p-5 rounded-xl bg-surface-container-lowest h-36 flex flex-col justify-between">
+<div class="h-4 bg-surface-container rounded w-1/2"></div>
+<div class="h-8 bg-surface-container-high rounded w-3/4"></div>
+<div class="h-3 bg-surface-container rounded w-2/3"></div>
+</div>
+<div class="p-5 rounded-xl bg-surface-container-lowest h-36 flex flex-col justify-between">
+<div class="h-4 bg-surface-container rounded w-1/2"></div>
+<div class="h-8 bg-surface-container-high rounded w-3/4"></div>
+<div class="h-3 bg-surface-container rounded w-2/3"></div>
+</div>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-lowest h-44 flex flex-col justify-between">
+<div class="h-6 bg-surface-container-high rounded w-1/3"></div>
+<div class="grid grid-cols-2 gap-4">
+<div class="h-20 bg-surface-container rounded-lg"></div>
+<div class="h-20 bg-surface-container rounded-lg"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-7 p-6 rounded-xl bg-surface-container-lowest h-96 flex flex-col gap-4">
+<div class="h-6 bg-surface-container-high rounded w-1/4"></div>
+<div class="h-10 bg-surface-container rounded"></div>
+<div class="h-10 bg-surface-container rounded"></div>
+<div class="h-10 bg-surface-container rounded"></div>
+<div class="h-10 bg-surface-container rounded"></div>
+</div>
+<div class="lg:col-span-5 p-6 rounded-xl bg-surface-container-lowest h-96 flex flex-col gap-4">
+<div class="h-6 bg-surface-container-high rounded w-1/3"></div>
+<div class="h-14 bg-surface-container rounded-lg"></div>
+<div class="h-14 bg-surface-container rounded-lg"></div>
+<div class="h-14 bg-surface-container rounded-lg"></div>
+</div>
+</div>
+</div>
+<!-- INTERACTIVE MODAL: REGISTRAR VENTA PRESENCIAL (POS RÁPIDO) -->
+<div class="hidden fixed inset-0 z-50 bg-neutral-900/60 backdrop-blur-sm flex items-center justify-center p-4" id="modal-pos">
+<div class="bg-surface-container-lowest rounded-xl max-w-xl w-full p-6 shadow-xl relative animate-in fade-in zoom-in duration-200">
+<div class="flex items-center justify-between pb-4">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-secondary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">point_of_sale</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Venta Presencial en Mostrador</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Almacén y Tienda Miraflores (POS)</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface-variant" onclick="closePosModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<form class="space-y-4 pt-2" onsubmit="handlePosSubmit(event)">
+<!-- Shoe Selection -->
+<div>
+<label class="block font-label-badge text-label-badge uppercase tracking-wider text-on-surface-variant font-bold mb-1.5">
+            Seleccionar Calzado
+          </label>
+<select class="w-full h-11 px-3 rounded-lg bg-surface-container-low text-on-surface text-body-md font-body-md focus:outline-none focus:bg-surface-container-lowest" id="pos-shoe-select" onchange="calculatePosTotal()">
+<option data-name="Nike Air Max Pulse 'Black Volt'" value="579.00">Nike Air Max Pulse 'Black Volt' - S/ 579.00</option>
+<option data-name="Jordan Retro High OG Chicago" value="699.00">Jordan Retro High OG Chicago - S/ 699.00</option>
+<option data-name="New Balance 9060 Triple Sea" value="549.00">New Balance 9060 Triple Sea - S/ 549.00</option>
+<option data-name="Adidas Campus 00s Grey Gum" value="389.00">Adidas Campus 00s Grey Gum - S/ 389.00</option>
+</select>
+</div>
+<!-- Size Chips Selector -->
+<div>
+<label class="block font-label-badge text-label-badge uppercase tracking-wider text-on-surface-variant font-bold mb-2">
+            Talla Disponible (EU)
+          </label>
+<div class="flex flex-wrap gap-2" id="pos-size-chips">
+<button class="pos-size-btn h-10 w-12 rounded-lg bg-surface-container-low text-body-sm font-label-size font-bold text-on-surface hover:bg-surface-container transition-all" onclick="selectPosSize(this, '39')" type="button">39</button>
+<button class="pos-size-btn h-10 w-12 rounded-lg bg-surface-container-low text-body-sm font-label-size font-bold text-on-surface hover:bg-surface-container transition-all" onclick="selectPosSize(this, '40')" type="button">40</button>
+<button class="pos-size-btn h-10 w-12 rounded-lg bg-primary text-on-primary text-body-sm font-label-size font-bold transition-all" onclick="selectPosSize(this, '41')" type="button">41</button>
+<button class="pos-size-btn h-10 w-12 rounded-lg bg-surface-container-low text-body-sm font-label-size font-bold text-on-surface hover:bg-surface-container transition-all" onclick="selectPosSize(this, '42')" type="button">42</button>
+<button class="pos-size-btn h-10 w-12 rounded-lg bg-surface-container-low text-body-sm font-label-size font-bold text-on-surface hover:bg-surface-container transition-all" onclick="selectPosSize(this, '43')" type="button">43</button>
+<button class="pos-size-btn h-10 w-12 rounded-lg bg-surface-container-high text-body-sm font-label-size font-semibold text-outline-variant cursor-not-allowed line-through" disabled="" type="button">44</button>
+</div>
+</div>
+<!-- Customer Name & DNI -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div>
+<label class="block font-label-badge text-label-badge uppercase tracking-wider text-on-surface-variant font-bold mb-1">Nombre del Cliente</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface text-body-sm font-body-sm focus:outline-none focus:bg-surface-container-lowest" placeholder="Ej. Rodrigo Salazar" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-badge text-label-badge uppercase tracking-wider text-on-surface-variant font-bold mb-1">DNI / CE</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface text-body-sm font-body-sm focus:outline-none focus:bg-surface-container-lowest" maxlength="8" placeholder="8 dígitos" required="" type="text"/>
+</div>
+</div>
+<!-- Payment Method -->
+<div>
+<label class="block font-label-badge text-label-badge uppercase tracking-wider text-on-surface-variant font-bold mb-1.5">Método de Cobro en Mostrador</label>
+<div class="grid grid-cols-3 gap-2">
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input checked="" class="accent-secondary-container" name="paymentMethod" type="radio" value="pos"/>
+<span class="text-body-sm font-body-sm font-semibold">POS Izipay / Niubiz</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input class="accent-secondary-container" name="paymentMethod" type="radio" value="yape"/>
+<span class="text-body-sm font-body-sm font-semibold">Yape / Plin QR</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container transition-colors">
+<input class="accent-secondary-container" name="paymentMethod" type="radio" value="cash"/>
+<span class="text-body-sm font-body-sm font-semibold">Efectivo Soles</span>
+</label>
+</div>
+</div>
+<!-- Total Box -->
+<div class="p-4 rounded-xl bg-surface-container flex items-center justify-between">
+<div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Total a Cobrar</span>
+<span class="font-label-badge text-label-badge text-secondary font-bold">Emisión Boleta Electrónica Directa</span>
+</div>
+<div class="font-headline-lg text-headline-lg font-extrabold text-on-surface" id="pos-display-total">
+            S/ 579.00
+          </div>
+</div>
+<!-- Submit Button -->
+<div class="flex items-center justify-end gap-3 pt-2">
+<button class="px-4 py-2 rounded-lg text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container" onclick="closePosModal()" type="button">
+            Cancelar
+          </button>
+<button class="px-6 py-2.5 rounded-xl bg-secondary-container text-on-primary font-body-sm text-body-sm font-bold shadow-md shadow-secondary-container/20 hover:opacity-90 active:scale-95 transition-all" type="submit">
+            Completar Venta y Emitir Ticket
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- INTERACTIVE MODAL: VOUCHER PREVIEW -->
+<div class="hidden fixed inset-0 z-50 bg-neutral-900/60 backdrop-blur-sm flex items-center justify-center p-4" id="modal-voucher">
+<div class="bg-surface-container-lowest rounded-xl max-w-md w-full p-6 shadow-xl relative animate-in fade-in zoom-in duration-150">
+<div class="flex items-center justify-between pb-3">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Voucher de Comprobante</h3>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container flex items-center justify-center text-on-surface-variant" onclick="closeVoucherModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-4 bg-surface-container-low rounded-xl mb-4 text-center">
+<!-- Visual Voucher Graphic Simulation -->
+<div class="w-full bg-surface-container-lowest p-5 rounded-lg shadow-sm text-left flex flex-col gap-2 relative">
+<div class="flex justify-between items-center pb-2">
+<span class="font-label-badge text-label-badge font-bold text-on-surface-variant" id="voucher-method">YAPE</span>
+<span class="text-label-badge font-label-badge bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded-full">Transacción Exitosa</span>
+</div>
+<div class="text-center py-2">
+<span class="text-headline-lg font-headline-lg font-extrabold text-on-surface" id="voucher-amount">S/ 1,108.00</span>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1" id="voucher-client">Carlos Mendoza Poma</p>
+</div>
+<div class="text-body-sm font-body-sm pt-2 space-y-1">
+<div class="flex justify-between text-on-surface-variant">
+<span>Destino:</span>
+<strong class="text-on-surface">SneakerStore Perú SAC</strong>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Número de Operación:</span>
+<span class="font-mono text-on-surface" id="voucher-ref">84920491</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Archivo:</span>
+<span class="text-primary truncate max-w-[160px]" id="voucher-filename">voucher_yape_84920.jpg</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-end gap-2">
+<button class="px-4 py-2 rounded-lg text-body-sm font-body-sm text-on-surface-variant hover:bg-surface-container" onclick="closeVoucherModal()">
+          Cerrar
+        </button>
+<button class="px-5 py-2 rounded-xl bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-secondary-container transition-colors" onclick="confirmCurrentVoucher()">
+          Aprobar Inmediatamente
+        </button>
+</div>
+</div>
+</div>
+<!-- INTERACTIVE TOAST NOTIFICATION -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-3 px-4 py-3 rounded-xl bg-primary text-on-primary shadow-xl" id="toast-notification">
+<span class="material-symbols-outlined text-secondary-container text-[20px]" id="toast-icon">check_circle</span>
+<span class="font-body-sm text-body-sm font-semibold" id="toast-message">Acción completada con éxito</span>
+</div>
+</div>
+<script>
+  // Prototype State Controller
+  function switchState(state) {
+    const liveView = document.getElementById('view-live');
+    const emptyView = document.getElementById('view-empty');
+    const loadingView = document.getElementById('view-loading');
+
+    const btnLive = document.getElementById('btn-state-live');
+    const btnEmpty = document.getElementById('btn-state-empty');
+    const btnLoading = document.getElementById('btn-state-loading');
+
+    // Reset buttons
+    [btnLive, btnEmpty, btnLoading].forEach(btn => {
+      btn.className = 'px-3 py-1 rounded text-body-sm font-body-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface flex items-center gap-1.5';
+    });
+
+    // Reset views
+    liveView.classList.add('hidden');
+    emptyView.classList.add('hidden');
+    loadingView.classList.add('hidden');
+
+    if (state === 'live') {
+      liveView.classList.remove('hidden');
+      btnLive.className = 'px-3 py-1 rounded text-body-sm font-body-sm font-semibold transition-all bg-primary text-on-primary shadow-sm flex items-center gap-1.5';
+      showToast('Cargados datos comerciales en vivo de Almacén Miraflores', 'sync');
+    } else if (state === 'empty') {
+      emptyView.classList.remove('hidden');
+      btnEmpty.className = 'px-3 py-1 rounded text-body-sm font-body-sm font-semibold transition-all bg-primary text-on-primary shadow-sm flex items-center gap-1.5';
+      showToast('Visualizando estado en reposo sin alertas', 'info');
+    } else if (state === 'loading') {
+      loadingView.classList.remove('hidden');
+      btnLoading.className = 'px-3 py-1 rounded text-body-sm font-body-sm font-semibold transition-all bg-primary text-on-primary shadow-sm flex items-center gap-1.5';
+      showToast('Simulando carga de base de datos (Skeleton)', 'hourglass_top');
+    }
+  }
+
+  // POS Modal Controls
+  function openPosModal() {
+    document.getElementById('modal-pos').classList.remove('hidden');
+  }
+
+  function closePosModal() {
+    document.getElementById('modal-pos').classList.add('hidden');
+  }
+
+  function selectPosSize(button, size) {
+    document.querySelectorAll('.pos-size-btn').forEach(b => {
+      if (!b.disabled) {
+        b.className = 'pos-size-btn h-10 w-12 rounded-lg bg-surface-container-low text-body-sm font-label-size font-bold text-on-surface hover:bg-surface-container transition-all';
+      }
+    });
+    button.className = 'pos-size-btn h-10 w-12 rounded-lg bg-primary text-on-primary text-body-sm font-label-size font-bold transition-all';
+  }
+
+  function calculatePosTotal() {
+    const select = document.getElementById('pos-shoe-select');
+    const val = parseFloat(select.value).toFixed(2);
+    document.getElementById('pos-display-total').innerText = 'S/ ' + val;
+  }
+
+  function handlePosSubmit(e) {
+    e.preventDefault();
+    closePosModal();
+    showToast('¡Venta Presencial completada y boleta emitida con éxito!', 'check_circle');
+  }
+
+  // Generic Product Modal Trigger
+  function openProductModal() {
+    showToast('Formulario de Nuevo Calzado / SKU desplegado', 'add_box');
+  }
+
+  // Treasury Approval Actions
+  function approvePayment(cardId, orderRef) {
+    const card = document.getElementById(cardId);
+    if (card) {
+      card.style.transition = 'all 0.3s ease';
+      card.style.opacity = '0';
+      card.style.transform = 'scale(0.95)';
+      setTimeout(() => {
+        card.remove();
+        showToast('Pago de ' + orderRef + ' verificado: Pedido enviado a Preparación', 'verified');
+      }, 300);
+    }
+  }
+
+  function rejectPayment(cardId, orderRef) {
+    const card = document.getElementById(cardId);
+    if (card) {
+      card.style.transition = 'all 0.3s ease';
+      card.style.opacity = '0';
+      setTimeout(() => {
+        card.remove();
+        showToast('Comprobante de ' + orderRef + ' rechazado. Notificación enviada al cliente.', 'cancel');
+      }, 300);
+    }
+  }
+
+  // Voucher Viewer Modal
+  let activeVoucherCard = 'voucher-card-1';
+  function previewVoucher(client, amount, method, ref, filename) {
+    document.getElementById('voucher-client').innerText = client;
+    document.getElementById('voucher-amount').innerText = amount;
+    document.getElementById('voucher-method').innerText = method.toUpperCase();
+    document.getElementById('voucher-ref').innerText = ref;
+    document.getElementById('voucher-filename').innerText = filename;
+    document.getElementById('modal-voucher').classList.remove('hidden');
+  }
+
+  function closeVoucherModal() {
+    document.getElementById('modal-voucher').classList.add('hidden');
+  }
+
+  function confirmCurrentVoucher() {
+    closeVoucherModal();
+    approvePayment('voucher-card-1', '#SK-84920');
+  }
+
+  function viewOrderDetail(orderNumber) {
+    showToast('Consultando tracking e historial de ' + orderNumber, 'visibility');
+  }
+
+  function restockItem(itemName) {
+    showToast('Orden de reposición emitida para ' + itemName, 'local_shipping');
+  }
+
+  // Toast System
+  function showToast(message, iconName) {
+    const toast = document.getElementById('toast-notification');
+    const toastMsg = document.getElementById('toast-message');
+    const toastIcon = document.getElementById('toast-icon');
+
+    toastMsg.innerText = message;
+    if (iconName) toastIcon.innerText = iconName;
+
+    toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 3500);
+  }
+</script></main></div></body></html>

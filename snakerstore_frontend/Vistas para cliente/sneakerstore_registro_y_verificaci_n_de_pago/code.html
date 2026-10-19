@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "background": "#f9f9fa", "on-surface": "#1a1c1d", "secondary-fixed-dim": "#ffb59d", "on-secondary-fixed": "#390c00", "tertiary-fixed-dim": "#c0c7d6", "on-primary-fixed": "#1c1b1b", "on-primary-fixed-variant": "#474646", "surface-dim": "#dadadb", "surface-bright": "#f9f9fa", "surface-container-highest": "#e2e2e3", "outline": "#747878", "on-primary": "#ffffff", "error-container": "#ffdad6", "secondary-container": "#fe6a34", "primary-container": "#1c1b1b", "on-secondary-fixed-variant": "#832600", "on-primary-container": "#858383", "tertiary": "#000000", "secondary": "#ab3500", "on-secondary-container": "#5d1900", "inverse-on-surface": "#f0f1f2", "inverse-primary": "#c8c6c5", "primary-fixed-dim": "#c8c6c5", "on-surface-variant": "#444748", "surface": "#f9f9fa", "surface-container-high": "#e8e8e9", "primary-fixed": "#e5e2e1", "surface-container-low": "#f3f3f4", "on-tertiary-container": "#7d8492", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#151c27", "tertiary-container": "#151c27", "outline-variant": "#c4c7c7", "surface-tint": "#5f5e5e", "on-tertiary-fixed-variant": "#404754", "secondary-fixed": "#ffdbd0", "surface-variant": "#e2e2e3", "on-secondary": "#ffffff", "on-background": "#1a1c1d", "inverse-surface": "#2f3132", "surface-container": "#eeeeef", "primary": "#000000", "on-tertiary": "#ffffff", "on-error": "#ffffff", "error": "#ba1a1a", "tertiary-fixed": "#dce2f3", "on-error-container": "#93000a" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.5rem", "space-xs": "0.25rem", "margin": "2rem", "margin-mobile": "1rem", "gutter": "1.5rem", "space-md": "1rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "gutter-mobile": "0.75rem" }, fontFamily: { "headline-md": ["Inter"], "headline-sm": ["Inter"], "body-md": ["Inter"], "price-md": ["Inter"], "display-hero": ["Inter"], "price-lg": ["Inter"], "label-size": ["Inter"], "headline-lg-mobile": ["Inter"], "body-sm": ["Inter"], "body-lg": ["Inter"], "headline-lg": ["Inter"], "label-badge": ["Inter"], "display-hero-mobile": ["Inter"] }, fontSize: { "headline-md": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "700"}], "headline-sm": ["18px", {"lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}], "price-md": ["18px", {"lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "display-hero": ["56px", {"lineHeight": "60px", "letterSpacing": "-0.03em", "fontWeight": "800"}], "price-lg": ["24px", {"lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "800"}], "label-size": ["13px", {"lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "600"}], "headline-lg-mobile": ["26px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}], "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}], "headline-lg": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "label-badge": ["11px", {"lineHeight": "12px", "letterSpacing": "0.05em", "fontWeight": "700"}], "display-hero-mobile": ["36px", {"lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "800"}] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-background font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="SneakerStore Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XwnSj5aCSrv7RclT3WoonCoPb1_Cfh77YGDJHlU1ojayTrVXgWmJ5eOxMwrxQldcBxdsV58IIAL9pdOLOt1W3Bf9BN3zAt-YN7AYw8Z7yKknGoKhHNKEIyalfUnr0xPAEGm3523GBgupfPxKsJMQDT6xIiD0LONm4iNf9vzDAg2tOaKSjHL-hRiXiOkqKdz-J0fudDGLbF_9IQiF-vimK6-zXBc0wxLKVXKLYC0eaKxie8GClJKqJlD7Sv"/><span class="font-headline-sm text-headline-sm uppercase tracking-tight text-primary">SneakerStore</span><span class="hidden">Carrito</span></div><div class="flex items-center gap-space-xs"><button aria-label="Buscar" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><a aria-label="Ver Carrito" class="w-11 h-11 relative flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-2 right-2 flex items-center justify-center min-w-[16px] h-4 px-1 rounded-full bg-secondary-container text-on-primary font-label-badge text-label-badge leading-none">2</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-background min-h-screen"><div class="flex flex-col w-full pb-8">
+<!-- Interactive State Simulator Bar (UX Reviewer Toolbar) -->
+<aside aria-label="Simulador de Estados UX" class="w-full bg-surface-container-highest px-margin-mobile py-2.5">
+<div class="flex items-center justify-between gap-space-xs mb-1.5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary-container">tune</span>
+<span class="font-label-badge text-label-badge uppercase tracking-wider text-on-surface-variant font-semibold">Simulador de Estados UX</span>
+</div>
+<span class="font-label-badge text-[10px] text-on-surface-variant bg-surface-container-lowest px-2 py-0.5 rounded-full font-bold">Interactivo</span>
+</div>
+<!-- Scrollable Pills -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar text-left" id="state-simulator-container">
+<button class="sim-btn active shrink-0 px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-badge text-label-badge transition-all flex items-center gap-1 shadow-sm" data-sim-state="form-ready" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+        1. Formulario
+      </button>
+<button class="sim-btn shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-badge text-label-badge transition-all flex items-center gap-1" data-sim-state="error-empty" type="button">
+        2. Sin Referencia
+      </button>
+<button class="sim-btn shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-badge text-label-badge transition-all flex items-center gap-1" data-sim-state="submitting" type="button">
+        3. Enviando Datos
+      </button>
+<button class="sim-btn shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-badge text-label-badge transition-all flex items-center gap-1" data-sim-state="pending-verification" type="button">
+        4. En Revisión
+      </button>
+<button class="sim-btn shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-badge text-label-badge transition-all flex items-center gap-1" data-sim-state="rejected" type="button">
+        5. Rechazado
+      </button>
+<button class="sim-btn shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-badge text-label-badge transition-all flex items-center gap-1" data-sim-state="expired" type="button">
+        6. Vencida
+      </button>
+</div>
+</aside>
+<!-- Main View Container -->
+<div class="px-margin-mobile pt-3 space-y-4">
+<!-- Screen Navigation & Title -->
+<div class="flex items-center justify-between">
+<a class="inline-flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors py-1" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span class="font-body-sm text-body-sm font-semibold">Mis Pedidos</span>
+</a>
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-widest bg-surface-container px-2.5 py-1 rounded-full">Paso 2 / 2</span>
+</div>
+<div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Registro de Pago</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Valida tu transferencia o pago móvil para asegurar tus pares.</p>
+</div>
+<!-- Active State Alert Banners (Dynamically displayed based on simulator) -->
+<!-- State 4: Pending Manual Verification View -->
+<section class="hidden p-4 rounded-xl bg-surface-container-lowest shadow-md space-y-3" id="state-banner-pending">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px] text-secondary-container animate-pulse">hourglass_top</span>
+</div>
+<div class="space-y-1">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-badge text-label-badge uppercase tracking-wider font-semibold">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-ping"></span>
+            En Verificación Manual
+          </div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Comprobante Recibido con Éxito</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Un administrador de <strong class="text-on-surface font-semibold">SneakerStore Perú</strong> verificará los fondos en la cuenta de banco antes de liberar el despacho. Tiempo promedio: <strong>15 a 45 min</strong>.
+          </p>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-on-surface">verified_user</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Stock reservado en bóveda</span>
+</div>
+<span class="font-label-badge text-label-badge bg-primary text-on-primary px-2 py-1 rounded">Garantizado</span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<a class="flex items-center justify-center gap-1.5 h-11 px-3 rounded-xl bg-surface-container-high text-on-surface font-label-size text-label-size hover:bg-surface-container transition-all text-center" href="#">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+          Ver en Pedidos
+        </a>
+<a class="flex items-center justify-center gap-1.5 h-11 px-3 rounded-xl bg-primary text-on-primary font-label-size text-label-size transition-all text-center" href="https://wa.me/51987654321?text=Hola%20SneakerStore,%20envi%C3%A9%20el%20pago%20de%20mi%20pedido%20SK-84920">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+          WhatsApp Admin
+        </a>
+</div>
+</section>
+<!-- State 5: Rejected Payment View -->
+<section class="hidden p-4 rounded-xl bg-error-container text-on-error-container shadow-md space-y-3" id="state-banner-rejected">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-error text-on-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">cancel</span>
+</div>
+<div class="space-y-1">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-error text-on-error font-label-badge text-label-badge uppercase font-bold tracking-wider">
+            Pago Rechazado
+          </div>
+<h2 class="font-headline-sm text-headline-sm text-error">No Pudimos Validar tu Operación</h2>
+<p class="font-body-sm text-body-sm text-on-error-container leading-relaxed">
+            El código ingresado <strong class="font-semibold">#OP-998811</strong> no figura en los extractos bancarios o el monto transferido difiere de <strong>S/ 1,108.00</strong>.
+          </p>
+</div>
+</div>
+<button class="w-full h-11 rounded-xl bg-error text-on-error font-headline-sm text-body-md flex items-center justify-center gap-2 shadow-sm" id="btn-retry-payment" type="button">
+<span class="material-symbols-outlined text-[20px]">refresh</span>
+        Corregir y Reenviar Comprobante
+      </button>
+</section>
+<!-- State 6: Reservation Expired View -->
+<section class="hidden p-4 rounded-xl bg-surface-container-lowest shadow-md space-y-3" id="state-banner-expired">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-outline flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">timer_off</span>
+</div>
+<div class="space-y-1">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-badge text-label-badge uppercase font-semibold">
+            Plazo Agotado
+          </span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Reserva de Stock Vencida</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Han transcurrido las 24 horas reglamentarias. Las unidades de <strong class="text-on-surface">Nike Air Volt</strong> y <strong class="text-on-surface">Jordan Retro</strong> fueron devueltas al inventario general.
+          </p>
+</div>
+</div>
+<a class="w-full h-11 rounded-xl bg-primary text-on-primary font-headline-sm text-body-md flex items-center justify-center gap-2 shadow-sm" href="#">
+<span class="material-symbols-outlined text-[20px]">shopping_cart_checkout</span>
+        Reconstruir Carrito de Compra
+      </a>
+</section>
+<!-- Order Summary Card -->
+<section aria-label="Resumen de la Orden" class="rounded-xl bg-surface-container-lowest p-4 shadow-sm space-y-3">
+<div class="flex items-center justify-between pb-3 bg-surface-container-low/50 -mx-4 -mt-4 px-4 pt-4 rounded-t-xl">
+<div>
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider block">Orden de Compra</span>
+<span class="font-headline-sm text-headline-sm text-primary">#SK-84920</span>
+</div>
+<div class="text-right">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge font-bold" id="order-status-badge">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+            Esperando Pago
+          </span>
+</div>
+</div>
+<!-- Sneaker Mini-Thumbnails -->
+<div class="space-y-2 pt-1">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low shrink-0 overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-contain p-1" data-alt="Nike Air Volt React GT modern athletic high performance running sneaker with vibrant neon accents on clean white background studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMq1Zeoq0acM1cX_0mQo285cEN0753i5_f9_4ltBTAvShELImO367kf1Q0LUCM-LsQ68ZSRocWnu1-yJyVlJVhLwB8_0GI9G8UXwUO9x7cUu5ESsJ82awhWRqtsdvXK4k0L2kyPgOGXKGexBhMZPihwu7WdwZPTvYBi8Ll7Oo2eYTkhAD38pKJEMOOh3rsk0jbqnkCFr3oJZi22b7hKVMogZ8ypnNOrxIzCn93yrbK5ZrVgwIbqeq70A"/>
+</div>
+<div class="flex-1 min-w-0">
+<p class="font-headline-sm text-body-md text-on-surface truncate">Nike Air Volt React GT</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Talla: EU 42.5 • Cant: 1</p>
+</div>
+<span class="font-price-md text-price-md text-on-surface shrink-0">S/ 589.00</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low shrink-0 overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-contain p-1" data-alt="Jordan Retro Street OG classic basketball lifestyle leather high top sneaker clean urban aesthetic neutral grey backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJAwg9XbJE9wYr5_3aTrKwT9KIQln-oIJPj-gujoCpIboECztfpJ6ofOacsnareUOX3XGdcWT2JYoVypUD6nxWbogABgjC7yQB5eX3swGJdx-gNS3gnCmjeQSJuh7rd4c898Zv0lw-Jp2yueKafVMKUWoFNy-APwhQv6uHScK8W6WoZW7HkAEZUXqbbpea7HyUJ8L0HPJPAQMnQrDUgzyaW69f3oAH_E_X2VYexXuGpAc0kC2Skyhc2g"/>
+</div>
+<div class="flex-1 min-w-0">
+<p class="font-headline-sm text-body-md text-on-surface truncate">Jordan Retro Street OG</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Talla: EU 43.0 • Cant: 1</p>
+</div>
+<span class="font-price-md text-price-md text-on-surface shrink-0">S/ 519.00</span>
+</div>
+</div>
+<!-- Total Row -->
+<div class="pt-3 flex items-baseline justify-between bg-surface-container-low/40 -mx-4 -mb-4 px-4 py-3 rounded-b-xl">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Total Final a Transferir:</span>
+<div class="text-right">
+<span class="font-price-lg text-price-lg text-primary tracking-tight">S/ 1,108.00</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant block">Envío Express a Lima incluido</span>
+</div>
+</div>
+</section>
+<!-- Stock Reservation Countdown Banner -->
+<section aria-label="Temporizador de Reserva" class="rounded-xl bg-surface-container-high p-3.5 space-y-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary-container">alarm</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Tiempo restante de reserva:</span>
+</div>
+<span class="font-price-md text-price-md text-primary font-bold" id="reservation-timer">23h 48m 15s</span>
+</div>
+<!-- Progress Bar (Depleting) -->
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-secondary-container h-2 rounded-full transition-all duration-500" id="reservation-bar" style="width: 86%;"></div>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary-container">shield</span>
+        Tus zapatillas están temporalmente bloqueadas para evitar quiebre de stock.
+      </p>
+</section>
+<!-- Payment Method Selector Tabs -->
+<section aria-label="Métodos de Pago Perú" class="space-y-3">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Elige Método de Transferencia</h2>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Sin comisiones</span>
+</div>
+<!-- Tactical Tabs -->
+<div class="grid grid-cols-3 gap-2 p-1 rounded-xl bg-surface-container-high" role="tablist">
+<button aria-selected="true" class="method-tab flex flex-col items-center justify-center py-2.5 px-1 rounded-lg bg-surface-container-lowest shadow-sm text-on-surface font-headline-sm text-label-size transition-all" id="tab-btn-yape" role="tab" type="button">
+<div class="w-6 h-6 rounded-full flex items-center justify-center font-bold text-[11px] text-on-primary shadow-xs mb-1" style="background-color: #742284;">
+            Y
+          </div>
+<span>Yape</span>
+</button>
+<button aria-selected="false" class="method-tab flex flex-col items-center justify-center py-2.5 px-1 rounded-lg text-on-surface-variant hover:text-on-surface font-headline-sm text-label-size transition-all" id="tab-btn-plin" role="tab" type="button">
+<div class="w-6 h-6 rounded-full flex items-center justify-center font-bold text-[11px] text-on-primary shadow-xs mb-1" style="background-color: #00D1B2;">
+            P
+          </div>
+<span>Plin</span>
+</button>
+<button aria-selected="false" class="method-tab flex flex-col items-center justify-center py-2.5 px-1 rounded-lg text-on-surface-variant hover:text-on-surface font-headline-sm text-label-size transition-all" id="tab-btn-bank" role="tab" type="button">
+<div class="w-6 h-6 rounded-full flex items-center justify-center font-bold text-[11px] bg-primary text-on-primary shadow-xs mb-1">
+<span class="material-symbols-outlined text-[15px]">account_balance</span>
+</div>
+<span>Bancos BCP</span>
+</button>
+</div>
+<!-- Dynamic Method Content -->
+<div class="rounded-xl bg-surface-container-lowest p-4 shadow-sm space-y-4">
+<!-- Yape View -->
+<div class="method-content space-y-4" id="method-content-yape">
+<div class="flex items-center justify-between pb-2 bg-surface-container-low/40 -mx-4 -mt-4 px-4 pt-3.5 rounded-t-xl">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full" style="background-color: #742284;"></span>
+<span class="font-headline-sm text-body-md text-on-surface font-semibold">Instrucciones Yape Móvil</span>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Límite S/ 2,000</span>
+</div>
+<!-- QR Code Canvas & Instructions -->
+<div class="flex flex-col items-center text-center p-3 rounded-xl bg-surface-container-low/70 space-y-2">
+<div class="p-2.5 bg-surface-container-lowest rounded-xl shadow-sm relative">
+<!-- Stylized Simulated Dynamic QR -->
+<svg class="w-36 h-36" fill="none" height="150" viewbox="0 0 150 150" width="150">
+<rect fill="#FFFFFF" height="150" rx="8" width="150"></rect>
+<!-- Corner Eyes -->
+<rect fill="#1A1C1D" height="34" rx="4" width="34" x="14" y="14"></rect>
+<rect fill="#FFFFFF" height="22" rx="2" width="22" x="20" y="20"></rect>
+<rect fill="#742284" height="12" rx="1" width="12" x="25" y="25"></rect>
+<rect fill="#1A1C1D" height="34" rx="4" width="34" x="102" y="14"></rect>
+<rect fill="#FFFFFF" height="22" rx="2" width="22" x="108" y="20"></rect>
+<rect fill="#742284" height="12" rx="1" width="12" x="113" y="25"></rect>
+<rect fill="#1A1C1D" height="34" rx="4" width="34" x="14" y="102"></rect>
+<rect fill="#FFFFFF" height="22" rx="2" width="22" x="20" y="108"></rect>
+<rect fill="#742284" height="12" rx="1" width="12" x="25" y="113"></rect>
+<!-- Stylized Matrix Blocks -->
+<rect fill="#1A1C1D" height="8" width="8" x="56" y="16"></rect>
+<rect fill="#1A1C1D" height="8" width="16" x="68" y="16"></rect>
+<rect fill="#1A1C1D" height="8" width="16" x="56" y="28"></rect>
+<rect fill="#1A1C1D" height="8" width="12" x="76" y="28"></rect>
+<rect fill="#1A1C1D" height="16" width="8" x="56" y="40"></rect>
+<rect fill="#1A1C1D" height="8" width="20" x="68" y="40"></rect>
+<rect fill="#1A1C1D" height="20" width="8" x="16" y="56"></rect>
+<rect fill="#1A1C1D" height="8" width="14" x="28" y="60"></rect>
+<rect fill="#1A1C1D" height="8" width="26" x="16" y="80"></rect>
+<!-- Center Logo Pill -->
+<circle cx="75" cy="75" fill="#742284" r="16"></circle>
+<text fill="#FFFFFF" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" x="75" y="80">Y</text>
+<rect fill="#1A1C1D" height="8" width="16" x="98" y="56"></rect>
+<rect fill="#1A1C1D" height="16" width="16" x="118" y="60"></rect>
+<rect fill="#1A1C1D" height="20" width="12" x="98" y="68"></rect>
+<rect fill="#1A1C1D" height="8" width="20" x="114" y="80"></rect>
+<rect fill="#1A1C1D" height="16" width="8" x="56" y="98"></rect>
+<rect fill="#1A1C1D" height="8" width="20" x="68" y="102"></rect>
+<rect fill="#1A1C1D" height="16" width="18" x="56" y="118"></rect>
+<rect fill="#1A1C1D" height="16" width="10" x="78" y="118"></rect>
+<rect fill="#1A1C1D" height="14" width="16" x="94" y="98"></rect>
+<rect fill="#1A1C1D" height="8" width="20" x="114" y="98"></rect>
+<rect fill="#1A1C1D" height="16" width="36" x="98" y="118"></rect>
+</svg>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Escanea desde tu app Yape o transfiere al número:</span>
+</div>
+<!-- Account Details Card -->
+<div class="space-y-2">
+<!-- Phone Number Row with Copy -->
+<div class="p-3 rounded-lg bg-surface-container flex items-center justify-between">
+<div>
+<span class="font-label-badge text-label-badge text-on-surface-variant block">Número Telefónico Yape</span>
+<span class="font-headline-sm text-headline-sm text-primary tracking-wide" id="yape-phone-text">987 654 321</span>
+</div>
+<button class="copy-action-btn flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-size text-label-size hover:bg-primary hover:text-on-primary transition-all shadow-xs" data-copy="987654321" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span>Copiar</span>
+</button>
+</div>
+<!-- Titular Row -->
+<div class="p-3 rounded-lg bg-surface-container flex items-center justify-between">
+<div>
+<span class="font-label-badge text-label-badge text-on-surface-variant block">Titular Registrado</span>
+<span class="font-headline-sm text-body-md text-on-surface font-semibold">SneakerStore Perú S.A.C.</span>
+</div>
+<span class="font-label-badge text-label-badge bg-surface-container-high px-2 py-1 rounded text-on-surface-variant">RUC: 20608933211</span>
+</div>
+<!-- Motivo Reminder Note -->
+<div class="p-2.5 rounded-lg bg-secondary-fixed/50 flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary-container shrink-0 mt-0.5">notification_important</span>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed leading-tight">
+<strong>Importante:</strong> Coloca en el mensaje/motivo de Yape tu pedido: <span class="font-bold underline">SK-84920</span>.
+              </p>
+</div>
+</div>
+</div>
+<!-- Plin View -->
+<div class="method-content hidden space-y-4" id="method-content-plin">
+<div class="flex items-center justify-between pb-2 bg-surface-container-low/40 -mx-4 -mt-4 px-4 pt-3.5 rounded-t-xl">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full" style="background-color: #00D1B2;"></span>
+<span class="font-headline-sm text-body-md text-on-surface font-semibold">Instrucciones Plin (BBVA / Interbank / Scotiabank)</span>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Sin recargo</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container flex items-center justify-between">
+<div>
+<span class="font-label-badge text-label-badge text-on-surface-variant block">Número Telefónico Plin</span>
+<span class="font-headline-sm text-headline-sm text-primary tracking-wide">987 654 321</span>
+</div>
+<button class="copy-action-btn flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-size text-label-size hover:bg-primary hover:text-on-primary transition-all shadow-xs" data-copy="987654321" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span>Copiar</span>
+</button>
+</div>
+<div class="p-3 rounded-lg bg-surface-container">
+<span class="font-label-badge text-label-badge text-on-surface-variant block">Titular de Destino</span>
+<span class="font-headline-sm text-body-md text-on-surface font-semibold">SneakerStore Perú S.A.C.</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-start gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">info</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-tight">
+              Acepta transferencias directas desde Scotiabank, Interbank, BBVA y BanBif sin comisiones interbancarias.
+            </p>
+</div>
+</div>
+<!-- Bank Transfer View -->
+<div class="method-content hidden space-y-3" id="method-content-bank">
+<div class="flex items-center justify-between pb-2 bg-surface-container-low/40 -mx-4 -mt-4 px-4 pt-3.5 rounded-t-xl">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-headline-sm text-body-md text-on-surface font-semibold">Cuentas Corrientes Empresariales</span>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Soles (PEN)</span>
+</div>
+<!-- BCP -->
+<div class="p-3 rounded-lg bg-surface-container space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Banco de Crédito (BCP)</span>
+<span class="font-label-badge text-label-badge bg-primary text-on-primary px-2 py-0.5 rounded">Inmediato</span>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-badge text-label-badge text-on-surface-variant block">Cta Corriente Soles</span>
+<span class="font-headline-sm text-body-md text-on-surface font-semibold">194-9842145-0-28</span>
+</div>
+<button class="copy-action-btn flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-lowest text-primary font-label-badge text-label-badge" data-copy="194-9842145-0-28" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+                Copiar
+              </button>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div>
+<span class="font-label-badge text-label-badge text-on-surface-variant block">CCI Interbancario</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">002-19400984214502812</span>
+</div>
+<button class="copy-action-btn flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-lowest text-primary font-label-badge text-label-badge" data-copy="00219400984214502812" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+                Copiar
+              </button>
+</div>
+</div>
+<!-- BBVA -->
+<div class="p-3 rounded-lg bg-surface-container space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">BBVA Continental</span>
+<span class="font-label-badge text-label-badge bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded">CCI Inmediato</span>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-badge text-label-badge text-on-surface-variant block">Cta Corriente Soles</span>
+<span class="font-headline-sm text-body-md text-on-surface font-semibold">0011-0422-0100492811</span>
+</div>
+<button class="copy-action-btn flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-lowest text-primary font-label-badge text-label-badge" data-copy="0011-0422-0100492811" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+                Copiar
+              </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Payment Submission Form -->
+<form class="space-y-4" id="payment-verification-form" onsubmit="return false;">
+<section aria-label="Confirmación de Transferencia" class="rounded-xl bg-surface-container-lowest p-4 shadow-sm space-y-4">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Ingresa Datos del Pago</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Registra la referencia emitida por la aplicación bancaria.</p>
+</div>
+<!-- Reference / Operation Code Input -->
+<div class="space-y-1.5">
+<label class="block font-headline-sm text-body-md text-on-surface" for="op-reference-input">
+            Número de Operación o Referencia <span class="text-secondary-container">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-12 px-3.5 pr-10 rounded-xl bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/60 font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary transition-all" id="op-reference-input" name="referenceNumber" placeholder="Ej. 18492039" required="" type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-3 text-[20px] text-on-surface-variant pointer-events-none">pin</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="reference-helper-text">
+            Ubicado en la parte inferior del voucher o captura de tu app.
+          </p>
+<div class="hidden items-center gap-1.5 text-error font-body-sm text-body-sm pt-0.5" id="reference-error-message">
+<span class="material-symbols-outlined text-[16px]">error</span>
+<span>Debes ingresar el número de operación para validar tu pago.</span>
+</div>
+</div>
+<!-- Optional Screenshot Dropzone -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="block font-headline-sm text-body-md text-on-surface">
+              Adjuntar Captura de Pantalla
+            </label>
+<span class="font-label-badge text-label-badge text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">Opcional</span>
+</div>
+<!-- Dropzone Container -->
+<div class="relative rounded-xl p-4 text-center bg-surface-container-low/60 hover:bg-surface-container-low transition-all cursor-pointer" id="upload-idle-state">
+<input accept="image/png, image/jpeg, image/jpg, application/pdf" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" id="voucher-file-input" type="file"/>
+<div class="flex flex-col items-center justify-center pointer-events-none space-y-1">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary mb-1">
+<span class="material-symbols-outlined text-[22px]">upload_file</span>
+</div>
+<span class="font-headline-sm text-body-md text-on-surface">Presiona para cargar comprobante</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">JPG, PNG o PDF (Máx. 5MB)</span>
+</div>
+</div>
+<!-- Preview State (Hidden by default, shown upon simulate or user upload) -->
+<div class="hidden p-3 rounded-xl bg-surface-container items-center justify-between" id="upload-preview-state">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Screenshot voucher capture from Peruvian mobile payment app with operation number and green check mark" id="voucher-preview-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBV-dKv3t3c1lPdaorI-Bv1j2ho2xPVtSmuP4zbfRvwG6K31OwnG2Qs3RG0rZVr77fbA9N8KIAsiuIc1BKXj2bpQFBxTRboDGZ162hIcgX7ZEtc3dvEz6km2QFoLkyxVPcuOqEB4xOVU_BpqMnOFv-mhjsjpQlWL6pzJjSIrTO67KTQiWfpXbzVUpdiDUz3BKIDUos4LdC0qJiAS1hWSxQ1hf1MWeoeiZJjB4kN_U0gjdt5XNitDP-Hw"/>
+</div>
+<div class="min-w-0 flex-1">
+<p class="font-headline-sm text-body-md text-on-surface truncate" id="preview-filename">voucher_yape_84920.jpg</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">1.4 MB • Listo para enviar</p>
+</div>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-error flex items-center justify-center transition-colors shadow-xs" id="btn-remove-file" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Strict Business Rule Notice -->
+<div class="rounded-xl p-3.5 bg-surface-container-low space-y-1.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary-container">shield_with_heart</span>
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Aviso de Verificación Manual</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Un administrador de <span class="text-on-surface font-semibold">SneakerStore</span> cotejará manualmente el código de operación en el portal bancario antes de aprobar el despacho. 
+          </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">
+            🔒 Tu reserva de zapatillas se mantendrá garantizada durante la revisión.
+          </p>
+</div>
+<!-- Main Action CTA -->
+<button class="w-full h-13 py-3.5 px-6 rounded-xl bg-secondary-container text-on-primary font-headline-sm text-body-md font-bold flex items-center justify-center gap-2 shadow-lg hover:opacity-95 active:scale-[0.99] transition-all" id="btn-submit-payment" type="submit">
+<span id="btn-submit-text">Enviar Comprobante de Pago</span>
+<span class="material-symbols-outlined text-[20px]" id="btn-submit-icon">arrow_forward</span>
+<span class="hidden material-symbols-outlined text-[20px] animate-spin" id="btn-submit-spinner">progress_activity</span>
+</button>
+</section>
+</form>
+<!-- WhatsApp Support Assistant -->
+<section aria-label="Soporte Directo" class="rounded-xl bg-surface-container-lowest p-4 shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full flex items-center justify-center text-on-primary shadow-xs" style="background-color: #25D366;">
+<span class="material-symbols-outlined text-[22px]">chat</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-body-md text-on-surface">¿Dudas con tu transferencia?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Atención inmediata por WhatsApp</p>
+</div>
+</div>
+<a class="h-10 px-3.5 rounded-lg bg-surface-container-high text-on-surface font-label-size text-label-size hover:bg-surface-container flex items-center gap-1 transition-all" href="https://wa.me/51987654321?text=Hola%20SneakerStore,%20tengo%20una%20consulta%20con%20el%20pago%20de%20mi%20pedido%20SK-84920" rel="noopener noreferrer" target="_blank">
+<span>Escribir</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</section>
+<!-- Toast Notification Overlay for Copy Micro-interactions -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 transition-opacity duration-300 bg-primary text-on-primary px-4 py-2 rounded-full font-label-badge text-label-badge flex items-center gap-1.5 shadow-xl" id="copy-toast">
+<span class="material-symbols-outlined text-[16px] text-secondary-container">check_circle</span>
+<span id="toast-message">Número copiado al portapapeles</span>
+</div>
+</div>
+</div>
+<script>
+  (function initPaymentScreen() {
+    // Interactive Simulator State Management
+    const simButtons = document.querySelectorAll('.sim-btn');
+    const stateBannerPending = document.getElementById('state-banner-pending');
+    const stateBannerRejected = document.getElementById('state-banner-rejected');
+    const stateBannerExpired = document.getElementById('state-banner-expired');
+    const orderStatusBadge = document.getElementById('order-status-badge');
+    const opInput = document.getElementById('op-reference-input');
+    const refError = document.getElementById('reference-error-message');
+    const submitBtn = document.getElementById('btn-submit-payment');
+    const btnText = document.getElementById('btn-submit-text');
+    const btnIcon = document.getElementById('btn-submit-icon');
+    const btnSpinner = document.getElementById('btn-submit-spinner');
+    const reservationBar = document.getElementById('reservation-bar');
+    const reservationTimer = document.getElementById('reservation-timer');
+    const paymentForm = document.getElementById('payment-verification-form');
+
+    function resetStates() {
+      stateBannerPending.classList.add('hidden');
+      stateBannerRejected.classList.add('hidden');
+      stateBannerExpired.classList.add('hidden');
+      refError.classList.add('hidden');
+      refError.classList.remove('flex');
+      opInput.classList.remove('ring-2', 'ring-error');
+      
+      // Default Form Button State
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('opacity-50', 'cursor-not-allowed', 'bg-surface-container-highest', 'text-on-surface-variant');
+      submitBtn.classList.add('bg-secondary-container', 'text-on-primary');
+      btnText.textContent = "Enviar Comprobante de Pago";
+      btnIcon.classList.remove('hidden');
+      btnSpinner.classList.add('hidden');
+
+      // Default order status badge
+      orderStatusBadge.className = "inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge font-bold";
+      orderStatusBadge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>Esperando Pago';
+
+      // Default Timer
+      reservationTimer.textContent = "23h 48m 15s";
+      reservationBar.style.width = "86%";
+      reservationBar.className = "bg-secondary-container h-2 rounded-full transition-all duration-500";
+    }
+
+    function applyState(stateKey) {
+      resetStates();
+
+      // Update Tab Pill Styling
+      simButtons.forEach(btn => {
+        if (btn.getAttribute('data-sim-state') === stateKey) {
+          btn.className = "sim-btn active shrink-0 px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-badge text-label-badge transition-all flex items-center gap-1 shadow-sm";
+          btn.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>' + btn.textContent.trim();
+        } else {
+          btn.className = "sim-btn shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface font-label-badge text-label-badge transition-all flex items-center gap-1";
+          btn.innerHTML = btn.textContent.trim().replace(/^•\s*/, '');
+        }
+      });
+
+      switch (stateKey) {
+        case 'form-ready':
+          opInput.value = "18492039";
+          break;
+
+        case 'error-empty':
+          opInput.value = "";
+          refError.classList.remove('hidden');
+          refError.classList.add('flex');
+          opInput.classList.add('ring-2', 'ring-error');
+          opInput.focus();
+          break;
+
+        case 'submitting':
+          opInput.value = "18492039";
+          submitBtn.disabled = true;
+          submitBtn.classList.add('opacity-75');
+          btnText.textContent = "Cotejando en Bóveda...";
+          btnIcon.classList.add('hidden');
+          btnSpinner.classList.remove('hidden');
+          break;
+
+        case 'pending-verification':
+          stateBannerPending.classList.remove('hidden');
+          orderStatusBadge.className = "inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-badge text-label-badge font-bold";
+          orderStatusBadge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-ping"></span>En Verificación Manual';
+          submitBtn.disabled = true;
+          submitBtn.classList.add('bg-surface-container-highest', 'text-on-surface-variant', 'cursor-not-allowed');
+          submitBtn.classList.remove('bg-secondary-container', 'text-on-primary');
+          btnText.textContent = "Comprobante en Revisión por Administrador";
+          btnIcon.classList.add('hidden');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          break;
+
+        case 'rejected':
+          stateBannerRejected.classList.remove('hidden');
+          orderStatusBadge.className = "inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-error font-label-badge text-label-badge font-bold";
+          orderStatusBadge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-error"></span>Pago Observado';
+          opInput.value = "OP-998811";
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          break;
+
+        case 'expired':
+          stateBannerExpired.classList.remove('hidden');
+          orderStatusBadge.className = "inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-highest text-outline font-label-badge text-label-badge font-bold";
+          orderStatusBadge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>Reserva Caducada';
+          reservationTimer.textContent = "00h 00m 00s";
+          reservationBar.style.width = "0%";
+          reservationBar.className = "bg-outline h-2 rounded-full transition-all duration-500";
+          submitBtn.disabled = true;
+          submitBtn.classList.add('bg-surface-container-highest', 'text-on-surface-variant', 'cursor-not-allowed');
+          submitBtn.classList.remove('bg-secondary-container', 'text-on-primary');
+          btnText.textContent = "Tiempo Límite Agotado";
+          btnIcon.classList.add('hidden');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          break;
+      }
+    }
+
+    simButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const state = btn.getAttribute('data-sim-state');
+        applyState(state);
+      });
+    });
+
+    const retryBtn = document.getElementById('btn-retry-payment');
+    if (retryBtn) {
+      retryBtn.addEventListener('click', () => {
+        applyState('form-ready');
+      });
+    }
+
+    // Payment Method Tabs Swapping
+    const tabYape = document.getElementById('tab-btn-yape');
+    const tabPlin = document.getElementById('tab-btn-plin');
+    const tabBank = document.getElementById('tab-btn-bank');
+    
+    const contentYape = document.getElementById('method-content-yape');
+    const contentPlin = document.getElementById('method-content-plin');
+    const contentBank = document.getElementById('method-content-bank');
+
+    function setActiveTab(selectedTab, targetContent) {
+      [tabYape, tabPlin, tabBank].forEach(t => {
+        t.setAttribute('aria-selected', 'false');
+        t.className = "method-tab flex flex-col items-center justify-center py-2.5 px-1 rounded-lg text-on-surface-variant hover:text-on-surface font-headline-sm text-label-size transition-all";
+      });
+      [contentYape, contentPlin, contentBank].forEach(c => c.classList.add('hidden'));
+
+      selectedTab.setAttribute('aria-selected', 'true');
+      selectedTab.className = "method-tab flex flex-col items-center justify-center py-2.5 px-1 rounded-lg bg-surface-container-lowest shadow-sm text-on-surface font-headline-sm text-label-size transition-all";
+      targetContent.classList.remove('hidden');
+    }
+
+    tabYape.addEventListener('click', () => setActiveTab(tabYape, contentYape));
+    tabPlin.addEventListener('click', () => setActiveTab(tabPlin, contentPlin));
+    tabBank.addEventListener('click', () => setActiveTab(tabBank, contentBank));
+
+    // Clipboard Copy Interaction with Micro-toast
+    const copyBtns = document.querySelectorAll('.copy-action-btn');
+    const toast = document.getElementById('copy-toast');
+    const toastMessage = document.getElementById('toast-message');
+    let toastTimeout;
+
+    copyBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const value = btn.getAttribute('data-copy');
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(value);
+        }
+        
+        toastMessage.textContent = 'Copiado: ' + value;
+        toast.classList.remove('opacity-0');
+        toast.classList.add('opacity-100');
+
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
+          toast.classList.remove('opacity-100');
+          toast.classList.add('opacity-0');
+        }, 2200);
+      });
+    });
+
+    // File Upload / Dropzone simulation
+    const fileInput = document.getElementById('voucher-file-input');
+    const uploadIdle = document.getElementById('upload-idle-state');
+    const uploadPreview = document.getElementById('upload-preview-state');
+    const previewFilename = document.getElementById('preview-filename');
+    const btnRemoveFile = document.getElementById('btn-remove-file');
+
+    fileInput.addEventListener('change', (e) => {
+      if (e.target.files && e.target.files[0]) {
+        const file = e.target.files[0];
+        previewFilename.textContent = file.name;
+        uploadIdle.classList.add('hidden');
+        uploadPreview.classList.remove('hidden');
+        uploadPreview.classList.add('flex');
+      }
+    });
+
+    btnRemoveFile.addEventListener('click', () => {
+      fileInput.value = '';
+      uploadPreview.classList.add('hidden');
+      uploadPreview.classList.remove('flex');
+      uploadIdle.classList.remove('hidden');
+    });
+
+    // Form Submit Submission Simulation
+    paymentForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const val = opInput.value.trim();
+      if (!val) {
+        applyState('error-empty');
+        return;
+      }
+      applyState('submitting');
+      setTimeout(() => {
+        applyState('pending-verification');
+      }, 1400);
+    });
+
+    // Clear error on typing
+    opInput.addEventListener('input', () => {
+      if (opInput.value.trim()) {
+        refError.classList.add('hidden');
+        refError.classList.remove('flex');
+        opInput.classList.remove('ring-2', 'ring-error');
+      }
+    });
+
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-4px_16px_-2px_rgba(17,17,17,0.06)]" data-active-classes="text-primary font-semibold [&amp;_span.indicator]:opacity-100"><div class="flex items-center justify-around h-16 px-gutter-mobile"><a class="group relative flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-surface-variant hover:text-primary transition-all" data-path="inicio" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-badge text-label-badge mt-0.5">Inicio</span><span class="indicator opacity-0 w-1 h-1 rounded-full bg-secondary-container mt-0.5 transition-opacity"></span></a><a class="group relative flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-surface-variant hover:text-primary transition-all" data-path="catalogo" href="#"><span class="material-symbols-outlined text-[22px]">explore</span><span class="font-label-badge text-label-badge mt-0.5">Catálogo</span><span class="indicator opacity-0 w-1 h-1 rounded-full bg-secondary-container mt-0.5 transition-opacity"></span></a><a class="group relative flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-surface-variant hover:text-primary transition-all" data-path="carrito" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute -top-1 -right-2 flex items-center justify-center min-w-[15px] h-[15px] px-1 rounded-full bg-secondary-container text-on-primary font-label-badge text-[9px] font-bold leading-none">2</span></div><span class="font-label-badge text-label-badge mt-0.5">Carrito</span><span class="indicator opacity-100 w-1 h-1 rounded-full bg-secondary-container mt-0.5 transition-opacity"></span></a><a class="group relative flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-surface-variant hover:text-primary transition-all" data-path="pedidos" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-badge text-label-badge mt-0.5">Pedidos</span><span class="indicator opacity-0 w-1 h-1 rounded-full bg-secondary-container mt-0.5 transition-opacity"></span></a><a class="group relative flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-surface-variant hover:text-primary transition-all" data-path="perfil" href="#"><span class="material-symbols-outlined text-[22px]">person</span><span class="font-label-badge text-label-badge mt-0.5">Perfil</span><span class="indicator opacity-0 w-1 h-1 rounded-full bg-secondary-container mt-0.5 transition-opacity"></span></a></div></nav></body></html>
