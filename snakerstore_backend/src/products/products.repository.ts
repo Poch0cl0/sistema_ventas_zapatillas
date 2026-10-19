@@ -4,7 +4,10 @@ import {
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
-import type { ProductImage } from '../cloudinary/cloudinary.service.js';
+import type {
+  ProductImage,
+  ProductModel,
+} from '../cloudinary/cloudinary.service.js';
 import { FieldValue } from 'firebase-admin/firestore';
 import type { Firestore } from 'firebase-admin/firestore';
 import { FIREBASE_FIRESTORE } from '../firebase/firebase.providers.js';
@@ -68,13 +71,21 @@ export class ProductsRepository {
 
   async availability(id: string) {
     await this.find(id, true);
-    const snapshot = await this.firestore.collection('inventory')
-      .where('productId', '==', id).get();
-    return snapshot.docs.map((doc) => {
-      const data = doc.data();
-      return { size: data.size, available: Number.isSafeInteger(data.available)
-        ? Math.max(0, data.available) : 0 };
-    }).sort((a, b) => Number(a.size) - Number(b.size));
+    const snapshot = await this.firestore
+      .collection('inventory')
+      .where('productId', '==', id)
+      .get();
+    return snapshot.docs
+      .map((doc) => {
+        const data = doc.data();
+        return {
+          size: data.size,
+          available: Number.isSafeInteger(data.available)
+            ? Math.max(0, data.available)
+            : 0,
+        };
+      })
+      .sort((a, b) => Number(a.size) - Number(b.size));
   }
 
   async update(id: string, input: UpdateProductDto, actorId: string) {
@@ -114,6 +125,26 @@ export class ProductsRepository {
       };
       transaction.update(ref, changes);
       return publicProduct(id, { ...data, ...changes });
+    });
+  }
+
+  async setModel(id: string, model: ProductModel | null, actorId: string) {
+    const ref = this.firestore.collection('products').doc(id);
+    return this.firestore.runTransaction(async (transaction) => {
+      const snapshot = await transaction.get(ref);
+      if (!snapshot.exists)
+        throw new NotFoundException('Producto no encontrado.');
+      const current = snapshot.data()!;
+      const changes = {
+        model3d: model,
+        updatedAt: FieldValue.serverTimestamp(),
+        updatedBy: actorId,
+      };
+      transaction.update(ref, changes);
+      return {
+        product: publicProduct(id, { ...current, ...changes }),
+        previous: current.model3d as ProductModel | null | undefined,
+      };
     });
   }
 }

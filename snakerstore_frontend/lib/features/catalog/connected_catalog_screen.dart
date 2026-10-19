@@ -9,6 +9,7 @@ import '../auth/application/session.dart';
 import '../store/commerce_screens.dart';
 import 'catalog_repository.dart';
 import 'product_visual.dart';
+import 'product_model_view.dart';
 export 'product_visual.dart';
 
 class ConnectedCatalogScreen extends ConsumerStatefulWidget {
@@ -527,7 +528,10 @@ class _AdminProductCard extends StatelessWidget {
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(width: 80, child: RemoteProductImage(product, height: 80)),
+            SizedBox(
+              width: 80,
+              child: RemoteProductImage(product, height: 80, showModel: false),
+            ),
             const SizedBox(width: 14),
             Expanded(
               child: Column(
@@ -591,13 +595,7 @@ class _ProductGallery extends StatefulWidget {
 }
 
 class _ProductGalleryState extends State<_ProductGallery> {
-  final controller = PageController();
   int index = 0;
-  @override
-  void dispose() {
-    controller.dispose();
-    super.dispose();
-  }
 
   Widget image(String url) => Image.network(
     url,
@@ -606,58 +604,80 @@ class _ProductGalleryState extends State<_ProductGallery> {
         const Center(child: Icon(Icons.broken_image_outlined, color: muted)),
   );
   @override
-  Widget build(BuildContext context) => Column(
-    children: [
-      AspectRatio(
-        aspectRatio: 1.05,
-        child: Container(
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(18),
+  Widget build(BuildContext context) {
+    final product = widget.product;
+    final hasModel = product.modelUrl != null;
+    final count = product.images.length + (hasModel ? 1 : 0);
+    final selected = index < count ? index : 0;
+    final selectedModel = hasModel && selected == 0;
+    return Column(
+      children: [
+        AspectRatio(
+          aspectRatio: 1.05,
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(18),
+            ),
+            clipBehavior: Clip.antiAlias,
+            child: count == 0
+                ? const Center(
+                    child: Icon(Icons.image_outlined, color: muted, size: 48),
+                  )
+                : selectedModel
+                ? ProductModelView(
+                    key: ValueKey(product.modelUrl),
+                    url: product.modelUrl!,
+                    name: product.name,
+                    poster: product.images.firstOrNull,
+                    interactive: true,
+                  )
+                : image(product.images[selected - (hasModel ? 1 : 0)]),
           ),
-          clipBehavior: Clip.antiAlias,
-          child: widget.product.images.isEmpty
-              ? const Center(
-                  child: Icon(Icons.image_outlined, color: muted, size: 48),
-                )
-              : PageView(
-                  controller: controller,
-                  onPageChanged: (i) => setState(() => index = i),
-                  children: widget.product.images.map(image).toList(),
-                ),
         ),
-      ),
-      if (widget.product.images.length > 1) ...[
-        const SizedBox(height: 12),
-        SizedBox(
-          height: 70,
-          child: ListView.separated(
-            scrollDirection: Axis.horizontal,
-            itemCount: widget.product.images.length,
-            separatorBuilder: (_, _) => const SizedBox(width: 10),
-            itemBuilder: (_, i) => InkWell(
-              onTap: () => controller.animateToPage(
-                i,
-                duration: const Duration(milliseconds: 220),
-                curve: Curves.easeOut,
-              ),
-              borderRadius: BorderRadius.circular(12),
-              child: Container(
-                width: 70,
-                padding: const EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: index == i ? ink : line),
+        if (selectedModel) ...[
+          const SizedBox(height: 10),
+          const Text(
+            'Arrastra para girar · Usa dos dedos para acercar',
+            style: TextStyle(fontSize: 11, color: muted),
+          ),
+        ],
+        if (count > 1) ...[
+          const SizedBox(height: 12),
+          SizedBox(
+            height: 70,
+            child: ListView.separated(
+              scrollDirection: Axis.horizontal,
+              itemCount: count,
+              separatorBuilder: (_, _) => const SizedBox(width: 10),
+              itemBuilder: (_, i) => InkWell(
+                onTap: () => setState(() => index = i),
+                borderRadius: BorderRadius.circular(12),
+                child: Container(
+                  width: 70,
+                  padding: const EdgeInsets.all(5),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(color: selected == i ? ink : line),
+                  ),
+                  child: hasModel && i == 0
+                      ? const Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(Icons.view_in_ar_outlined),
+                            Text('3D'),
+                          ],
+                        )
+                      : image(product.images[i - (hasModel ? 1 : 0)]),
                 ),
-                child: image(widget.product.images[i]),
               ),
             ),
           ),
-        ),
+        ],
       ],
-    ],
-  );
+    );
+  }
 }
 
 class ConnectedProductScreen extends ConsumerWidget {

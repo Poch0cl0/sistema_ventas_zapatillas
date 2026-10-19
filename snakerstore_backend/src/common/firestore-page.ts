@@ -23,6 +23,16 @@ export function publicProduct(id: string, data: DocumentData) {
     category: data.category,
     brand: data.brand,
     active: data.active,
+    model3d:
+      data.model3d?.format === 'glb' &&
+      typeof data.model3d.secure_url === 'string' &&
+      data.model3d.secure_url.startsWith('https://')
+        ? {
+            secure_url: data.model3d.secure_url,
+            format: 'glb',
+            bytes: data.model3d.bytes,
+          }
+        : null,
     images: Array.isArray(data.images)
       ? data.images.map((image: Record<string, unknown>) => ({
           secure_url: image.secure_url,

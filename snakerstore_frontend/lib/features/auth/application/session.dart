@@ -35,11 +35,17 @@ final authRepositoryProvider = Provider<AuthRepository>(
 enum SessionStatus { loading, signedOut, authenticated, unavailable }
 
 class SessionState {
-  const SessionState(this.status, {this.profile, this.message});
+  const SessionState(
+    this.status, {
+    this.profile,
+    this.message,
+    this.connectionIssue = false,
+  });
   const SessionState.signedOut() : this(SessionStatus.signedOut);
   final SessionStatus status;
   final UserProfile? profile;
   final String? message;
+  final bool connectionIssue;
 }
 
 final sessionProvider = NotifierProvider<SessionController, SessionState>(
@@ -94,6 +100,15 @@ class SessionController extends Notifier<SessionState> {
         state = SessionState(
           SessionStatus.unavailable,
           message: errorMessage(error),
+          connectionIssue:
+              error is DioException &&
+              ([
+                    DioExceptionType.connectionError,
+                    DioExceptionType.connectionTimeout,
+                    DioExceptionType.receiveTimeout,
+                    DioExceptionType.sendTimeout,
+                  ].contains(error.type) ||
+                  [502, 503, 504].contains(error.response?.statusCode)),
         );
       }
     }

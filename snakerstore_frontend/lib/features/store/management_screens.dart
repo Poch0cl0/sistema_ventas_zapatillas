@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:file_picker/file_picker.dart';
 
 import '../../core/ui.dart';
 import '../../core/store_design.dart';
 import '../../core/network/app_failure.dart';
 import '../catalog/catalog_repository.dart';
+import '../catalog/product_model_view.dart';
 import '../admin/store_read_repository.dart';
 import 'commerce_screens.dart';
 import 'store_repository.dart';
@@ -35,6 +37,7 @@ class _EditorState extends ConsumerState<ManagementEditor> {
   late Future<void> setup;
   List<Json> products = [];
   List<String> images = [];
+  String? modelUrl;
   String? productId;
   bool active = true, busy = false;
   String? savedId;
@@ -77,6 +80,9 @@ class _EditorState extends ConsumerState<ManagementEditor> {
     final Json current;
     if (widget.kind == ManagementKind.product) {
       current = await repo.get('/admin/products/${widget.id}');
+      modelUrl = current['model3d'] is Map
+          ? (current['model3d'] as Map)['secure_url'] as String?
+          : null;
       images = (current['images'] as List)
           .map((e) => e['secure_url'] as String)
           .toList();
@@ -278,6 +284,65 @@ class _EditorState extends ConsumerState<ManagementEditor> {
             .toList(),
       );
       refresh();
+    } catch (e) {
+      if (mounted) storeMessage(context, e);
+    } finally {
+      if (mounted) setState(() => busy = false);
+    }
+  }
+
+  Future<void> uploadModel() async {
+    if (busy || savedId == null) return;
+    setState(() => busy = true);
+    try {
+      final file = await FilePicker.pickFile(
+        type: FileType.custom,
+        allowedExtensions: ['glb'],
+      );
+      if (file == null) return;
+      const limit = 10 * 1024 * 1024;
+      final length = await file.length();
+      if (length == null || length <= 0 || length > limit)
+        throw const AppFailure('Selecciona un modelo GLB de hasta 10 MiB.');
+      final bytes = await file.readAsBytes();
+      if (bytes.isEmpty || bytes.length > limit)
+        throw const AppFailure('El modelo debe pesar como máximo 10 MiB.');
+      final result = await ref
+          .read(storeRepositoryProvider)
+          .write(
+            'POST',
+            '/admin/products/$savedId/model',
+            data: FormData.fromMap({
+              'file': MultipartFile.fromBytes(bytes, filename: file.name),
+            }),
+          );
+      if (!mounted) return;
+      setState(
+        () => modelUrl = (result['model3d'] as Map)['secure_url'] as String,
+      );
+      refresh();
+      notice(context, 'Modelo 3D guardado como vista principal del producto.');
+    } catch (e) {
+      if (mounted) storeMessage(context, e);
+    } finally {
+      if (mounted) setState(() => busy = false);
+    }
+  }
+
+  Future<void> removeModel() async {
+    if (busy || savedId == null) return;
+    setState(() => busy = true);
+    try {
+      await ref
+          .read(storeRepositoryProvider)
+          .write('DELETE', '/admin/products/$savedId/model');
+      if (!mounted) return;
+      setState(() => modelUrl = null);
+      refresh();
+      notice(
+        context,
+        'Modelo quitado. Las fotos vuelven a ser la vista principal.',
+      );
     } catch (e) {
       if (mounted) storeMessage(context, e);
     } finally {
@@ -537,6 +602,51 @@ class _EditorState extends ConsumerState<ManagementEditor> {
                 child: Text(busy ? 'Guardando…' : 'Guardar'),
               ),
               if (widget.kind == ManagementKind.product && savedId != null) ...[
+                SurfaceSection(
+                  title: 'Modelo 3D (opcional)',
+                  icon: Icons.view_in_ar_outlined,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: spaced([
+                      const Text(
+                        'Sube un archivo .glb con sus texturas incluidas (máximo 10 MiB). Se mostrará primero en el catálogo; las fotos se conservan.',
+                      ),
+                      if (modelUrl != null) ...[
+                        SizedBox(
+                          height: 240,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: ProductModelView(
+                              key: ValueKey(modelUrl),
+                              url: modelUrl!,
+                              name: field('name').text,
+                              poster: images.firstOrNull,
+                              interactive: true,
+                            ),
+                          ),
+                        ),
+                        const Text(
+                          'Arrastra para girar y usa dos dedos para acercar.',
+                        ),
+                      ],
+                      OutlinedButton.icon(
+                        onPressed: busy ? null : uploadModel,
+                        icon: const Icon(Icons.upload_file_outlined),
+                        label: Text(
+                          modelUrl == null
+                              ? 'Subir modelo 3D'
+                              : 'Reemplazar modelo 3D',
+                        ),
+                      ),
+                      if (modelUrl != null)
+                        TextButton.icon(
+                          onPressed: busy ? null : removeModel,
+                          icon: const Icon(Icons.delete_outline),
+                          label: const Text('Quitar modelo 3D'),
+                        ),
+                    ]),
+                  ),
+                ),
                 SurfaceSection(
                   title: 'Galería de fotografías',
                   icon: Icons.add_photo_alternate_outlined,

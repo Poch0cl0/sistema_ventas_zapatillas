@@ -20,7 +20,9 @@ class SessionScreen extends ConsumerWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       EmptyState(
-                        'No pudimos verificar tu cuenta',
+                        session.connectionIssue
+                            ? 'No hay conexión con la tienda'
+                            : 'No pudimos verificar tu cuenta',
                         session.message ?? 'Inténtalo nuevamente.',
                         icon: Icons.cloud_off,
                         action: () =>

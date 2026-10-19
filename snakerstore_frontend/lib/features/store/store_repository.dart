@@ -43,8 +43,12 @@ class StoreRepository {
     data: data,
     options: Options(
       method: method,
-      receiveTimeout:
-          path.endsWith('/simulation') || path.endsWith('/receipt/send')
+      sendTimeout: path.endsWith('/model')
+          ? const Duration(seconds: 120)
+          : null,
+      receiveTimeout: path.endsWith('/model')
+          ? const Duration(seconds: 120)
+          : path.endsWith('/simulation') || path.endsWith('/receipt/send')
           ? const Duration(seconds: 60)
           : null,
       headers: {if (key != null) 'Idempotency-Key': key},

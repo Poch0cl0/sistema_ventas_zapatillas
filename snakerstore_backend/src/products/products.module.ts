@@ -7,10 +7,16 @@ import { ProductsRepository } from './products.repository.js';
 import { ProductsService } from './products.service.js';
 import { CloudinaryModule } from '../cloudinary/cloudinary.module.js';
 import { ProductImagesService } from './product-images.service.js';
+import { ProductModelService } from './product-model.service.js';
 
 @Module({
   imports: [CloudinaryModule],
   controllers: [ProductsController, AdminProductsController],
-  providers: [ProductsRepository, ProductsService, ProductImagesService],
+  providers: [
+    ProductsRepository,
+    ProductsService,
+    ProductImagesService,
+    ProductModelService,
+  ],
 })
 export class ProductsModule {}

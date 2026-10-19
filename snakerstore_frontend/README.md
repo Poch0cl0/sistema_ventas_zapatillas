@@ -4,6 +4,12 @@ Aplicación Flutter para `com.example.sneakerstore`, registrada en el proyecto
 Firebase existente `snakerstore-e74cd`. Los HTML y PNG de `Login`, `Vistas para
 cliente` y `Vistas para administrador` son referencias visuales y se conservan.
 
+## Modelos 3D opcionales
+
+El editor permite subir un `.glb` de hasta 10 MiB. Cuando existe, tiene prioridad
+en catálogo y ficha; las fotos se conservan. Requiere actualizar la instalación
+Android por los nuevos plugins. Ver [uso y configuración](../snakerstore_backend/PRODUCT_MODELS_GUIDE.md).
+
 ## Estado de la conexión
 
 El modo conectado utiliza el diseño móvil Kinetic Minimal de las carpetas de

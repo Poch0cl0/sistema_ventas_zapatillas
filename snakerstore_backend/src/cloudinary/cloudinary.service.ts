@@ -13,6 +13,11 @@ export interface ProductImage {
   public_id: string;
 }
 
+export interface ProductModel extends ProductImage {
+  format: 'glb';
+  bytes: number;
+}
+
 @Injectable()
 export class CloudinaryService {
   private readonly logger = new Logger(CloudinaryService.name);
@@ -64,6 +69,65 @@ export class CloudinaryService {
       );
       stream.end(buffer);
     });
+  }
+
+  uploadModel(buffer: Buffer, productId: string): Promise<ProductModel> {
+    const options = this.options();
+    return new Promise((resolve, reject) => {
+      const stream = cloudinary.uploader.upload_stream(
+        {
+          ...options,
+          resource_type: 'raw',
+          public_id: `sneakerstore/products/${productId}/models/${randomUUID()}.glb`,
+          type: 'upload',
+          overwrite: false,
+          timeout: 60000,
+          tags: ['sneakerstore-model'],
+        },
+        (error, result) => {
+          if (error || !result?.secure_url || !result.public_id)
+            reject(
+              new ServiceUnavailableException(
+                'No se pudo subir el modelo 3D a Cloudinary.',
+              ),
+            );
+          else
+            resolve({
+              secure_url: result.secure_url,
+              public_id: result.public_id,
+              format: 'glb',
+              bytes: buffer.length,
+            });
+        },
+      );
+      stream.on('error', () =>
+        reject(
+          new ServiceUnavailableException(
+            'No se pudo transferir el modelo 3D.',
+          ),
+        ),
+      );
+      stream.end(buffer);
+    });
+  }
+
+  async cleanupModel(model: ProductImage) {
+    try {
+      const options = {
+        ...this.options(),
+        resource_type: 'raw' as const,
+        type: 'upload' as const,
+        invalidate: true,
+        timeout: 60000,
+      };
+      const result = await cloudinary.uploader.destroy(model.public_id, options);
+      if (result.result !== 'ok' && result.result !== 'not found')
+        throw new Error('cleanup');
+    } catch {
+      this.logger.warn(
+        'No se pudo eliminar un modelo 3D sin uso; revisar recursos de catálogo en Cloudinary.',
+      );
+    }
   }
 
   async cleanup(images: ProductImage[]) {

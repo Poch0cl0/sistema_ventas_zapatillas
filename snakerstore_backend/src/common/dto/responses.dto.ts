@@ -6,11 +6,22 @@ class ProductImageDto {
   secure_url: string;
 }
 
+class ProductModelDto {
+  @ApiProperty({ type: String })
+  secure_url: string;
+  @ApiProperty({ enum: ['glb'] })
+  format: string;
+  @ApiProperty({ type: Number })
+  bytes: number;
+}
+
 export class ProductResponseDto extends CreateProductDto {
   @ApiProperty({ type: String })
   id: string;
   @ApiProperty({ type: [ProductImageDto] })
   images: ProductImageDto[];
+  @ApiProperty({ type: ProductModelDto, nullable: true })
+  model3d: ProductModelDto | null;
 }
 
 export class ProductPageDto {

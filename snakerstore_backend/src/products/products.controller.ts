@@ -10,9 +10,14 @@ import {
   Post,
   Query,
   UploadedFiles,
+  UploadedFile,
   UseInterceptors,
 } from '@nestjs/common';
-import { FilesInterceptor } from '@nestjs/platform-express';
+import { FileInterceptor, FilesInterceptor } from '@nestjs/platform-express';
+import {
+  ProductModelService,
+  MAX_MODEL_BYTES,
+} from './product-model.service.js';
 import {
   ProductImagesService,
   MAX_IMAGE_BYTES,
@@ -67,7 +72,9 @@ export class ProductsController {
   }
   @Get(':id/availability')
   @Header('Cache-Control', 'no-store')
-  @ApiOperation({ summary: 'Consultar tallas y unidades disponibles de un producto activo' })
+  @ApiOperation({
+    summary: 'Consultar tallas y unidades disponibles de un producto activo',
+  })
   availability(@Param() params: DocumentIdDto) {
     return this.products.availability(params.id);
   }
@@ -87,6 +94,7 @@ export class AdminProductsController {
   constructor(
     @Inject(ProductsService) private readonly products: ProductsService,
     @Inject(ProductImagesService) private readonly images: ProductImagesService,
+    @Inject(ProductModelService) private readonly models: ProductModelService,
   ) {}
   @Get()
   @ApiOkResponse({ type: ProductPageDto })
@@ -161,6 +169,45 @@ export class AdminProductsController {
     @CurrentUser() user: UserProfile,
   ) {
     return this.products.update(params.id, input, user.uid);
+  }
+  @Post(':id/model')
+  @ApiOperation({
+    summary:
+      'Subir o reemplazar el modelo 3D opcional: GLB 2.0 autocontenido, hasta 10 MiB',
+  })
+  @ApiConsumes('multipart/form-data')
+  @ApiBody({
+    schema: {
+      type: 'object',
+      required: ['file'],
+      properties: { file: { type: 'string', format: 'binary' } },
+    },
+  })
+  @ApiCreatedResponse({ type: ProductResponseDto })
+  @ApiResponse({ status: 413, description: 'Modelo demasiado grande.' })
+  @UseInterceptors(
+    FileInterceptor('file', {
+      limits: { fileSize: MAX_MODEL_BYTES, files: 1, fields: 0, parts: 2 },
+    }),
+  )
+  uploadModel(
+    @Param() params: DocumentIdDto,
+    @UploadedFile() file: Express.Multer.File | undefined,
+    @CurrentUser() user: UserProfile,
+  ) {
+    return this.models.upload(params.id, file, user.uid);
+  }
+  @Delete(':id/model')
+  @ApiOperation({
+    summary:
+      'Quitar el modelo 3D y volver a usar las fotos como vista principal',
+  })
+  @ApiOkResponse({ type: ProductResponseDto })
+  removeModel(
+    @Param() params: DocumentIdDto,
+    @CurrentUser() user: UserProfile,
+  ) {
+    return this.models.remove(params.id, user.uid);
   }
   @Delete(':id')
   @ApiOkResponse({ type: ProductResponseDto })

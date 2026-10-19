@@ -292,7 +292,11 @@ class ConnectedCartScreen extends ConsumerWidget {
                     children: [
                       SizedBox(
                         width: 86,
-                        child: RemoteProductImage(cart[i].product, height: 90),
+                        child: RemoteProductImage(
+                          cart[i].product,
+                          height: 90,
+                          showModel: false,
+                        ),
                       ),
                       const SizedBox(width: 14),
                       Expanded(

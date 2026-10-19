@@ -2,6 +2,8 @@
 
 API NestJS con Firebase Authentication y Firestore.
 
+- [Modelos 3D opcionales para el catálogo](./PRODUCT_MODELS_GUIDE.md)
+
 - [Pago opcional, boletas de simulación y correo Gmail](./SIMULATION_RECEIPTS_GUIDE.md)
 
 - [Probar Swagger, productos e inventario](./SWAGGER_GUIDE.md)

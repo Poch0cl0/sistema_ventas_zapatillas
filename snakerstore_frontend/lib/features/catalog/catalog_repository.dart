@@ -15,11 +15,13 @@ class CatalogProduct {
     required this.priceCents,
     required this.active,
     required this.images,
+    this.modelUrl,
   });
   final String id, name, brand, category, description;
   final int priceCents;
   final bool active;
   final List<String> images;
+  final String? modelUrl;
   factory CatalogProduct.fromJson(Map<String, dynamic> json) => CatalogProduct(
     id: json['id'] as String,
     name: json['name'] as String,
@@ -28,6 +30,13 @@ class CatalogProduct {
     description: json['description'] as String,
     priceCents: json['priceCents'] as int,
     active: json['active'] as bool,
+    modelUrl:
+        json['model3d'] is Map &&
+            (json['model3d'] as Map)['format'] == 'glb' &&
+            Uri.tryParse('${(json['model3d'] as Map)['secure_url']}')?.scheme ==
+                'https'
+        ? (json['model3d'] as Map)['secure_url'] as String
+        : null,
     images: (json['images'] as List<dynamic>? ?? [])
         .map((image) => (image as Map)['secure_url'])
         .whereType<String>()
