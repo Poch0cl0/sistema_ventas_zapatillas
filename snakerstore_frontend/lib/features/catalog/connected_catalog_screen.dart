@@ -765,6 +765,22 @@ class ConnectedProductScreen extends ConsumerWidget {
                   ),
                 ),
                 const SizedBox(height: 24),
+                if (!admin && p.canTryOn) ...[
+                  OutlinedButton.icon(
+                    onPressed: () => context.push(
+                      '/producto/${Uri.encodeComponent(id)}/probar',
+                    ),
+                    icon: const Icon(Icons.camera_alt_outlined),
+                    label: const Text('Probar con cámara'),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 8, bottom: 20),
+                    child: Text(
+                      'Probador visual experimental. No mide tu talla.',
+                      style: TextStyle(color: muted, fontSize: 12),
+                    ),
+                  ),
+                ],
                 if (!admin)
                   AddToCart(p)
                 else

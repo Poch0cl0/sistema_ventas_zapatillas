@@ -22,6 +22,8 @@ export class ProductResponseDto extends CreateProductDto {
   images: ProductImageDto[];
   @ApiProperty({ type: ProductModelDto, nullable: true })
   model3d: ProductModelDto | null;
+  @ApiProperty({ enum: ['urban_sand', 'sport_night'], nullable: true })
+  bundledModel: string | null;
 }
 
 export class ProductPageDto {

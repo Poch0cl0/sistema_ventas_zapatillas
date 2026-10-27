@@ -24,6 +24,7 @@ function productFields(input: UpdateProductDto) {
     'category',
     'brand',
     'active',
+    'tryOnEnabled',
   ] as const) {
     if (input[key] !== undefined) data[key] = input[key];
   }
@@ -56,6 +57,10 @@ export class ProductsRepository {
   }
 
   async create(input: CreateProductDto, actorId: string) {
+    if (input.tryOnEnabled === true)
+      throw new BadRequestException(
+        'Guarda el producto y carga un modelo 3D antes de habilitar el probador.',
+      );
     const ref = this.firestore.collection('products').doc();
     const data = {
       ...productFields(input),
@@ -93,6 +98,16 @@ export class ProductsRepository {
     return this.firestore.runTransaction(async (transaction) => {
       const doc = await transaction.get(ref);
       if (!doc.exists) throw new NotFoundException('Producto no encontrado.');
+      const current = doc.data()!;
+      const hasModel =
+        ['urban_sand', 'sport_night'].includes(current.bundledModel) ||
+        (current.model3d?.format === 'glb' &&
+          typeof current.model3d.secure_url === 'string' &&
+          current.model3d.secure_url.startsWith('https://'));
+      if (input.tryOnEnabled === true && !hasModel)
+        throw new BadRequestException(
+          'Carga un modelo 3D antes de habilitar el probador.',
+        );
       const changes = {
         ...productFields(input),
         updatedAt: FieldValue.serverTimestamp(),
@@ -137,6 +152,7 @@ export class ProductsRepository {
       const current = snapshot.data()!;
       const changes = {
         model3d: model,
+        tryOnEnabled: false,
         updatedAt: FieldValue.serverTimestamp(),
         updatedBy: actorId,
       };

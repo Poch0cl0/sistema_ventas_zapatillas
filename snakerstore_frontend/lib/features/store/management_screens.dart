@@ -38,6 +38,8 @@ class _EditorState extends ConsumerState<ManagementEditor> {
   List<Json> products = [];
   List<String> images = [];
   String? modelUrl;
+  String? bundledModel;
+  bool tryOnEnabled = false;
   String? productId;
   bool active = true, busy = false;
   String? savedId;
@@ -80,9 +82,10 @@ class _EditorState extends ConsumerState<ManagementEditor> {
     final Json current;
     if (widget.kind == ManagementKind.product) {
       current = await repo.get('/admin/products/${widget.id}');
-      modelUrl = current['model3d'] is Map
-          ? (current['model3d'] as Map)['secure_url'] as String?
-          : null;
+      final product = CatalogProduct.fromJson(current);
+      modelUrl = product.modelUrl;
+      bundledModel = product.bundledModel;
+      tryOnEnabled = product.tryOnEnabled;
       images = (current['images'] as List)
           .map((e) => e['secure_url'] as String)
           .toList();
@@ -200,6 +203,7 @@ class _EditorState extends ConsumerState<ManagementEditor> {
             'category': field('category').text.trim(),
             'priceCents': cents(),
             'active': active,
+            'tryOnEnabled': tryOnEnabled,
           };
         case ManagementKind.zone:
           path = '/admin/delivery-zones';
@@ -317,9 +321,10 @@ class _EditorState extends ConsumerState<ManagementEditor> {
             }),
           );
       if (!mounted) return;
-      setState(
-        () => modelUrl = (result['model3d'] as Map)['secure_url'] as String,
-      );
+      setState(() {
+        modelUrl = CatalogProduct.fromJson(result).modelUrl;
+        tryOnEnabled = false;
+      });
       refresh();
       notice(context, 'Modelo 3D guardado como vista principal del producto.');
     } catch (e) {
@@ -333,15 +338,20 @@ class _EditorState extends ConsumerState<ManagementEditor> {
     if (busy || savedId == null) return;
     setState(() => busy = true);
     try {
-      await ref
+      final result = await ref
           .read(storeRepositoryProvider)
           .write('DELETE', '/admin/products/$savedId/model');
       if (!mounted) return;
-      setState(() => modelUrl = null);
+      setState(() {
+        modelUrl = CatalogProduct.fromJson(result).modelUrl;
+        tryOnEnabled = false;
+      });
       refresh();
       notice(
         context,
-        'Modelo quitado. Las fotos vuelven a ser la vista principal.',
+        modelUrl == null
+            ? 'Modelo quitado. Las fotos vuelven a ser la vista principal.'
+            : 'Se recuperó el modelo 3D incluido. Revisa y activa nuevamente el probador.',
       );
     } catch (e) {
       if (mounted) storeMessage(context, e);
@@ -611,6 +621,10 @@ class _EditorState extends ConsumerState<ManagementEditor> {
                       const Text(
                         'Sube un archivo .glb con sus texturas incluidas (máximo 10 MiB). Se mostrará primero en el catálogo; las fotos se conservan.',
                       ),
+                      if (bundledModel != null)
+                        const Text(
+                          'Este artículo incluye un modelo 3D de demostración dentro de la app. Puedes reemplazarlo por un GLB propio.',
+                        ),
                       if (modelUrl != null) ...[
                         SizedBox(
                           height: 240,
@@ -638,12 +652,26 @@ class _EditorState extends ConsumerState<ManagementEditor> {
                               : 'Reemplazar modelo 3D',
                         ),
                       ),
-                      if (modelUrl != null)
+                      if (modelUrl != null && !modelUrl!.startsWith('assets/'))
                         TextButton.icon(
                           onPressed: busy ? null : removeModel,
                           icon: const Icon(Icons.delete_outline),
                           label: const Text('Quitar modelo 3D'),
                         ),
+                      SwitchListTile(
+                        contentPadding: EdgeInsets.zero,
+                        title: const Text('Disponible para probar con cámara'),
+                        subtitle: const Text(
+                          'Revisa que el GLB tenga la punta hacia +Z y la suela hacia -Y. El pie derecho se genera por simetría. Guarda después de activar.',
+                        ),
+                        value: tryOnEnabled,
+                        onChanged: busy || modelUrl == null
+                            ? null
+                            : (value) => setState(() => tryOnEnabled = value),
+                      ),
+                      const Text(
+                        'Flujo: guarda el artículo → sube el GLB → revisa el modelo → activa el probador → pulsa Guardar. Al reemplazar el modelo, el probador se desactiva para revisarlo otra vez.',
+                      ),
                     ]),
                   ),
                 ),

@@ -28,6 +28,8 @@ dependencies:
   model_viewer_plus: 1.10.0
   file_picker: 13.1.0
   visibility_detector: 0.4.0+2
+  webview_flutter: ^4.14.1
+  webview_flutter_android: ^4.14.1
 
 dev_dependencies:
   flutter_test:
@@ -43,3 +45,6 @@ flutter:
         - asset: assets/fonts/Inter.ttf
   assets:
     - assets/images/
+    - assets/try_on/
+    - assets/try_on/models/
+    - assets/try_on/vendor/

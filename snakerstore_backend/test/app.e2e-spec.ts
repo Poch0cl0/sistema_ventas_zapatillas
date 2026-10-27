@@ -3,6 +3,7 @@ import { INestApplication } from '@nestjs/common';
 import request from 'supertest';
 import { App } from 'supertest/types.js';
 import { AppModule } from './../src/app.module.js';
+import { DefaultProductsService } from '../src/products/default-products.js';
 import {
   FIREBASE_APP,
   FIREBASE_AUTH,
@@ -28,6 +29,8 @@ describe('AppController (e2e)', () => {
       .useValue({})
       .overrideProvider(FIREBASE_FIRESTORE)
       .useValue({})
+      .overrideProvider(DefaultProductsService)
+      .useValue({ onModuleInit: async () => {} })
       .compile();
 
     app = moduleFixture.createNestApplication();

@@ -1,6 +1,14 @@
 import { ApiProperty, PartialType } from '@nestjs/swagger';
 import { Transform } from 'class-transformer';
-import { IsBoolean, IsInt, IsString, Length, Max, Min } from 'class-validator';
+import {
+  IsBoolean,
+  IsInt,
+  IsString,
+  ValidateIf,
+  Length,
+  Max,
+  Min,
+} from 'class-validator';
 
 const trim = ({ value }: { value: unknown }) =>
   typeof value === 'string' ? value.trim() : value;
@@ -44,6 +52,16 @@ export class CreateProductDto {
   @ApiProperty({ example: true })
   @IsBoolean()
   active: boolean;
+
+  @ApiProperty({
+    required: false,
+    default: false,
+    description:
+      'Habilitar el probador visual experimental después de revisar el GLB.',
+  })
+  @ValidateIf((_object, value) => value !== undefined)
+  @IsBoolean()
+  tryOnEnabled?: boolean;
 }
 
 // Omitidos sí; null no: evita eliminar campos obligatorios durante una edición.

@@ -12,6 +12,7 @@ import '../features/catalog/connected_catalog_screen.dart';
 import '../features/admin/connected_admin_screen.dart';
 import 'preview_app.dart';
 import 'session_redirect.dart';
+import '../features/try_on/try_on_screen.dart';
 import '../features/store/commerce_screens.dart';
 import '../features/store/management_screens.dart';
 
@@ -55,6 +56,10 @@ class _ConnectedAppState extends ConsumerState<_ConnectedApp> {
         builder: (_, s) => ConnectedProductScreen(id: s.pathParameters['id']!),
       ),
       GoRoute(path: '/perfil', builder: (_, _) => const AccountScreen()),
+      GoRoute(
+        path: '/producto/:id/probar',
+        builder: (_, s) => TryOnScreen(id: s.pathParameters['id']!),
+      ),
       GoRoute(path: '/carrito', builder: (_, _) => const ConnectedCartScreen()),
       GoRoute(
         path: '/checkout',

@@ -70,4 +70,25 @@ describe('Productos: visibilidad y edición', () => {
       { secure_url: 'https://example.invalid/photo.jpg' },
     ]);
   });
+  it('no permite activar un probador sin modelo', async () => {
+    get.mockResolvedValue({ exists: true, data: () => ({ active: true }) });
+    await expect(
+      repository.update('product1', { tryOnEnabled: true }, 'actor'),
+    ).rejects.toThrow('modelo 3D');
+    expect(update).not.toHaveBeenCalled();
+  });
+  it('permite activar el modelo incluido y desactiva al reemplazar un GLB', async () => {
+    get.mockResolvedValue({
+      exists: true,
+      data: () => ({ active: true, bundledModel: 'urban_sand' }),
+    });
+    expect(
+      await repository.update('product1', { tryOnEnabled: true }, 'actor'),
+    ).toMatchObject({ tryOnEnabled: true });
+    await repository.setModel('product1', null, 'actor');
+    expect(update).toHaveBeenLastCalledWith(
+      reference,
+      expect.objectContaining({ tryOnEnabled: false, model3d: null }),
+    );
+  });
 });

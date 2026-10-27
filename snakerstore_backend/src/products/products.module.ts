@@ -8,6 +8,7 @@ import { ProductsService } from './products.service.js';
 import { CloudinaryModule } from '../cloudinary/cloudinary.module.js';
 import { ProductImagesService } from './product-images.service.js';
 import { ProductModelService } from './product-model.service.js';
+import { DefaultProductsService } from './default-products.js';
 
 @Module({
   imports: [CloudinaryModule],
@@ -17,6 +18,7 @@ import { ProductModelService } from './product-model.service.js';
     ProductsService,
     ProductImagesService,
     ProductModelService,
+    DefaultProductsService,
   ],
 })
 export class ProductsModule {}

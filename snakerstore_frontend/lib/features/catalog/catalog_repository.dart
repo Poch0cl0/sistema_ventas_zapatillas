@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/network/api_page.dart';
 import '../../core/network/app_failure.dart';
 import '../auth/application/session.dart';
+import 'bundled_models.dart';
 
 class CatalogProduct {
   const CatalogProduct({
@@ -16,12 +17,17 @@ class CatalogProduct {
     required this.active,
     required this.images,
     this.modelUrl,
+    this.tryOnEnabled = false,
+    this.bundledModel,
   });
   final String id, name, brand, category, description;
   final int priceCents;
   final bool active;
   final List<String> images;
   final String? modelUrl;
+  final String? bundledModel;
+  final bool tryOnEnabled;
+  bool get canTryOn => tryOnEnabled && modelUrl != null;
   factory CatalogProduct.fromJson(Map<String, dynamic> json) => CatalogProduct(
     id: json['id'] as String,
     name: json['name'] as String,
@@ -30,13 +36,15 @@ class CatalogProduct {
     description: json['description'] as String,
     priceCents: json['priceCents'] as int,
     active: json['active'] as bool,
+    bundledModel: json['bundledModel'] as String?,
+    tryOnEnabled: json['tryOnEnabled'] == true,
     modelUrl:
         json['model3d'] is Map &&
             (json['model3d'] as Map)['format'] == 'glb' &&
             Uri.tryParse('${(json['model3d'] as Map)['secure_url']}')?.scheme ==
                 'https'
         ? (json['model3d'] as Map)['secure_url'] as String
-        : null,
+        : bundledModels[json['bundledModel']],
     images: (json['images'] as List<dynamic>? ?? [])
         .map((image) => (image as Map)['secure_url'])
         .whereType<String>()

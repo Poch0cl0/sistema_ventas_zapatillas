@@ -1,4 +1,5 @@
 import { Test } from '@nestjs/testing';
+import { DefaultProductsService } from '../src/products/default-products.js';
 import type { INestApplication } from '@nestjs/common';
 import {
   BadRequestException,
@@ -58,6 +59,8 @@ describe('Catálogo, inventario, validación y Swagger (HTTP)', () => {
       .useValue({ verifyIdToken })
       .overrideProvider(FIREBASE_FIRESTORE)
       .useValue({})
+      .overrideProvider(DefaultProductsService)
+      .useValue({ onModuleInit: async () => {} })
       .overrideProvider(UsersRepository)
       .useValue({
         findOrCreate: async (identity: { uid: string }) => ({
