@@ -6,9 +6,18 @@ const video = document.querySelector('#video'), canvas = document.querySelector(
 const status = document.querySelector('#status'), start = document.querySelector('#start');
 const modeButton = document.querySelector('#mode'), manualControls = document.querySelector('#manualControls');
 let renderer, scene, camera, detector, stream, shoes = [], stopped = false, manual = false;
-let loadingDetector = false, detectorError = false, lastVideoTime = -1, lastInference = 0;
+let loadingDetector = false, lastVideoTime = -1, lastInference = 0;
 let manualScale = 1, manualRotation = 0, drag = null;
+let lastFootSeen = 0;
 const message = text => { if (status.textContent !== text) status.textContent = text; };
+
+function useManual(text = 'Modo manual · Arrastra las zapatillas sobre tus pies y ajusta tamaño y giro.') {
+  manual = true;
+  manualControls.style.display = 'block';
+  modeButton.textContent = 'Probar seguimiento experimental';
+  placeManual();
+  message(text);
+}
 
 function resize() {
   const w = innerWidth, h = innerHeight;
@@ -28,6 +37,7 @@ function placeManual() {
 }
 
 async function prepareDetector() {
+  if (loadingDetector || detector || stopped) return;
   loadingDetector = true;
   message('Cargando seguimiento experimental… Puedes usar el ajuste manual.');
   try {
@@ -40,8 +50,7 @@ async function prepareDetector() {
     });
     if (stopped) result.close(); else detector = result;
   } catch (_) {
-    detectorError = true;
-    message('No se pudo iniciar el seguimiento. Usa el ajuste manual o vuelve a entrar.');
+    if (!stopped && !manual) useManual('Seguimiento no disponible · Coloca las zapatillas manualmente sobre tus pies.');
   } finally { loadingDetector = false; }
 }
 
@@ -64,13 +73,17 @@ function track(now) {
         shoe.scale.setScalar(THREE.MathUtils.lerp(shoe.scale.x, transform.length, blend));
         shoe.visible = true; count++;
       });
+      if (count) lastFootSeen = now;
       message(count ? `${count === 2 ? 'Ambos pies detectados' : 'Un pie detectado'} · Mueve los pies despacio.`
         : 'Buscando pies… Encuadra pies, tobillos y parte de las piernas. Prueba el ajuste manual si no detecta.');
     } catch (_) {
       shoes.forEach(shoe => shoe.visible = false);
-      detectorError = true; detector.close(); detector = null;
-      message('Se interrumpió el seguimiento. Puedes continuar con el ajuste manual.');
+      detector.close(); detector = null;
+      useManual('Se interrumpió el seguimiento · Puedes seguir ajustando las zapatillas manualmente.');
     }
+  }
+  if (!manual && now - lastFootSeen >= 6000) {
+    useManual('No se detectaron los pies · Modo manual activado. Arrastra las zapatillas sobre tus pies.');
   }
   renderer.render(scene, camera);
 }
@@ -101,7 +114,7 @@ start.addEventListener('click', async () => {
     if (stopped) { nextStream.getTracks().forEach(t => t.stop()); return; }
     stream = nextStream; video.srcObject = stream; await video.play();
     start.hidden = true; modeButton.hidden = false;
-    prepareDetector(); requestAnimationFrame(track);
+    useManual(); requestAnimationFrame(track);
   } catch (_) {
     stream?.getTracks().forEach(t => t.stop()); stream = null;
     message('No se pudo abrir la cámara. Revisa el permiso de cámara en Ajustes y vuelve a intentarlo.');
@@ -110,12 +123,14 @@ start.addEventListener('click', async () => {
 });
 
 modeButton.addEventListener('click', () => {
-  manual = !manual; shoes.forEach(s => s.visible = false);
-  manualControls.style.display = manual ? 'block' : 'none';
-  modeButton.textContent = manual ? 'Usar seguimiento experimental' : 'Ajustar manualmente';
-  if (manual) { placeManual(); message('Modo manual · Arrastra las zapatillas sobre tus pies.'); }
-  else message(detectorError ? 'Seguimiento no disponible. Vuelve a entrar o usa el ajuste manual.'
-    : loadingDetector ? 'Cargando seguimiento…' : 'Buscando pies…');
+  if (!manual) { useManual(); return; }
+  manual = false;
+  shoes.forEach(s => { s.visible = false; s.userData.moved = false; });
+  manualControls.style.display = 'none';
+  modeButton.textContent = 'Ajustar manualmente';
+  lastFootSeen = performance.now();
+  message('Buscando postura · Encuadra también las piernas. Si no detecta, volverás al modo manual.');
+  if (!detector) prepareDetector();
 });
 document.querySelector('#scale').addEventListener('input', e => { manualScale = +e.target.value; placeManual(); });
 document.querySelector('#rotation').addEventListener('input', e => { manualRotation = +e.target.value*Math.PI/180; placeManual(); });
@@ -153,7 +168,7 @@ try {
     scene.add(group); return group;
   });
   resize(); window.addEventListener('resize', resize);
-  message('Modelo listo. Activa la cámara y apunta a tus pies. Procesamiento local en este dispositivo.');
+  message('Modelo listo. Activa la cámara para colocar las zapatillas sobre tus pies.');
   start.disabled = false;
 } catch (_) {
   message('No se pudo preparar el modelo 3D. Vuelve al producto y reintenta.');

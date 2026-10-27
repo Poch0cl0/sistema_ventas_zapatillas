@@ -15,15 +15,20 @@ Son diseños de demostración, no reproducciones de zapatillas de una marca.
 ## Cliente
 
 Catálogo → Urban Sand o Sport Night → Probar con cámara → Activar cámara.
-Usar la cámara trasera y encuadrar los pies, tobillos y parte de las piernas.
+Al abrir la cámara aparecen ambas zapatillas en modo manual. Arrastrar cada
+una sobre el pie y ajustar tamaño y giro con los controles visibles.
+El botón «Probar seguimiento experimental» permite intentar la detección:
+usar la cámara trasera y encuadrar los pies, tobillos y parte de las piernas.
 MediaPipe Pose estima tobillo, talón y punta; no es un detector especializado
 de pies en primer plano. La superposición de ambos modelos es experimental,
 sin oclusión ni reconstrucción de profundidad. Al perder confianza se oculta
 la zapatilla correspondiente. La escala es una aproximación visual, no una
 medición ni recomendación de talla.
 
-Si no hay detección, seleccionar Ajustar manualmente y arrastrar cada zapatilla;
-los controles permiten ajustar tamaño y giro del par. Este modo es manual,
+Si no hay detección durante seis segundos (incluida la carga del detector),
+se vuelve automáticamente al modo manual con ambos modelos visibles.
+También se puede seleccionar Ajustar manualmente en cualquier momento.
+Los controles permiten ajustar tamaño y giro del par. Este modo es manual,
 no seguimiento automático. Volver al producto para elegir talla y comprar.
 
 ## Agregar más modelos
