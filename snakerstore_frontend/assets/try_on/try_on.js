@@ -12,10 +12,10 @@ const baseSize = () => Math.min(innerWidth * .55, innerHeight * .28);
 let lastFootSeen = 0;
 const message = text => { if (status.textContent !== text) status.textContent = text; };
 
-function useManual(text = 'Modo manual · Arrastra las zapatillas sobre tus pies y ajusta tamaño y giro.') {
+function useManual(text = 'Manual · Selecciona un pie y arrastra para colocarlo.') {
   manual = true;
   manualControls.style.display = 'block';
-  modeButton.textContent = 'Activar tracking automático (experimental)';
+  modeButton.textContent = 'Activar tracking (experimental)';
   modeButton.setAttribute('aria-pressed', 'false');
   placeManual();
   message(text);
@@ -152,6 +152,13 @@ function syncControls() {
   document.querySelector('#positionY').value = shoe.position.y / innerHeight * 100;
 }
 document.querySelector('#selected').addEventListener('change', e => { selected = +e.target.value; syncControls(); });
+document.querySelector('#flip').addEventListener('click', () => {
+  if (!manual) return;
+  const pivot = shoes[selected].children[0];
+  const offset = pivot.rotation.x - Math.PI/2;
+  pivot.rotation.x = Math.PI/2 + (offset > 0 ? offset - Math.PI : offset + Math.PI);
+  syncControls();
+});
 for (const [id, apply] of [
   ['scale', (shoe, v) => shoe.scale.setScalar(baseSize()*v)],
   ['rotation', (shoe, v) => { shoe.rotation.z = Math.PI + v*Math.PI/180; }],
@@ -195,11 +202,15 @@ canvas.addEventListener('lostpointercapture', endDrag);
 try {
   const config = await fetch('./config.json').then(r => { if (!r.ok) throw Error(); return r.json(); });
   renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  // Compress bright highlights instead of clipping all white surfaces to white.
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = .85;
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5));
   scene = new THREE.Scene(); camera = new THREE.OrthographicCamera(-1,1,1,-1,.1,1000);
   camera.position.z = 500;
-  scene.add(new THREE.HemisphereLight(0xffffff, 0x777777, 2.5));
-  const light = new THREE.DirectionalLight(0xffffff, 2); light.position.set(-1,2,4); scene.add(light);
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x353541, .8));
+  const light = new THREE.DirectionalLight(0xfff5e8, 2); light.position.set(-3,4,2); scene.add(light);
   const gltf = await new GLTFLoader().loadAsync(config.modelUrl);
   if (stopped) throw Error();
   const box = new THREE.Box3().setFromObject(gltf.scene), size = box.getSize(new THREE.Vector3());

@@ -21,6 +21,12 @@ tamaño, giro e inclinación afectan únicamente a la zapatilla seleccionada.
 El arrastre conserva el punto de agarre. «Congelar cámara» pausa la imagen
 local para facilitar el ajuste; «Reanudar cámara» recupera la imagen en vivo.
 «Recentrar ambas» recupera los modelos si quedan fuera de la zona visible.
+«Voltear modelo» gira 180° únicamente la zapatilla seleccionada cuando el GLB
+está orientado al revés y muestra la suela. La inclinación admite una vuelta
+completa. Posición e inclinación están en un panel desplegable para mantener
+tamaño y giro accesibles. La iluminación usa mapeo tonal ACES y menor luz
+ambiental para conservar el relieve de superficies blancas; esto no agrega
+texturas que falten en el archivo original.
 El botón «Activar tracking automático (experimental)» permite intentar la detección:
 usar la cámara trasera y encuadrar los pies, tobillos y parte de las piernas.
 MediaPipe Pose estima tobillo, talón y punta; no es un detector especializado

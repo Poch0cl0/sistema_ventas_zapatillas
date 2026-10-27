@@ -14,8 +14,9 @@ test('camera shows both models immediately and restores manual mode after tracki
     });
     return elements.get(selector);
   };
-  let frame, renderedScene;
+  let frame, renderedScene, renderer;
   class Renderer {
+    constructor() { renderer = this; }
     setSize() {} setPixelRatio() {} dispose() {}
     render(scene) { renderedScene = scene; }
   }
@@ -50,7 +51,15 @@ test('camera shows both models immediately and restores manual mode after tracki
   assert.ok(Math.abs(bounds.getSize(new THREE.Vector3()).y - shoes[0].scale.x) < .001);
   assert.ok(bounds.getCenter(new THREE.Vector3()).distanceTo(shoes[0].position) < .001);
   assert.equal(element('#manualControls').style.display, 'block');
-  assert.match(element('#status').textContent, /Modo manual/);
+  assert.match(element('#status').textContent, /Manual/);
+  assert.equal(renderer.toneMapping, THREE.ACESFilmicToneMapping);
+  assert.equal(renderer.toneMappingExposure, .85);
+  const initialTilt = shoes[0].children[0].rotation.x;
+  element('#flip').events.click();
+  assert.ok(Math.abs(shoes[0].children[0].rotation.x - initialTilt - Math.PI) < .001);
+  assert.equal(shoes[1].children[0].rotation.x, initialTilt);
+  element('#flip').events.click();
+  assert.equal(shoes[0].children[0].rotation.x, initialTilt);
   const rightScale = shoes[1].scale.x;
   element('#scale').events.input({ target: { value: '1.5' } });
   assert.equal(shoes[0].scale.x, rightScale * 1.5);
