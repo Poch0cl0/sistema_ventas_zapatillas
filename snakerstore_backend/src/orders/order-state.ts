@@ -110,6 +110,7 @@ export function orderView(id: string, data: DocumentData) {
     reservationState: data.reservationState,
     reservationExpiresAt: iso(data.reservationExpiresAt),
     createdAt: iso(data.createdAt),
+    approvedAt: iso(data.approvedAt),
     currentPaymentId: data.currentPaymentId ?? null,
     cancellationReason: data.cancellationReason ?? null,
     isSimulation: data.isSimulation === true,

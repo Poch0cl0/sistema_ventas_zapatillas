@@ -45,9 +45,10 @@ import {
   Roles,
 } from '../common/decorators/auth.decorators.js';
 import type { UserProfile } from '../common/auth.types.js';
-import { DocumentIdDto, PaginationDto } from '../common/dto/pagination.dto.js';
+import { DocumentIdDto } from '../common/dto/pagination.dto.js';
 import { CreateProductDto, UpdateProductDto } from './dto/product.dto.js';
 import { ProductsService } from './products.service.js';
+import { CatalogQueryDto } from './dto/catalog-query.dto.js';
 
 @ApiTags('Catálogo público')
 @ApiBadRequestResponse({ description: 'Parámetros inválidos.' })
@@ -60,7 +61,7 @@ export class ProductsController {
   @Get()
   @ApiOkResponse({ type: ProductPageDto })
   @ApiOperation({ summary: 'Listar productos activos; paginación por ID' })
-  list(@Query() pagination: PaginationDto) {
+  list(@Query() pagination: CatalogQueryDto) {
     return this.products.list(pagination);
   }
   @Get(':id')
@@ -99,7 +100,7 @@ export class AdminProductsController {
   @Get()
   @ApiOkResponse({ type: ProductPageDto })
   @ApiOperation({ summary: 'Listar productos activos e inactivos' })
-  list(@Query() pagination: PaginationDto) {
+  list(@Query() pagination: CatalogQueryDto) {
     return this.products.list(pagination, false);
   }
   @Get(':id')

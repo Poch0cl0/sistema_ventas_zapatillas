@@ -6,6 +6,8 @@ export const DEFAULT_PRODUCTS = [
   {
     id: 'demo-sport-night',
     bundledModel: 'sport_night',
+    gender: 'UNISEX',
+    colors: ['AZUL', 'VERDE'],
     name: 'Sport Night',
     category: 'Deportivo',
     priceCents: 22900,
@@ -15,6 +17,8 @@ export const DEFAULT_PRODUCTS = [
   {
     id: 'demo-urban-sand',
     bundledModel: 'urban_sand',
+    gender: 'UNISEX',
+    colors: ['BEIGE', 'NARANJA'],
     name: 'Urban Sand',
     category: 'Urbano',
     priceCents: 19900,

@@ -1,6 +1,10 @@
 import { Module } from '@nestjs/common';
 import { ReceiptsService } from '../receipts/receipts.service.js';
 import {
+  DemoGatewayController,
+  DemoGatewayService,
+} from '../payments/demo-gateway.js';
+import {
   CheckoutOptionsController,
   SimulationController,
 } from './simulation.controller.js';
@@ -25,6 +29,7 @@ import {
     AdminPaymentsController,
     CheckoutOptionsController,
     SimulationController,
+    DemoGatewayController,
   ],
   providers: [
     OrdersRepository,
@@ -32,6 +37,7 @@ import {
     ReservationsRepository,
     PaymentsRepository,
     ReceiptsService,
+    DemoGatewayService,
   ],
 })
 export class OrdersModule {}

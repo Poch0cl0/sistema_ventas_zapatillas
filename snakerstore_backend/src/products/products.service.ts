@@ -1,14 +1,14 @@
 import { BadRequestException, Inject, Injectable } from '@nestjs/common';
 import { ProductsRepository } from './products.repository.js';
-import type { PaginationDto } from '../common/dto/pagination.dto.js';
 import type { CreateProductDto, UpdateProductDto } from './dto/product.dto.js';
+import type { CatalogQueryDto } from './dto/catalog-query.dto.js';
 
 @Injectable()
 export class ProductsService {
   constructor(
     @Inject(ProductsRepository) private readonly repository: ProductsRepository,
   ) {}
-  list(pagination: PaginationDto, onlyActive = true) {
+  list(pagination: CatalogQueryDto, onlyActive = true) {
     return this.repository.list(pagination, onlyActive);
   }
   find(id: string, onlyActive = true) {

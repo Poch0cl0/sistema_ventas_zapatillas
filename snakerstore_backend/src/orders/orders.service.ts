@@ -6,7 +6,7 @@ import type {
   FulfillmentStatus,
   OrderItemDto,
 } from './dto/order.dto.js';
-import type { PaginationDto } from '../common/dto/pagination.dto.js';
+import type { OrderQueryDto } from './dto/order-query.dto.js';
 
 @Injectable()
 export class OrdersService {
@@ -54,16 +54,23 @@ export class OrdersService {
       ...(input.delivery.type === DeliveryType.DELIVERY
         ? {
             zoneId: input.delivery.zoneId,
-            address: input.delivery.address ?? `Punto de entrega: ${input.delivery.clientLat}, ${input.delivery.clientLon}`,
-            ...(input.delivery.clientLat !== undefined && input.delivery.clientLon !== undefined
-              ? { clientLat: input.delivery.clientLat, clientLon: input.delivery.clientLon } : {}),
+            address:
+              input.delivery.address ??
+              `Punto de entrega: ${input.delivery.clientLat}, ${input.delivery.clientLon}`,
+            ...(input.delivery.clientLat !== undefined &&
+            input.delivery.clientLon !== undefined
+              ? {
+                  clientLat: input.delivery.clientLat,
+                  clientLon: input.delivery.clientLon,
+                }
+              : {}),
             reference: input.delivery.reference ?? undefined,
           }
         : {}),
     };
     return this.repository.create({ items, delivery }, uid, key);
   }
-  list(pagination: PaginationDto, uid?: string) {
+  list(pagination: OrderQueryDto, uid?: string) {
     return this.repository.list(pagination, uid);
   }
   find(id: string, uid?: string) {

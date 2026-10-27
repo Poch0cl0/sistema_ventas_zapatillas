@@ -7,12 +7,10 @@ import '../../core/store_design.dart';
 import '../../core/network/app_failure.dart';
 import '../admin/store_read_repository.dart';
 import 'store_repository.dart';
+import 'demo_checkout_screen.dart';
 import 'receipt_screen.dart';
 
-final checkoutOptionsProvider = FutureProvider.autoDispose<Json>(
-  (ref) =>
-      ref.watch(storeRepositoryProvider).get('/checkout-options', public: true),
-);
+export 'store_repository.dart' show checkoutOptionsProvider;
 
 class SimulationPaymentScreen extends ConsumerStatefulWidget {
   const SimulationPaymentScreen({super.key, required this.id});
@@ -105,6 +103,7 @@ class _SimulationState extends ConsumerState<SimulationPaymentScreen> {
                 ),
               ),
               if (available || skipped) ...[
+                if (available) DemoCheckoutButton(orderId: widget.id),
                 FilledButton.icon(
                   onPressed: busy ? null : () => complete('PAY'),
                   style: accentButton,

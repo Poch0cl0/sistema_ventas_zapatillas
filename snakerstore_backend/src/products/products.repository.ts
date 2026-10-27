@@ -8,15 +8,18 @@ import type {
   ProductImage,
   ProductModel,
 } from '../cloudinary/cloudinary.service.js';
-import { FieldValue } from 'firebase-admin/firestore';
-import type { Firestore } from 'firebase-admin/firestore';
+import { FieldValue, FieldPath } from 'firebase-admin/firestore';
+import type {
+  Firestore,
+  QueryDocumentSnapshot,
+} from 'firebase-admin/firestore';
 import { FIREBASE_FIRESTORE } from '../firebase/firebase.providers.js';
-import type { PaginationDto } from '../common/dto/pagination.dto.js';
 import { firestorePage, publicProduct } from '../common/firestore-page.js';
 import type { CreateProductDto, UpdateProductDto } from './dto/product.dto.js';
+import type { CatalogQueryDto } from './dto/catalog-query.dto.js';
 
 function productFields(input: UpdateProductDto) {
-  const data: Record<string, string | number | boolean> = {};
+  const data: Record<string, string | number | boolean | string[]> = {};
   for (const key of [
     'name',
     'description',
@@ -25,6 +28,8 @@ function productFields(input: UpdateProductDto) {
     'brand',
     'active',
     'tryOnEnabled',
+    'gender',
+    'colors',
   ] as const) {
     if (input[key] !== undefined) data[key] = input[key];
   }
@@ -37,12 +42,39 @@ export class ProductsRepository {
     @Inject(FIREBASE_FIRESTORE) private readonly firestore: Firestore,
   ) {}
 
-  async list(pagination: PaginationDto, onlyActive: boolean) {
+  async list(pagination: CatalogQueryDto, onlyActive: boolean) {
     const collection = this.firestore.collection('products');
-    const result = await firestorePage(
-      onlyActive ? collection.where('active', '==', true) : collection,
-      pagination,
-    );
+    if (pagination.gender && onlyActive) {
+      // A single-field query works with Firestore's default indexes. Fill the
+      // public page with active matches before deciding its continuation cursor.
+      const base = collection
+        .where('gender', '==', pagination.gender)
+        .orderBy(FieldPath.documentId());
+      const matches: QueryDocumentSnapshot[] = [];
+      let after = pagination.after;
+      while (matches.length <= pagination.limit) {
+        const batch = await (after ? base.startAfter(after) : base)
+          .limit(100)
+          .get();
+        for (const doc of batch.docs) {
+          if (doc.data().active === true) matches.push(doc);
+          if (matches.length > pagination.limit) break;
+        }
+        if (batch.docs.length < 100 || matches.length > pagination.limit) break;
+        after = batch.docs.at(-1)!.id;
+      }
+      const docs = matches.slice(0, pagination.limit);
+      return {
+        items: docs.map((doc) => publicProduct(doc.id, doc.data())),
+        nextCursor: matches.length > pagination.limit ? docs.at(-1)!.id : null,
+      };
+    }
+    let query = onlyActive
+      ? collection.where('active', '==', true)
+      : collection;
+    if (pagination.gender)
+      query = query.where('gender', '==', pagination.gender);
+    const result = await firestorePage(query, pagination);
     return {
       items: result.docs.map((doc) => publicProduct(doc.id, doc.data())),
       nextCursor: result.nextCursor,

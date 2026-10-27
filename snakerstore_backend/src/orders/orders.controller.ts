@@ -26,6 +26,7 @@ import type { UserProfile } from '../common/auth.types.js';
 import { DocumentIdDto, PaginationDto } from '../common/dto/pagination.dto.js';
 import { CreateOrderDto, FulfillmentDto } from './dto/order.dto.js';
 import { OrdersService } from './orders.service.js';
+import { OrderQueryDto } from './dto/order-query.dto.js';
 import { ReservationsRepository } from './reservations.repository.js';
 import { ApiCreatedResponse, ApiOkResponse } from '@nestjs/swagger';
 import {
@@ -119,7 +120,7 @@ export class AdminOrdersController {
   @ApiOkResponse({ type: OrderPageDto })
   @Header('Cache-Control', 'no-store')
   @ApiOperation({ summary: 'Listar todos los pedidos online' })
-  list(@Query() pagination: PaginationDto) {
+  list(@Query() pagination: OrderQueryDto) {
     return this.orders.list(pagination);
   }
   @Post('expire')

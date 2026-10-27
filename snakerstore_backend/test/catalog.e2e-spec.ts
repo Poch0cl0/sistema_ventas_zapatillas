@@ -1,4 +1,6 @@
 import { Test } from '@nestjs/testing';
+import { DemoGatewayService } from '../src/payments/demo-gateway.js';
+import { OrdersRepository } from '../src/orders/orders.repository.js';
 import { DefaultProductsService } from '../src/products/default-products.js';
 import type { INestApplication } from '@nestjs/common';
 import {
@@ -40,6 +42,8 @@ describe('Catálogo, inventario, validación y Swagger (HTTP)', () => {
     create: vi.fn(),
     update: vi.fn(),
   };
+  const demoGateway = { checkout: vi.fn(), find: vi.fn(), confirm: vi.fn() };
+  const orders = { list: vi.fn() };
   const inventory = {
     list: vi.fn(),
     create: vi.fn(),
@@ -70,6 +74,10 @@ describe('Catálogo, inventario, validación y Swagger (HTTP)', () => {
       })
       .overrideProvider(ProductsRepository)
       .useValue(products)
+      .overrideProvider(DemoGatewayService)
+      .useValue(demoGateway)
+      .overrideProvider(OrdersRepository)
+      .useValue(orders)
       .overrideProvider(InventoryRepository)
       .useValue(inventory)
       .compile();
@@ -281,5 +289,91 @@ describe('Catálogo, inventario, validación y Swagger (HTTP)', () => {
       .get('/products')
       .expect(500);
     expect(JSON.stringify(response.body)).not.toContain('SECRET_DETAILS');
+  });
+  it('filtra catálogo por género a través de HTTP', async () => {
+    await request(app.getHttpServer())
+      .get('/products?gender=MUJER&limit=2')
+      .expect(200);
+    expect(products.list).toHaveBeenCalledWith(
+      expect.objectContaining({ gender: 'MUJER', limit: 2 }),
+      true,
+    );
+    await request(app.getHttpServer())
+      .get('/products?gender=DESCONOCIDO')
+      .expect(400);
+  });
+  it('el filtro HTTP de fechas exige administrador y llega al repositorio', async () => {
+    await request(app.getHttpServer())
+      .get('/admin/orders?from=2026-10-01')
+      .expect(401);
+    await request(app.getHttpServer())
+      .get('/admin/orders?from=2026-10-01')
+      .set('Authorization', 'Bearer client')
+      .expect(403);
+    await request(app.getHttpServer())
+      .get('/admin/orders?from=invalida')
+      .set('Authorization', 'Bearer admin')
+      .expect(400);
+    orders.list.mockResolvedValueOnce({ items: [], nextCursor: null });
+    await request(app.getHttpServer())
+      .get('/admin/orders?from=2026-10-01&to=2026-10-27&after=previous')
+      .set('Authorization', 'Bearer admin')
+      .expect(200);
+    expect(orders.list).toHaveBeenCalledWith(
+      expect.objectContaining({
+        from: '2026-10-01',
+        to: '2026-10-27',
+        after: 'previous',
+      }),
+      undefined,
+    );
+  });
+  it('registra género y varios colores en el artículo', async () => {
+    await request(app.getHttpServer())
+      .post('/admin/products')
+      .set('Authorization', 'Bearer admin')
+      .send({ ...product, gender: 'HOMBRE', colors: ['NEGRO', 'BLANCO'] })
+      .expect(201);
+    expect(products.create).toHaveBeenCalledWith(
+      expect.objectContaining({
+        gender: 'HOMBRE',
+        colors: ['NEGRO', 'BLANCO'],
+      }),
+      'admin',
+    );
+  });
+  it('el checkout demo exige cliente autenticado y no admite importes ni tarjetas enviados por el cliente', async () => {
+    await request(app.getHttpServer())
+      .post('/orders/product1/demo-checkout')
+      .expect(401);
+    await request(app.getHttpServer())
+      .post('/orders/product1/demo-checkout')
+      .set('Authorization', 'Bearer admin')
+      .expect(403);
+    await request(app.getHttpServer())
+      .post('/demo-checkouts/checkout1/confirm')
+      .set('Authorization', 'Bearer client')
+      .send({ scenario: 'APPROVED', amountCents: 1 })
+      .expect(400);
+    await request(app.getHttpServer())
+      .post('/demo-checkouts/checkout1/confirm')
+      .set('Authorization', 'Bearer client')
+      .send({ scenario: 'APPROVED', cardNumber: '4242424242424242' })
+      .expect(400);
+    expect(demoGateway.confirm).not.toHaveBeenCalled();
+    demoGateway.confirm.mockResolvedValueOnce({
+      testMode: true,
+      status: 'APPROVED',
+    });
+    await request(app.getHttpServer())
+      .post('/demo-checkouts/checkout1/confirm')
+      .set('Authorization', 'Bearer client')
+      .send({ scenario: 'APPROVED' })
+      .expect(201);
+    expect(demoGateway.confirm).toHaveBeenCalledWith(
+      'checkout1',
+      'APPROVED',
+      'client',
+    );
   });
 });

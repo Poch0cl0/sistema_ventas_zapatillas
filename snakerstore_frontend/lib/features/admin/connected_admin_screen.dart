@@ -10,6 +10,7 @@ import '../catalog/catalog_repository.dart';
 import '../store/store_repository.dart';
 import '../store/commerce_screens.dart';
 import 'store_read_repository.dart';
+import 'sales_chart.dart';
 
 class ConnectedAdminScreen extends ConsumerWidget {
   const ConnectedAdminScreen({super.key});
@@ -50,7 +51,11 @@ class ConnectedAdminScreen extends ConsumerWidget {
               .where((s) => (s['available'] as int) <= 2)
               .toList();
           final paid = data.orders
-              .where((o) => o['paymentStatus'] == 'APROBADO')
+              .where(
+                (o) =>
+                    o['paymentStatus'] == 'APROBADO' &&
+                    o['isSimulation'] != true,
+              )
               .fold<int>(0, (sum, o) => sum + (o['totalCents'] as int));
           final names = {for (final p in data.products) p['id']: p['name']};
           return ListView(
@@ -125,6 +130,12 @@ class ConnectedAdminScreen extends ConsumerWidget {
               const Text(
                 'Resumen de los registros actuales. Ventas: todos los pedidos con pago aprobado.',
                 style: TextStyle(fontSize: 10, color: muted),
+              ),
+              const SizedBox(height: 24),
+              SurfaceSection(
+                title: 'Gráfico de ventas',
+                icon: Icons.bar_chart,
+                child: SalesChart(data.orders),
               ),
               const SizedBox(height: 24),
               SurfaceSection(
@@ -317,6 +328,25 @@ class _RecordsState extends ConsumerState<ConnectedRecordsScreen> {
   final cursors = <String?>[null];
   bool busy = false;
   String search = '', filter = 'Todos';
+  DateTimeRange? dates;
+  Future<void> selectDates() async {
+    final result = await showDateRangePicker(
+      context: context,
+      firstDate: DateTime(2020),
+      lastDate: DateTime.now().add(const Duration(days: 1)),
+      initialDateRange: dates,
+      helpText: 'Filtrar pedidos por fecha de creación',
+    );
+    if (result != null && mounted) {
+      setState(() {
+        dates = result;
+        cursors
+          ..clear()
+          ..add(null);
+      });
+    }
+  }
+
   bool get orders => widget.path.endsWith('orders');
   bool get zones => widget.path.endsWith('delivery-zones');
   Future<void> expire() async {
@@ -460,7 +490,12 @@ class _RecordsState extends ConsumerState<ConnectedRecordsScreen> {
         ),
       );
     }
-    final query = (path: widget.path, after: cursors.last);
+    String day(DateTime value) =>
+        '${value.year}-${value.month.toString().padLeft(2, '0')}-${value.day.toString().padLeft(2, '0')}';
+    final datedPath = orders && !widget.client && dates != null
+        ? '${widget.path}?from=${day(dates!.start)}&to=${day(dates!.end)}'
+        : widget.path;
+    final query = (path: datedPath, after: cursors.last);
     final page = ref.watch(storePageProvider(query));
     return KineticScaffold(
       appBar: StoreAppBar(
@@ -546,6 +581,32 @@ class _RecordsState extends ConsumerState<ConnectedRecordsScreen> {
                 ),
               ),
               const SizedBox(height: 14),
+              if (orders && !widget.client) ...[
+                OutlinedButton.icon(
+                  onPressed: selectDates,
+                  icon: const Icon(Icons.date_range),
+                  label: Text(
+                    dates == null
+                        ? 'Filtrar por fecha o rango'
+                        : '${day(dates!.start)} al ${day(dates!.end)}',
+                  ),
+                ),
+                if (dates != null)
+                  TextButton(
+                    onPressed: () => setState(() {
+                      dates = null;
+                      cursors
+                        ..clear()
+                        ..add(null);
+                    }),
+                    child: const Text('Quitar filtro de fechas'),
+                  ),
+                const Text(
+                  'Fechas de creación de pedidos, zona horaria de Perú.',
+                  style: TextStyle(fontSize: 11, color: muted),
+                ),
+                const SizedBox(height: 14),
+              ],
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(

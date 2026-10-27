@@ -10,6 +10,7 @@ import '../../core/store_design.dart';
 import '../../core/network/app_failure.dart';
 import '../catalog/catalog_repository.dart';
 import '../catalog/product_model_view.dart';
+import '../catalog/product_attributes.dart';
 import '../admin/store_read_repository.dart';
 import 'commerce_screens.dart';
 import 'store_repository.dart';
@@ -40,6 +41,8 @@ class _EditorState extends ConsumerState<ManagementEditor> {
   String? modelUrl;
   String? bundledModel;
   bool tryOnEnabled = false;
+  String gender = 'SIN_ESPECIFICAR';
+  final colors = <String>{};
   String? productId;
   bool active = true, busy = false;
   String? savedId;
@@ -86,6 +89,8 @@ class _EditorState extends ConsumerState<ManagementEditor> {
       modelUrl = product.modelUrl;
       bundledModel = product.bundledModel;
       tryOnEnabled = product.tryOnEnabled;
+      gender = product.gender;
+      colors.addAll(product.colors);
       images = (current['images'] as List)
           .map((e) => e['secure_url'] as String)
           .toList();
@@ -204,6 +209,8 @@ class _EditorState extends ConsumerState<ManagementEditor> {
             'priceCents': cents(),
             'active': active,
             'tryOnEnabled': tryOnEnabled,
+            'gender': gender,
+            'colors': colors.toList(),
           };
         case ManagementKind.zone:
           path = '/admin/delivery-zones';
@@ -439,6 +446,52 @@ class _EditorState extends ConsumerState<ManagementEditor> {
                         input('brand', 'Marca', max: 80),
                         input('category', 'Categoría', max: 80),
                         input('description', 'Descripción', max: 2000),
+                        DropdownButtonFormField<String>(
+                          initialValue: gender,
+                          decoration: const InputDecoration(
+                            labelText: 'Género',
+                          ),
+                          items: [
+                            for (final item in productGenders.entries)
+                              DropdownMenuItem(
+                                value: item.key,
+                                child: Text(item.value),
+                              ),
+                          ],
+                          onChanged: busy
+                              ? null
+                              : (value) => setState(() => gender = value!),
+                        ),
+                        const Text('Colores del producto'),
+                        Wrap(
+                          spacing: 8,
+                          runSpacing: 8,
+                          children: [
+                            for (final item in productColors.entries)
+                              FilterChip(
+                                label: Text(item.value.$1),
+                                avatar: Container(
+                                  width: 16,
+                                  height: 16,
+                                  decoration: BoxDecoration(
+                                    color: item.value.$2,
+                                    shape: BoxShape.circle,
+                                    border: Border.all(color: Colors.black26),
+                                  ),
+                                ),
+                                selected: colors.contains(item.key),
+                                onSelected: busy
+                                    ? null
+                                    : (selected) => setState(() {
+                                        if (selected) {
+                                          colors.add(item.key);
+                                        } else {
+                                          colors.remove(item.key);
+                                        }
+                                      }),
+                              ),
+                          ],
+                        ),
                       ],
                       input(
                         'amount',

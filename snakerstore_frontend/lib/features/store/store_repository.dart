@@ -64,6 +64,10 @@ class StoreRepository {
 final storeRepositoryProvider = Provider(
   (ref) => StoreRepository(ref.watch(apiClientProvider)),
 );
+final checkoutOptionsProvider = FutureProvider.autoDispose<Json>(
+  (ref) =>
+      ref.watch(storeRepositoryProvider).get('/checkout-options', public: true),
+);
 final availabilityProvider = FutureProvider.autoDispose
     .family<List<Json>, String>(
       (ref, id) => ref.watch(storeRepositoryProvider).availability(id),

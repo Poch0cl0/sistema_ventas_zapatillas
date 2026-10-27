@@ -53,9 +53,10 @@ class StoreReadRepository {
   StoreReadRepository(this.api);
   final Dio api;
   Future<ApiPage<StoreEntry>> list(String path, String? after) async {
+    final uri = Uri.parse(path);
     final response = await api.get<Map<String, dynamic>>(
-      path,
-      queryParameters: {'limit': 20, 'after': ?after},
+      uri.path,
+      queryParameters: {...uri.queryParameters, 'limit': 20, 'after': ?after},
     );
     return ApiPage.fromJson(
       response.data!,

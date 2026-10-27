@@ -4,12 +4,13 @@ import {
   Injectable,
   NotFoundException,
   Optional,
+  BadRequestException,
 } from '@nestjs/common';
-import { FieldValue, Timestamp } from 'firebase-admin/firestore';
+import { FieldValue, Timestamp, FieldPath } from 'firebase-admin/firestore';
+import { OrderQueryDto, dateBounds } from './dto/order-query.dto.js';
 import type { DocumentData, Firestore } from 'firebase-admin/firestore';
 import { createHash } from 'node:crypto';
 import { FIREBASE_FIRESTORE } from '../firebase/firebase.providers.js';
-import type { PaginationDto } from '../common/dto/pagination.dto.js';
 import { firestorePage } from '../common/firestore-page.js';
 import {
   orderView,
@@ -198,8 +199,35 @@ export class OrdersRepository {
     });
   }
 
-  async list(pagination: PaginationDto, uid?: string) {
+  async list(pagination: OrderQueryDto, uid?: string) {
     const collection = this.firestore.collection('orders');
+    const bounds = dateBounds(pagination);
+    if (pagination.from || pagination.to) {
+      let query = uid ? collection.where('userId', '==', uid) : collection;
+      if (bounds.from !== undefined)
+        query = query.where(
+          'createdAt',
+          '>=',
+          Timestamp.fromMillis(bounds.from),
+        );
+      if (bounds.to !== undefined)
+        query = query.where('createdAt', '<', Timestamp.fromMillis(bounds.to));
+      let ordered = query
+        .orderBy('createdAt', 'desc')
+        .orderBy(FieldPath.documentId(), 'desc');
+      if (pagination.after) {
+        const cursor = await collection.doc(pagination.after).get();
+        if (!cursor.exists)
+          throw new BadRequestException('Cursor de pedidos inválido.');
+        ordered = ordered.startAfter(cursor);
+      }
+      const snapshot = await ordered.limit(pagination.limit + 1).get();
+      const docs = snapshot.docs.slice(0, pagination.limit);
+      return {
+        items: docs.map((doc) => orderView(doc.id, doc.data())),
+        nextCursor: snapshot.size > pagination.limit ? docs.at(-1)!.id : null,
+      };
+    }
     const result = await firestorePage(
       uid ? collection.where('userId', '==', uid) : collection,
       pagination,

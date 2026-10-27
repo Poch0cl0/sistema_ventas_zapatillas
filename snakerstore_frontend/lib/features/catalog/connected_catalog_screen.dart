@@ -10,6 +10,7 @@ import '../store/commerce_screens.dart';
 import 'catalog_repository.dart';
 import 'product_visual.dart';
 import 'product_model_view.dart';
+import 'product_attributes.dart';
 export 'product_visual.dart';
 
 class ConnectedCatalogScreen extends ConsumerStatefulWidget {
@@ -26,6 +27,7 @@ class ConnectedCatalogScreen extends ConsumerStatefulWidget {
 class _CatalogState extends ConsumerState<ConnectedCatalogScreen> {
   final search = TextEditingController();
   String query = '', category = '', brand = '';
+  String gender = '';
   final cursors = <String?>[null];
   @override
   void dispose() {
@@ -37,12 +39,16 @@ class _CatalogState extends ConsumerState<ConnectedCatalogScreen> {
     query = '';
     category = '';
     brand = '';
+    gender = '';
+    cursors
+      ..clear()
+      ..add(null);
     search.clear();
   }
 
   @override
   Widget build(BuildContext context) {
-    final request = (admin: widget.admin, after: cursors.last);
+    final request = (admin: widget.admin, after: cursors.last, gender: gender);
     final page = ref.watch(catalogPageProvider(request));
     final profile = ref.watch(sessionProvider).profile;
     return KineticScaffold(
@@ -150,6 +156,30 @@ class _CatalogState extends ConsumerState<ConnectedCatalogScreen> {
                   ),
                 ),
                 const SizedBox(height: 18),
+                Wrap(
+                  spacing: 8,
+                  runSpacing: 8,
+                  children: [
+                    for (final value in ['', 'HOMBRE', 'MUJER', 'UNISEX'])
+                      ChoiceChip(
+                        label: Text(
+                          value.isEmpty
+                              ? 'Todos los géneros'
+                              : productGenders[value]!,
+                        ),
+                        selected: gender == value,
+                        onSelected: (_) => setState(() {
+                          gender = value;
+                          category = '';
+                          brand = '';
+                          cursors
+                            ..clear()
+                            ..add(null);
+                        }),
+                      ),
+                  ],
+                ),
+                const SizedBox(height: 18),
                 if (!widget.admin &&
                     data.items.isNotEmpty &&
                     cursors.length == 1) ...[
@@ -237,7 +267,8 @@ class _CatalogState extends ConsumerState<ConnectedCatalogScreen> {
                     ),
                     if (query.isNotEmpty ||
                         category.isNotEmpty ||
-                        brand.isNotEmpty)
+                        brand.isNotEmpty ||
+                        gender.isNotEmpty)
                       TextButton(
                         onPressed: () => setState(resetFilters),
                         child: const Text(
@@ -739,6 +770,15 @@ class ConnectedProductScreen extends ConsumerWidget {
                 ),
                 const SizedBox(height: 8),
                 Text(p.category, style: const TextStyle(color: muted)),
+                const SizedBox(height: 8),
+                Text(
+                  productGenders[p.gender] ?? 'Sin especificar',
+                  style: const TextStyle(color: muted),
+                ),
+                if (p.colors.isNotEmpty) ...[
+                  const SizedBox(height: 12),
+                  ProductColorLabels(p.colors),
+                ],
                 const SizedBox(height: 12),
                 Text(
                   money(p.priceCents),

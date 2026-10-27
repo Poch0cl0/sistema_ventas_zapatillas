@@ -23,6 +23,8 @@ export function publicProduct(id: string, data: DocumentData) {
     category: data.category,
     brand: data.brand,
     active: data.active,
+    gender: data.gender ?? 'SIN_ESPECIFICAR',
+    colors: Array.isArray(data.colors) ? data.colors : [],
     bundledModel: ['urban_sand', 'sport_night'].includes(data.bundledModel)
       ? data.bundledModel
       : null,

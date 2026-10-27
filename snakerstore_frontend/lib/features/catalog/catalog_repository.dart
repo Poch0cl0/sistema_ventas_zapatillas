@@ -19,6 +19,8 @@ class CatalogProduct {
     this.modelUrl,
     this.tryOnEnabled = false,
     this.bundledModel,
+    this.gender = 'SIN_ESPECIFICAR',
+    this.colors = const [],
   });
   final String id, name, brand, category, description;
   final int priceCents;
@@ -26,6 +28,8 @@ class CatalogProduct {
   final List<String> images;
   final String? modelUrl;
   final String? bundledModel;
+  final String gender;
+  final List<String> colors;
   final bool tryOnEnabled;
   bool get canTryOn => tryOnEnabled && modelUrl != null;
   factory CatalogProduct.fromJson(Map<String, dynamic> json) => CatalogProduct(
@@ -36,6 +40,10 @@ class CatalogProduct {
     description: json['description'] as String,
     priceCents: json['priceCents'] as int,
     active: json['active'] as bool,
+    gender: json['gender'] as String? ?? 'SIN_ESPECIFICAR',
+    colors: (json['colors'] as List<dynamic>? ?? [])
+        .whereType<String>()
+        .toList(),
     bundledModel: json['bundledModel'] as String?,
     tryOnEnabled: json['tryOnEnabled'] == true,
     modelUrl:
@@ -59,10 +67,15 @@ class CatalogRepository {
   Future<ApiPage<CatalogProduct>> list({
     bool admin = false,
     String? after,
+    String? gender,
   }) async {
     final response = await api.get<Map<String, dynamic>>(
       admin ? '/admin/products' : '/products',
-      queryParameters: {'limit': 20, 'after': ?after},
+      queryParameters: {
+        'limit': 20,
+        'after': ?after,
+        if (gender != null && gender.isNotEmpty) 'gender': gender,
+      },
       options: Options(extra: {'authenticated': admin}),
     );
     return ApiPage.fromJson(response.data!, CatalogProduct.fromJson);
@@ -80,15 +93,20 @@ class CatalogRepository {
 final catalogRepositoryProvider = Provider(
   (ref) => CatalogRepository(ref.watch(apiClientProvider)),
 );
-typedef CatalogQuery = ({bool admin, String? after});
+typedef CatalogQuery = ({bool admin, String? after, String gender});
 final catalogPageProvider = FutureProvider.autoDispose
     .family<ApiPage<CatalogProduct>, CatalogQuery>((ref, query) {
       if (query.admin && ref.watch(sessionProvider).profile?.isAdmin != true) {
         throw const AppFailure('Inicia sesión como administrador.');
       }
-      return ref
-          .watch(catalogRepositoryProvider)
-          .list(admin: query.admin, after: query.after);
+      final repository = ref.watch(catalogRepositoryProvider);
+      return query.gender.isEmpty
+          ? repository.list(admin: query.admin, after: query.after)
+          : repository.list(
+              admin: query.admin,
+              after: query.after,
+              gender: query.gender,
+            );
     });
 typedef ProductQuery = ({bool admin, String id});
 final catalogProductProvider = FutureProvider.autoDispose

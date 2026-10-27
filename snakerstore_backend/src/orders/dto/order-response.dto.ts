@@ -68,6 +68,8 @@ export class OrderResponseDto {
   reservationExpiresAt: string | null;
   @ApiProperty({ type: String, format: 'date-time', nullable: true })
   createdAt: string | null;
+  @ApiProperty({ type: String, format: 'date-time', nullable: true })
+  approvedAt: string | null;
   @ApiProperty({ type: String, nullable: true }) currentPaymentId:
     string | null;
   @ApiProperty({ type: String, nullable: true }) cancellationReason:

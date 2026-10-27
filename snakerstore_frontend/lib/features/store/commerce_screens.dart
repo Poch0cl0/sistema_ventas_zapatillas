@@ -15,6 +15,7 @@ import '../delivery/delivery_location_screen.dart';
 import '../admin/store_read_repository.dart';
 import 'receipt_screen.dart';
 import 'simulation_payment_screen.dart';
+import 'demo_checkout_screen.dart';
 
 void storeMessage(BuildContext context, Object error) =>
     ScaffoldMessenger.of(context)
@@ -454,6 +455,7 @@ class _CheckoutState extends ConsumerState<ConnectedCheckoutScreen> {
   DeliveryLocation? location;
   List<Json> loadedZones = [];
   bool simulationEnabled = false;
+  bool demoGatewayEnabled = false;
   Future<void> selectLocation() async {
     FocusScope.of(context).unfocus();
     final selectedZone = (updatedZones ?? loadedZones)
@@ -570,6 +572,7 @@ class _CheckoutState extends ConsumerState<ConnectedCheckoutScreen> {
     ]);
     loadedZones = values[1] as List<Json>;
     simulationEnabled = (values[2] as Json)['simulationEnabled'] == true;
+    demoGatewayEnabled = (values[2] as Json)['demoGatewayEnabled'] == true;
     return (values[0] as Json, values[1] as List<Json>);
   }
 
@@ -896,7 +899,9 @@ class _CheckoutState extends ConsumerState<ConnectedCheckoutScreen> {
                 InfoNote(
                   '${settings['publicNotes']}\nLa reserva dura 24 horas. Revisa el total definitivo del pedido antes de pagar.',
                 ),
-                if (methods.isEmpty && !simulationEnabled)
+                if (methods.isEmpty &&
+                    !simulationEnabled &&
+                    !demoGatewayEnabled)
                   const InfoNote(
                     'La tienda todavía no tiene métodos de pago habilitados.',
                   ),
@@ -905,7 +910,9 @@ class _CheckoutState extends ConsumerState<ConnectedCheckoutScreen> {
                       busy ||
                           loadingZones ||
                           cart.isEmpty ||
-                          (methods.isEmpty && !simulationEnabled) ||
+                          (methods.isEmpty &&
+                              !simulationEnabled &&
+                              !demoGatewayEnabled) ||
                           (type == 'DELIVERY' && zones.isEmpty)
                       ? null
                       : submit,
@@ -1091,7 +1098,7 @@ class _OrderState extends ConsumerState<ConnectedOrderScreen> {
                 const SurfaceSection(
                   tint: accentWash,
                   child: Text(
-                    'Consulta tu pedido y su comprobante desde esta pantalla.',
+                    'Pedido de prueba: no se ha cobrado dinero y no cuenta como venta real.',
                     style: TextStyle(fontSize: 12, height: 1.6),
                   ),
                 ),
@@ -1228,6 +1235,13 @@ class _OrderState extends ConsumerState<ConnectedOrderScreen> {
                   ]),
                 ),
               ),
+              if (!widget.admin && canPay && order['currentPaymentId'] == null)
+                DemoCheckoutButton(
+                  orderId: widget.id,
+                  onComplete: () {
+                    if (mounted) setState(() => data = load());
+                  },
+                ),
               if (!widget.admin && canSimulate)
                 FilledButton.icon(
                   onPressed: busy
@@ -1478,6 +1492,10 @@ class _PaymentState extends ConsumerState<ConnectedPaymentScreen> {
                   subtitle: 'Realiza la transferencia y envía la referencia para su verificación.',
                 ),
                 const CheckoutSteps(2),
+                if (value != null &&
+                    value['reservationState'] == 'ACTIVE' &&
+                    value['currentPaymentId'] == null)
+                  DemoCheckoutButton(orderId: widget.id),
                 order.when(
                   loading: () => const LinearProgressIndicator(),
                   error: (e, _) => Text(errorMessage(e)),

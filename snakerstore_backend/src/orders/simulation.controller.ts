@@ -20,6 +20,7 @@ import {
 import type { UserProfile } from '../common/auth.types.js';
 import { DocumentIdDto } from '../common/dto/pagination.dto.js';
 import { OrdersRepository } from './orders.repository.js';
+import { demoGatewayEnabled } from '../payments/demo-gateway.js';
 import { ReceiptsService } from '../receipts/receipts.service.js';
 
 enum SimulationAction {
@@ -42,6 +43,7 @@ export class CheckoutOptionsController {
     return {
       simulationEnabled:
         this.config.get<string>('CHECKOUT_SIMULATION_ENABLED') === 'true',
+      demoGatewayEnabled: demoGatewayEnabled(this.config),
     };
   }
 }
