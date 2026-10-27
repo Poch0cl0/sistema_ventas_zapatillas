@@ -7,14 +7,16 @@ const status = document.querySelector('#status'), start = document.querySelector
 const modeButton = document.querySelector('#mode'), manualControls = document.querySelector('#manualControls');
 let renderer, scene, camera, detector, stream, shoes = [], stopped = false, manual = false;
 let loadingDetector = false, lastVideoTime = -1, lastInference = 0;
-let manualScale = 1, manualRotation = 0, drag = null;
+let selected = 0, drag = null, frozen = false;
+const baseSize = () => Math.min(innerWidth * .55, innerHeight * .28);
 let lastFootSeen = 0;
 const message = text => { if (status.textContent !== text) status.textContent = text; };
 
 function useManual(text = 'Modo manual · Arrastra las zapatillas sobre tus pies y ajusta tamaño y giro.') {
   manual = true;
   manualControls.style.display = 'block';
-  modeButton.textContent = 'Probar seguimiento experimental';
+  modeButton.textContent = 'Activar tracking automático (experimental)';
+  modeButton.setAttribute('aria-pressed', 'false');
   placeManual();
   message(text);
 }
@@ -30,10 +32,14 @@ function resize() {
 function placeManual() {
   shoes.forEach((shoe, i) => {
     shoe.visible = true;
-    if (!shoe.userData.moved) shoe.position.set((i ? 1 : -1)*innerWidth*.19, 0, 0);
-    shoe.scale.setScalar(Math.min(innerWidth*.55, innerHeight*.35)*manualScale);
-    shoe.rotation.z = Math.PI + manualRotation;
+    if (!shoe.userData.placed) {
+      shoe.position.set((i ? 1 : -1)*innerWidth*.19, innerHeight*.18, 0);
+      shoe.scale.setScalar(baseSize());
+      shoe.rotation.z = Math.PI;
+      shoe.userData.placed = true;
+    }
   });
+  syncControls();
 }
 
 async function prepareDetector() {
@@ -66,12 +72,12 @@ function track(now) {
       shoes.forEach((shoe, i) => {
         const transform = pose && footTransform(pose, i ? [28,30,32] : [27,29,31],
           [video.videoWidth, video.videoHeight, innerWidth, innerHeight]);
-        if (!transform) { shoe.visible = false; return; }
+        if (!transform) return; // Keep the last placement available for manual correction.
         const blend = shoe.visible ? .4 : 1;
         shoe.position.lerp(new THREE.Vector3(transform.x-innerWidth/2, innerHeight/2-transform.y, 0), blend);
         shoe.rotation.z = smoothAngle(shoe.rotation.z, transform.angle, blend);
         shoe.scale.setScalar(THREE.MathUtils.lerp(shoe.scale.x, transform.length, blend));
-        shoe.visible = true; count++;
+        shoe.visible = true; shoe.userData.placed = true; count++;
       });
       if (count) lastFootSeen = now;
       message(count ? `${count === 2 ? 'Ambos pies detectados' : 'Un pie detectado'} · Mueve los pies despacio.`
@@ -98,7 +104,7 @@ function stop() {
 }
 window.stopTryOn = stop;
 window.addEventListener('pagehide', stop);
-document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); });
+document.addEventListener('visibilitychange', () => { if (document.hidden && stream) stop(); });
 
 start.addEventListener('click', async () => {
   start.disabled = true;
@@ -125,25 +131,66 @@ start.addEventListener('click', async () => {
 modeButton.addEventListener('click', () => {
   if (!manual) { useManual(); return; }
   manual = false;
-  shoes.forEach(s => { s.visible = false; s.userData.moved = false; });
+  if (frozen) { frozen = false; video.play().catch(() => useManual()); }
+  document.querySelector('#freeze').textContent = 'Congelar cámara';
   manualControls.style.display = 'none';
-  modeButton.textContent = 'Ajustar manualmente';
+  modeButton.textContent = 'Desactivar tracking · Ajustar a mano';
+  modeButton.setAttribute('aria-pressed', 'true');
   lastFootSeen = performance.now();
   message('Buscando postura · Encuadra también las piernas. Si no detecta, volverás al modo manual.');
   if (!detector) prepareDetector();
 });
-document.querySelector('#scale').addEventListener('input', e => { manualScale = +e.target.value; placeManual(); });
-document.querySelector('#rotation').addEventListener('input', e => { manualRotation = +e.target.value*Math.PI/180; placeManual(); });
-canvas.addEventListener('pointerdown', e => {
+function syncControls() {
+  const shoe = shoes[selected];
+  if (!shoe) return;
+  document.querySelector('#selected').value = String(selected);
+  document.querySelector('#scale').value = shoe.scale.x / baseSize();
+  const degrees = (shoe.rotation.z - Math.PI) * 180 / Math.PI;
+  document.querySelector('#rotation').value = ((degrees + 180) % 360 + 360) % 360 - 180;
+  document.querySelector('#tilt').value = (shoe.children[0].rotation.x - Math.PI/2) * 180 / Math.PI;
+  document.querySelector('#positionX').value = shoe.position.x / innerWidth * 100;
+  document.querySelector('#positionY').value = shoe.position.y / innerHeight * 100;
+}
+document.querySelector('#selected').addEventListener('change', e => { selected = +e.target.value; syncControls(); });
+for (const [id, apply] of [
+  ['scale', (shoe, v) => shoe.scale.setScalar(baseSize()*v)],
+  ['rotation', (shoe, v) => { shoe.rotation.z = Math.PI + v*Math.PI/180; }],
+  ['tilt', (shoe, v) => { shoe.children[0].rotation.x = Math.PI/2 + v*Math.PI/180; }],
+  ['positionX', (shoe, v) => { shoe.position.x = innerWidth*v/100; }],
+  ['positionY', (shoe, v) => { shoe.position.y = innerHeight*v/100; }],
+]) document.querySelector('#'+id).addEventListener('input', e => {
   if (!manual) return;
-  const p = new THREE.Vector2(e.clientX-innerWidth/2, innerHeight/2-e.clientY);
-  const index = shoes[0].position.distanceTo(new THREE.Vector3(p.x,p.y,0)) < shoes[1].position.distanceTo(new THREE.Vector3(p.x,p.y,0)) ? 0 : 1;
-  drag = shoes[index]; drag.userData.moved = true;
-  canvas.setPointerCapture(e.pointerId); drag.position.set(p.x,p.y,0);
+  apply(shoes[selected], +e.target.value);
 });
-canvas.addEventListener('pointermove', e => { if (drag) drag.position.set(e.clientX-innerWidth/2,innerHeight/2-e.clientY,0); });
-canvas.addEventListener('pointerup', () => drag = null);
-canvas.addEventListener('pointercancel', () => drag = null);
+document.querySelector('#reset').addEventListener('click', () => {
+  shoes.forEach(shoe => { shoe.userData.placed = false; shoe.children[0].rotation.x = Math.PI/2; });
+  useManual('Zapatillas centradas · Selecciona izquierda o derecha para acomodarlas.');
+});
+document.querySelector('#freeze').addEventListener('click', async () => {
+  if (!manual) return;
+  if (frozen) {
+    try { await video.play(); frozen = false; } catch (_) { message('No se pudo reanudar la cámara. Vuelve a entrar al probador.'); }
+  } else { video.pause(); frozen = true; }
+  document.querySelector('#freeze').textContent = frozen ? 'Reanudar cámara' : 'Congelar cámara';
+});
+canvas.addEventListener('pointerdown', e => {
+  if (!manual || drag) return;
+  const x = e.clientX-innerWidth/2, y = innerHeight/2-e.clientY;
+  const shoe = shoes[selected];
+  drag = { shoe, pointerId: e.pointerId, x: x-shoe.position.x, y: y-shoe.position.y };
+  canvas.setPointerCapture(e.pointerId);
+});
+canvas.addEventListener('pointermove', e => {
+  if (!drag || e.pointerId !== drag.pointerId) return;
+  drag.shoe.position.set(
+    THREE.MathUtils.clamp(e.clientX-innerWidth/2-drag.x, -innerWidth/2, innerWidth/2),
+    THREE.MathUtils.clamp(innerHeight/2-e.clientY-drag.y, -innerHeight/2, innerHeight/2), 0);
+  syncControls();
+});
+const endDrag = e => { if (drag?.pointerId === e.pointerId) drag = null; };
+canvas.addEventListener('pointerup', endDrag);
+canvas.addEventListener('pointercancel', endDrag);
+canvas.addEventListener('lostpointercapture', endDrag);
 
 try {
   const config = await fetch('./config.json').then(r => { if (!r.ok) throw Error(); return r.json(); });
@@ -159,12 +206,14 @@ try {
   const length = size.z;
   if (!Number.isFinite(length) || length < .00001) throw Error();
   const center = box.getCenter(new THREE.Vector3());
-  gltf.scene.position.sub(center); gltf.scene.scale.setScalar(1/length);
-  gltf.scene.position.divideScalar(length);
+  const normalized = new THREE.Group();
+  normalized.add(gltf.scene);
+  normalized.scale.setScalar(1/length);
+  normalized.position.copy(center).multiplyScalar(-1/length);
   shoes = [false,true].map(mirror => {
     const group = new THREE.Group(), pivot = new THREE.Group();
     pivot.rotation.x = Math.PI/2; pivot.scale.x = mirror ? -1 : 1;
-    pivot.add(gltf.scene.clone(true)); group.add(pivot); group.visible = false;
+    pivot.add(normalized.clone(true)); group.add(pivot); group.visible = false;
     scene.add(group); return group;
   });
   resize(); window.addEventListener('resize', resize);
